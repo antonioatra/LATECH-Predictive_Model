@@ -79,15 +79,54 @@ Remova este bloco ao final
 ```
 
 #### 4.1.3. Planejamento Geral da Solução
-```
-a) quais os dados disponíveis (fonte e conteúdo - exemplo: dados da área de Compras da empresa descrevendo seus fornecedores).
-b) qual a solução proposta (pode ser um resumo do texto da Seção 2.2).
-c) como a solução proposta deverá ser utilizada.
-d) quais os benefícios trazidos pela solução proposta.
-e) qual será o critério de sucesso.
+&nbsp;&nbsp;&nbsp;&nbsp;O planejamento geral da solução é uma etapa fundamental em projetos de inteligência artificial e ciência de dados. É a fase em que se define o que será feito, por que será feito e como será feito, com base no problema real a ser resolvido. Nele são detalhados os dados disponíveis, os objetivos da solução, o tipo de tarefa de aprendizado de máquina mais adequada (como classificação ou regressão), além dos possíveis usos da ferramenta, benefícios esperados e critérios de sucesso. 
 
-Remova este bloco ao final
-```
+&nbsp;&nbsp;&nbsp;&nbsp;Para garantir o desenvolvimento organizado e eficiente da solução preditiva, este documento apresenta o planejamento geral no projeto.
+
+##### Dados disponíveis 
+&nbsp;&nbsp;&nbsp;&nbsp;Os dados utilizados como fonte de aprendizado para o modelo preditivo foram entregues pela faculdade EAFIT. Esses dados são de 775 de alunos da instituição e eles são: 
+
+- **Período:** Período letivo em que a aula é realizada.
+- **Grupo:** Grupo ao qual o aluno pertence.
+- **Horário:** Dia da semana e horário da aula do aluno.
+- **Tipo de Documento:** Tipo de documento de identificação do aluno. Por exemplo: CC (maior de 17 anos), TI (menor de 18 anos).
+- **Idade:** Determina se o aluno é adulto ou menor de idade (17 anos ou mais). Sexo: Sexo do aluno (masculino ou feminino).
+- **Nome do Programa Acadêmico:** Nome do programa acadêmico que o aluno está cursando. STEM: Indica se o programa acadêmico está na área STEM (Sim/Não).
+- **Semestre 1:** Nota obtida na primeira prova de meio de semestre.
+- **Semestre 2:** Nota obtida na segunda prova de meio de semestre.
+- **Parte 1 do Projeto:** Nota obtida no primeiro projeto.
+- **Parte 2 do Projeto:** Nota obtida no segundo projeto.
+- **Oficinas:** Nota média das oficinas.
+- **Quices:** Nota final da prova.
+- **Quiz 1 ao 8:** Notas dos quiz do 1 ao 8.
+- **Tempo do Q1 ao Q8:** Tempo, em segundos, que o aluno demorou para fazer o Quiz referente.
+- **CalcNotaQuiz:** Nota calculada do teste (média aritmética das notas do teste).
+- **MelhoraNotaQuizes:** Indica se houve melhora nas notas do teste (VERDADEIRO/FALSO). As notas podem ser melhoradas completando atividades adicionais e respondendo a perguntas em sala de aula.
+- **Quanto Melhora?:** Magnitude da melhora nas notas do teste (diferença entre Quices e CalcQuizNote).
+- **Nota Final:** Nota final do curso.
+- **Passou?:** Resultado final (Aprovado ou Reprovado no curso).
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;Esse banco de dados fornecidos será importante para que seja possível identificar padrões, nível de dificuldade entre as atividades, e outros dados importântes para o treinamento do modelo preditivo. 
+
+##### Solução Proposta
+&nbsp;&nbsp;&nbsp;&nbsp;A instituição EAFIT colocou uma nova matéria de programação em sua grade e no primeiro ano, teve notas muitas notas baixas e vários alunos desistindo da matéria antes de acabar. Para solucionar esse problema, será produzido um modelo preditivo que ajudará os professores a administrar o curso, analisando as notas dos alunos e se há chance de reprovação dos mesmos. Com um ajudante que pode prever desempenhos e até prever se o aluno será reprovado ou não, os professores e coordenadores poderão disponibilizar o melhor suporte para os alunos que estão com dificuldade ou até grande risco de reprovação. Com o objetivo final sendo ter o melhor suporte e melhores resultados acadêmicos, com o modelo isso será possível.
+
+##### Tipo de Tarefa
+&nbsp;&nbsp;&nbsp;&nbsp;A solução engloba duas tarefas de aprendizado de máquina:
+
+Classificação: utilizada para prever se o aluno será aprovado ou reprovado, categorizando os casos.
+
+Regressão: aplicada para estimar as notas futuras com base em padrões de desempenho, frequência, participação e tempo de execução das provas.
+
+##### Utilização
+&nbsp;&nbsp;&nbsp;&nbsp;Com base de dados passados como notas de quizes e projetos passados de alunos de anos anteriores, o sistema preditivo irá ajudar os professores a identificar padrões de notas para prever quais alunos terão chances de reprovar a matéria. Assim, os educadores poderão intervir previamente momentos antes dos alunos atinjirem situações de reprovação.
+
+##### Benefícios
+&nbsp;&nbsp;&nbsp;&nbsp; O projeto facilitará a tomada de decisões mais informadas e oportunas por parte dos professores, permitindo-lhes identificar com eficiência os alunos em risco de reprovação e oferecer-lhes apoio adicional. Isso não só melhorará os resultados acadêmicos, como também aumentará o engajamento dos docentes, que poderão acompanhar o progresso dos alunos, de uma forma mais fácil e intuitiva.
+
+##### Critério de Sucesso e Métricas
+&nbsp;&nbsp;&nbsp;&nbsp;O objetivo central do projeto é resolver a dor da EAFIT em detectar alunos com chances de reprovar por meio de um sistema preditivo, mas para alcançar esse objetivo, é necessário fazer métricas e critérios. Uma métrica clara é o aumento de suporte à alunos e, consequentemente, mais notas altas. Outra métrica é o modelo conseguir acertar ou chegar perto da nota tirada de um certo aluno após um quiz ou projeto, além de entender que certo quiz é mais difícil que o outro e se ajustar conforme esse dado. Juntamente com a melhora significativa do suporte aos alunos, a taxa de evasão ou desistência do curso também irão baixar.	
 
 #### 4.1.4. Value Proposition Canvas
 ```
