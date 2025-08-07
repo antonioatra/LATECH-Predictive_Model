@@ -81,7 +81,7 @@ A análise SWOT é uma ferramenta de planejamento estratégico que organiza visu
 
    <img src="../assets/analise-swot.png"> 
    
-   <sup>Fonte: Material produzido pelos autores (2024)</sup>
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
    
 </div>
 
