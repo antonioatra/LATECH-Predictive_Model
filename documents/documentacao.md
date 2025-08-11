@@ -228,11 +228,7 @@ Remova este bloco ao final
 
 ## <a name="c6"></a>6. Referências
 
-Inteli. 2024-2A-T11-IN03-G01. Disponível em: https://github.com/InteliProjects/2024-2A-T11-IN03-G01. Acesso em 11/08/2025.
-
 QS. Rankings released! QS World University Rankings: Latin America & The Caribbean 2025. Disponível em: https://www.qs.com/rankings-released-qs-world-university-rankings-latin-america-the-caribbean-2025/. Acesso em 9/08/2025.
-
-
 
 ## <a name="attachments"></a>Anexos
 ```
