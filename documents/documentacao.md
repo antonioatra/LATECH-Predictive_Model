@@ -128,13 +128,13 @@ Remova este bloco ao final
 ```
 #### 4.1.9 Cinco Forças de Porter
 
-&nbsp;&nbsp;&nbsp;&nbsp;Segundo Michael Porter (1986), no contexto de elaboração de ações estratégicas dentro de uma corporação, torna-se essencial compreender como o setor em que ela atua no mercado interfere seu desempenho. Nesse sentido, as chamadas Cinco Forças de Porter são um *framework* para a investigação de fatores-chave que exercem influência no sucesso de um negócio, sendo eles: rivalidade entre concorrentes; poder de barganha dos fornecedores e de compradores; ameaça de novos entrantes, de produtos ou serviços substitutos. A seguir, segue uma explicação em tópicos do que cada ameaça significa.
+&nbsp;&nbsp;&nbsp;&nbsp;No livro *Competitive Strategy: Techniques for Analyzing Industries and Competitors* (1986), Michael Porter apresenta o modelo das **Cinco Forças**, um método para avaliar a atratividade e a dinâmica competitiva de um setor. Essa estrutura identifica os principais elementos que influenciam o desempenho e a lucratividade das empresas.
 
-- Rivalidade entre Concorrentes: descreve a concorrência entre empresas posicionadas em um mesmo setor, disputando por atenção do público através de preços mais atrativos, diferencial de marca/produto/serviço, melhor atendimento ao cliente, entre vários fatores. 
-- Poder de Barganha dos Fornecedores: explica como o poder dos fornecedores de aumentar os preços ou reduzir a qualidade pode impactar os custos e a lucratividade.
-- Poder de Barganha dos Compradores: descreve como consumidores exigentes podem forçar as empresas a reduzir preços ou aumentar a qualidade.
-- Ameaça de Novos Entrantes: representa as barreiras de entrada que protegem as empresas já posicionadas em um setor de novas concorrências, e como isso pode afetar a estratégia em geral.
-- Ameaça de Produtos ou Serviços Substitutos: analisa como a disponibilidade de alternativas de produtos e serviços pode limitar os preços e impactar a demanda.
+- **Rivalidade no Setor**: intensidade da competição entre empresas já estabelecidas, manifestada por estratégias como redução de preços, fortalecimento de marca, inovação e melhoria no atendimento.
+- **Influência dos Fornecedores**: capacidade dos fornecedores de impactar custos e qualidade, afetando diretamente a rentabilidade das empresas compradoras.
+- **Poder dos Consumidores**: grau em que os clientes podem exigir preços mais baixos ou maior qualidade, pressionando margens de lucro.
+- **Entrada de Novos Concorrentes**: facilidade ou dificuldade para que novas empresas ingressem no mercado, determinada por barreiras de entrada como capital inicial, regulamentações e diferenciação de marca.
+- **Produtos ou Serviços Substitutos**: presença de alternativas que atendem à mesma necessidade, limitando preços e influenciando a demanda.
 
 ### vai entrar uma imagem aqui
 
@@ -229,6 +229,10 @@ Remova este bloco ao final
 ## <a name="c6"></a>6. Referências
 
 Inteli. 2024-2A-T11-IN03-G01. Disponível em: https://github.com/InteliProjects/2024-2A-T11-IN03-G01. Acesso em 11/08/2025.
+
+QS. Rankings released! QS World University Rankings: Latin America & The Caribbean 2025. Disponível em: https://www.qs.com/rankings-released-qs-world-university-rankings-latin-america-the-caribbean-2025/. Acesso em 9/08/2025.
+
+
 
 ## <a name="attachments"></a>Anexos
 ```
