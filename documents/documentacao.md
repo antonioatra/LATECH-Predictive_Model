@@ -31,7 +31,9 @@ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-wr
 
 Fundada em 1960 por um grupo de empresários de Medellín, a EAFIT nasceu com o propósito de formar profissionais para os setores de gestão, finanças e tecnologia, estabelecendo desde o início um forte vínculo com o desenvolvimento socioeconômico da região (EAFIT HISTORIA, 2025). Reconhecida pelo governo colombiano como universidade em 1971, a instituição expandiu sua oferta acadêmica para incluir escolas de Engenharia, Ciências e Humanidades, Direito e Música, adaptando-se às necessidades da sociedade e consolidando sua posição como um centro educacional de destaque.
 
-Entre seus alunos notáveis, a EAFIT formou figuras como Aníbal Gaviria, ex-governador de Antioquia, e Claudia Patricia Restrepo Montoya, ex-vice-ministra de Cultura da Colômbia.
+O reconhecimento oficial como universidade pelo Ministério da Educação, em 1971, marcou um ponto de inflexão que acelerou a diversificação acadêmica e a expansão institucional. A partir dos anos 1970, a EAFIT consolidou novas escolas e programas além da Administração, incluindo Engenharia e, posteriormente, Ciências e Humanidades, Direito e Música, em sintonia com as necessidades emergentes da sociedade e com a modernização do tecido econômico regional (EAFIT HISTORIA NOTICIAS, 2025). Esse crescimento veio acompanhado de uma profunda atuação no território: o campus de La Aguacatala, no sul de Medellín, tornou-se referência urbana e cultural, com atividades acadêmicas, científicas e de extensão que expressam a missão institucional de inspirar vidas, criar conhecimento e transformar a sociedade (EAFIT HISTORIA, 2025).
+
+Entre seus egressos notáveis, a EAFIT formou líderes como Aníbal Gaviria, ex-governador de Antioquia, e Claudia Patricia Restrepo Montoya, ex-vice-ministra de Cultura da Colômbia, testemunhos do compromisso da instituição com uma formação ética, crítica e orientada ao serviço público. Apesar desse histórico, a universidade enfrenta o desafio contemporâneo de otimizar a experiência de aprendizagem em um contexto cada vez mais digital. Neste projeto, propomos desenvolver um modelo preditivo que antecipe a probabilidade de reprovação de estudantes, apoiando a tomada de decisão pedagógica e a personalização de intervenções (EAFIT NOTICIAS, 2025).
 
 Apesar de seu histórico de sucesso, a EAFIT enfrenta o desafio de otimizar a experiência de aprendizado dos estudantes em um contexto cada vez mais digital. O problema consiste na necessidade de desenvolver uma metodologia para adaptar estratégias de ensino de países mais desenvolvidos à realidade e aos recursos da Colômbia.
 
@@ -243,7 +245,11 @@ ROTHER, Mike; SHOOK, John. Aprendendo a enxergar: Mapeando o fluxo de valor para
 
 UNIVERSIDAD EAFIT. "Excelencia y reconocimiento". Disponível em: https://www.eafit.edu.co/informes-de-gestion-y-sostenibilidad/informe-sostenibilidad-2023/excelencia-y-reconocimiento. Acesso em: 11 de agosto de 2025.
 
-EAFIT HISTORIA. "Historia de EAFIT". Disponível em: https://www.eafit.edu.co/institucional/historia. Acesso em: 11 de agosto de 2025.
+EAFIT HISTORIA. "Historia de EAFIT". Disponível em: https://www.eafit.edu.co/historia. Acesso em: 11 de agosto de 2025.
+
+EAFIT NOTICIAS. "La ANDI reconoció a EAFIT por 65 años de impacto social y legado de futuro". Disponível em: https://www.eafit.edu.co/noticias/eafit-es-noticia/ANDI-reconocio-EAFIT-65anios-impacto-social. Acesso em: 11 de agosto de 2025.
+
+EAFIT HISTORIA NOTICIAS. "EAFIT, hija de la Medellín de los 60". Disponível em: https://www.eafit.edu.co/institucional/historia/noticias/eafit-hija-de-la-medellin-de-los-60. Acesso em: 11 de agosto de 2025.
 
 
 QS QUACQUARELLI SYMONDS. "QS World University Rankings 2025". Disponível em: https://www.topuniversities.com/university-rankings/world-university-rankings/2025. Acesso em: 11 de agosto de 2025.
