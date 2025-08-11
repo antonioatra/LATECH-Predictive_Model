@@ -134,11 +134,44 @@ Remova este bloco ao final
 ```
 
 #### 4.1.4. Value Proposition Canvas
-```
-Posicione aqui seu canvas.
+O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de forma prática e objetiva, o que uma solução oferece com o que o cliente realmente precisa. Conforme Kellison Ferreira (s. d.), ele organiza a análise em dois blocos complementares: o Perfil do Cliente (tarefas, dores e ganhos) e o Mapa de Valor (produtos/serviços, analgésicos e criadores de ganho). Inspirado no trabalho de Osterwalder e Pigneur, o objetivo é alcançar o “encaixe” entre oferta e demanda: entender claramente o que o cliente tenta realizar, quais obstáculos enfrenta e quais resultados espera, e então descrever como a solução elimina essas dores e potencializa os ganhos.
 
-Remova este bloco ao final
-```
+<div align="center">
+   
+   <sub>Figura : Canva Proposta de Valor </sub>
+
+   <img src="../assets/canva-proposta-de-valor.png">
+   
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+   
+</div>
+
+### Perfil do Cliente: 
+&nbsp;&nbsp;&nbsp;&nbsp;
+**Ganhos:** Professores e coordenação querem entender rapidamente o que impacta as notas para agir cedo e melhorar os resultados. Buscam visão por curso/área e horário, com evidências para orientar intervenções e monitores.
+<hr> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+**Dores:** Alunos em risco são identificados tarde, por falta de previsibilidade e pela necessidade de juntar dados de várias fontes. O aumento de turmas piora a falta de visibilidade e dificulta priorizar quem atender.
+<hr>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+**Tarefas do Cliente:** Professores intervêm quando o risco já está claro (após notas baixas) e organizam grupos a cada semestre. Precisam de um fluxo simples, online e padronizado para acompanhar evolução, comparar grupos e orientar monitores.
+<hr> 
+
+### Proposta de Valor
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+**Criadores de Ganho:** Alertas antecipados nas primeiras semanas indicam probabilidade de reprovação por faixas de risco (baixo, médio, alto, muito alto). Um dashboard reúne evolução das notas, motivos do risco e filtros por programa, grupo e horário para ações rápidas e coordenadas.
+<hr> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+**Aliviam as Dores:** O sistema prevê próximos resultados e explica o “porquê do risco” (ex.: quizzes pendentes, queda de desempenho, efeitos de horário/programa), reduzindo checagens manuais. É escalável, com execução automática por marcos do semestre ou upload manual, absorvendo o crescimento de alunos sem sobrecarga.
+<hr> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+**Produtos e Serviços:** Modelo preditivo que destaca alunos em risco (nota final < 3) e diferencia “aprova”, “reprova” e “cancela”. Integra notas oficiais, quizzes/talleres, grupos/horários e indicadores de evolução, com privacidade garantida. Entrega inclui dashboard web, manuais (usuário e técnico), capacitação breve e revisão do modelo a cada semestre.
+<hr> 
 
 #### 4.1.5. Matriz de Riscos
 
