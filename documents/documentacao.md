@@ -104,11 +104,64 @@ Remova este bloco ao final
 ```
 
 #### 4.1.6. Personas
-```
-Posicione aqui suas Personas (indique se são personas que utilizam o modelo e/ou se são afetadas pelo modelo).
 
-Remova este bloco ao final
-```
+<div align = "center">
+
+<sub>Figura : Persona 1</sub>
+
+<img src = "../assets/persona1.png">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+&emsp; A primeira persona tem as seguintes informações:
+
+- #### Perfil: Possui nome, gênero, idade, cidade de nascença e posição na universidade
+
+○ Nome: Paola Andrea Vallejo Ramírez
+
+○ Gênero: Feminino
+
+○ Idade: 41 anos
+
+○ Cidade: Medellín – Antioquia, Colômbia
+
+○ Posição: Docente universitária e coordenadora de projetos pedagógicos na Universidad EAFIT
+
+- #### Biografia: Apresenta sua origem e características<br>
+&emsp; Paola nasceu em Medellín, na Colômbia, e cresceu em um ambiente onde a educação era altamente vastlorizada. Desde pequena, era curiosa e gostava de resolver problemas práticos. Apaixonada por aprender, escolheu seguir a carreira acadêmica e se formou em Engenharia de Software pela Universidade Industrial de Santander. Posteriormente, concluiu um mestrado em Educação e Tecnologias Digitais na Universidad de los Andes.<br>
+&emsp; Atualmente, mora em Medellín e leciona disciplinas introdutórias de programação na Universidad EAFIT, onde também lidera iniciativas de inovação educacional. É reconhecida por sua dedicação ao sucesso dos alunos e por seu compromisso com a inclusão e o uso ético da tecnologia na educação. Atua como ponte entre dados educacionais e ações pedagógicas eficazes, sempre buscando formas de aprimorar os resultados acadêmicos.
+
+- #### Frustrações: Dores que a persona carrega e que estão relacionadas com o projeto
+
+○ Dificuldade em acompanhar o progresso individual de cada aluno devido ao grande número de estudantes e ao tempo limitado.
+
+○ Falta de ferramentas práticas para identificar alunos em risco antes que a situação se agrave.
+
+○ Sensação de que as ações pedagógicas são frequentemente reativas, e não preventivas.
+
+○ Necessidade constante de adaptar estratégias sem dados objetivos suficientes para orientar as decisões.
+
+- #### Motivações: Aspectos da personalidade da persona e que estão relacionados com o projeto
+
+○ Acredita que a educação transforma vidas e que todos os alunos merecem oportunidades reais de sucesso.
+
+○ Busca aplicar métodos científicos e baseados em dados para tornar o ensino mais eficaz.
+
+○ Quer melhorar a retenção e o desempenho dos estudantes, especialmente os que enfrentam maiores dificuldades, reduzindo a taxa de evasão.
+
+○ Valoriza tecnologias que permitam aos professores agir com mais precisão e empatia.
+
+- #### Interesses: Gostos da persona e que estão relacionados com o projeto
+
+○ Ferramentas de visualização de dados e dashboards educacionais.
+
+○ Avaliação formativa e intervenções pedagógicas personalizadas.
+
+○ Inteligência artificial aplicada à educação.
+
+○ Equidade de gênero e inclusão no ensino superior.
 
 #### 4.1.7. Jornadas do Usuário
 ```
