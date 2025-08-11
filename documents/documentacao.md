@@ -117,9 +117,9 @@ Remova este bloco ao final
 
 &emsp; A primeira persona tem as seguintes informações:
 
-- #### Perfil: Possui nome, gênero, idade, cidade de nascença e posição na universidade
+- #### Perfil
 
-○ Nome: Paola Andrea Vallejo Ramírez
+○ Nome: Paola Andrea Vallejo Ramírez 
 
 ○ Gênero: Feminino
 
@@ -129,11 +129,11 @@ Remova este bloco ao final
 
 ○ Posição: Docente universitária e coordenadora de projetos pedagógicos na Universidad EAFIT
 
-- #### Biografia: Apresenta sua origem e características<br>
+- Biografia<br>
 &emsp; Paola nasceu em Medellín, na Colômbia, e cresceu em um ambiente onde a educação era altamente vastlorizada. Desde pequena, era curiosa e gostava de resolver problemas práticos. Apaixonada por aprender, escolheu seguir a carreira acadêmica e se formou em Engenharia de Software pela Universidade Industrial de Santander. Posteriormente, concluiu um mestrado em Educação e Tecnologias Digitais na Universidad de los Andes.<br>
 &emsp; Atualmente, mora em Medellín e leciona disciplinas introdutórias de programação na Universidad EAFIT, onde também lidera iniciativas de inovação educacional. É reconhecida por sua dedicação ao sucesso dos alunos e por seu compromisso com a inclusão e o uso ético da tecnologia na educação. Atua como ponte entre dados educacionais e ações pedagógicas eficazes, sempre buscando formas de aprimorar os resultados acadêmicos.
 
-- #### Frustrações: Dores que a persona carrega e que estão relacionadas com o projeto
+- Frustrações
 
 ○ Dificuldade em acompanhar o progresso individual de cada aluno devido ao grande número de estudantes e ao tempo limitado.
 
@@ -143,7 +143,7 @@ Remova este bloco ao final
 
 ○ Necessidade constante de adaptar estratégias sem dados objetivos suficientes para orientar as decisões.
 
-- #### Motivações: Aspectos da personalidade da persona e que estão relacionados com o projeto
+- Motivações
 
 ○ Acredita que a educação transforma vidas e que todos os alunos merecem oportunidades reais de sucesso.
 
@@ -153,7 +153,7 @@ Remova este bloco ao final
 
 ○ Valoriza tecnologias que permitam aos professores agir com mais precisão e empatia.
 
-- #### Interesses: Gostos da persona e que estão relacionados com o projeto
+- Interesses
 
 ○ Ferramentas de visualização de dados e dashboards educacionais.
 
