@@ -72,11 +72,55 @@ Descreva os principais players, modelos de negócio e tendências acerca dos mod
 Remova este bloco ao final
 ```
 #### 4.1.2. Análise SWOT 
-```
-Posicione aqui sua análise SWOT.
 
-Remova este bloco ao final
-```
+Segundo Rother e Shook (2003), a Análise SWOT é uma ferramenta de planejamento estratégico que organiza visualmente as forças, fraquezas, oportunidades e ameaças de um negócio. Seu objetivo é auxiliar na avaliação do ambiente interno e externo de uma empresa ou projeto, e orientar uma tomada de decisão mais embasada na realidade.
+
+Dessa maneira, a aplicação dessa análise é crucial para o mapeamento estratégico da solução em desenvolvimento para a EAFIT. Fornecendo elementos vitais para a idealização e o debate de ideias do projeto, permitindo uma compreensão clara dos desafios e das oportunidades.
+
+<div align="center">
+   
+   <sub>Figura 1 - Análise Swot </sub>
+
+   <img src="../assets/analise-swot.png"> 
+   
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+   
+</div>
+
+Na figura acima temos:
+
+### Forças
+
+##### **Posicionada como uma das melhores universidades da Colômbia**
+
+- A Universidad EAFIT possui reconhecimento nacional por sua excelência acadêmica (UNIVERSIDAD EAFIT, 2025), foco na inovação e comprometimento com a formação integral de seus estudantes. É constantemente classificada entre as melhores instituições de ensino superior da Colômbia.
+
+##### **Credenciada como instituição de alta qualidade**
+- A EAFIT foi credenciada pelo Ministério Nacional da Educação da Colômbia como uma universidade de alta qualidade duas vezes seguidas, sendo a primeira universidade colombiana a ter esta recognição. Essa certificação garante que a instituição atende a rigorosos critérios de avaliação institucional, como infraestrutura, corpo docente, produção científica, governança e impacto social, contribuindo para a confiança do público interno e externo.
+
+##### **Currículo extenso e diverso, com opções de pós-graduação**
+- A universidade oferece uma ampla gama de programas acadêmicos em áreas como administração, economia, engenharia, humanidades, direito e ciências aplicadas. Além disso, conta com cerca de 90 opções de cursos de pós-graduação.
+
+### Fraquezas
+
+##### **Gastos elevados com a manutenção do Campus Vivo**
+- Embora o Campus Vivo seja um diferencial arquitetônico e ambiental da EAFIT, sua manutenção representa custos operacionais significativos. Isso inclui jardinagem, segurança, manutenção predial e limpeza, o que pode impactar os recursos disponíveis para investimentos em outras áreas estratégicas, como digitalização ou internacionalização.
+
+##### **Inexistência de parcerias com universidades de referência na América Latina e no mundo**
+- Apesar de seu prestígio nacional, a EAFIT ainda apresenta limitações na construção de alianças acadêmicas internacionais robustas, especialmente com instituições de referência global. A ausência de programas de dupla titulação, intercâmbios amplamente reconhecidos e pesquisa conjunta com universidades de renome mundial limita o alcance internacional da instituição.
+
+### Ameaças
+
+#####  **Instabilidade econômica e política regional**
+- O contexto colombiano, assim como o de outras nações latino-americanas, é frequentemente marcado por flutuações econômicas, tensões sociais e mudanças políticas que podem afetar diretamente o financiamento da educação superior, os programas de intercâmbio, os investimentos em infraestrutura e a própria capacidade de planejamento estratégico das universidades privadas.
+
+#####  **Competição com outras universidades sul-americanas**
+- A crescente profissionalização e internacionalização de outras universidades na América Latina, como a Universidad de Los Andes (Colômbia), Pontificia Universidad Católica (Chile), Universidade de São Paulo (Brasil) e Universidad Nacional Autónoma de México (México), impõe um desafio constante. A EAFIT precisa manter-se atualizada, inovadora e conectada globalmente para não perder sua atratividade frente à concorrência (QS, 2025). 
+
+### Oportunidades
+
+##### **Horizonte para a digitalização do atendimento ao aluno**
+- A universidade possui uma grande oportunidade de melhorar a experiência do estudante por meio da automação e digitalização de processos relacionados à vida acadêmica. Isso inclui sistemas mais inteligentes para acompanhamento de desempenho, integração com orientações pedagógicas, monitoramento psicológico, alertas de risco acadêmico, e acesso facilitado a recursos administrativos e financeiros. A adoção de plataformas tecnológicas modernas pode otimizar a gestão estudantil e fortalecer o engajamento institucional.
 
 #### 4.1.3. Planejamento Geral da Solução
 ```
@@ -264,6 +308,13 @@ Remova este bloco ao final
 ```
 
 ## <a name="c6"></a>6. Referências
+
+
+[Númeração de acordo com a ordem alfabética] ROTHER, Mike; SHOOK, John. Aprendendo a enxergar: Mapeando o fluxo de valor para agregar valor e eliminar o desperdício. Disponível em: https://leanproduction.com.br/livro/aprendendo-a-enxergar/. Acesso em: 11 ago. 2025.
+
+[Númeração de acordo com a ordem alfabética] UNIVERSIDAD EAFIT. "Excelencia y reconocimiento". Disponível em: https://www.eafit.edu.co/informes-de-gestion-y-sostenibilidad/informe-sostenibilidad-2023/excelencia-y-reconocimiento. Acesso em: 11 de agosto de 2025.
+
+[Númeração de acordo com a ordem alfabética] QS QUACQUARELLI SYMONDS. "QS World University Rankings 2025". Disponível em: https://www.topuniversities.com/university-rankings/world-university-rankings/2025. Acesso em: 11 de agosto de 2025.
 
 [Númeração de acordo com a ordem alfabética]. <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [PMI – Project Management Institute. Um guia do conhecimento em gerenciamento de projetos (Guia PMBOK®): guia do conhecimento em gerenciamento de projetos. 7. ed. Newtown Square, PA: Project Management Institute, 2021.](https://www.academiaplaorc.com.br/wp-content/uploads/2024/07/Guia-PMBOK-7a-Edicao.pdf)  
 
