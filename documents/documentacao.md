@@ -265,53 +265,92 @@ Ameaça: Desenvolver um modelo preditivo com acurácia insuficiente para gerar r
 
 </div>
 
-&emsp; A primeira persona tem as seguintes informações:
+### Persona: Paola Andrea Vallejo Ramírez
 
-- #### Perfil
+#### Perfil
 
-○ Nome: Paola Andrea Vallejo Ramírez 
+- Nome: Paola Andrea Vallejo Ramírez  
+- Gênero: Feminino  
+- Idade: 41 anos  
+- Cidade: Medellín – Antioquia, Colômbia  
+- Posição: Docente universitária e coordenadora de projetos pedagógicos na Universidad EAFIT
 
-○ Gênero: Feminino
+#### Biografia
 
-○ Idade: 41 anos
+Paola nasceu em Medellín, na Colômbia, e cresceu em um ambiente onde a educação era altamente valorizada. Desde pequena, era curiosa e gostava de resolver problemas práticos. Apaixonada por aprender, escolheu seguir a carreira acadêmica e se formou em Engenharia de Software pela Universidade Industrial de Santander. Posteriormente, concluiu um mestrado em Educação e Tecnologias Digitais na Universidad de los Andes.
 
-○ Cidade: Medellín – Antioquia, Colômbia
+Atualmente, mora em Medellín e leciona disciplinas introdutórias de programação na Universidad EAFIT, onde também lidera iniciativas de inovação educacional. É reconhecida por sua dedicação ao sucesso dos alunos e por seu compromisso com a inclusão e o uso ético da tecnologia na educação. Atua como ponte entre dados educacionais e ações pedagógicas eficazes, sempre buscando formas de aprimorar os resultados acadêmicos.
 
-○ Posição: Docente universitária e coordenadora de projetos pedagógicos na Universidad EAFIT
+#### Frustrações
 
-- #### Biografia<br>
-&emsp; Paola nasceu em Medellín, na Colômbia, e cresceu em um ambiente onde a educação era altamente vastlorizada. Desde pequena, era curiosa e gostava de resolver problemas práticos. Apaixonada por aprender, escolheu seguir a carreira acadêmica e se formou em Engenharia de Software pela Universidade Industrial de Santander. Posteriormente, concluiu um mestrado em Educação e Tecnologias Digitais na Universidad de los Andes.<br>
-&emsp; Atualmente, mora em Medellín e leciona disciplinas introdutórias de programação na Universidad EAFIT, onde também lidera iniciativas de inovação educacional. É reconhecida por sua dedicação ao sucesso dos alunos e por seu compromisso com a inclusão e o uso ético da tecnologia na educação. Atua como ponte entre dados educacionais e ações pedagógicas eficazes, sempre buscando formas de aprimorar os resultados acadêmicos.
+- Dificuldade em acompanhar o progresso individual de cada aluno devido ao grande número de estudantes e ao tempo limitado.  
+- Falta de ferramentas práticas para identificar alunos em risco antes que a situação se agrave.  
+- Sensação de que as ações pedagógicas são frequentemente reativas, e não preventivas.  
+- Necessidade constante de adaptar estratégias sem dados objetivos suficientes para orientar as decisões.
 
-- #### Frustrações
+#### Motivações
 
-○ Dificuldade em acompanhar o progresso individual de cada aluno devido ao grande número de estudantes e ao tempo limitado.
+- Acredita que a educação transforma vidas e que todos os alunos merecem oportunidades reais de sucesso.  
+- Busca aplicar métodos científicos e baseados em dados para tornar o ensino mais eficaz.  
+- Quer melhorar a retenção e o desempenho dos estudantes, especialmente os que enfrentam maiores dificuldades, reduzindo a taxa de evasão.  
+- Valoriza tecnologias que permitam aos professores agir com mais precisão e empatia.
 
-○ Falta de ferramentas práticas para identificar alunos em risco antes que a situação se agrave.
+#### Interesses
 
-○ Sensação de que as ações pedagógicas são frequentemente reativas, e não preventivas.
+- Ferramentas de visualização de dados e dashboards educacionais.  
+- Avaliação formativa e intervenções pedagógicas personalizadas.  
+- Inteligência artificial aplicada à educação.  
+- Equidade de gênero e inclusão no ensino superior.
 
-○ Necessidade constante de adaptar estratégias sem dados objetivos suficientes para orientar as decisões.
+<div align = "center">
 
-- #### Motivações
+<sub>Figura : Persona 2</sub>
 
-○ Acredita que a educação transforma vidas e que todos os alunos merecem oportunidades reais de sucesso.
+<img src = "../assets/persona2.png">
 
-○ Busca aplicar métodos científicos e baseados em dados para tornar o ensino mais eficaz.
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
 
-○ Quer melhorar a retenção e o desempenho dos estudantes, especialmente os que enfrentam maiores dificuldades, reduzindo a taxa de evasão.
+</div>
 
-○ Valoriza tecnologias que permitam aos professores agir com mais precisão e empatia.
+### Persona: Juan Esteban Gómez Ríos
 
-- #### Interesses
+#### Perfil
 
-○ Ferramentas de visualização de dados e dashboards educacionais.
+- Nome: Juan Esteban Gómez Ríos  
+- Gênero: Masculino  
+- Idade: 18 anos  
+- Cidade: Bello – Antioquia, Colômbia  
+- Posição: Estudante de primeiro semestre no curso de Engenharia de Sistemas da Universidad EAFIT
 
-○ Avaliação formativa e intervenções pedagógicas personalizadas.
+#### Biografia
 
-○ Inteligência artificial aplicada à educação.
+Juan nasceu e cresceu em Bello, uma cidade próxima a Medellín. Vem de uma família de classe média-baixa, onde é o primeiro a ingressar em uma universidade particular. Sempre se destacou na escola pública por sua criatividade e curiosidade, especialmente em áreas como matemática e informática, onde aprendeu programação básica por conta própria através de vídeos no YouTube.
 
-○ Equidade de gênero e inclusão no ensino superior.
+Ingressar na Universidad EAFIT foi um grande sonho realizado, mas o choque com a metodologia, o volume de conteúdo e a linguagem acadêmica mais formal têm representado grandes desafios. Juan trabalha meio período em uma loja para ajudar nas despesas e, por isso, nem sempre consegue dedicar o tempo ideal aos estudos. Mesmo esforçado, suas notas nos primeiros quizzes e avaliações foram baixas, o que começou a impactar sua motivação.
+
+#### Frustrações
+
+- Sente que estuda muito, mas não vê resultado nas notas.  
+- Tem dificuldades em organizar o tempo entre trabalho, estudo e tarefas da universidade.  
+- Acredita que falta suporte ou acompanhamento mais próximo dos professores para lidar com suas dificuldades.  
+- Não entende bem por que está indo mal: se é falta de base, cansaço ou desorganização.  
+- Tem receio de reprovar logo no primeiro semestre e decepcionar sua família.
+
+#### Motivações
+
+- Quer ser um exemplo positivo para seus irmãos mais novos e mostrar que é possível vencer pelos estudos.  
+- Sonha em trabalhar com tecnologia e desenvolvimento de software, talvez até criar sua própria startup.  
+- Gosta de aprender e se desenvolver, principalmente em temas práticos e aplicados.  
+- Quer provar para si mesmo que é capaz de se adaptar à universidade e ter sucesso.  
+- Valoriza professores que explicam com empatia e clareza, e se sente mais seguro quando percebe que está sendo acompanhado.
+
+#### Interesses
+
+- Desenvolvimento web e mobile.  
+- Jogos digitais e cultura geek.  
+- Comunidades de aprendizado online (como YouTube, Discord e fóruns de programação).  
+- Tecnologias acessíveis e que ajudam a estudar de forma independente.  
+- Bolsas de estudo e oportunidades extracurriculares que possam melhorar sua formação.
 
 #### 4.1.7. Jornadas do Usuário
 ```
