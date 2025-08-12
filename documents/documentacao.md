@@ -134,11 +134,11 @@ Remova este bloco ao final
 ```
 
 #### 4.1.4. Value Proposition Canvas
-O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de forma prática e objetiva, o que uma solução oferece com o que o cliente realmente precisa. Conforme Kellison Ferreira (s. d.), ele organiza a análise em dois blocos complementares: o Perfil do Cliente (tarefas, dores e ganhos) e o Mapa de Valor (produtos/serviços, analgésicos e criadores de ganho). Inspirado no trabalho de Osterwalder e Pigneur, o objetivo é alcançar o “encaixe” entre oferta e demanda: entender claramente o que o cliente tenta realizar, quais obstáculos enfrenta e quais resultados espera, e então descrever como a solução elimina essas dores e potencializa os ganhos.
+O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de forma prática e objetiva, o que uma solução oferece com o que o cliente realmente precisa. Desenvolvido por Alexander Osterwalder, Yves Pigneur e Alan Smith, ele organiza a análise em dois blocos complementares: o Perfil do Cliente, que detalha as tarefas atuais do cliente, as dores em relação aquela atividade e os ganhos esperados com a solução, e o Mapa de Valor, com as principais informações sobre o produto ou serviço, os elementos aliviantes de dores e as vantagens que criam de ganho. Nesse sentido, o objetivo é alcançar o “encaixe” entre oferta e demanda: entender claramente o que o cliente tenta realizar, quais obstáculos enfrenta e quais resultados espera, e então descrever como a solução elimina essas dores e potencializa os ganhos.
 
 <div align="center">
    
-   <sub>Figura : Canva Proposta de Valor </sub>
+   <sub>Figura : Canvas Proposta de Valor </sub>
 
    <img src="../assets/canva-proposta-de-valor.png">
    
