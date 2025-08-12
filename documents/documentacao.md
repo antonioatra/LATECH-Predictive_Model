@@ -157,6 +157,8 @@ Remova este bloco ao final
 
 &emsp; Com o modelo preditivo, conseguimos resolver as dores do cliente, mas temos que contextualizar tal problema para ficar o mais claro possível nossos objetivos. A instituição EAFIT colocou uma nova matéria de programação em sua grade e, no primeiro ano, teve muitas notas baixas e vários alunos desistindo da matéria antes de acabar. Para solucionar esse problema, será produzido um modelo preditivo que ajudará os professores a administrar o curso, analisando as notas dos alunos e se há chance de reprovação dos mesmos. Com um sistema capaz de prever desempenhos e até prever se o aluno será reprovado ou não, os professores e coordenadores poderão disponibilizar o melhor suporte para os alunos que estão com dificuldade ou até grande risco de reprovação.
 
+
+
 ##### Tipo de Tarefa
 
 &emsp; A solução engloba duas tarefas de aprendizado de máquina:
@@ -351,6 +353,47 @@ Ingressar na Universidad EAFIT foi um grande sonho realizado, mas o choque com a
 - Comunidades de aprendizado online (como YouTube, Discord e fóruns de programação).  
 - Tecnologias acessíveis e que ajudam a estudar de forma independente.  
 - Bolsas de estudo e oportunidades extracurriculares que possam melhorar sua formação.
+
+<div align = "center">
+
+<sub>Figura : Persona 3</sub>
+
+<img src = "../assets/persona3.png">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+### Persona: Ricardo Morales
+
+#### Perfil
+
+- Nome: Dr. Ricardo Morales  
+- Gênero: Masculino  
+- Idade: 55 anos  
+- Cidade: Medellín, Colômbia  
+- Posição: Diretor da Faculdade de Ciências e Engenharia na Universidad EAFIT
+
+#### Biografia
+
+Ricardo nasceu em Bogotá e desde cedo demonstrou paixão por educação e tecnologia. Formou-se em Engenharia de Sistemas na Universidad Nacional da Colômbia e concluiu mestrado e doutorado em Inovação Educacional no MIT. Iniciou sua carreira como professor de algoritmos antes de assumir cargos de liderança acadêmica. Hoje, como diretor, busca integrar soluções baseadas em dados para melhorar o desempenho estudantil e reduzir a evasão.
+
+#### Frustrações
+
+- Possuímos dados históricos, mas não os aplicamos de forma preventiva.  
+- Intervimos apenas quando a reprovação já é inevitável.  
+- Parte do corpo docente ainda prioriza intuição em detrimento de evidências.
+
+#### Motivações
+
+- Transformar a EAFIT em referência em learning analytics na América Latina.  
+- Reduzir a taxa de reprovação em 25% nos próximos 3 anos.  
+- Criar um modelo replicável para outras disciplinas e instituições.
+
+#### Interesses
+
+- Educação.  
+- Estatística.
 
 #### 4.1.7. Jornadas do Usuário
 ```
