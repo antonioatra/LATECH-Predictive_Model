@@ -137,7 +137,11 @@ Remova este bloco ao final
 - **Entrada de Novos Concorrentes**: facilidade ou dificuldade para que novas empresas ingressem no mercado, determinada por barreiras de entrada como capital inicial, regulamentações e diferenciação de marca.
 - **Produtos ou Serviços Substitutos**: presença de alternativas que atendem à mesma necessidade, limitando preços e influenciando a demanda.
 
-<!-- Image placeholder: Porter's Five Forces diagram -->
+  <sub>Figura : 5 forças de Porter </sub>
+
+  <img src="../assets/5forcas.png">
+
+  <sup>Fonte: Imagem retirada do site https://ufabcjr.com.br/</sup>
 
 **Rivalidade entre concorrentes existentes**
 
@@ -233,7 +237,7 @@ Remova este bloco ao final
 
 ## <a name="c6"></a>6. Referências
 
-QS. **Rankings released! QS World University Rankings: Latin America & The Caribbean 2025**. Disponível em: https://www.qs.com/rankings-released-qs-world-university-rankings-latin-america-the-caribbean-2025/. Acesso em: 9 ago. 2025.
+[Contexto da indústria]QS. **Rankings released! QS World University Rankings: Latin America & The Caribbean 2025**. Disponível em: https://www.qs.com/rankings-released-qs-world-university-rankings-latin-america-the-caribbean-2025/. Acesso em: 9 ago. 2025.
 
 ## <a name="attachments"></a>Anexos
 ```
