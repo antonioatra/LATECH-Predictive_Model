@@ -103,9 +103,11 @@ Remova este bloco ao final
 
 **4.1.5.1. Riscos:**
 
+&emsp; Com base nas diretrizes apresentadas no PMBOK® Guide (PMI, 2021) e no conhecimento consolidado acerca da análise de riscos, elaborou-se a matriz de riscos do projeto com o objetivo de identificar, classificar e propor estratégias de mitigação para as ameaças potenciais ao desenvolvimento da solução. Essa abordagem permite antecipar problemas, minimizar impactos negativos e assegurar maior controle sobre as variáveis que podem comprometer o desempenho do modelo preditivo desenvolvido para a Universidade EAFIT, apresentado na figura xx.
+
 <div align="center">
 
-<sup>Figura : Matriz de riscos do projeto</sup>
+<sup>Figura xx: Matriz de riscos do projeto</sup>
 
 <img src="../assets/matrizRiscos.png">
 
@@ -115,64 +117,33 @@ Remova este bloco ao final
 
 &emsp; A seguir, os riscos identificados são apresentados com base em cinco dimensões: categoria, ameaça, impacto, probabilidade e estratégia de mitigação. A classificação por categorias segue as diretrizes do PMBOK® Guide (PMI, 2021), visando facilitar o agrupamento, a análise e a priorização das ameaças ao longo do desenvolvimento do projeto. As categorias adotadas — Técnico, Humano, Organizacional e Acadêmico — refletem as diferentes naturezas dos riscos e permitem uma abordagem mais direcionada em sua gestão.
 
-&emsp; **4.1.5.1.1. Dados insuficientes**
+&emsp; O primeiro risco refere-se à possibilidade de treinar o modelo preditivo com uma quantidade insuficiente de dados, classificado como de natureza técnica. Trata-se de um risco de impacto muito alto, pois a escassez de dados inviabiliza o treinamento adequado do modelo e compromete todo o desenvolvimento do projeto. A probabilidade estimada é de 10%, uma vez que o parceiro institucional assumiu o compromisso de fornecer os dados necessários, reduzindo a chance de indisponibilidade. A estratégia de mitigação consiste em levantar previamente a quantidade mínima de dados amostrais e solicitar oficialmente à universidade a sua disponibilização.
 
-- **Categoria:** Técnico
-- **Ameaça:** Treinar o modelo preditivo com uma quantidade insuficiente de dados.
-- **Impacto:** (Muito alto): A escassez de dados inviabiliza o treinamento adequado do modelo, comprometendo toda a elaboração do projeto.
-- **Probabilidade (10%):** O parceiro institucional comprometeu-se a fornecer os dados necessários, tornando baixa a chance de indisponibilidade de material para análise.
-- **Mitigação:** Levantar previamente a quantidade mínima de dados amostrais necessária e solicitar oficialmente à universidade a disponibilização desses dados.
+&emsp; Outro risco identificado está relacionado ao descumprimento de prazos, classificado como humano. Essa ameaça envolve a possibilidade de membros do grupo não concluírem suas atividades no prazo definido, o que pode atrasar etapas subsequentes, gerar sobrecarga em alguns integrantes e comprometer a entrega de funcionalidades do MVP. O impacto é considerado alto e a probabilidade estimada em 30%, com base em experiências anteriores que indicam a necessidade de melhorar a definição de prazos e a comunicação. Para mitigar esse risco, recomenda-se reavaliar os prazos considerando o tempo de aprendizado e de testes, atualizar periodicamente o status das atividades e manter comunicação constante sobre eventuais impedimentos.
 
-&emsp; **4.1.5.1.2. Descumprimento de prazos**
+&emsp; Também foi identificada a dificuldade na aplicação de modelos preditivos, enquadrada na categoria acadêmica. Essa situação pode ocorrer quando houver obstáculos na implementação de um ou mais modelos apresentados durante as aulas. O impacto é moderado, pois, embora seja possível recorrer a modelos alternativos testados, há risco de que estes apresentem desempenho inferior ao originalmente planejado. A probabilidade de ocorrência é de 10%, considerando o suporte contínuo de professores e monitores. A mitigação envolve buscar auxílio técnico sempre que surgirem dificuldades, recorrendo à monitoria e ao corpo docente especializado.
 
-- **Categoria:** Humano
-Ameaça: Membros do grupo não concluírem suas atividades dentro dos prazos definidos, atrasando etapas subsequentes do projeto.
-- **Impacto (Alto):** Tarefas atrasadas podem paralisar o desenvolvimento em determinado estágio, gerar sobrecarga em alguns membros ou até comprometer a entrega de funcionalidades do MVP.
-- **Probabilidade (30%):** Com base na experiência adquirida em projetos anteriores, espera-se que os membros consigam estabelecer prazos realistas e comunicar eventuais dificuldades com antecedência. Contudo, reconhece-se que o grupo ainda está em processo de aprendizado, o que torna eventuais falhas compreensíveis.
-- **Mitigação:** Reavaliar prazos com base na experiência passada, considerando o tempo de aprendizado e testes. Realizar atualizações periódicas do status das atividades e manter comunicação constante sobre obstáculos no desenvolvimento.
-
-&emsp; **4.1.5.1.3. Dificuldades na aplicação de modelos preditivos**
-
-- **Categoria:** Acadêmico
-Ameaça: Dificuldade na implementação de um ou mais modelos apresentados durante as aulas.
-- **Impacto (Moderado):** Caso um modelo não seja aplicável, o projeto poderá recorrer aos demais modelos testados. Entretanto, há risco de desempenho inferior em relação ao modelo originalmente planejado.
-- **Probabilidade (10%):** Com o suporte contínuo do professor e da monitoria, espera-se que qualquer dificuldade técnica possa ser superada com auxílio qualificado.
-- **Mitigação:** Solicitar apoio técnico sempre que surgirem dificuldades na aplicação de modelos, recorrendo à monitoria ou ao corpo docente especializado.
-
-&emsp; **4.1.5.1.4. Fazer um modelo com baixa acurácia**
-
-- **Categoria:** Técnico
-Ameaça: Desenvolver um modelo preditivo com acurácia insuficiente para gerar resultados confiáveis e úteis na prática.
-- **Impacto (Alto):** Um modelo com baixo desempenho compromete a utilidade da solução, podendo gerar diagnósticos incorretos sobre o risco de reprovação dos alunos. Isso afetaria diretamente a credibilidade do projeto junto aos stakeholders institucionais e reduziria o potencial de aplicação prática.
-- **Probabilidade (20%):** Embora o grupo esteja empenhado em testar diferentes algoritmos e estratégias de modelagem, existe a possibilidade de que os dados não sejam suficientemente robustos ou que os ajustes (tuning) não sejam ideais para alcançar uma acurácia satisfatória.
-- **Mitigação:** Realizar testes com múltiplos modelos preditivos, aplicar validação cruzada, otimizar hiperparâmetros e, se necessário, solicitar feedback técnico dos professores e monitores especializados em ciência de dados.
+&emsp; Por fim, considera-se o risco de desenvolver um modelo com baixa acurácia, classificado como técnico. Um desempenho insatisfatório compromete a utilidade prática da solução, podendo gerar diagnósticos incorretos sobre o risco de reprovação e afetar a credibilidade do projeto perante os stakeholders institucionais. Esse risco tem impacto alto e probabilidade estimada em 20%, já que, apesar dos esforços da equipe em testar diferentes algoritmos e estratégias de modelagem, podem ocorrer limitações nos dados ou ajustes inadequados. A mitigação proposta inclui a realização de experimentos com múltiplos algoritmos, aplicação de validação cruzada, otimização de hiperparâmetros e solicitação de feedback técnico a professores e monitores especializados.
 
 **4.1.5.2. Oportunidades**
 
+&emsp; Além da identificação e análise dos riscos, é relevante reconhecer e explorar as oportunidades que o projeto oferece. A partir dessa perspectiva, elaborou-se a matriz de oportunidades com o propósito de potencializar fatores favoráveis, agregar valor ao desenvolvimento da solução e maximizar os benefícios dessa etapa de construção. Essa abordagem permite direcionar esforços para iniciativas que fortaleçam o trabalho do grupo e ampliem o impacto positivo do modelo preditivo desenvolvido para a Universidade EAFIT, apresentado na figura xx.
+
 <div align="center">
 
-<sup>Figura : Matriz de oportunidades do projeto</sup>
+<sup>Figura xx: Matriz de oportunidades do projeto</sup>
 
 <img src="../assets/matrizOportunidades.png">
 
 <sup>Fonte: Material produzido pelos autores</sup>
 
-</div>>
+</div>
 
-&emsp; As oportunidades identificadas no projeto foram descritas considerando três dimensões principais: oportunidade, impacto e probabilidade. A análise dessas oportunidades permite reconhecer e potencializar fatores que podem agregar valor ao desenvolvimento da solução e à formação dos integrantes do grupo. Assim como na seção anterior, a estruturação clara desses elementos favorece a tomada de decisões estratégicas durante a execução do projeto.
+&emsp; As oportunidades identificadas no projeto foram descritas considerando três dimensões principais: oportunidade, impacto e probabilidade. Essa análise possibilita reconhecer e explorar fatores que podem agregar valor tanto ao desenvolvimento da solução quanto à formação acadêmica e profissional dos integrantes do grupo. A organização dessas informações de maneira clara contribui para embasar decisões estratégicas e maximizar os benefícios potenciais ao longo da execução do projeto.
 
-&emsp; **4.1.5.2.1. Intercâmbio cultural**
+&emsp; A primeira oportunidade está relacionada ao intercâmbio cultural, envolvendo a troca de experiências com a instituição parceira e o contato com metodologias de ensino aplicadas em outro país. Como nenhum dos integrantes do grupo teve, até então, a oportunidade de conhecer a Colômbia, esta experiência representa uma excelente chance de ampliar a compreensão sobre a realidade educacional e cultural local, enriquecendo não apenas o aprendizado acadêmico, mas também a vivência pessoal de cada participante. O impacto dessa oportunidade é considerado muito alto, e sua probabilidade de concretização chega a 90%, uma vez que o longo período de colaboração com a instituição colombiana torna praticamente certa a interação direta com seus profissionais e a troca de experiências que irão aprofundar o contexto da aplicação do modelo preditivo.
 
-- **Oportunidade:** Possibilidade de trocar experiências culturais com a instituição parceira, além de conhecer as metodologias de ensino aplicadas em outro país.
-- **Impacto (Muito alto):** Considerando que nenhum dos integrantes do grupo teve, até então, a oportunidade de conhecer a Colômbia, este projeto representa uma excelente chance de ampliar a compreensão sobre a realidade educacional e cultural local, enriquecendo tanto a experiência acadêmica quanto pessoal dos envolvidos.
-- **Probabilidade (90%):** Devido ao longo período de colaboração com a instituição colombiana, a interação com seus profissionais é praticamente garantida, permitindo a troca de experiências rotineiras que ajudarão a contextualizar e aprofundar a aplicação do modelo preditivo.
-
-&emsp; **4.1.5.2.2. Trabalhar com análise de dados**
-
-- **Oportunidade:** Aplicar técnicas de análise de dados para resolver uma dor real de uma instituição de ensino de grande relevância na América Latina.
-- **Impacto (Alto):** Por se tratar da primeira experiência de muitos integrantes na construção de um modelo preditivo, o projeto representa uma oportunidade valiosa de aprendizado prático e de enriquecimento do portfólio profissional.
-- **Probabilidade (90%):** A equipe será exposta a diferentes modelos preditivos e ambientes de execução, o que garantirá a todos a oportunidade de compreender os fundamentos da área e adquirir conhecimentos essenciais para o avanço futuro na ciência de dados.
-
+&emsp; A segunda oportunidade refere-se ao trabalho com análise de dados, no qual a equipe poderá aplicar técnicas para solucionar uma necessidade real de uma instituição de ensino de grande relevância na América Latina. Para muitos integrantes, essa será a primeira experiência prática na construção de um modelo preditivo, o que torna o projeto um recurso valioso para o desenvolvimento de competências técnicas e para o fortalecimento do portfólio profissional. O impacto é classificado como alto, e a probabilidade de concretização é de 90%, pois a equipe estará exposta a diferentes tipos de modelos preditivos e ambientes de execução, garantindo a todos a oportunidade de compreender os fundamentos da área e adquirir conhecimentos essenciais para futuros avanços na ciência de dados.
 
 #### 4.1.6. Personas
 ```
