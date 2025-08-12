@@ -136,7 +136,7 @@ Remova este bloco ao final
 - **Entrada de Novos Concorrentes**: facilidade ou dificuldade para que novas empresas ingressem no mercado, determinada por barreiras de entrada como capital inicial, regulamentações e diferenciação de marca.
 - **Produtos ou Serviços Substitutos**: presença de alternativas que atendem à mesma necessidade, limitando preços e influenciando a demanda.
 
-### vai entrar uma imagem aqui
+<!-- Image placeholder: Porter's Five Forces diagram -->
 
 **Rivalidade entre concorrentes existentes**
 
