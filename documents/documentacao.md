@@ -328,7 +328,7 @@ Ameaça: Desenvolver um modelo preditivo com acurácia insuficiente para gerar r
 
 &emsp; Juan nasceu e cresceu em Bello, uma cidade próxima a Medellín. Vem de uma família de classe média-baixa, onde é o primeiro a ingressar em uma universidade particular. Sempre se destacou na escola pública por sua criatividade e curiosidade, especialmente em áreas como matemática e informática, onde aprendeu programação básica por conta própria através de vídeos no YouTube.
 
-Ingressar na Universidad EAFIT foi um grande sonho realizado, mas o choque com a metodologia, o volume de conteúdo e a linguagem acadêmica mais formal têm representado grandes desafios. Juan trabalha meio período em uma loja para ajudar nas despesas e, por isso, nem sempre consegue dedicar o tempo ideal aos estudos. Mesmo esforçado, suas notas nos primeiros quizzes e avaliações foram baixas, o que começou a impactar sua motivação.
+&emsp; Ingressar na Universidad EAFIT foi um grande sonho realizado, mas o choque com a metodologia, o volume de conteúdo e a linguagem acadêmica mais formal têm representado grandes desafios. Juan trabalha meio período em uma loja para ajudar nas despesas e, por isso, nem sempre consegue dedicar o tempo ideal aos estudos. Mesmo esforçado, suas notas nos primeiros quizzes e avaliações foram baixas, o que começou a impactar sua motivação.
 
 #### Frustrações
 
@@ -376,7 +376,7 @@ Ingressar na Universidad EAFIT foi um grande sonho realizado, mas o choque com a
 
 #### Biografia
 
-Ricardo nasceu em Bogotá e desde cedo demonstrou paixão por educação e tecnologia. Formou-se em Engenharia de Sistemas na Universidad Nacional da Colômbia e concluiu mestrado e doutorado em Inovação Educacional no MIT. Iniciou sua carreira como professor de algoritmos antes de assumir cargos de liderança acadêmica. Hoje, como diretor, busca integrar soluções baseadas em dados para melhorar o desempenho estudantil e reduzir a evasão.
+&emsp; Ricardo nasceu em Bogotá e desde cedo demonstrou paixão por educação e tecnologia. Formou-se em Engenharia de Sistemas na Universidad Nacional da Colômbia e concluiu mestrado e doutorado em Inovação Educacional no MIT. Iniciou sua carreira como professor de algoritmos antes de assumir cargos de liderança acadêmica. Hoje, como diretor, busca integrar soluções baseadas em dados para melhorar o desempenho estudantil e reduzir a evasão.
 
 #### Frustrações
 
