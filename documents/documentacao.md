@@ -228,7 +228,7 @@ Remova este bloco ao final
 
 ## <a name="c6"></a>6. Referências
 
-QS. Rankings released! QS World University Rankings: Latin America & The Caribbean 2025. Disponível em: https://www.qs.com/rankings-released-qs-world-university-rankings-latin-america-the-caribbean-2025/. Acesso em 9/08/2025.
+QS. **Rankings released! QS World University Rankings: Latin America & The Caribbean 2025**. Disponível em: https://www.qs.com/rankings-released-qs-world-university-rankings-latin-america-the-caribbean-2025/. Acesso em: 9 ago. 2025.
 
 ## <a name="attachments"></a>Anexos
 ```
