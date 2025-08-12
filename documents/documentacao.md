@@ -255,6 +255,9 @@ Ameaça: Desenvolver um modelo preditivo com acurácia insuficiente para gerar r
 
 #### 4.1.6. Personas
 
+&emsp; No desenvolvimento de produtos e serviços — especialmente em projetos de tecnologia e experiência do usuário — o uso de personas é uma prática amplamente adotada para orientar decisões de design. Uma persona é uma representação fictícia, porém plausível, de um usuário-alvo, construída a partir de dados qualitativos e quantitativos sobre seus comportamentos, necessidades, motivações e objetivos. Essa abordagem ajuda as equipes a manterem o foco nas expectativas reais do público, reduzindo suposições e alinhando o projeto às demandas concretas.
+&emsp; De acordo com Cooper et al. (2014)[personas], personas funcionam como arquétipos que sintetizam as principais características de determinados segmentos de usuários, permitindo que designers e desenvolvedores fundamentem suas escolhas em evidências, e não em opiniões subjetivas. Ao serem aplicadas em documentos técnicos e estratégicos, elas contribuem para que o produto final seja relevante, funcional e verdadeiramente centrado no usuário.
+
 <div align = "center">
 
 <sub>Figura : Persona 1</sub>
@@ -277,9 +280,9 @@ Ameaça: Desenvolver um modelo preditivo com acurácia insuficiente para gerar r
 
 #### Biografia
 
-Paola nasceu em Medellín, na Colômbia, e cresceu em um ambiente onde a educação era altamente valorizada. Desde pequena, era curiosa e gostava de resolver problemas práticos. Apaixonada por aprender, escolheu seguir a carreira acadêmica e se formou em Engenharia de Software pela Universidade Industrial de Santander. Posteriormente, concluiu um mestrado em Educação e Tecnologias Digitais na Universidad de los Andes.
+&emsp; Paola nasceu em Medellín, na Colômbia, e cresceu em um ambiente onde a educação era altamente valorizada. Desde pequena, era curiosa e gostava de resolver problemas práticos. Apaixonada por aprender, escolheu seguir a carreira acadêmica e se formou em Engenharia de Software pela Universidade Industrial de Santander. Posteriormente, concluiu um mestrado em Educação e Tecnologias Digitais na Universidad de los Andes.
 
-Atualmente, mora em Medellín e leciona disciplinas introdutórias de programação na Universidad EAFIT, onde também lidera iniciativas de inovação educacional. É reconhecida por sua dedicação ao sucesso dos alunos e por seu compromisso com a inclusão e o uso ético da tecnologia na educação. Atua como ponte entre dados educacionais e ações pedagógicas eficazes, sempre buscando formas de aprimorar os resultados acadêmicos.
+&emsp; Atualmente, mora em Medellín e leciona disciplinas introdutórias de programação na Universidad EAFIT, onde também lidera iniciativas de inovação educacional. É reconhecida por sua dedicação ao sucesso dos alunos e por seu compromisso com a inclusão e o uso ético da tecnologia na educação. Atua como ponte entre dados educacionais e ações pedagógicas eficazes, sempre buscando formas de aprimorar os resultados acadêmicos.
 
 #### Frustrações
 
@@ -324,9 +327,9 @@ Atualmente, mora em Medellín e leciona disciplinas introdutórias de programaç
 
 #### Biografia
 
-Juan nasceu e cresceu em Bello, uma cidade próxima a Medellín. Vem de uma família de classe média-baixa, onde é o primeiro a ingressar em uma universidade particular. Sempre se destacou na escola pública por sua criatividade e curiosidade, especialmente em áreas como matemática e informática, onde aprendeu programação básica por conta própria através de vídeos no YouTube.
+&emsp; Juan nasceu e cresceu em Bello, uma cidade próxima a Medellín. Vem de uma família de classe média-baixa, onde é o primeiro a ingressar em uma universidade particular. Sempre se destacou na escola pública por sua criatividade e curiosidade, especialmente em áreas como matemática e informática, onde aprendeu programação básica por conta própria através de vídeos no YouTube.
 
-Ingressar na Universidad EAFIT foi um grande sonho realizado, mas o choque com a metodologia, o volume de conteúdo e a linguagem acadêmica mais formal têm representado grandes desafios. Juan trabalha meio período em uma loja para ajudar nas despesas e, por isso, nem sempre consegue dedicar o tempo ideal aos estudos. Mesmo esforçado, suas notas nos primeiros quizzes e avaliações foram baixas, o que começou a impactar sua motivação.
+&emsp; Ingressar na Universidad EAFIT foi um grande sonho realizado, mas o choque com a metodologia, o volume de conteúdo e a linguagem acadêmica mais formal têm representado grandes desafios. Juan trabalha meio período em uma loja para ajudar nas despesas e, por isso, nem sempre consegue dedicar o tempo ideal aos estudos. Mesmo esforçado, suas notas nos primeiros quizzes e avaliações foram baixas, o que começou a impactar sua motivação.
 
 #### Frustrações
 
@@ -447,6 +450,9 @@ Remova este bloco ao final
 [Númeração de acordo com a ordem alfabética] UNIVERSIDAD EAFIT. "Excelencia y reconocimiento". Disponível em: https://www.eafit.edu.co/informes-de-gestion-y-sostenibilidad/informe-sostenibilidad-2023/excelencia-y-reconocimiento. Acesso em: 11 de agosto de 2025.
 
 [Númeração de acordo com a ordem alfabética] QS QUACQUARELLI SYMONDS. "QS World University Rankings 2025". Disponível em: https://www.topuniversities.com/university-rankings/world-university-rankings/2025. Acesso em: 11 de agosto de 2025.
+
+[personas] <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [COOPER, Alan; REIMANN, Robert; CRONIN, David; NOESSEL, Christopher. *About Face: The Essentials of Interaction Design*. 4. ed. Indianapolis: Wiley, 2014.](https://www.wiley.com/en-us/About+Face%3A+The+Essentials+of+Interaction+Design%2C+4th+Edition-p-9781118766576)
+
 
 [Númeração de acordo com a ordem alfabética]. <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [PMI – Project Management Institute. Um guia do conhecimento em gerenciamento de projetos (Guia PMBOK®): guia do conhecimento em gerenciamento de projetos. 7. ed. Newtown Square, PA: Project Management Institute, 2021.](https://www.academiaplaorc.com.br/wp-content/uploads/2024/07/Guia-PMBOK-7a-Edicao.pdf)  
 
