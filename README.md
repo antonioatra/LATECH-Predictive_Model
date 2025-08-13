@@ -4,7 +4,7 @@
 <a href= "https://www.inteli.edu.br/"><img src="assets/inteli.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do projeto
+#  LATECH
 
 ## Nome do grupo
 
@@ -14,7 +14,7 @@
 - <a href="https://www.linkedin.com/in/leandro-precaro-barankiewicz-filho-8a293a345/">Leandro Precaro Brankiewicz Filho</a> 
 - <a href="https://www.linkedin.com/in/yuriboczar/">Yuri Boczar</a> 
 - <a href="https://www.linkedin.com/in/messias-olivindo/">Messias Olivindo</a>
-- <a href="">Nome do integrante 6</a> 
+- <a href="https://www.linkedin.com/in/carlos-quaglia-309088357/">Carlos Quaglia</a> 
 - <a href="https://www.linkedin.com/in/antonio-augusto-tavares-ribeiro-andr%C3%A9-613937345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Antonio Augusto Tavares Ribeiro André</a>
 
 ## :teacher: Professores:
