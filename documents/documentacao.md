@@ -1,11 +1,5 @@
 # Documentação Modelo Preditivo - Inteli
 
-```
-INSTRUÇÕES GERAIS (remova este trecho ao final)
-
-Você deve editar este documento utilizando notação markdown - siga as convenções neste link 
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
-```
 
 ## Nome da Solução
 ### Nome do grupo
