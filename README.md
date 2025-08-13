@@ -6,7 +6,7 @@
 
 #  LATECH
 
-## Nome do grupo
+## THROXY
 
 ## :student: Integrantes: 
 - <a href="https://www.linkedin.com/in/luiz-hinuy-0995252b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Luiz Hinuy</a>
