@@ -68,7 +68,8 @@ Remova este bloco ao final
 
 ## <a name="c4"></a>4. Desenvolvimento e Resultados
 ### 4.1. Compreensão do Problema
-#### 4.1.1. Contexto da indústria 
+#### 4.1.1. Contexto da indústria e 5 forças de Porter
+##### 1. Contexto da indústria:
 
 &emsp;A Universidad EAFIT é uma instituição privada sem fins lucrativos, fundada em Medellín, que se consolidou como protagonista no cenário acadêmico colombiano e regional. Reconhecida por sua excelência acadêmica e inovação, ocupa a 56ª posição entre 437 universidades no QS World University Rankings: Latin America & the Caribbean 2025, sendo a principal instituição fora de Bogotá e uma das cinco melhores universidades privadas da Colômbia. Entre seus principais concorrentes estão a Universidad de los Andes, líder no segmento privado e classificada em 7º lugar na América Latina, referência em pesquisa de ponta; a Universidad Pontificia Bolivariana (UPB), também sediada em Medellín e posicionada na 84ª colocação, com atuação multidisciplinar; e a Universidad CES, 33ª na região e especializada nas áreas de saúde e engenharia biomédica.
 
@@ -77,6 +78,44 @@ Remova este bloco ao final
 &emsp;O setor de ensino superior na Colômbia passa por transformações aceleradas. Estudos apontam que 69% dos estudantes preferem modelos flexíveis de aprendizagem, seja no formato online, híbrido ou blended. A adoção de ferramentas de inteligência artificial já alcança 92% do corpo discente, exigindo da EAFIT políticas claras de uso e integridade acadêmica. Paralelamente, as microcredentials ganham espaço como percursos de aprendizagem curtos, flexíveis e reconhecidos, impulsionando debates regionais liderados pela UNESCO IESALC para padronização e garantia de qualidade.
 
 &emsp;Nesse contexto, a EAFIT se posiciona para capitalizar essas mudanças, investindo em inovação pedagógica, integração tecnológica e ampliação de parcerias estratégicas, visando não apenas manter sua relevância no cenário acadêmico, mas também antecipar tendências e moldar o futuro da educação superior na América Latina.
+
+##### 2. 5 forças de Porter:
+
+&emsp;No livro *Competitive Strategy: Techniques for Analyzing Industries and Competitors* (1986), Michael Porter apresenta o modelo das **Cinco Forças**, um método para avaliar a atratividade e a dinâmica competitiva de um setor. Essa estrutura identifica os principais elementos que influenciam o desempenho e a lucratividade das empresas.
+
+- **Rivalidade no Setor**: intensidade da competição entre empresas já estabelecidas, manifestada por estratégias como redução de preços, fortalecimento de marca, inovação e melhoria no atendimento.
+- **Influência dos Fornecedores**: capacidade dos fornecedores de impactar custos e qualidade, afetando diretamente a rentabilidade das empresas compradoras.
+- **Poder dos Consumidores**: grau em que os clientes podem exigir preços mais baixos ou maior qualidade, pressionando margens de lucro.
+- **Entrada de Novos Concorrentes**: facilidade ou dificuldade para que novas empresas ingressem no mercado, determinada por barreiras de entrada como capital inicial, regulamentações e diferenciação de marca.
+- **Produtos ou Serviços Substitutos**: presença de alternativas que atendem à mesma necessidade, limitando preços e influenciando a demanda.
+
+<div align="center">
+   
+  <sub>Figura : 5 forças de Porter </sub>
+
+  <img src="../assets/5forcas.png">
+
+  <sup>Fonte: Imagem retirada do site https://ufabcjr.com.br/</sup>
+
+**Rivalidade entre concorrentes existentes**
+
+&emsp;A Universidad EAFIT atua no setor de ensino superior colombiano, especialmente no segmento privado, caracterizado por um número moderado de instituições de grande porte e forte reputação acadêmica. Seus principais concorrentes diretos incluem a Universidad de los Andes, líder no ranking nacional, a Universidad Pontificia Bolivariana (UPB) e a Universidad CES, todas com forte presença em áreas estratégicas de ensino e pesquisa. Essa rivalidade é intensificada por fatores como reputação acadêmica, qualidade do corpo docente, internacionalização, infraestrutura e inovação pedagógica. Apesar disso, a EAFIT diferencia-se por seu posicionamento como a principal universidade privada fora de Bogotá, pela diversificação de receitas e pela oferta de programas inovadores em múltiplas áreas do conhecimento, o que fortalece sua marca e a mantém competitiva no cenário nacional e regional.
+
+**Poder de barganha de fornecedores**
+
+&emsp;No setor educacional, os fornecedores podem incluir desde editoras acadêmicas e plataformas tecnológicas até prestadores de serviços de manutenção, segurança e alimentação. A EAFIT, por ser uma instituição de grande porte e com sólida situação financeira, tem poder de negociação elevado, podendo diversificar fornecedores e adotar soluções internas para reduzir dependências estratégicas. Sua posição consolidada no mercado permite estabelecer contratos de longo prazo em condições favoráveis, além de buscar parcerias acadêmicas e tecnológicas que geram benefícios mútuos, diminuindo o risco de impactos significativos advindos de aumento de custos ou mudanças nas condições de fornecimento.
+
+**Poder de barganha de compradores**
+
+&emsp;Os "compradores" no contexto da EAFIT são os estudantes e suas famílias, que avaliam não apenas o preço das mensalidades, mas também a qualidade do ensino, a empregabilidade dos egressos, as oportunidades de intercâmbio e o reconhecimento acadêmico. No segmento premium da educação superior privada, o poder de barganha é moderado: embora os alunos possam optar por outras instituições de prestígio, a reputação, a localização estratégica e o portfólio diversificado da EAFIT reduzem a elasticidade da demanda. No entanto, com o aumento da oferta de cursos online, híbridos e microcredentials — muitas vezes a preços menores —, cresce a pressão para que a EAFIT mantenha diferenciais claros de valor agregado, reforçando a importância de inovação contínua e experiência acadêmica de excelência.
+
+**Ameaça de novos entrantes**
+
+&emsp;O ingresso de novos competidores relevantes no ensino superior colombiano é dificultado por barreiras como altos investimentos em infraestrutura, acreditações, corpo docente qualificado e reputação acadêmica, além de regulamentações rigorosas. Apesar disso, o avanço da educação online e de plataformas globais de cursos representa uma ameaça indireta, pois reduz as barreiras geográficas e oferece alternativas de formação a custos competitivos. Nesse cenário, a EAFIT mitiga o risco por meio de expansão de programas digitais, parcerias internacionais e fortalecimento de sua marca como centro de excelência acadêmica e inovação.
+
+**Ameaça de produtos substitutos**
+
+&emsp;As principais alternativas ao ensino superior tradicional incluem cursos técnicos, bootcamps, programas de microcredentials e plataformas de aprendizado online, que oferecem formação mais rápida e focada em habilidades específicas. Esses formatos, muitas vezes mais acessíveis, podem atrair estudantes que buscam inserção rápida no mercado de trabalho ou atualização profissional contínua. A ameaça é crescente, especialmente em áreas ligadas à tecnologia e negócios, onde a aprendizagem prática é valorizada. No entanto, a EAFIT mantém vantagem competitiva ao oferecer uma formação integral, com reconhecimento acadêmico formal, rede de contatos e experiências de pesquisa e intercâmbio, fatores que ainda representam barreiras significativas para a substituição total por formatos alternativos.
 
 #### 4.1.2. Análise SWOT 
 
@@ -177,7 +216,7 @@ Remova este bloco ao final
 &emsp; Com todos os passos passados sendo feitos corretamentes, já é possível definir e observar como o modelo está performando. Primeiramente, a máquina, necessita acertar qual aluno está com dificuldade ou está caminhando para uma situação agravada de reprovação. Outro ponto que pode ser usado como métrica de sucesso é o aumento do suporte dos professores aos alunos e essa alta nos atendimentos resultar em melhoras nas notas. Além disso, o aumento da escolha, por parte dos alunos, de incluir essa matéria em sua grade curricular também é uma métrica de sucesso.
 
 #### 4.1.4. Value Proposition Canvas
-O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de forma prática e objetiva, o que uma solução oferece com o que o cliente realmente precisa. Desenvolvido por Alexander Osterwalder, Yves Pigneur e Alan Smith, ele organiza a análise em dois blocos complementares: o Perfil do Cliente, que detalha as tarefas atuais do cliente, as dores em relação aquela atividade e os ganhos esperados com a solução, e o Mapa de Valor, com as principais informações sobre o produto ou serviço, os elementos aliviantes de dores e as vantagens que criam de ganho. Nesse sentido, o objetivo é alcançar o “encaixe” entre oferta e demanda: entender claramente o que o cliente tenta realizar, quais obstáculos enfrenta e quais resultados espera, e então descrever como a solução elimina essas dores e potencializa os ganhos.
+O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de forma prática e objetiva, o que uma solução oferece com o que o cliente realmente precisa. Desenvolvido por Alexander Osterwalder, Yves Pigneur e Alan Smith, ele organiza a análise em dois blocos complementares: o Perfil do Cliente, que detalha as tarefas atuais do cliente, as dores em relação aquela atividade e os ganhos esperados com a solução, e o Mapa de Valor, com as principais informações sobre o produto ou serviço, os elementos aliviantes de dores e as vantagens que criam de ganho. Nesse sentido, o objetivo é alcançar o "encaixe" entre oferta e demanda: entender claramente o que o cliente tenta realizar, quais obstáculos enfrenta e quais resultados espera, e então descrever como a solução elimina essas dores e potencializa os ganhos.
 
 <div align="center">
    
@@ -209,11 +248,11 @@ O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de f
 <hr> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
-**Aliviam as Dores:** O sistema prevê próximos resultados e explica o “porquê do risco” (ex.: quizzes pendentes, queda de desempenho, efeitos de horário/programa), reduzindo checagens manuais. É escalável, com execução automática por marcos do semestre ou upload manual, absorvendo o crescimento de alunos sem sobrecarga.
-<hr> 
+**Aliviam as Dores:** O sistema prevê próximos resultados e explica o "porquê do risco" (ex.: quizzes pendentes, queda de desempenho, efeitos de horário/programa), reduzindo checagens manuais. É escalável, com execução automática por marcos do semestre ou upload manual, absorvendo o crescimento de alunos sem sobrecarga.
+<hr>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
-**Produtos e Serviços:** Modelo preditivo que destaca alunos em risco (nota final < 3) e diferencia “aprova”, “reprova” e “cancela”. Integra notas oficiais, quizzes/talleres, grupos/horários e indicadores de evolução, com privacidade garantida. Entrega inclui dashboard web, manuais (usuário e técnico), capacitação breve e revisão do modelo a cada semestre.
+**Produtos e Serviços:** Modelo preditivo que destaca alunos em risco (nota final < 3) e diferencia "aprova", "reprova" e "cancela". Integra notas oficiais, quizzes/talleres, grupos/horários e indicadores de evolução, com privacidade garantida. Entrega inclui dashboard web, manuais (usuário e técnico), capacitação breve e revisão do modelo a cada semestre.
 <hr> 
 
 #### 4.1.5. Matriz de Riscos
@@ -286,7 +325,7 @@ O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de f
 - Nome: Paola Andrea Vallejo Ramírez  
 - Gênero: Feminino  
 - Idade: 41 anos  
-- Cidade: Medellín – Antioquia, Colômbia  
+- Cidade: Medellín - Antioquia, Colômbia  
 - Posição: Docente universitária e coordenadora de projetos pedagógicos na Universidad EAFIT
 
 #### Biografia
@@ -333,7 +372,7 @@ O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de f
 - Nome: Juan Esteban Gómez Ríos  
 - Gênero: Masculino  
 - Idade: 18 anos  
-- Cidade: Bello – Antioquia, Colômbia  
+- Cidade: Bello - Antioquia, Colômbia  
 - Posição: Estudante de primeiro semestre no curso de Engenharia de Sistemas da Universidad EAFIT
 
 #### Biografia
@@ -420,45 +459,6 @@ Posicione aqui sua política de privacidade em acordo com a LGPD
 
 Remova este bloco ao final
 ```
-#### 4.1.9 Cinco Forças de Porter
-
-&emsp;No livro *Competitive Strategy: Techniques for Analyzing Industries and Competitors* (1986), Michael Porter apresenta o modelo das **Cinco Forças**, um método para avaliar a atratividade e a dinâmica competitiva de um setor. Essa estrutura identifica os principais elementos que influenciam o desempenho e a lucratividade das empresas.
-
-- **Rivalidade no Setor**: intensidade da competição entre empresas já estabelecidas, manifestada por estratégias como redução de preços, fortalecimento de marca, inovação e melhoria no atendimento.
-- **Influência dos Fornecedores**: capacidade dos fornecedores de impactar custos e qualidade, afetando diretamente a rentabilidade das empresas compradoras.
-- **Poder dos Consumidores**: grau em que os clientes podem exigir preços mais baixos ou maior qualidade, pressionando margens de lucro.
-- **Entrada de Novos Concorrentes**: facilidade ou dificuldade para que novas empresas ingressem no mercado, determinada por barreiras de entrada como capital inicial, regulamentações e diferenciação de marca.
-- **Produtos ou Serviços Substitutos**: presença de alternativas que atendem à mesma necessidade, limitando preços e influenciando a demanda.
-
-  <sub>Figura : 5 forças de Porter </sub>
-
-  <img src="../assets/5forcas.png">
-
-  <sup>Fonte: Imagem retirada do site https://ufabcjr.com.br/</sup>
-
-**Rivalidade entre concorrentes existentes**
-
-&emsp;A Universidad EAFIT atua no setor de ensino superior colombiano, especialmente no segmento privado, caracterizado por um número moderado de instituições de grande porte e forte reputação acadêmica. Seus principais concorrentes diretos incluem a Universidad de los Andes, líder no ranking nacional, a Universidad Pontificia Bolivariana (UPB) e a Universidad CES, todas com forte presença em áreas estratégicas de ensino e pesquisa. Essa rivalidade é intensificada por fatores como reputação acadêmica, qualidade do corpo docente, internacionalização, infraestrutura e inovação pedagógica. Apesar disso, a EAFIT diferencia-se por seu posicionamento como a principal universidade privada fora de Bogotá, pela diversificação de receitas e pela oferta de programas inovadores em múltiplas áreas do conhecimento, o que fortalece sua marca e a mantém competitiva no cenário nacional e regional.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-**Poder de barganha de fornecedores**
-
-&emsp;No setor educacional, os fornecedores podem incluir desde editoras acadêmicas e plataformas tecnológicas até prestadores de serviços de manutenção, segurança e alimentação. A EAFIT, por ser uma instituição de grande porte e com sólida situação financeira, tem poder de negociação elevado, podendo diversificar fornecedores e adotar soluções internas para reduzir dependências estratégicas. Sua posição consolidada no mercado permite estabelecer contratos de longo prazo em condições favoráveis, além de buscar parcerias acadêmicas e tecnológicas que geram benefícios mútuos, diminuindo o risco de impactos significativos advindos de aumento de custos ou mudanças nas condições de fornecimento.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-**Poder de barganha de compradores**
-
-&emsp;Os “compradores” no contexto da EAFIT são os estudantes e suas famílias, que avaliam não apenas o preço das mensalidades, mas também a qualidade do ensino, a empregabilidade dos egressos, as oportunidades de intercâmbio e o reconhecimento acadêmico. No segmento premium da educação superior privada, o poder de barganha é moderado: embora os alunos possam optar por outras instituições de prestígio, a reputação, a localização estratégica e o portfólio diversificado da EAFIT reduzem a elasticidade da demanda. No entanto, com o aumento da oferta de cursos online, híbridos e microcredentials — muitas vezes a preços menores —, cresce a pressão para que a EAFIT mantenha diferenciais claros de valor agregado, reforçando a importância de inovação contínua e experiência acadêmica de excelência.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-**Ameaça de novos entrantes**
-
-&emsp;O ingresso de novos competidores relevantes no ensino superior colombiano é dificultado por barreiras como altos investimentos em infraestrutura, acreditações, corpo docente qualificado e reputação acadêmica, além de regulamentações rigorosas. Apesar disso, o avanço da educação online e de plataformas globais de cursos representa uma ameaça indireta, pois reduz as barreiras geográficas e oferece alternativas de formação a custos competitivos. Nesse cenário, a EAFIT mitiga o risco por meio de expansão de programas digitais, parcerias internacionais e fortalecimento de sua marca como centro de excelência acadêmica e inovação.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-**Ameaça de produtos substitutos**
-
-&emsp;As principais alternativas ao ensino superior tradicional incluem cursos técnicos, bootcamps, programas de microcredentials e plataformas de aprendizado online, que oferecem formação mais rápida e focada em habilidades específicas. Esses formatos, muitas vezes mais acessíveis, podem atrair estudantes que buscam inserção rápida no mercado de trabalho ou atualização profissional contínua. A ameaça é crescente, especialmente em áreas ligadas à tecnologia e negócios, onde a aprendizagem prática é valorizada. No entanto, a EAFIT mantém vantagem competitiva ao oferecer uma formação integral, com reconhecimento acadêmico formal, rede de contatos e experiências de pesquisa e intercâmbio, fatores que ainda representam barreiras significativas para a substituição total por formatos alternativos.
 
 ### 4.2. Compreensão dos Dados
 
@@ -523,7 +523,7 @@ Remova este bloco ao final
 
 ## <a name="c5"></a>5. Conclusões e Recomendações
 ```
-Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de negócios em relação ao uso desse modelo. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras, como um manual de usuário mais detalhado na seção “Anexos”. Não se esqueça também das pessoas que serão potencialmente afetadas pelas decisões do modelo preditivo e elabore recomendações que ajudem seu parceiro a tratá-las de maneira estratégica e ética. 
+Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de negócios em relação ao uso desse modelo. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras, como um manual de usuário mais detalhado na seção "Anexos". Não se esqueça também das pessoas que serão potencialmente afetadas pelas decisões do modelo preditivo e elabore recomendações que ajudem seu parceiro a tratá-las de maneira estratégica e ética. 
 
 Remova este bloco ao final
 ```
@@ -547,7 +547,7 @@ Remova este bloco ao final
 [personas] <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [COOPER, Alan; REIMANN, Robert; CRONIN, David; NOESSEL, Christopher. *About Face: The Essentials of Interaction Design*. 4. ed. Indianapolis: Wiley, 2014.](https://www.wiley.com/en-us/About+Face%3A+The+Essentials+of+Interaction+Design%2C+4th+Edition-p-9781118766576)
 
 
-[Númeração de acordo com a ordem alfabética]. <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [PMI – Project Management Institute. Um guia do conhecimento em gerenciamento de projetos (Guia PMBOK®): guia do conhecimento em gerenciamento de projetos. 7. ed. Newtown Square, PA: Project Management Institute, 2021.](https://www.academiaplaorc.com.br/wp-content/uploads/2024/07/Guia-PMBOK-7a-Edicao.pdf)  
+[Númeração de acordo com a ordem alfabética]. <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [PMI - Project Management Institute. Um guia do conhecimento em gerenciamento de projetos (Guia PMBOK®): guia do conhecimento em gerenciamento de projetos. 7. ed. Newtown Square, PA: Project Management Institute, 2021.](https://www.academiaplaorc.com.br/wp-content/uploads/2024/07/Guia-PMBOK-7a-Edicao.pdf)  
 
 ## <a name="attachments"></a>Anexos
 ```
