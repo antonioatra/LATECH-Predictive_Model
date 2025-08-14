@@ -91,6 +91,8 @@ Remova este bloco ao final
 
   <sup>Fonte: Imagem retirada do site https://ufabcjr.com.br/</sup>
 
+</div>
+
 **Rivalidade entre concorrentes existentes**
 
 &emsp;A Universidad EAFIT atua no setor de ensino superior colombiano, especialmente no segmento privado, caracterizado por um número moderado de instituições de grande porte e forte reputação acadêmica. Seus principais concorrentes diretos incluem a Universidad de los Andes, líder no ranking nacional, a Universidad Pontificia Bolivariana (UPB) e a Universidad CES, todas com forte presença em áreas estratégicas de ensino e pesquisa. Essa rivalidade é intensificada por fatores como reputação acadêmica, qualidade do corpo docente, internacionalização, infraestrutura e inovação pedagógica. Apesar disso, a EAFIT diferencia-se por seu posicionamento como a principal universidade privada fora de Bogotá, pela diversificação de receitas e pela oferta de programas inovadores em múltiplas áreas do conhecimento, o que fortalece sua marca e a mantém competitiva no cenário nacional e regional.
@@ -448,11 +450,38 @@ Remova este bloco ao final
 ```
 
 #### 4.1.8 Política de Privacidade
-```
-Posicione aqui sua política de privacidade em acordo com a LGPD
 
-Remova este bloco ao final
-```
+### Modelo de Política de Privacidade:
+
+&emsp; A Política de Privacidade é um documento que tem como objetivo informar de forma clara e transparente como uma organização realiza a coleta, o uso, o armazenamento e a proteção dos dados pessoais de seus usuários. No Brasil, esse processo deve estar em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD), em vigor desde 2020. A LGPD estabelece regras e princípios para o tratamento de dados, garantindo os direitos dos titulares e promovendo práticas seguras, éticas e responsáveis por parte das instituições.
+
+#### Projeto Latech
+
+
+#### Informações Gerais
+&emsp; Esta política de privacidade informa como o projeto Latech, desenvolvido pelo grupo Throxy, trata os dados pessoais coletados durante o uso da solução. Está em conformidade com a Lei nº 13.709/2018 – LGPD.<br>
+#### Dados Coletados<br>
+- **Dados fornecidos diretamente:** Gênero, Faixa etária e Programa Acadêmico
+- **Dados coletados automaticamente:** Notas dos quizzes, provas e projetos realizados no curso
+#### Finalidade do Tratamento
+&emsp; A finalidade do tratamento é analisar e encontrar alunos que estão com probabilidade de serem reprovados para que sejam introduzidos em um programa de ajuda com o objetivo de aumentar a taxa de aprovação dos alunos.<br>
+#### Armazenamento e Retenção
+- **Local:** Arquivo Excel<br>
+- **Prazo:** 10 semanas<br>
+#### Compartilhamento de Dados
+- Parceiros técnicos, Fornecedores dos dados<br>
+#### Segurança dos Dados<br>
+&emsp; Todos os dados pessoais coletados são armazenados com técnicas de segurança da informação, incluindo criptografia em repouso (AES-256) e em trânsito (TLS), além de controles de acesso e autenticação. Quando armazenados localmente, os arquivos são protegidos por criptografia de disco e acesso restrito.<br>
+#### Direitos dos Titulares
+Acesso, correção, exclusão, revogação de consentimento
+**Solicitações via e-mail:** lgonzalez8@eafit.edu.co ​
+#### Encarregado de Dados (DPO)
+**Nome:** Paola Vallejo
+**E-mail:** pvallej3@eafit.edu.co​​​ ​
+
+### Política de Privacidade na Colômbia
+
+&emsp; Na Colômbia, a Lei sobre proteção de dados é a Lei Estatutária 1581 de 2012. Sancionada em 2017, ela visa garantir o direito constitucional à retificação e atualização de dados que cosntem em vases de dados ou arquivos, conforme os artigos 15(direito ao habeas data) e 20(direito à informação) da Constituição Política colombiana. Entrou em vigor em 27 de junho de 2013, por meio do Decreto 1377 de 2013
 
 ### 4.2. Compreensão dos Dados
 
