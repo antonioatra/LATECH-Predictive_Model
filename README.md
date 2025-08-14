@@ -4,33 +4,36 @@
 <a href= "https://www.inteli.edu.br/"><img src="assets/inteli.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do projeto
+#  LATECH
 
-## Nome do grupo
+## THROXY
 
 ## :student: Integrantes: 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 6</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 7</a>
+- <a href="https://www.linkedin.com/in/luiz-hinuy-0995252b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Luiz Hinuy</a>
+- <a href="https://www.linkedin.com/in/hugo-montan-393b49175/">Hugo Montan</a>
+- <a href="https://www.linkedin.com/in/leandro-precaro-barankiewicz-filho-8a293a345/">Leandro Precaro Brankiewicz Filho</a> 
+- <a href="https://www.linkedin.com/in/yuriboczar/">Yuri Boczar</a> 
+- <a href="https://www.linkedin.com/in/messias-olivindo/">Messias Olivindo</a>
+- <a href="https://www.linkedin.com/in/carlos-quaglia-309088357/">Carlos Quaglia</a> 
+- <a href="https://www.linkedin.com/in/antonio-augusto-tavares-ribeiro-andr%C3%A9-613937345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Antonio Augusto Tavares Ribeiro André</a>
 
 ## :teacher: Professores:
 ### Orientador(a) 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do orientador(a)</a>
+- <a href="https://www.linkedin.com/in/profclaudioandre/">Claudio Fernando André</a>
 ### Instrutores
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do instrutor 1</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do instrutor 2</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do instrutor 3</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do instrutor 4</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do instrutor 5</a> 
+- <a href="https://www.linkedin.com/in/emf-softw-eng/">Eduardo Moreira Fernandes</a>
+- <a href="https://www.linkedin.com/in/gui-cestari/">Guilherme Henrique de Oliveira Cestari</a> 
+- <a href="https://www.linkedin.com/in/renato-penha/">Renato Penha</a> 
+- <a href="https://www.linkedin.com/in/fernando-pizzo-208b526a/">Fernando Pizzo Ribeiro</a>
+- <a href="https://www.linkedin.com/in/laizaribeiro/">Laíza Ribeiro Silva</a> 
 
 
 ## 📝 Descrição
 
-Escreva uma curta descrição sobre o seu projeto (problema a ser resolvido e solução proposta). (minímo 150 palavras, máximo 600 palavras)
+&emsp; O projeto, desenvolvido em parceria com a Universidade EAFIT, tem como objetivo criar um modelo preditivo capaz de identificar, de forma antecipada, estudantes em risco de reprovar no curso de programação. A instituição enfrenta o desafio de detectar dificuldades acadêmicas apenas em estágios avançados do semestre, o que limita as oportunidades de intervenção e apoio.<br>
+&emsp; A solução proposta é um sistema de análise preditiva que utiliza dados históricos e parciais — como notas de avaliações, quizzes, tempo de resolução e informações demográficas — para estimar a probabilidade de aprovação antes do término do curso. O modelo fará previsões contínuas e atualizadas a cada 4 semanas, permitindo aos docentes agir rapidamente com estratégias personalizadas, como tutorias, revisões ou atividades de reforço.<br>
+&emsp; Com isso, espera-se otimizar os recursos de acompanhamento, reduzir taxas de reprovação e evasão, além de promover melhorias no desempenho acadêmico. A ferramenta também oferecerá insights sobre quais fatores mais influenciam o resultado final, apoiando decisões pedagógicas baseadas em dados.
+
 
 <b>Link para vídeo demonstrativo:</b> <a href="https://inteli.edu.br">Coloque seu link aqui</a>
 
