@@ -483,13 +483,67 @@ Acesso, correção, exclusão, revogação de consentimento
 &emsp; Na Colômbia, a Lei sobre proteção de dados é a Lei Estatutária 1581 de 2012. Sancionada em 2017, ela visa garantir o direito constitucional à retificação e atualização de dados que cosntem em vases de dados ou arquivos, conforme os artigos 15(direito ao habeas data) e 20(direito à informação) da Constituição Política colombiana. Entrou em vigor em 27 de junho de 2013, por meio do Decreto 1377 de 2013
 
 ### 4.2. Compreensão dos Dados
+&emsp; Esta seção tem como objetivo compreender todo o processo de entendimento dos dados do projeto. Esse processo representa o primeiro contato dos integrantes do grupo com os dados fornecidos pela empresa parceira. Trata-se de um momento destinado a analisar a estrutura e a composição desses dados, por meio de consultas, aplicação de métodos de estatística descritiva, identificação de colunas numéricas e categóricas, além da realização de etapas de pré-processamento, normalização e limpeza dos dados disponibilizados.
 
 #### 4.2.1. Exploração de dados
-```
-Apresentar a estatística descritiva básica de cada coluna, identificar se a coluna é numérica ou categórica e pelo menos 3 gráficos para visualizar a relação entre colunas escolhidas pelo grupo.
+Esta etapa inicial marca o primeiro contato com os dados, sendo responsável pela análise preliminar e pela identificação dos tipos de variáveis que compõem a base. A partir dessa exploração, torna-se possível compreender melhor a natureza das informações disponíveis e orientar as próximas etapas de preparação e tratamento.
+  A base de dados contém informações de alunos matriculados em um curso de Pensamento Computacional da Universidade EAFIT e apresenta as seguintes features:
 
-Remova este bloco ao final
-```
+<div align = "center">
+
+<sub>Tabela : Classificações das variáveis</sub>
+
+<table align="center">
+
+| Variável | Descrição | Tipo de Variável |
+|:-----:|:-----:|:-----:|
+| **Período** | Indica o turno do curso (manhã/tarde/noite). | Categórica |
+| **Grupo** | Identificação da turma ou grupo de alunos. | Categórica |
+| **Horário** | Hora da aula (valor inteiro). | Numérica discreta |
+| **Tipo\_Documento** | Tipo de documento de identificação do aluno. | Categórica |
+| **Idade** | Idade do aluno em anos | Numérica discreta |
+| **Gênero** | Sexo/gênero do aluno. | Categórica |
+| **Nome\_Programa\_Acadêmico** | Nome do programa/curso acadêmico do aluno. | Categórica |
+| **STEM** | Indica se o curso é da área STEM (Sim/Não). | Categórica binária |
+| **Parcial\_1** | Nota do aluno na primeira avaliação parcial. | Numérica contínua |
+| **Parcial\_2** | Nota do aluno na segunda avaliação parcial. | Numérica contínua |
+| **Projeto\_Parte1** | Nota do primeiro projeto. | Numérica contínua |
+| **Projeto\_Parte2** | Nota do segundo projeto. | Numérica contínua |
+| **Taller** | Nota obtida em atividades práticas. | Numérica contínua |
+| **Quizzes** | Nota agregada dos quizzes. | Numérica contínua |
+| **Fecha\_Quiz1** | Data de realização do Quiz 1\. | Temporal (Data) |
+| **Quiz1** | Nota obtida no Quiz 1\. | Numérica contínua |
+| **TempoQ1** | Tempo gasto no Quiz 1 (em minutos/segundos). | Numérica contínua |
+| **Fecha\_Quiz2** | Data de realização do Quiz 2\. | Temporal (Data) |
+| **Quiz2** | Nota obtida no Quiz 2\. | Numérica contínua |
+| **TempoQ2** | Tempo gasto no Quiz 2\. | Numérica contínua |
+| **Fecha\_Quiz3** | Data de realização do Quiz 3\. | Temporal (Data) |
+| **Quiz3** | Nota obtida no Quiz 3\. | Numérica contínua |
+| **TempoQ3** | Tempo gasto no Quiz 3\. | Numérica contínua |
+| **Fecha\_Quiz4** | Data de realização do Quiz 4\. | Temporal (Data) |
+| **Quiz4** | Nota obtida no Quiz 4\. | Numérica contínua |
+| **TempoQ4** | Tempo gasto no Quiz 4\. | Numérica contínua |
+| **Fecha\_Quiz5** | Data de realização do Quiz 5\. | Temporal (Data) |
+| **Quiz5** | Nota obtida no Quiz 5\. | Numérica contínua |
+| **TempoQ5** | Tempo gasto no Quiz 5\. | Numérica contínua |
+| **Fecha\_Quiz6** | Data de realização do Quiz 6\. | Temporal (Data) |
+| **Quiz6** | Nota obtida no Quiz 6\. | Numérica contínua |
+| **TempoQ6** | Tempo gasto no Quiz 6\. | Numérica contínua |
+| **Fecha\_Quiz7** | Data de realização do Quiz 7\. | Temporal (Data) |
+| **Quiz7** | Nota obtida no Quiz 7\. | Numérica contínua |
+| **TempoQ7** | Tempo gasto no Quiz 7\. | Numérica contínua |
+| **Quiz8** | Nota obtida no Quiz 8\. | Numérica contínua |
+| **CalcNotaQuiz** | Cálculo agregado da nota de quizzes. | Numérica contínua |
+| **MelhoraNotaQuizzes** | Indicador se houve melhora nos quizzes. | Categórica binária |
+| **Quanto melhora?** | Valor quantitativo da melhora nas notas. | Numérica contínua |
+| **Qualificação\_Oficial** | Nota oficial final do curso. | Numérica contínua |
+| **Aprovo** | Indica se o aluno foi aprovado (Sim/Não). | Categórica binária |
+
+</table>
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
 
 #### 4.2.2. Pré-processamento dos dados
 ```
