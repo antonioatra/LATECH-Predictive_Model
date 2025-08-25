@@ -442,11 +442,63 @@ O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de f
 - Estatística.
 
 #### 4.1.7. Jornadas do Usuário
-```
-Posicione aqui seus mapas de jornadas do usuário que utiliza o modelo.
 
-Remova este bloco ao final
-```
+&nbsp;O mapeamento das jornadas dos usuários é fundamental para compreender como diferentes atores (professores, gestores e estudantes) interagem com o modelo preditivo e quais são as suas necessidades, emoções e oportunidades em cada etapa. Segundo Cooper et al. (2014), ao representar as experiências e necessidades do usuário em forma de jornada, é possível estruturar de maneira cronológica as atividades, emoções e pontos de contato, possibilitando um desenho de soluções mais eficaz e centrado no usuário. Detalhamos abaixo as jornadas de três personas centrais do projeto: **Paola Andrea Vallejo Ramírez (docente/coordenadora)**, **Dr. Ricardo Morales (diretor)** e **Juan Esteban Gómez Ríos (estudante)**. 
+
+---
+
+### Jornada da Persona 1: Paola Andrea Vallejo Ramírez (Docente/Coordenadora)
+
+**Cenário:** Utilização do modelo preditivo para identificar alunos em risco e planejar intervenções pedagógicas.
+
+- **Atividades:** Analisa notas e frequência manualmente; identifica alunos com baixo desempenho; cria grupos de monitoria; oferece suporte individual ou em grupo; sugere atividades de reforço; acompanha evolução das notas.  
+- **Necessidades:** Ferramentas que automatizem a análise de dados; visão rápida de desempenho; informações claras sobre fatores de risco; priorização de alunos que precisam de mais ajuda; feedback sobre a eficácia das intervenções.  
+- **Emoções:** Frustração ao atuar de forma reativa; preocupação sobre eficácia das intervenções; esperança e alívio ao ver melhoras nas notas.  
+- **Oportunidades:** Alertas proativos sobre alunos em risco; insights sobre motivos do risco; classificação por faixas de risco; relatórios periódicos para medir impacto das ações pedagógicas.  
+
+<div align="center">
+   <sub>Figura - Jornada da Persona Paola Andrea Vallejo Ramírez</sub>  
+   <img src="../assets/Paola Andrea Vallejo Ramírez uj.png">  
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+---
+
+### Jornada da Persona 2: Dr. Ricardo Morales (Diretor)
+
+**Cenário:** Avaliação estratégica e tomada de decisão sobre a continuidade e expansão do modelo preditivo.
+
+- **Atividades:** Analisa relatórios de desempenho e evasão; define metas e KPIs; recebe relatórios periódicos; participa de reuniões com equipe pedagógica; decide sobre manutenção ou expansão do projeto; apresenta resultados para stakeholders.  
+- **Necessidades:** Dados claros sobre ROI; métricas de sucesso alinhadas a objetivos institucionais; evidências concretas de que a solução funciona; projeções de impacto da expansão.  
+- **Emoções:** Inquietação pela falta de dados preventivos; curiosidade e avaliação crítica diante dos relatórios; satisfação com resultados positivos e sensação de liderança.  
+- **Oportunidades:** Relatórios executivos sobre impacto da solução; dashboards consolidados comparando dados históricos; simulações de impacto em outras disciplinas; manuais de replicabilidade.  
+
+<div align="center">
+   <sub>Figura - Jornada da Persona Dr. Ricardo Morales</sub>  
+   <img src="../assets/Dr. Ricardo Morales uj.png">  
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+---
+
+### Jornada da Persona 3: Juan Esteban Gómez Ríos (Estudante)
+
+**Cenário:** Experiência como estudante em risco de reprovação e recebimento de suporte baseado no modelo preditivo.
+
+- **Atividades:** Assiste às aulas; recebe notas baixas nos quizzes; sente esforço insuficiente; recebe suporte do professor; aplica orientações recebidas; dedica mais tempo aos estudos.  
+- **Necessidades:** Clareza sobre expectativas da disciplina; ajuda para entender notas baixas; suporte empático de professores; feedback personalizado; motivação e confiança.  
+- **Emoções:** Ansiedade e esperança no início; frustração e insegurança ao receber notas baixas; alívio e motivação ao receber suporte; orgulho e confiança ao ver progresso.  
+- **Oportunidades:** Sistema de boas-vindas com dicas personalizadas; notificações automáticas alertando risco; relatórios com insights para professores; gamificação com medidores de progresso.  
+
+<div align="center">
+   <sub>Figura - Jornada da Persona Juan Esteban Gómez Ríos</sub>  
+   <img src="../assets/Juan Esteban Gómez Ríos uj.png">  
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+---
+
+&nbsp; Essas jornadas evidenciam como o modelo preditivo atende diferentes níveis da comunidade acadêmica: suporte individualizado ao estudante, ferramentas práticas e preditivas para os docentes, e indicadores estratégicos para os gestores. Assim, reforça-se o alinhamento do projeto às necessidades institucionais e à experiência dos usuários finais.
 
 #### 4.1.8 Política de Privacidade
 
