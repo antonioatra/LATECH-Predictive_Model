@@ -466,7 +466,7 @@ O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de f
 
 ### Jornada da Persona 2: Dr. Ricardo Morales (Diretor)
 
-**Cenário:** Avaliação estratégica e tomada de decisão sobre a continuidade e expansão do modelo preditivo.
+&emsp; **Cenário:** Avaliação estratégica e tomada de decisão sobre a continuidade e expansão do modelo preditivo.
 
 - **Atividades:** Analisa relatórios de desempenho e evasão; define metas e KPIs; recebe relatórios periódicos; participa de reuniões com equipe pedagógica; decide sobre manutenção ou expansão do projeto; apresenta resultados para stakeholders.  
 - **Necessidades:** Dados claros sobre ROI; métricas de sucesso alinhadas a objetivos institucionais; evidências concretas de que a solução funciona; projeções de impacto da expansão.  
@@ -483,7 +483,7 @@ O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de f
 
 ### Jornada da Persona 3: Juan Esteban Gómez Ríos (Estudante)
 
-**Cenário:** Experiência como estudante em risco de reprovação e recebimento de suporte baseado no modelo preditivo.
+&emsp; **Cenário:** Experiência como estudante em risco de reprovação e recebimento de suporte baseado no modelo preditivo.
 
 - **Atividades:** Assiste às aulas; recebe notas baixas nos quizzes; sente esforço insuficiente; recebe suporte do professor; aplica orientações recebidas; dedica mais tempo aos estudos.  
 - **Necessidades:** Clareza sobre expectativas da disciplina; ajuda para entender notas baixas; suporte empático de professores; feedback personalizado; motivação e confiança.  
