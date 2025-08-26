@@ -449,7 +449,7 @@ O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de f
 
 ### Jornada da Persona 1: Paola Andrea Vallejo Ramírez (Docente/Coordenadora)
 
-**Cenário:** Utilização do modelo preditivo para identificar alunos em risco e planejar intervenções pedagógicas.
+&emsp; **Cenário:** Utilização do modelo preditivo para identificar alunos em risco e planejar intervenções pedagógicas eficientes. 
 
 - **Atividades:** Analisa notas e frequência manualmente; identifica alunos com baixo desempenho; cria grupos de monitoria; oferece suporte individual ou em grupo; sugere atividades de reforço; acompanha evolução das notas.  
 - **Necessidades:** Ferramentas que automatizem a análise de dados; visão rápida de desempenho; informações claras sobre fatores de risco; priorização de alunos que precisam de mais ajuda; feedback sobre a eficácia das intervenções.  
