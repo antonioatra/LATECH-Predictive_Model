@@ -237,7 +237,7 @@ Remova este bloco ao final
 &emsp; **Dores:** Alunos em risco são identificados tarde, por falta de previsibilidade e pela necessidade de juntar dados de várias fontes. O aumento de turmas piora a falta de visibilidade e dificulta priorizar quem atender.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
-**Tarefas do Cliente:** Professores intervêm quando o risco já está claro (após notas baixas) e organizam grupos a cada semestre. Precisam de um fluxo simples, online e padronizado para acompanhar evolução, comparar grupos e orientar monitores.
+&emsp; **Tarefas do Cliente:** Professores intervêm quando o risco já está claro (após notas baixas) e organizam grupos a cada semestre. Precisam de um fluxo simples, online e padronizado para acompanhar evolução, comparar grupos e orientar monitores.
 
 ### Proposta de Valor
 
