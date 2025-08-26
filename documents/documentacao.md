@@ -447,7 +447,7 @@ Remova este bloco ao final
 
 ---
 
-### Jornada da Persona 1: Paola Andrea Vallejo Ramírez (Docente/Coordenadora)
+#### Jornada da Persona 1: Paola Andrea Vallejo Ramírez (Docente/Coordenadora)
 
 &emsp; **Cenário:** Utilização do modelo preditivo para identificar alunos em risco e planejar intervenções pedagógicas eficientes. 
 
@@ -464,7 +464,7 @@ Remova este bloco ao final
 
 ---
 
-### Jornada da Persona 2: Dr. Ricardo Morales (Diretor)
+#### Jornada da Persona 2: Dr. Ricardo Morales (Diretor)
 
 &emsp; **Cenário:** Avaliação estratégica e tomada de decisão sobre a continuidade e expansão do modelo preditivo.
 
@@ -481,7 +481,7 @@ Remova este bloco ao final
 
 ---
 
-### Jornada da Persona 3: Juan Esteban Gómez Ríos (Estudante)
+#### Jornada da Persona 3: Juan Esteban Gómez Ríos (Estudante)
 
 &emsp; **Cenário:** Experiência como estudante em risco de reprovação e recebimento de suporte baseado no modelo preditivo.
 
