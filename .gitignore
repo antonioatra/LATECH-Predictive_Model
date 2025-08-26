@@ -7,4 +7,5 @@
 *.tsv
 *.db
 *.sql
+*.venv
 *.ipynb
