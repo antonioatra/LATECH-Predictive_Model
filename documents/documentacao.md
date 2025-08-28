@@ -136,38 +136,29 @@ Remova este bloco ao final
 
 &emsp; Na figura acima temos:
 
-### Forças
+##### Forças:
 
-##### **Posicionada como uma das melhores universidades da Colômbia**
+- **Posicionada como uma das melhores universidades da Colômbia** - A Universidad EAFIT possui reconhecimento nacional por sua excelência acadêmica (UNIVERSIDAD EAFIT, 2025), foco na inovação e comprometimento com a formação integral de seus estudantes. É constantemente classificada entre as melhores instituições de ensino superior da Colômbia.
 
-- A Universidad EAFIT possui reconhecimento nacional por sua excelência acadêmica (UNIVERSIDAD EAFIT, 2025), foco na inovação e comprometimento com a formação integral de seus estudantes. É constantemente classificada entre as melhores instituições de ensino superior da Colômbia.
+- **Credenciada como instituição de alta qualidade** - A EAFIT foi credenciada pelo Ministério Nacional da Educação da Colômbia como uma universidade de alta qualidade duas vezes seguidas, sendo a primeira universidade colombiana a ter esta recognição. Essa certificação garante que a instituição atende a rigorosos critérios de avaliação institucional, como infraestrutura, corpo docente, produção científica, governança e impacto social, contribuindo para a confiança do público interno e externo.
 
-##### **Credenciada como instituição de alta qualidade**
-- A EAFIT foi credenciada pelo Ministério Nacional da Educação da Colômbia como uma universidade de alta qualidade duas vezes seguidas, sendo a primeira universidade colombiana a ter esta recognição. Essa certificação garante que a instituição atende a rigorosos critérios de avaliação institucional, como infraestrutura, corpo docente, produção científica, governança e impacto social, contribuindo para a confiança do público interno e externo.
+- **Currículo extenso e diverso, com opções de pós-graduação** - A universidade oferece uma ampla gama de programas acadêmicos em áreas como administração, economia, engenharia, humanidades, direito e ciências aplicadas. Além disso, conta com cerca de 90 opções de cursos de pós-graduação.
 
-##### **Currículo extenso e diverso, com opções de pós-graduação**
-- A universidade oferece uma ampla gama de programas acadêmicos em áreas como administração, economia, engenharia, humanidades, direito e ciências aplicadas. Além disso, conta com cerca de 90 opções de cursos de pós-graduação.
+##### Fraquezas:
 
-### Fraquezas
+- **Gastos elevados com a manutenção do Campus Vivo** - Embora o Campus Vivo seja um diferencial arquitetônico e ambiental da EAFIT, sua manutenção representa custos operacionais significativos. Isso inclui jardinagem, segurança, manutenção predial e limpeza, o que pode impactar os recursos disponíveis para investimentos em outras áreas estratégicas, como digitalização ou internacionalização.
 
-##### **Gastos elevados com a manutenção do Campus Vivo**
-- Embora o Campus Vivo seja um diferencial arquitetônico e ambiental da EAFIT, sua manutenção representa custos operacionais significativos. Isso inclui jardinagem, segurança, manutenção predial e limpeza, o que pode impactar os recursos disponíveis para investimentos em outras áreas estratégicas, como digitalização ou internacionalização.
+- **Inexistência de parcerias com universidades de referência na América Latina e no mundo** - Apesar de seu prestígio nacional, a EAFIT ainda apresenta limitações na construção de alianças acadêmicas internacionais robustas, especialmente com instituições de referência global. A ausência de programas de dupla titulação, intercâmbios amplamente reconhecidos e pesquisa conjunta com universidades de renome mundial limita o alcance internacional da instituição.
 
-##### **Inexistência de parcerias com universidades de referência na América Latina e no mundo**
-- Apesar de seu prestígio nacional, a EAFIT ainda apresenta limitações na construção de alianças acadêmicas internacionais robustas, especialmente com instituições de referência global. A ausência de programas de dupla titulação, intercâmbios amplamente reconhecidos e pesquisa conjunta com universidades de renome mundial limita o alcance internacional da instituição.
+##### Ameaças:
 
-### Ameaças
+- **Instabilidade econômica e política regional** - O contexto colombiano, assim como o de outras nações latino-americanas, é frequentemente marcado por flutuações econômicas, tensões sociais e mudanças políticas que podem afetar diretamente o financiamento da educação superior, os programas de intercâmbio, os investimentos em infraestrutura e a própria capacidade de planejamento estratégico das universidades privadas.
 
-#####  **Instabilidade econômica e política regional**
-- O contexto colombiano, assim como o de outras nações latino-americanas, é frequentemente marcado por flutuações econômicas, tensões sociais e mudanças políticas que podem afetar diretamente o financiamento da educação superior, os programas de intercâmbio, os investimentos em infraestrutura e a própria capacidade de planejamento estratégico das universidades privadas.
+- **Competição com outras universidades sul-americanas** - A crescente profissionalização e internacionalização de outras universidades na América Latina, como a Universidad de Los Andes (Colômbia), Pontificia Universidad Católica (Chile), Universidade de São Paulo (Brasil) e Universidad Nacional Autónoma de México (México), impõe um desafio constante. A EAFIT precisa manter-se atualizada, inovadora e conectada globalmente para não perder sua atratividade frente à concorrência (QS, 2025). 
 
-#####  **Competição com outras universidades sul-americanas**
-- A crescente profissionalização e internacionalização de outras universidades na América Latina, como a Universidad de Los Andes (Colômbia), Pontificia Universidad Católica (Chile), Universidade de São Paulo (Brasil) e Universidad Nacional Autónoma de México (México), impõe um desafio constante. A EAFIT precisa manter-se atualizada, inovadora e conectada globalmente para não perder sua atratividade frente à concorrência (QS, 2025). 
+##### Oportunidades:
 
-### Oportunidades
-
-##### **Horizonte para a digitalização do atendimento ao aluno**
-- A universidade possui uma grande oportunidade de melhorar a experiência do estudante por meio da automação e digitalização de processos relacionados à vida acadêmica. Isso inclui sistemas mais inteligentes para acompanhamento de desempenho, integração com orientações pedagógicas, monitoramento psicológico, alertas de risco acadêmico, e acesso facilitado a recursos administrativos e financeiros. A adoção de plataformas tecnológicas modernas pode otimizar a gestão estudantil e fortalecer o engajamento institucional.
+- **Horizonte para a digitalização do atendimento ao aluno** - A universidade possui uma grande oportunidade de melhorar a experiência do estudante por meio da automação e digitalização de processos relacionados à vida acadêmica. Isso inclui sistemas mais inteligentes para acompanhamento de desempenho, integração com orientações pedagógicas, monitoramento psicológico, alertas de risco acadêmico, e acesso facilitado a recursos administrativos e financeiros. A adoção de plataformas tecnológicas modernas pode otimizar a gestão estudantil e fortalecer o engajamento institucional.
 
 #### 4.1.3. Planejamento Geral da Solução
 &emsp; Planejamento Geral da Solução é um conceito de organizar o projeto em tópicos com intuito de nunca se perder em relação a esses 6 tópicos: Dados que serão usados, neste caso, para abastecer o modelo preditivo, A solução proposta para ao cliente, tipo de tarefa, para que o produto será usado, benefícios ao escolher o produto e quais críterios e métricas será usada para acompanhar o sucesso da solução. Pode-se fazer uma analogia com um mapa, onde os tópicos citados são os locais para chegar ao produto ideal. A empresa PMBOK Guide, empresas de software e análise de projetos foram os primeiros a utilizar esse método de se guiar conforme o projeto está em andamento.
@@ -229,7 +220,7 @@ Remova este bloco ao final
    
 </div>
 
-### Perfil do Cliente: 
+##### Perfil do Cliente: 
 &nbsp;&nbsp;&nbsp;&nbsp;
 &emsp; **Ganhos:** Professores e coordenação querem entender rapidamente o que impacta as notas para agir cedo e melhorar os resultados. Buscam visão por curso/área e horário, com evidências para orientar intervenções e monitores.
 
@@ -239,7 +230,7 @@ Remova este bloco ao final
 &nbsp;&nbsp;&nbsp;&nbsp;
 &emsp; **Tarefas do Cliente:** Professores intervêm quando o risco já está claro (após notas baixas) e organizam grupos a cada semestre. Precisam de um fluxo simples, online e padronizado para acompanhar evolução, comparar grupos e orientar monitores.
 
-### Proposta de Valor
+##### Proposta de Valor
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 &emsp; **Criadores de Ganho:** Alertas antecipados nas primeiras semanas indicam probabilidade de reprovação por faixas de risco (baixo, médio, alto, muito alto). Um dashboard reúne evolução das notas, motivos do risco e filtros por programa, grupo e horário para ações rápidas e coordenadas.
@@ -254,7 +245,7 @@ Remova este bloco ao final
 &emsp; A análise de riscos e oportunidades em um projeto é uma etapa essencial no desenvolvimento de um modelo preditivo, pois permite mitigar possíveis problemas e, ao mesmo tempo, identificar oportunidades que possam alavancar a entrega do MVP. Segundo o PMBOK® Guide (PMI, 2021), o gerenciamento de riscos compreende os processos de planejamento, identificação, análise, resposta, monitoramento e controle de riscos e oportunidades que possam surgir ao longo do ciclo de vida do projeto. Com base nesse entendimento, propõe-se a seguinte divisão em matriz de riscos e matriz de oportunidades:
 
 
-**4.1.5.1. Riscos:**
+##### Riscos:
 
 &emsp; Com base nas diretrizes apresentadas no PMBOK® Guide (PMI, 2021) e no conhecimento consolidado acerca da análise de riscos, elaborou-se a matriz de riscos do projeto com o objetivo de identificar, classificar e propor estratégias de mitigação para as ameaças potenciais ao desenvolvimento da solução. Essa abordagem permite antecipar problemas, minimizar impactos negativos e assegurar maior controle sobre as variáveis que podem comprometer o desempenho do modelo preditivo desenvolvido para a Universidade EAFIT, apresentado na figura xx.
 
@@ -278,7 +269,7 @@ Remova este bloco ao final
 
 &emsp; Por fim, considera-se o risco de desenvolver um modelo com baixa acurácia, classificado como técnico. Um desempenho insatisfatório compromete a utilidade prática da solução, podendo gerar diagnósticos incorretos sobre o risco de reprovação e afetar a credibilidade do projeto perante os stakeholders institucionais. Esse risco tem impacto alto e probabilidade estimada em 20%, já que, apesar dos esforços da equipe em testar diferentes algoritmos e estratégias de modelagem, podem ocorrer limitações nos dados ou ajustes inadequados. A mitigação proposta inclui a realização de experimentos com múltiplos algoritmos, aplicação de validação cruzada, otimização de hiperparâmetros e solicitação de feedback técnico a professores e monitores especializados.
 
-**4.1.5.2. Oportunidades**
+##### Oportunidades:
 
 &emsp; Além da identificação e análise dos riscos, é relevante reconhecer e explorar as oportunidades que o projeto oferece. A partir dessa perspectiva, elaborou-se a matriz de oportunidades com o propósito de potencializar fatores favoráveis, agregar valor ao desenvolvimento da solução e maximizar os benefícios dessa etapa de construção. Essa abordagem permite direcionar esforços para iniciativas que fortaleçam o trabalho do grupo e ampliem o impacto positivo do modelo preditivo desenvolvido para a Universidade EAFIT, apresentado na figura xx.
 
@@ -313,9 +304,9 @@ Remova este bloco ao final
 
 </div>
 
-### Persona: Paola Andrea Vallejo Ramírez
+##### Persona: Paola Andrea Vallejo Ramírez
 
-#### Perfil
+**Perfil**
 
 - Nome: Paola Andrea Vallejo Ramírez  
 - Gênero: Feminino  
@@ -323,27 +314,27 @@ Remova este bloco ao final
 - Cidade: Medellín - Antioquia, Colômbia  
 - Posição: Docente universitária e coordenadora de projetos pedagógicos na Universidad EAFIT
 
-#### Biografia
+**Biografia**
 
 &emsp; Paola nasceu em Medellín, na Colômbia, e cresceu em um ambiente onde a educação era altamente valorizada. Desde pequena, era curiosa e gostava de resolver problemas práticos. Apaixonada por aprender, escolheu seguir a carreira acadêmica e se formou em Engenharia de Software pela Universidade Industrial de Santander. Posteriormente, concluiu um mestrado em Educação e Tecnologias Digitais na Universidad de los Andes.
 
 &emsp; Atualmente, mora em Medellín e leciona disciplinas introdutórias de programação na Universidad EAFIT, onde também lidera iniciativas de inovação educacional. É reconhecida por sua dedicação ao sucesso dos alunos e por seu compromisso com a inclusão e o uso ético da tecnologia na educação. Atua como ponte entre dados educacionais e ações pedagógicas eficazes, sempre buscando formas de aprimorar os resultados acadêmicos.
 
-#### Frustrações
+**Frustrações** 
 
 - Dificuldade em acompanhar o progresso individual de cada aluno devido ao grande número de estudantes e ao tempo limitado.  
 - Falta de ferramentas práticas para identificar alunos em risco antes que a situação se agrave.  
 - Sensação de que as ações pedagógicas são frequentemente reativas, e não preventivas.  
 - Necessidade constante de adaptar estratégias sem dados objetivos suficientes para orientar as decisões.
 
-#### Motivações
+**Motivações**
 
 - Acredita que a educação transforma vidas e que todos os alunos merecem oportunidades reais de sucesso.  
 - Busca aplicar métodos científicos e baseados em dados para tornar o ensino mais eficaz.  
 - Quer melhorar a retenção e o desempenho dos estudantes, especialmente os que enfrentam maiores dificuldades, reduzindo a taxa de evasão.  
 - Valoriza tecnologias que permitam aos professores agir com mais precisão e empatia.
 
-#### Interesses
+ **Interesses**
 
 - Ferramentas de visualização de dados e dashboards educacionais.  
 - Avaliação formativa e intervenções pedagógicas personalizadas.  
@@ -360,9 +351,9 @@ Remova este bloco ao final
 
 </div>
 
-### Persona: Juan Esteban Gómez Ríos
+##### Persona: Juan Esteban Gómez Ríos
 
-#### Perfil
+**Perfil**
 
 - Nome: Juan Esteban Gómez Ríos  
 - Gênero: Masculino  
@@ -370,13 +361,13 @@ Remova este bloco ao final
 - Cidade: Bello - Antioquia, Colômbia  
 - Posição: Estudante de primeiro semestre no curso de Engenharia de Sistemas da Universidad EAFIT
 
-#### Biografia
+**Biografia**
 
 &emsp; Juan nasceu e cresceu em Bello, uma cidade próxima a Medellín. Vem de uma família de classe média-baixa, onde é o primeiro a ingressar em uma universidade particular. Sempre se destacou na escola pública por sua criatividade e curiosidade, especialmente em áreas como matemática e informática, onde aprendeu programação básica por conta própria através de vídeos no YouTube.
 
 &emsp; Ingressar na Universidad EAFIT foi um grande sonho realizado, mas o choque com a metodologia, o volume de conteúdo e a linguagem acadêmica mais formal têm representado grandes desafios. Juan trabalha meio período em uma loja para ajudar nas despesas e, por isso, nem sempre consegue dedicar o tempo ideal aos estudos. Mesmo esforçado, suas notas nos primeiros quizzes e avaliações foram baixas, o que começou a impactar sua motivação.
 
-#### Frustrações
+**Frustrações**
 
 - Sente que estuda muito, mas não vê resultado nas notas.  
 - Tem dificuldades em organizar o tempo entre trabalho, estudo e tarefas da universidade.  
@@ -384,7 +375,7 @@ Remova este bloco ao final
 - Não entende bem por que está indo mal: se é falta de base, cansaço ou desorganização.  
 - Tem receio de reprovar logo no primeiro semestre e decepcionar sua família.
 
-#### Motivações
+**Motivações**
 
 - Quer ser um exemplo positivo para seus irmãos mais novos e mostrar que é possível vencer pelos estudos.  
 - Sonha em trabalhar com tecnologia e desenvolvimento de software, talvez até criar sua própria startup.  
@@ -392,7 +383,7 @@ Remova este bloco ao final
 - Quer provar para si mesmo que é capaz de se adaptar à universidade e ter sucesso.  
 - Valoriza professores que explicam com empatia e clareza, e se sente mais seguro quando percebe que está sendo acompanhado.
 
-#### Interesses
+**Interesses**
 
 - Desenvolvimento web e mobile.  
 - Jogos digitais e cultura geek.  
@@ -410,9 +401,9 @@ Remova este bloco ao final
 
 </div>
 
-### Persona: Ricardo Morales
+##### Persona: Ricardo Morales
 
-#### Perfil
+**Perfil**
 
 - Nome: Dr. Ricardo Morales  
 - Gênero: Masculino  
@@ -420,23 +411,23 @@ Remova este bloco ao final
 - Cidade: Medellín, Colômbia  
 - Posição: Diretor da Faculdade de Ciências e Engenharia na Universidad EAFIT
 
-#### Biografia
+**Biografia**
 
 &emsp; Ricardo nasceu em Bogotá e desde cedo demonstrou paixão por educação e tecnologia. Formou-se em Engenharia de Sistemas na Universidad Nacional da Colômbia e concluiu mestrado e doutorado em Inovação Educacional no MIT. Iniciou sua carreira como professor de algoritmos antes de assumir cargos de liderança acadêmica. Hoje, como diretor, busca integrar soluções baseadas em dados para melhorar o desempenho estudantil e reduzir a evasão.
 
-#### Frustrações
+**Frustrações**
 
 - Possuímos dados históricos, mas não os aplicamos de forma preventiva.  
 - Intervimos apenas quando a reprovação já é inevitável.  
 - Parte do corpo docente ainda prioriza intuição em detrimento de evidências.
 
-#### Motivações
+**Motivações**
 
 - Transformar a EAFIT em referência em learning analytics na América Latina.  
 - Reduzir a taxa de reprovação em 25% nos próximos 3 anos.  
 - Criar um modelo replicável para outras disciplinas e instituições.
 
-#### Interesses
+**Interesses**
 
 - Educação.  
 - Estatística.
@@ -447,7 +438,7 @@ Remova este bloco ao final
 
 ---
 
-#### Jornada da Persona 1: Paola Andrea Vallejo Ramírez (Docente/Coordenadora)
+##### Jornada da Persona 1: Paola Andrea Vallejo Ramírez (Docente/Coordenadora)
 
 &emsp; **Cenário:** Utilização do modelo preditivo para identificar alunos em risco e planejar intervenções pedagógicas eficientes. 
 
@@ -464,7 +455,7 @@ Remova este bloco ao final
 
 ---
 
-#### Jornada da Persona 2: Dr. Ricardo Morales (Diretor)
+##### Jornada da Persona 2: Dr. Ricardo Morales (Diretor)
 
 &emsp; **Cenário:** Avaliação estratégica e tomada de decisão sobre a continuidade e expansão do modelo preditivo.
 
@@ -481,7 +472,7 @@ Remova este bloco ao final
 
 ---
 
-#### Jornada da Persona 3: Juan Esteban Gómez Ríos (Estudante)
+##### Jornada da Persona 3: Juan Esteban Gómez Ríos (Estudante)
 
 &emsp; **Cenário:** Experiência como estudante em risco de reprovação e recebimento de suporte baseado no modelo preditivo.
 
@@ -502,35 +493,37 @@ Remova este bloco ao final
 
 #### 4.1.8 Política de Privacidade
 
-### Modelo de Política de Privacidade:
+##### **Modelo de Política de Privacidade:**
 
 &emsp; A Política de Privacidade é um documento que tem como objetivo informar de forma clara e transparente como uma organização realiza a coleta, o uso, o armazenamento e a proteção dos dados pessoais de seus usuários. No Brasil, esse processo deve estar em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD), em vigor desde 2020. A LGPD estabelece regras e princípios para o tratamento de dados, garantindo os direitos dos titulares e promovendo práticas seguras, éticas e responsáveis por parte das instituições.
 
-#### Projeto Latech
+##### **Projeto Latech**
 
+- **Informações Gerais:** Esta política de privacidade informa como o projeto Latech, desenvolvido pelo grupo Throxy, trata os dados pessoais coletados durante o uso da solução. Está em conformidade com a Lei nº 13.709/2018 - LGPD.<br>
 
-#### Informações Gerais
-&emsp; Esta política de privacidade informa como o projeto Latech, desenvolvido pelo grupo Throxy, trata os dados pessoais coletados durante o uso da solução. Está em conformidade com a Lei nº 13.709/2018 – LGPD.<br>
-#### Dados Coletados<br>
-- **Dados fornecidos diretamente:** Gênero, Faixa etária e Programa Acadêmico
-- **Dados coletados automaticamente:** Notas dos quizzes, provas e projetos realizados no curso
-#### Finalidade do Tratamento
-&emsp; A finalidade do tratamento é analisar e encontrar alunos que estão com probabilidade de serem reprovados para que sejam introduzidos em um programa de ajuda com o objetivo de aumentar a taxa de aprovação dos alunos.<br>
-#### Armazenamento e Retenção
-- **Local:** Arquivo Excel<br>
-- **Prazo:** 10 semanas<br>
-#### Compartilhamento de Dados
-- Parceiros técnicos, Fornecedores dos dados<br>
-#### Segurança dos Dados<br>
-&emsp; Todos os dados pessoais coletados são armazenados com técnicas de segurança da informação, incluindo criptografia em repouso (AES-256) e em trânsito (TLS), além de controles de acesso e autenticação. Quando armazenados localmente, os arquivos são protegidos por criptografia de disco e acesso restrito.<br>
-#### Direitos dos Titulares
-Acesso, correção, exclusão, revogação de consentimento
-**Solicitações via e-mail:** lgonzalez8@eafit.edu.co ​
-#### Encarregado de Dados (DPO)
-**Nome:** Paola Vallejo
-**E-mail:** pvallej3@eafit.edu.co​​​ ​
+- **Dados Coletados**<br>
+   1- *Dados fornecidos diretamente:* Gênero, Faixa etária e Programa Acadêmico.<br>
+   2- *Dados coletados automaticamente:* Notas dos quizzes, provas e projetos realizados no curso<br>
 
-### Política de Privacidade na Colômbia
+- **Finalidade do Tratamento:** A finalidade do tratamento é analisar e encontrar alunos que estão com probabilidade de serem reprovados para que sejam introduzidos em um programa de ajuda com o objetivo de aumentar a taxa de aprovação dos alunos.<br>
+
+- **Armazenamento e Retenção**<br>
+   1- *Local:* Arquivo Excel<br>
+   2- *Prazo:* 10 semanas<br>
+
+- **Compartilhamento de Dados:** Parceiros técnicos, Fornecedores dos dados.<br>
+
+- **Segurança dos Dados:** Todos os dados pessoais coletados são armazenados com técnicas de segurança da informação, incluindo criptografia em repouso (AES-256) e em trânsito (TLS), além de controles de acesso e autenticação. Quando armazenados localmente, os arquivos são protegidos por criptografia de disco e acesso restrito.<br>
+
+- **Direitos dos Titulares:** Acesso, correção, exclusão, revogação de consentimento
+
+- **Solicitações via e-mail:** lgonzalez8@eafit.edu.co
+
+- **Encarregado de Dados (DPO):**<br>
+   1- *Nome:* Paola Vallejo<br>
+   2- *E-mail:* pvallej3@eafit.edu.co<br>
+
+##### **Política de Privacidade na Colômbia**
 
 &emsp; Na Colômbia, a Lei sobre proteção de dados é a Lei Estatutária 1581 de 2012. Sancionada em 2017, ela visa garantir o direito constitucional à retificação e atualização de dados que cosntem em vases de dados ou arquivos, conforme os artigos 15(direito ao habeas data) e 20(direito à informação) da Constituição Política colombiana. Entrou em vigor em 27 de junho de 2013, por meio do Decreto 1377 de 2013
 
