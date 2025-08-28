@@ -489,7 +489,14 @@ Remova este bloco ao final
 
 ---
 
-&nbsp; Essas jornadas evidenciam como o modelo preditivo atende diferentes níveis da comunidade acadêmica: suporte individualizado ao estudante, ferramentas práticas e preditivas para os docentes, e indicadores estratégicos para os gestores. Assim, reforça-se o alinhamento do projeto às necessidades institucionais e à experiência dos usuários finais.
+&nbsp; Essas jornadas evidenciam como o modelo preditivo atende diferentes níveis da comunidade acadêmica: suporte individualizado ao estudante, ferramentas práticas e preditivas para os docentes, e indicadores estratégicos para os gestores. Assim, reforça-se o alinhamento do projeto às necessidades institucionais e à experiência dos usuários finais.  
+
+&nbsp;A análise conjunta das jornadas de **Paola Andrea Vallejo Ramírez (docente/coordenadora)**, **Dr. Ricardo Morales (diretor)** e **Juan Esteban Gómez Ríos (estudante)** evidencia como o modelo preditivo se conecta de maneira complementar aos diferentes níveis da comunidade acadêmica. Enquanto para o **estudante** o foco está em apoio personalizado, motivação e superação de dificuldades, para a **docente** a ênfase recai sobre ferramentas práticas de análise, priorização de alunos em risco e feedback sobre intervenções. Já o **gestor** necessita de dados consolidados, projeções estratégicas e métricas de impacto que sustentem decisões institucionais.  
+
+&nbsp;Assim, percebe-se que as jornadas, apesar de distintas, são interdependentes: a motivação e o progresso do aluno alimentam os indicadores analisados pela professora; esses dados, por sua vez, são consolidados em relatórios que oferecem ao diretor uma visão estratégica da efetividade da solução. Essa correlação cria um **ciclo virtuoso de informação**, no qual cada persona se beneficia de forma diferenciada, mas convergente, reforçando o alinhamento entre **ações pedagógicas, suporte individualizado e decisões estratégicas**.  
+
+&nbsp;Portanto, as jornadas não devem ser vistas isoladamente, mas como partes de um ecossistema de inovação educacional, no qual o modelo preditivo atua como elo central entre experiência do aluno, prática docente e gestão institucional.  
+
 
 #### 4.1.8 Política de Privacidade
 
