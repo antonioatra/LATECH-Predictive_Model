@@ -682,3 +682,12 @@ Remova este bloco ao final
 &ensp;Esta seção investiga se as variáveis quantitativas seguem (ou não) a distribuição normal e discute as implicações dessa avaliação para as etapas subsequentes de modelagem. Em projetos de natureza preditiva voltados a decisões de negócio — como expansão de pontos de venda, segmentação de clientes ou aumento da penetração de produtos — a validade dos resultados depende diretamente da escolha adequada de: (1) testes estatísticos (paramétricos vs. não-paramétricos), (2) técnicas de transformação e tratamento de outliers e (3) métodos de escalonamento capazes de garantir comparabilidade entre atributos de diferentes magnitudes.
 
 &ensp;Nesse sentido, a análise de assimetria, curtose e valores extremos atua como etapa crítica tanto na engenharia de atributos quanto na seleção de algoritmos. Modelos baseados no cálculo de distâncias, que sensíveis à escala (como K-Means, SVM e redes neurais) ou baseados em pressupostos distributivos (como regressões lineares e outros modelos paramétricos) dependem fortemente da adequação das distribuições de entrada para gerar inferências consistentes e decisões confiáveis.
+
+#### Seleção e Caracterização das Variáveis
+
+&ensp;As três variáveis selecionadas para análise foram escolhidas com base em sua possibilidade de impacto e relevância para o treinamento do modelo preditivo.
+
+- **Talleres**: Representa a nota associada a trabalhos complementares aos Quizes e provas.
+- **CalcNotaQuiz**: Indica o número de itens adquiridos em cada transação, fundamental para compreender padrões de consumo
+- **Nota_Oficial**: Refere-se ao custo de produção dos produtos, essencial para análises de margem e rentabilidade
+
