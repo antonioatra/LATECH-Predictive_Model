@@ -598,11 +598,326 @@ Esta etapa inicial marca o primeiro contato com os dados, sendo responsável pel
 </div>
 
 #### 4.2.2. Pré-processamento dos dados
-```
-Apresentar quais foram as ações realizadas de limpeza (tratamento de missing values e remoção de outliers) e transformação (normalização e codificação) das colunas. Se houverem outliers, cite quais são e qual(is) correção(ões) será(ão) aplicada(s).
 
-Remova este bloco ao final
+&emsp; Antes de qualquer exploração ou treinamento de algum modelo, é necessário realizar um pré-processamento de dados. Segundo fulano() essa etapa é importante para garantir a qualidade dos resultados, evitando conclusões preciptadas. O principal objetivo dessa etapa é tratar os dados brutos para deixá-los limpo, preparado e selecionado para a análise. Para isso realizou-se as seguintes passos para início do treinamento do modelo:
+
+###### 4.2.2.1. Mapeamento para tadução e reconhecimento de erros
+
+&emsp; Primeiramente, mapeou-se os títulos das colunas, e os dados das células da planilha para serem alterados, devido a falta de familiaridade com o idioma espanhol, além de identificar os tokens de erros presentes. Para isso, realizou-se a seguinte célula no jupyter notebook:
+
+``` python
+rename_map = {
+    "Periodo": "Periodo",
+    "Grupo": "Grupo",
+    "Horario": "Horario",
+    "Tipo_Documento": "Tipo_Documento",
+    "Edad": "Idade",
+    "Genero": "Genero",
+    "STEM": "STEM",
+    "MejoraNotaQuices": "MelhoraNotaQuizzes",
+    "Calificación_Oficial": "Nota_Oficial",
+    "Aprobo": "Aprovou",
+    "Nombre_Programa_Academico": "Nome_Programa_Academico",
+    "Nombre_Programa_Académico": "Nome_Programa_Academico",
+    "Proyecto_Parte1": "Projeto_Parte1",
+    "Proyecto_Parte2": "Projeto_Parte2",
+    "Talleres": "Oficinas",
+    "Quices": "Quizzes",
+    "CalcNotaQuiz": "CalcNotaQuiz",
+    "Parcial_1": "Parcial_1",
+    "Parcial_2": "Parcial_2",
+    "Quiz1": "Quiz1",
+    "Quiz2": "Quiz2",
+    "Quiz3": "Quiz3",
+    "Quiz4": "Quiz4",
+    "Quiz5": "Quiz5",
+    "Quiz6": "Quiz6",
+    "Quiz7": "Quiz7",
+    "Quiz8": "Quiz8",
+    "Cuánto mejora?": "Quanto_Melhora",
+    "Cuanto mejora?": "Quanto_Melhora",
+}
+
+for i in range(1, 9):
+    rename_map[f"Fecha_Quiz{i}"] = f"Data_Quiz{i}"
+    rename_map[f"TiempoQ{i}"] = f"TempoQ{i}"
+
+MAPA_PROGRAMAS = {
+    "COMUNICACIÓN SOCIAL": "Comunicacao Social",
+    "DERECHO": "Direito",
+    "INGENIERÍA CIVIL": "Engenharia Civil",
+    "ADMINISTRACIÓN DE NEGOCIOS": "Administracao de Negocios",
+    "INGENIERÍA DE DISEÑO DE PRODUCTO": "Engenharia de Design de Produto",
+    "MERCADEO": "Marketing",
+    "PSICOLOGÍA": "Psicologia",
+    "INGENIERÍA FÍSICA": "Engenharia Fisica",
+    "NEGOCIOS INTERNACIONALES": "Negocios Internacionais",
+    "BIOLOGÍA": "Biologia",
+    "CIENCIAS POLÍTICAS": "Ciencias Politicas",
+    "ECONOMÍA": "Economia",
+    "CONTADURÍA PÚBLICA": "Contabilidade Publica",
+    "MÚSICA": "Musica",
+    "LITERATURA": "Literatura",
+    "INGENIERÍA DE PROCESOS": "Engenharia de Processos",
+    "CONVENIO MOVILIDAD PREGRADO (CONVENIOS - MOVILIDAD NACIONAL - ASISTENTES PREGRADO)":
+        "Convenio Mobilidade Graduacao (Convenios - Mobilidade Nacional - Assistentes Graduacao)",
+}
+MAPA_APROV = {"Aprobó": "Aprovou", "Reprobó": "Reprovou", "Aprobo": "Aprovou", "Reprobo": "Reprovou"}
+MAPA_IDADE = {"Mayor": "Maior", "Menor": "Menor"}
+MAPA_GENERO = {"femenino": "Feminino", "masculino": "Masculino", "Femenino": "Feminino", "Masculino": "Masculino"}
+
+MAPA_STEM = {
+    "Sí": "Sim", "SÍ": "Sim", "si": "Sim", "SIM": "Sim", "Sim": "Sim",
+    "YES": "Sim", "Yes": "Sim", "TRUE": "Sim", "True": "Sim", "1": "Sim",
+    "No": "No", "NO": "No", "Nao": "No", "Não": "No", "nao": "No",
+    "FALSE": "No", "False": "No", "0": "No",
+}
+
+ERROR_TOKENS = {
+    "#ERROR!", "#DIV/0!", "#N/A", "#NAME?", "#NULL!", "#NUM!", "#VALUE!", "#REF!",
+    "N/D", "N/A", "NA", "NaN", "nan", "None", "NONE"
+}
+
 ```
+
+##### 4.2.2.1. Funções utilitárias
+
+&emsp; Após o mapeamento, construi-se um célula somente com as funções responsávei pela limpeza, padronização e tratamento dos dados. Realizados da seguinte forma:
+
+- **Remoção dos erros**
+
+&emsp; Com  identificação das células com mensagens de erro na planilha, montou-se uma função de limpeza para esses dados:
+
+``` python
+def replace_excel_errors(df, cols=None):
+    df = df.copy()
+    if cols is None:
+        cols = df.select_dtypes(include="object").columns.tolist()
+    for c in cols:
+        if c in df.columns:
+            df[c] = df[c].replace(list(ERROR_TOKENS), np.nan)
+    return df
+```
+
+- **Tradução da planilha**
+
+&emsp; A partir do mapeamento dos dados em espanhol para serem traduzidos, elaborou-se uma função para renomear os pontos necessários:
+
+``` python
+def padroniza_df(df):
+    df = df.copy().rename(columns=rename_map)
+    df = replace_excel_errors(df)
+    if "Nome_Programa_Academico" in df.columns:
+        df["Nome_Programa_Academico"] = (
+            df["Nome_Programa_Academico"].astype(str).str.strip().replace(MAPA_PROGRAMAS, regex=False)
+        )
+    if "Aprovou" in df.columns:
+        df["Aprovou"] = df["Aprovou"].astype(str).str.strip().replace(MAPA_APROV, regex=False)
+    if "Idade" in df.columns:
+        df["Idade"] = df["Idade"].astype(str).str.strip().replace(MAPA_IDADE, regex=False)
+    if "Genero" in df.columns:
+        df["Genero"] = df["Genero"].astype(str).str.strip().replace(MAPA_GENERO, regex=False)
+    if "STEM" in df.columns:
+        mask = df["STEM"].notna()
+        if mask.any():
+            df.loc[mask, "STEM"] = df.loc[mask, "STEM"].astype(str).str.strip().replace(MAPA_STEM, regex=False)
+    return df
+```
+
+- **Padronização do tempo**
+
+&emsp; As informações de tempo gasto em prova encontrava-se em formato de minutos, e padronizou-se a sua conversão para segundos e ser utilizado para futuras análises da seguinte maneira:
+
+``` python
+_PATTERN_TEMPO = re.compile(
+    r"^\s*(?:(\d+)\s*minuto(?:s)?)?\s*(?:(\d+)\s*segundo(?:s)?)?\s*$",
+    re.IGNORECASE
+)
+
+def parse_to_seconds(val):
+    if pd.isna(val):
+        return np.nan
+    if isinstance(val, (int, float)) and not isinstance(val, bool):
+        try:
+            return int(val)
+        except Exception:
+            return np.nan
+    if isinstance(val, str):
+        s = val.strip()
+        try:
+            return int(float(s))
+        except Exception:
+            pass
+        s_norm = s.replace(" e ", " ").replace(",", " ")
+        m = _PATTERN_TEMPO.match(s_norm)
+        if m:
+            mins, secs = m.group(1), m.group(2)
+            total = (int(mins) * 60 if mins else 0) + (int(secs) if secs else 0)
+            return total if (mins or secs) else np.nan
+        if ":" in s_norm:
+            parts = [p.strip() for p in s_norm.split(":")]
+            if len(parts) == 2 and all(p.isdigit() for p in parts):
+                mm, ss = map(int, parts)
+                return mm * 60 + ss
+            if len(parts) == 3 and all(p.isdigit() for p in parts):
+                hh, mm, ss = map(int, parts)
+                return hh * 3600 + mm * 60 + ss
+    return np.nan
+
+def converte_colunas_tempo(df):
+    df = df.copy()
+    cols_tempo = [c for c in df.columns if re.match(r"^(TempoQ|TiempoQ)\d+$", c)]
+    for col in cols_tempo:
+        df[col] = df[col].apply(parse_to_seconds)
+    return df
+
+```
+
+- **Remoção de dados problemáticos**
+
+&emsp; Em relação a limpeza dos dados, removeu-se os alunos faltantes e tratou-se os outliers para melhorar a qualidade dos dados, realizado assim:
+
+``` python
+# Remove os alunos faltantes
+def filtra_alunos_presentes(df):
+    df = df.copy()
+    cols_data = [c for c in df.columns if re.match(r"^(Data_Quiz|Fecha_Quiz)\d+$", c)]
+    if not cols_data:
+        return df
+    df_filtrado = df.dropna(subset=cols_data, how="all")
+    df_filtrado = df_filtrado.drop(columns=cols_data)
+    return df_filtrado
+
+def remove_outliers(df, n_cols_per_row=3):
+    df_numeric = df.select_dtypes(include=["number"])
+    df_numeric = df_numeric.drop(columns=["Grupo"], errors="ignore")  # evita erro se não existir
+
+    n_cols = len(df_numeric.columns)
+    n_rows = math.ceil(n_cols / n_cols_per_row)
+
+    # Boxplots originais
+    fig, axes = plt.subplots(n_rows, n_cols_per_row, figsize=(6*n_cols_per_row, 4*n_rows))
+    axes = axes.flatten()
+    for i, col in enumerate(df_numeric.columns):
+        sns.boxplot(x=df_numeric[col], ax=axes[i])
+        axes[i].set_title(f"Boxplot - {col}")
+    # remover eixos vazios
+    for j in range(i+1, len(axes)):
+        fig.delaxes(axes[j])
+    plt.tight_layout()
+    plt.show()
+
+    # Normalizar os outliers (clip)
+    for col in df_numeric.columns:
+        Q1 = df_numeric[col].quantile(0.25)
+        Q3 = df_numeric[col].quantile(0.75)
+        IQR = Q3 - Q1
+        lower = Q1 - 1.5 * IQR
+        upper = Q3 + 1.5 * IQR
+        df_numeric[col] = df_numeric[col].clip(lower, upper)
+
+    # Boxplots limpos
+    fig, axes = plt.subplots(n_rows, n_cols_per_row, figsize=(6*n_cols_per_row, 4*n_rows))
+    axes = axes.flatten()
+    for i, col in enumerate(df_numeric.columns):
+        sns.boxplot(x=df_numeric[col], ax=axes[i])
+        axes[i].set_title(f"Boxplot cleaned - {col}")
+    for j in range(i+1, len(axes)):
+        fig.delaxes(axes[j])
+    plt.tight_layout()
+    plt.show()
+
+    return df_numeric
+
+```
+
+- **Conversão de dados categóricos**
+
+&emsp; Na etapa final do pré-processamento, elaborou-se as seguintes funções para converter os dados categóricos utilizando o one-hot:
+
+``` python
+def fit_onehot_encoder(df_cat, cat_cols):
+    cat_cols_exist = [c for c in cat_cols if c in df_cat.columns]
+    if not cat_cols_exist:
+        return {"type": "none", "encoder": None, "columns": [], "cat_cols": []}
+    X_fit = replace_excel_errors(df_cat[cat_cols_exist].copy(), cols=cat_cols_exist)
+    X_fit = X_fit.fillna("MISSING").astype(str)
+    try:
+        from sklearn.preprocessing import OneHotEncoder
+        try:
+            enc = OneHotEncoder(sparse_output=False, handle_unknown="ignore")
+        except TypeError:
+            enc = OneHotEncoder(sparse=False, handle_unknown="ignore")
+        enc.fit(X_fit)
+        cols = list(enc.get_feature_names_out(cat_cols_exist))
+        return {"type": "sklearn", "encoder": enc, "columns": cols, "cat_cols": cat_cols_exist}
+    except Exception:
+        dummies = pd.get_dummies(X_fit, prefix=cat_cols_exist, dummy_na=False)
+        cols = dummies.columns.tolist()
+        return {"type": "pandas", "encoder": cols, "columns": cols, "cat_cols": cat_cols_exist}
+
+def aplica_onehot(df, encoder_info):
+    df = df.copy()
+    if encoder_info["type"] == "none":
+        return df
+    cat_cols_exist = encoder_info["cat_cols"]
+    X = replace_excel_errors(df[cat_cols_exist].copy(), cols=cat_cols_exist).fillna("MISSING").astype(str)
+    if encoder_info["type"] == "sklearn":
+        arr = encoder_info["encoder"].transform(X)
+        encoded_df = pd.DataFrame(arr, columns=encoder_info["columns"], index=df.index)
+        out = pd.concat([df.drop(columns=cat_cols_exist), encoded_df], axis=1)
+    else:
+        dummies_df = pd.get_dummies(X, prefix=cat_cols_exist, dummy_na=False)
+        all_cols = encoder_info["columns"]
+        for c in all_cols:
+            if c not in dummies_df.columns:
+                dummies_df[c] = 0
+        dummies_df = dummies_df[all_cols]
+        out = pd.concat([df.drop(columns=cat_cols_exist), dummies_df], axis=1)
+    bad_cols = [c for c in out.columns if "#ERROR!" in c]
+    if bad_cols:
+        out = out.drop(columns=bad_cols)
+    return out
+
+```
+
+&emsp; Após a formação dessas funções para o pré-processamento, após isso elaborou-se uma célula no notebook com o pipeline de execução das funções, da seguinte forma:
+
+``` python
+# 1) Carregar Excel
+df1_raw = pd.read_excel(XLSX1_PATH, sheet_name=SHEET_INDEX)
+df2_raw = pd.read_excel(XLSX2_PATH, sheet_name=SHEET_INDEX)
+
+# 2) Padronizar valores/nomes
+df1 = padroniza_df(df1_raw)
+df2 = padroniza_df(df2_raw)
+
+# 3) Converter tempos para segundos
+df1 = converte_colunas_tempo(df1)
+df2 = converte_colunas_tempo(df2)
+
+# 4) Filtrar apenas alunos com algum quiz e remover colunas de datas
+df1_presentes = filtra_alunos_presentes(df1)
+df2_presentes = filtra_alunos_presentes(df2)
+
+# 5) Concatenar
+df_consolidado = pd.concat([df1_presentes, df2_presentes], ignore_index=True)
+
+# 5.1) Limpar outliers das colunas numéricas
+df_numeric_clean = remove_outliers(df_consolidado)  # faz clip nos outliers
+# Substituir as colunas numéricas no df_consolidado
+df_consolidado[df_numeric_clean.columns] = df_numeric_clean
+
+# 6) Remover linhas com STEM ausente, replicando lógica original
+if "STEM" in df_consolidado.columns:
+    df_consolidado = df_consolidado.dropna(subset=["STEM"])
+
+# 7) One-Hot
+cat_cols = ["Tipo_Documento", "Idade", "Genero", "STEM", "MelhoraNotaQuizzes", "Aprovou"]
+encoder_info = fit_onehot_encoder(df_consolidado, cat_cols)
+df_onehot = aplica_onehot(df_consolidado, encoder_info)
+```
+
 
 #### 4.2.3. Hipóteses
 ```
