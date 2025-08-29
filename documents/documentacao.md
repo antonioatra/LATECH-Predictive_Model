@@ -597,98 +597,22 @@ Esta etapa inicial marca o primeiro contato com os dados, sendo responsável pel
 
 </div>
 
-#### 4.2.2. Pré-processamento dos dados
+#### 4.2.2. Pré-processamento 
 
-&emsp; Antes de qualquer exploração ou treinamento de algum modelo, é necessário realizar um pré-processamento de dados. Segundo fulano() essa etapa é importante para garantir a qualidade dos resultados, evitando conclusões preciptadas. O principal objetivo dessa etapa é tratar os dados brutos para deixá-los limpo, preparado e selecionado para a análise. Para isso realizou-se as seguintes passos para início do treinamento do modelo:
+&emsp; Antes da etapa de modelagem, é essencial realizar um rigoroso pré-processamento dos dados. Segundo Silva, Peres e Boscarioli (2016), esta fase é fundamental para garantir a integridade e a qualidade do dataset, mitigando o risco de conclusões preciptadas ou de baixa performance do modelo. O objetivo deste processo é transformar os dados brutos — marcados por inconsistências, erros de formatação e ruídos — em um conjunto de dados limpo, padronizado e estruturado, prontos para serem aplicados no treinamento do modelo.
 
-###### 4.2.2.1. Mapeamento para tadução e reconhecimento de erros
+&emsp; Para alcançar tal objetivo, foi desenvolvido um conjunto de funções utilitárias, organizadas em um pipeline sequencial. As seções a seguir detalham cada uma dessas funções e a lógica de sua execução:
 
-&emsp; Primeiramente, mapeou-se os títulos das colunas, e os dados das células da planilha para serem alterados, devido a falta de familiaridade com o idioma espanhol, além de identificar os tokens de erros presentes. Para isso, realizou-se a seguinte célula no jupyter notebook:
+##### 4.2.2.1. Funções Utilitárias
 
-``` python
-rename_map = {
-    "Periodo": "Periodo",
-    "Grupo": "Grupo",
-    "Horario": "Horario",
-    "Tipo_Documento": "Tipo_Documento",
-    "Edad": "Idade",
-    "Genero": "Genero",
-    "STEM": "STEM",
-    "MejoraNotaQuices": "MelhoraNotaQuizzes",
-    "Calificación_Oficial": "Nota_Oficial",
-    "Aprobo": "Aprovou",
-    "Nombre_Programa_Academico": "Nome_Programa_Academico",
-    "Nombre_Programa_Académico": "Nome_Programa_Academico",
-    "Proyecto_Parte1": "Projeto_Parte1",
-    "Proyecto_Parte2": "Projeto_Parte2",
-    "Talleres": "Oficinas",
-    "Quices": "Quizzes",
-    "CalcNotaQuiz": "CalcNotaQuiz",
-    "Parcial_1": "Parcial_1",
-    "Parcial_2": "Parcial_2",
-    "Quiz1": "Quiz1",
-    "Quiz2": "Quiz2",
-    "Quiz3": "Quiz3",
-    "Quiz4": "Quiz4",
-    "Quiz5": "Quiz5",
-    "Quiz6": "Quiz6",
-    "Quiz7": "Quiz7",
-    "Quiz8": "Quiz8",
-    "Cuánto mejora?": "Quanto_Melhora",
-    "Cuanto mejora?": "Quanto_Melhora",
-}
+&emsp; A seguir, são apresentadas as funções desenvolvidas para a limpeza, padronização e tratamento do dataset.
 
-for i in range(1, 9):
-    rename_map[f"Fecha_Quiz{i}"] = f"Data_Quiz{i}"
-    rename_map[f"TiempoQ{i}"] = f"TempoQ{i}"
+- **Detecção e Padronização de Erros**
 
-MAPA_PROGRAMAS = {
-    "COMUNICACIÓN SOCIAL": "Comunicacao Social",
-    "DERECHO": "Direito",
-    "INGENIERÍA CIVIL": "Engenharia Civil",
-    "ADMINISTRACIÓN DE NEGOCIOS": "Administracao de Negocios",
-    "INGENIERÍA DE DISEÑO DE PRODUCTO": "Engenharia de Design de Produto",
-    "MERCADEO": "Marketing",
-    "PSICOLOGÍA": "Psicologia",
-    "INGENIERÍA FÍSICA": "Engenharia Fisica",
-    "NEGOCIOS INTERNACIONALES": "Negocios Internacionais",
-    "BIOLOGÍA": "Biologia",
-    "CIENCIAS POLÍTICAS": "Ciencias Politicas",
-    "ECONOMÍA": "Economia",
-    "CONTADURÍA PÚBLICA": "Contabilidade Publica",
-    "MÚSICA": "Musica",
-    "LITERATURA": "Literatura",
-    "INGENIERÍA DE PROCESOS": "Engenharia de Processos",
-    "CONVENIO MOVILIDAD PREGRADO (CONVENIOS - MOVILIDAD NACIONAL - ASISTENTES PREGRADO)":
-        "Convenio Mobilidade Graduacao (Convenios - Mobilidade Nacional - Assistentes Graduacao)",
-}
-MAPA_APROV = {"Aprobó": "Aprovou", "Reprobó": "Reprovou", "Aprobo": "Aprovou", "Reprobo": "Reprovou"}
-MAPA_IDADE = {"Mayor": "Maior", "Menor": "Menor"}
-MAPA_GENERO = {"femenino": "Feminino", "masculino": "Masculino", "Femenino": "Feminino", "Masculino": "Masculino"}
+&emsp; A análise exploratória inicial identificou a presença de múltiplos tokens de erro provenientes do google planilhas que atrapalham a análise dos dados. A função replace_excel_errors foi criada para resolver este problema, substituindo todas as ocorrências desses tokens pelo valor nulo do NumPy, o numpy.nan:
 
-MAPA_STEM = {
-    "Sí": "Sim", "SÍ": "Sim", "si": "Sim", "SIM": "Sim", "Sim": "Sim",
-    "YES": "Sim", "Yes": "Sim", "TRUE": "Sim", "True": "Sim", "1": "Sim",
-    "No": "No", "NO": "No", "Nao": "No", "Não": "No", "nao": "No",
-    "FALSE": "No", "False": "No", "0": "No",
-}
+```python
 
-ERROR_TOKENS = {
-    "#ERROR!", "#DIV/0!", "#N/A", "#NAME?", "#NULL!", "#NUM!", "#VALUE!", "#REF!",
-    "N/D", "N/A", "NA", "NaN", "nan", "None", "NONE"
-}
-
-```
-
-##### 4.2.2.1. Funções utilitárias
-
-&emsp; Após o mapeamento, construi-se um célula somente com as funções responsávei pela limpeza, padronização e tratamento dos dados. Realizados da seguinte forma:
-
-- **Remoção dos erros**
-
-&emsp; Com  identificação das células com mensagens de erro na planilha, montou-se uma função de limpeza para esses dados:
-
-``` python
 def replace_excel_errors(df, cols=None):
     df = df.copy()
     if cols is None:
@@ -697,13 +621,16 @@ def replace_excel_errors(df, cols=None):
         if c in df.columns:
             df[c] = df[c].replace(list(ERROR_TOKENS), np.nan)
     return df
+
 ```
 
-- **Tradução da planilha**
+- **Tradução e Padronização de Conteúdo**
 
-&emsp; A partir do mapeamento dos dados em espanhol para serem traduzidos, elaborou-se uma função para renomear os pontos necessários:
+&emsp; Para melhorar a interpretação dos dados durante o processo de desenvolvimento do modelo, foi necessário traduzir os nomes das colunas e padronizar os valores categóricos. A função padroniza_df centraliza essas operações. Além de renomear as colunas para o português (conforme rename_map), a função aplica mapeamentos específicos para corrigir os dados com diversas variantes em colunas críticas como Aprovou, Genero e STEM, que continha múltiplas representações para a mesma informação booleana. Essa padronização é vital para a construção do modelo e treinamento dele. Todo esse processo ocorreu da seguinte maneira:
 
-``` python
+
+```python
+
 def padroniza_df(df):
     df = df.copy().rename(columns=rename_map)
     df = replace_excel_errors(df)
@@ -722,13 +649,15 @@ def padroniza_df(df):
         if mask.any():
             df.loc[mask, "STEM"] = df.loc[mask, "STEM"].astype(str).str.strip().replace(MAPA_STEM, regex=False)
     return df
+
 ```
 
-- **Padronização do tempo**
+- **Normalização de Variáveis Temporais**
 
-&emsp; As informações de tempo gasto em prova encontrava-se em formato de minutos, e padronizou-se a sua conversão para segundos e ser utilizado para futuras análises da seguinte maneira:
+&emsp; As colunas que registram o tempo de execução dos quizzes (TempoQ) foram disponibilizado com unidades de tempo e outros caracteres que não são interpretados corretamente pelo modelo, para isso foi desenvolvida a função parse_to_seconds. Utilizando expressões regulares e lógica condicional, função transforma esses dados irregulares na quantidade de segundos correspondente. A função converte_colunas_tempo aplica essa transformação a todas as colunas de tempo relevantes, da seguinte maneira:
 
-``` python
+```python
+
 _PATTERN_TEMPO = re.compile(
     r"^\s*(?:(\d+)\s*minuto(?:s)?)?\s*(?:(\d+)\s*segundo(?:s)?)?\s*$",
     re.IGNORECASE
@@ -773,11 +702,12 @@ def converte_colunas_tempo(df):
 
 ```
 
-- **Remoção de dados problemáticos**
+- **Filtragem de Dados de Alunos Ausentes**
 
-&emsp; Em relação a limpeza dos dados, removeu-se os alunos faltantes e tratou-se os outliers para melhorar a qualidade dos dados, realizado assim:
+&emsp; Para o objetivo do modelo, os alunos faltantes atrapalham na predição do modelo. A função filtra_alunos_presentes implementa essa regra de negócio. Ela identifica os alunos para os quais todas as colunas de data de  entrega de quizzes são nulas e remove esses registros do dataset. A ausência total de datas de entrega indica que o aluno faltou durante a aplicação das atividades avaliativas. Após a filtragem, as próprias colunas de data são removidas, da seguinte forma:
 
-``` python
+```python
+
 # Remove os alunos faltantes
 def filtra_alunos_presentes(df):
     df = df.copy()
@@ -787,6 +717,14 @@ def filtra_alunos_presentes(df):
     df_filtrado = df.dropna(subset=cols_data, how="all")
     df_filtrado = df_filtrado.drop(columns=cols_data)
     return df_filtrado
+
+```
+
+- **Identificação e Tratamento de Outliers**
+
+&emsp; A presença de outliers em variáveis numéricas pode impactar negativamente o desempenho do modelo preditivo. A função remove_outliers foi projetada para identificar e mitigar esses valores extremos. A identificação é feita pelo método de Tukey, que utiliza o Intervalo Interquartil (IQR) para definir limites estatísticos. Para o tratamento, optou-se pela técnica de clipping, que substitui os outliers pelo valor do limite mais próximo (inferior ou superior). Essa abordagem tem a vantagem de reduzir a influência dos valores extremos sem descartar o registro inteiro, preservando as informações contidas nas outras features daquela observação. A função também gera visualizações de boxplots antes e depois do tratamento, permitindo uma validação visual da eficácia do processo.
+
+```python
 
 def remove_outliers(df, n_cols_per_row=3):
     df_numeric = df.select_dtypes(include=["number"])
@@ -831,11 +769,12 @@ def remove_outliers(df, n_cols_per_row=3):
 
 ```
 
-- **Conversão de dados categóricos**
+- **Codificação de Variáveis Categóricas**
 
-&emsp; Na etapa final do pré-processamento, elaborou-se as seguintes funções para converter os dados categóricos utilizando o one-hot:
+&emsp; Como etapa final, as variáveis categóricas restantes foram transformadas em um formato numérico que pode ser processado pelo modelo, utilizando a técnica de One-Hot Encoding. A implementação foi segregada em duas funções (fit_onehot_encoder e aplica_onehot). O encoder é "treinado" (fit) apenas uma vez no conjunto de dados principal. A transformação (aplica) pode então ser consistentemente aplicada a qualquer novo conjunto de dados (como dados de teste ou validação). A implementação também trata explicitamente valores ausentes, criando uma categoria "MISSING", o que permite ao modelo aprender padrões a partir da própria ausência de dados.
 
-``` python
+```python
+
 def fit_onehot_encoder(df_cat, cat_cols):
     cat_cols_exist = [c for c in cat_cols if c in df_cat.columns]
     if not cat_cols_exist:
@@ -881,9 +820,12 @@ def aplica_onehot(df, encoder_info):
 
 ```
 
-&emsp; Após a formação dessas funções para o pré-processamento, após isso elaborou-se uma célula no notebook com o pipeline de execução das funções, da seguinte forma:
+##### 4.2.2.2. Pipeline de Execução do Pré-processamento
+  
+&emsp; As funções utilitárias foram integradas em um pipeline sequencial para processar os dados brutos. O processo inicia-se com o carregamento dos datasets. Em seguida, a função padroniza_df é aplicada para realizar a tradução, padronização e limpeza inicial. As colunas de tempo são normalizadas para segundos. Após isso, os alunos ausentes são filtrados com base na ausência de entregas. Após a concatenação dos datasets, a função remove_outliers trata os valores extremos nas features numéricas. Por fim, as variáveis categóricas são transformadas via One-Hot Encoding, resultando no dataframe final, pronto para a modelagem.
 
-``` python
+```python
+
 # 1) Carregar Excel
 df1_raw = pd.read_excel(XLSX1_PATH, sheet_name=SHEET_INDEX)
 df2_raw = pd.read_excel(XLSX2_PATH, sheet_name=SHEET_INDEX)
@@ -916,8 +858,10 @@ if "STEM" in df_consolidado.columns:
 cat_cols = ["Tipo_Documento", "Idade", "Genero", "STEM", "MelhoraNotaQuizzes", "Aprovou"]
 encoder_info = fit_onehot_encoder(df_consolidado, cat_cols)
 df_onehot = aplica_onehot(df_consolidado, encoder_info)
+
 ```
 
+&emsp; Ao final deste pipeline, o dataframe está devidamente processado e preparado para a próxima fase do projeto, a análise de hipóteses formulada conforme descrito na seção 4.2.3.
 
 #### 4.2.3. Hipóteses
 ```
@@ -991,6 +935,8 @@ Remova este bloco ao final
 
 
 [Númeração de acordo com a ordem alfabética]. <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [PMI - Project Management Institute. Um guia do conhecimento em gerenciamento de projetos (Guia PMBOK®): guia do conhecimento em gerenciamento de projetos. 7. ed. Newtown Square, PA: Project Management Institute, 2021.](https://www.academiaplaorc.com.br/wp-content/uploads/2024/07/Guia-PMBOK-7a-Edicao.pdf)  
+
+SILVA, L. A. da; PERES, S. M.; BOSCARIOLI, C. **Introdução à mineração de dados**: com aplicações em R. Rio de Janeiro: GEN LTC, 2016
 
 ## <a name="attachments"></a>Anexos
 ```
