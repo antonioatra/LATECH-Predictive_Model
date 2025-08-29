@@ -691,3 +691,18 @@ Remova este bloco ao final
 - **CalcNotaQuiz**: Indica o número de itens adquiridos em cada transação, fundamental para compreender padrões de consumo
 - **Nota_Oficial**: Refere-se ao custo de produção dos produtos, essencial para análises de margem e rentabilidade
 
+### Análise e Teste de Normalidade das Variáveis Quantitativas
+
+ A verificação da normalidade dos dados é uma etapa central na análise estatística, pois orienta a escolha entre procedimentos paramétricos e não-paramétricos nas fases seguintes do estudo. Neste trabalho, a questão investigada é se as variáveis quantitativas do conjunto analisado podem ser consideradas como provenientes de uma distribuição normal.
+
+<div align="center">
+
+Hipótese Nula (H₀): Os dados seguem uma distribuição normal.
+$H_0: X \sim N(\mu, \sigma^2)$
+
+Hipótese Alternativa (Hₐ): Os dados não seguem uma distribuição normal.
+$H_1: X \not\sim N(\mu, \sigma^2)$
+
+</div> </br>
+
+ A formulação segue a abordagem clássica de testes de hipóteses: a hipótese nula (H₀) assume normalidade, enquanto a hipótese alternativa (Hₐ) sugere sua violação. Essa estrutura possibilita avaliar formalmente a adequação da distribuição de cada variável, constituindo um critério essencial para a definição de métodos estatísticos apropriados nas etapas posteriores da análise.
