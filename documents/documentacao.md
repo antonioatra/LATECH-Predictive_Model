@@ -676,8 +676,9 @@ Remova este bloco ao final
 [Númeração de acordo com a ordem alfabética]. <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [PMI - Project Management Institute. Um guia do conhecimento em gerenciamento de projetos (Guia PMBOK®): guia do conhecimento em gerenciamento de projetos. 7. ed. Newtown Square, PA: Project Management Institute, 2021.](https://www.academiaplaorc.com.br/wp-content/uploads/2024/07/Guia-PMBOK-7a-Edicao.pdf)  
 
 ## <a name="attachments"></a>Anexos
-```
-Utilize esta seção para anexar materiais como manuais de usuário, documentos complementares que ficaram grandes e não couberam no corpo do texto etc.
 
-Remova este bloco ao final
-```
+### Distribuição normal e teste de hipótese
+
+&ensp;Esta seção investiga se as variáveis quantitativas seguem (ou não) a distribuição normal e discute as implicações dessa avaliação para as etapas subsequentes de modelagem. Em projetos de natureza preditiva voltados a decisões de negócio — como expansão de pontos de venda, segmentação de clientes ou aumento da penetração de produtos — a validade dos resultados depende diretamente da escolha adequada de: (1) testes estatísticos (paramétricos vs. não-paramétricos), (2) técnicas de transformação e tratamento de outliers e (3) métodos de escalonamento capazes de garantir comparabilidade entre atributos de diferentes magnitudes.
+
+&ensp;Nesse sentido, a análise de assimetria, curtose e valores extremos atua como etapa crítica tanto na engenharia de atributos quanto na seleção de algoritmos. Modelos baseados no cálculo de distâncias, que sensíveis à escala (como K-Means, SVM e redes neurais) ou baseados em pressupostos distributivos (como regressões lineares e outros modelos paramétricos) dependem fortemente da adequação das distribuições de entrada para gerar inferências consistentes e decisões confiáveis.
