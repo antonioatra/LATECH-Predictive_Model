@@ -705,4 +705,8 @@ $H_1: X \not\sim N(\mu, \sigma^2)$
 
 </div> </br>
 
- A formulação segue a abordagem clássica de testes de hipóteses: a hipótese nula (H₀) assume normalidade, enquanto a hipótese alternativa (Hₐ) sugere sua violação. Essa estrutura possibilita avaliar formalmente a adequação da distribuição de cada variável, constituindo um critério essencial para a definição de métodos estatísticos apropriados nas etapas posteriores da análise.
+&ensp;A formulação segue a abordagem clássica de testes de hipóteses: a hipótese nula (H₀) assume normalidade, enquanto a hipótese alternativa (Hₐ) sugere sua violação. Essa estrutura possibilita avaliar formalmente a adequação da distribuição de cada variável, constituindo um critério essencial para a definição de métodos estatísticos apropriados nas etapas posteriores da análise.
+
+### Nível de significâcia e critérios de decisão
+
+&ensp;Adotou-se um nível de significância de α = 0,05 (5%), valor amplamente utilizado na literatura científica por proporcionar um equilíbrio adequado entre o risco de cometer erro do tipo I e a potência do teste. A decisão sobre a hipótese nula baseia-se no valor-p: se p-valor ≤ 0,05, rejeita-se H₀, indicando evidência estatística de desvio da normalidade; se p-valor > 0,05, não se rejeita H₀, sugerindo que não há evidência suficiente para concluir que os dados não seguem uma distribuição normal.
