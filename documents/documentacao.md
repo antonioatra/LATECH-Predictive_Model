@@ -710,3 +710,119 @@ $H_1: X \not\sim N(\mu, \sigma^2)$
 ### Nível de significâcia e critérios de decisão
 
 &ensp;Adotou-se um nível de significância de α = 0,05 (5%), valor amplamente utilizado na literatura científica por proporcionar um equilíbrio adequado entre o risco de cometer erro do tipo I e a potência do teste. A decisão sobre a hipótese nula baseia-se no valor-p: se p-valor ≤ 0,05, rejeita-se H₀, indicando evidência estatística de desvio da normalidade; se p-valor > 0,05, não se rejeita H₀, sugerindo que não há evidência suficiente para concluir que os dados não seguem uma distribuição normal.
+
+### Teste de Normalidade (Aderência)
+
+&ensp;A normalidade das variáveis quantitativas foi avaliada por meio do teste de Shapiro-Wilk, indicado para amostras de tamanho moderado e amplamente utilizado na literatura para essa finalidade. A estatística do teste é definida como:
+
+$$W = \frac{\left( \sum_{i=1}^{n} a_i x_{(i)} \right)^2}{\sum_{i=1}^{n} (x_i - \bar{x})^2}$$
+
+&ensp;Onde $x_{(i)}$ são os valores ordenados da amostra, $\bar{x}$ é a média amostral, $n$ representa o tamanho da amostra e $a_i$ são constantes derivadas das médias, variâncias e covariâncias das estatísticas de ordem de uma amostra de tamanho $n$ proveniente de uma distribuição normal. Seguem os testes feitos no código para a variável `"CalcNotaQuiz"`:
+
+```python
+# Testes de normalidade das variáveis "CalcNotaQuiz", "Talleres", "Calificación_Oficial"
+# Testando normalidade para "CalcNotaQuiz" via Shapiro-Wilk
+from scipy.stats import shapiro
+
+dados = df_consolidado['CalcNotaQuiz'].dropna()
+
+stat, p = shapiro(dados)
+
+print('H0: Os dados seguem uma distribuição normal')
+print('H1: Os dados não seguem uma distribuição normal')
+print("Estatística W:", stat)
+print("p-valor:", p)
+
+if p > 0.05:
+    print("Não rejeitamos H0: os dados seguem uma distribuição normal.")
+else:
+    print("Rejeitamos H0: os dados não seguem uma distribuição normal.")
+```
+Segue a saída:
+```
+H0: Os dados seguem uma distribuição normal
+H1: Os dados não seguem uma distribuição normal
+Estatística W: 0.9158549463812558
+p-valor: 5.737420736467878e-27
+Rejeitamos H0: os dados não seguem uma distribuição normal.
+```
+#### Teste de Normalidade para a variável "Talleres"
+
+```python
+# Testando normalidade para "Oficinas" (Talleres) via Shapiro-Wilk
+
+from scipy.stats import shapiro
+
+dados = df_consolidado['Oficinas'].dropna()
+
+stat, p = shapiro(dados)
+
+print('H0: Os dados seguem uma distribuição normal')
+print('H1: Os dados não seguem uma distribuição normal')
+print("Estatística W:", stat)
+print("p-valor:", p)
+
+if p > 0.05:
+    print("Não rejeitamos H0: os dados seguem uma distribuição normal.")
+else:
+    print("Rejeitamos H0: os dados não seguem uma distribuição normal.")
+```
+
+Segue a saída:
+```
+H0: Os dados seguem uma distribuição normal
+H1: Os dados não seguem uma distribuição normal
+Estatística W: 0.7847014498757214
+p-valor: 3.386401173855684e-39
+Rejeitamos H0: os dados não seguem uma distribuição normal.
+```
+
+#### Teste de Normalidade para a variável Calificación_Oficial
+
+```python
+# Testando normalidade para "Nota_Oficial" (Calificación_Oficial) via Shapiro-Wilk
+from scipy.stats import shapiro
+
+dados = df_consolidado['Nota_Oficial'].dropna()
+
+stat, p = shapiro(dados)
+
+print('H0: Os dados seguem uma distribuição normal')
+print('H1: Os dados não seguem uma distribuição normal')
+print("Estatística W:", stat)
+print("p-valor:", p)
+
+
+if p > 0.05:
+    print("Não rejeitamos H0: os dados seguem uma distribuição normal.")
+else:
+    print("Rejeitamos H0: os dados não seguem uma distribuição normal.")
+```
+
+Segue a saída:
+```
+# Testando normalidade para "Nota_Oficial" (Calificación_Oficial) via Shapiro-Wilk
+from scipy.stats import shapiro
+
+dados = df_consolidado['Nota_Oficial'].dropna()
+
+stat, p = shapiro(dados)
+
+print('H0: Os dados seguem uma distribuição normal')
+print('H1: Os dados não seguem uma distribuição normal')
+print("Estatística W:", stat)
+print("p-valor:", p)
+
+
+if p > 0.05:
+    print("Não rejeitamos H0: os dados seguem uma distribuição normal.")
+else:
+    print("Rejeitamos H0: os dados não seguem uma distribuição normal.")
+```
+
+&ensp; Os resultados indicam que as variáveis `CalcNotaQuiz`, `Talleres`, `Calificación_Oficial` apresentam evidências de não seguirem uma distribuição normal (p < 0.05).
+
+### Visualização por gráficos
+
+&ensp;A fim de complementar a análise, foram construídos histogramas e violin plots das três variáveis, permitindo uma avaliação visual sobre a distribuição das variáveis.
+
