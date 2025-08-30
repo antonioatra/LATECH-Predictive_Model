@@ -595,12 +595,271 @@ Esta etapa inicial marca o primeiro contato com os dados, sendo responsável pel
 
 </div>
 
-#### 4.2.2. Pré-processamento dos dados
-```
-Apresentar quais foram as ações realizadas de limpeza (tratamento de missing values e remoção de outliers) e transformação (normalização e codificação) das colunas. Se houverem outliers, cite quais são e qual(is) correção(ões) será(ão) aplicada(s).
+#### 4.2.2. Pré-processamento 
 
-Remova este bloco ao final
+&emsp; Antes da etapa de modelagem, é essencial realizar um rigoroso pré-processamento dos dados. Segundo Silva, Peres e Boscarioli (2016), esta fase é fundamental para garantir a integridade e a qualidade do dataset, mitigando o risco de conclusões preciptadas ou de baixa performance do modelo. O objetivo deste processo é transformar os dados brutos — marcados por inconsistências, erros de formatação e ruídos — em um conjunto de dados limpo, padronizado e estruturado, prontos para serem aplicados no treinamento do modelo.
+
+&emsp; Para alcançar tal objetivo, foi desenvolvido um conjunto de funções utilitárias, organizadas em um pipeline sequencial. As seções a seguir detalham cada uma dessas funções e a lógica de sua execução:
+
+##### 4.2.2.1. Funções Utilitárias
+
+&emsp; A seguir, são apresentadas as funções desenvolvidas para a limpeza, padronização e tratamento do dataset.
+
+- **Detecção e Padronização de Erros**
+
+&emsp; A análise exploratória inicial identificou a presença de múltiplos tokens de erro provenientes do google planilhas que atrapalham a análise dos dados. A função replace_excel_errors foi criada para resolver este problema, substituindo todas as ocorrências desses tokens pelo valor nulo do NumPy, o numpy.nan:
+
+```python
+
+def replace_excel_errors(df, cols=None):
+    df = df.copy()
+    if cols is None:
+        cols = df.select_dtypes(include="object").columns.tolist()
+    for c in cols:
+        if c in df.columns:
+            df[c] = df[c].replace(list(ERROR_TOKENS), np.nan)
+    return df
+
 ```
+
+- **Tradução e Padronização de Conteúdo**
+
+&emsp; Para melhorar a interpretação dos dados durante o processo de desenvolvimento do modelo, foi necessário traduzir os nomes das colunas e padronizar os valores categóricos. A função padroniza_df centraliza essas operações. Além de renomear as colunas para o português (conforme rename_map), a função aplica mapeamentos específicos para corrigir os dados com diversas variantes em colunas críticas como Aprovou, Genero e STEM, que continha múltiplas representações para a mesma informação booleana. Essa padronização é vital para a construção do modelo e treinamento dele. Todo esse processo ocorreu da seguinte maneira:
+
+
+```python
+
+def padroniza_df(df):
+    df = df.copy().rename(columns=rename_map)
+    df = replace_excel_errors(df)
+    if "Nome_Programa_Academico" in df.columns:
+        df["Nome_Programa_Academico"] = (
+            df["Nome_Programa_Academico"].astype(str).str.strip().replace(MAPA_PROGRAMAS, regex=False)
+        )
+    if "Aprovou" in df.columns:
+        df["Aprovou"] = df["Aprovou"].astype(str).str.strip().replace(MAPA_APROV, regex=False)
+    if "Idade" in df.columns:
+        df["Idade"] = df["Idade"].astype(str).str.strip().replace(MAPA_IDADE, regex=False)
+    if "Genero" in df.columns:
+        df["Genero"] = df["Genero"].astype(str).str.strip().replace(MAPA_GENERO, regex=False)
+    if "STEM" in df.columns:
+        mask = df["STEM"].notna()
+        if mask.any():
+            df.loc[mask, "STEM"] = df.loc[mask, "STEM"].astype(str).str.strip().replace(MAPA_STEM, regex=False)
+    return df
+
+```
+
+- **Normalização de Variáveis Temporais**
+
+&emsp; As colunas que registram o tempo de execução dos quizzes (TempoQ) foram disponibilizado com unidades de tempo e outros caracteres que não são interpretados corretamente pelo modelo, para isso foi desenvolvida a função parse_to_seconds. Utilizando expressões regulares e lógica condicional, função transforma esses dados irregulares na quantidade de segundos correspondente. A função converte_colunas_tempo aplica essa transformação a todas as colunas de tempo relevantes, da seguinte maneira:
+
+```python
+
+_PATTERN_TEMPO = re.compile(
+    r"^\s*(?:(\d+)\s*minuto(?:s)?)?\s*(?:(\d+)\s*segundo(?:s)?)?\s*$",
+    re.IGNORECASE
+)
+
+def parse_to_seconds(val):
+    if pd.isna(val):
+        return np.nan
+    if isinstance(val, (int, float)) and not isinstance(val, bool):
+        try:
+            return int(val)
+        except Exception:
+            return np.nan
+    if isinstance(val, str):
+        s = val.strip()
+        try:
+            return int(float(s))
+        except Exception:
+            pass
+        s_norm = s.replace(" e ", " ").replace(",", " ")
+        m = _PATTERN_TEMPO.match(s_norm)
+        if m:
+            mins, secs = m.group(1), m.group(2)
+            total = (int(mins) * 60 if mins else 0) + (int(secs) if secs else 0)
+            return total if (mins or secs) else np.nan
+        if ":" in s_norm:
+            parts = [p.strip() for p in s_norm.split(":")]
+            if len(parts) == 2 and all(p.isdigit() for p in parts):
+                mm, ss = map(int, parts)
+                return mm * 60 + ss
+            if len(parts) == 3 and all(p.isdigit() for p in parts):
+                hh, mm, ss = map(int, parts)
+                return hh * 3600 + mm * 60 + ss
+    return np.nan
+
+def converte_colunas_tempo(df):
+    df = df.copy()
+    cols_tempo = [c for c in df.columns if re.match(r"^(TempoQ|TiempoQ)\d+$", c)]
+    for col in cols_tempo:
+        df[col] = df[col].apply(parse_to_seconds)
+    return df
+
+```
+
+- **Filtragem de Dados de Alunos Ausentes**
+
+&emsp; Para o objetivo do modelo, os alunos faltantes atrapalham na predição do modelo. A função filtra_alunos_presentes implementa essa regra de negócio. Ela identifica os alunos para os quais todas as colunas de data de  entrega de quizzes são nulas e remove esses registros do dataset. A ausência total de datas de entrega indica que o aluno faltou durante a aplicação das atividades avaliativas. Após a filtragem, as próprias colunas de data são removidas, da seguinte forma:
+
+```python
+
+# Remove os alunos faltantes
+def filtra_alunos_presentes(df):
+    df = df.copy()
+    cols_data = [c for c in df.columns if re.match(r"^(Data_Quiz|Fecha_Quiz)\d+$", c)]
+    if not cols_data:
+        return df
+    df_filtrado = df.dropna(subset=cols_data, how="all")
+    df_filtrado = df_filtrado.drop(columns=cols_data)
+    return df_filtrado
+
+```
+
+- **Identificação e Tratamento de Outliers**
+
+&emsp; A presença de outliers em variáveis numéricas pode impactar negativamente o desempenho do modelo preditivo. A função remove_outliers foi projetada para identificar e mitigar esses valores extremos. A identificação é feita pelo método de Tukey, que utiliza o Intervalo Interquartil (IQR) para definir limites estatísticos. Para o tratamento, optou-se pela técnica de clipping, que substitui os outliers pelo valor do limite mais próximo (inferior ou superior). Essa abordagem tem a vantagem de reduzir a influência dos valores extremos sem descartar o registro inteiro, preservando as informações contidas nas outras features daquela observação. A função também gera visualizações de boxplots antes e depois do tratamento, permitindo uma validação visual da eficácia do processo.
+
+```python
+
+def remove_outliers(df, n_cols_per_row=3):
+    df_numeric = df.select_dtypes(include=["number"])
+    df_numeric = df_numeric.drop(columns=["Grupo"], errors="ignore")  # evita erro se não existir
+
+    n_cols = len(df_numeric.columns)
+    n_rows = math.ceil(n_cols / n_cols_per_row)
+
+    # Boxplots originais
+    fig, axes = plt.subplots(n_rows, n_cols_per_row, figsize=(6*n_cols_per_row, 4*n_rows))
+    axes = axes.flatten()
+    for i, col in enumerate(df_numeric.columns):
+        sns.boxplot(x=df_numeric[col], ax=axes[i])
+        axes[i].set_title(f"Boxplot - {col}")
+    # remover eixos vazios
+    for j in range(i+1, len(axes)):
+        fig.delaxes(axes[j])
+    plt.tight_layout()
+    plt.show()
+
+    # Normalizar os outliers (clip)
+    for col in df_numeric.columns:
+        Q1 = df_numeric[col].quantile(0.25)
+        Q3 = df_numeric[col].quantile(0.75)
+        IQR = Q3 - Q1
+        lower = Q1 - 1.5 * IQR
+        upper = Q3 + 1.5 * IQR
+        df_numeric[col] = df_numeric[col].clip(lower, upper)
+
+    # Boxplots limpos
+    fig, axes = plt.subplots(n_rows, n_cols_per_row, figsize=(6*n_cols_per_row, 4*n_rows))
+    axes = axes.flatten()
+    for i, col in enumerate(df_numeric.columns):
+        sns.boxplot(x=df_numeric[col], ax=axes[i])
+        axes[i].set_title(f"Boxplot cleaned - {col}")
+    for j in range(i+1, len(axes)):
+        fig.delaxes(axes[j])
+    plt.tight_layout()
+    plt.show()
+
+    return df_numeric
+
+```
+
+- **Codificação de Variáveis Categóricas**
+
+&emsp; Como etapa final, as variáveis categóricas restantes foram transformadas em um formato numérico que pode ser processado pelo modelo, utilizando a técnica de One-Hot Encoding. A implementação foi segregada em duas funções (fit_onehot_encoder e aplica_onehot). O encoder é "treinado" (fit) apenas uma vez no conjunto de dados principal. A transformação (aplica) pode então ser consistentemente aplicada a qualquer novo conjunto de dados (como dados de teste ou validação). A implementação também trata explicitamente valores ausentes, criando uma categoria "MISSING", o que permite ao modelo aprender padrões a partir da própria ausência de dados.
+
+```python
+
+def fit_onehot_encoder(df_cat, cat_cols):
+    cat_cols_exist = [c for c in cat_cols if c in df_cat.columns]
+    if not cat_cols_exist:
+        return {"type": "none", "encoder": None, "columns": [], "cat_cols": []}
+    X_fit = replace_excel_errors(df_cat[cat_cols_exist].copy(), cols=cat_cols_exist)
+    X_fit = X_fit.fillna("MISSING").astype(str)
+    try:
+        from sklearn.preprocessing import OneHotEncoder
+        try:
+            enc = OneHotEncoder(sparse_output=False, handle_unknown="ignore")
+        except TypeError:
+            enc = OneHotEncoder(sparse=False, handle_unknown="ignore")
+        enc.fit(X_fit)
+        cols = list(enc.get_feature_names_out(cat_cols_exist))
+        return {"type": "sklearn", "encoder": enc, "columns": cols, "cat_cols": cat_cols_exist}
+    except Exception:
+        dummies = pd.get_dummies(X_fit, prefix=cat_cols_exist, dummy_na=False)
+        cols = dummies.columns.tolist()
+        return {"type": "pandas", "encoder": cols, "columns": cols, "cat_cols": cat_cols_exist}
+
+def aplica_onehot(df, encoder_info):
+    df = df.copy()
+    if encoder_info["type"] == "none":
+        return df
+    cat_cols_exist = encoder_info["cat_cols"]
+    X = replace_excel_errors(df[cat_cols_exist].copy(), cols=cat_cols_exist).fillna("MISSING").astype(str)
+    if encoder_info["type"] == "sklearn":
+        arr = encoder_info["encoder"].transform(X)
+        encoded_df = pd.DataFrame(arr, columns=encoder_info["columns"], index=df.index)
+        out = pd.concat([df.drop(columns=cat_cols_exist), encoded_df], axis=1)
+    else:
+        dummies_df = pd.get_dummies(X, prefix=cat_cols_exist, dummy_na=False)
+        all_cols = encoder_info["columns"]
+        for c in all_cols:
+            if c not in dummies_df.columns:
+                dummies_df[c] = 0
+        dummies_df = dummies_df[all_cols]
+        out = pd.concat([df.drop(columns=cat_cols_exist), dummies_df], axis=1)
+    bad_cols = [c for c in out.columns if "#ERROR!" in c]
+    if bad_cols:
+        out = out.drop(columns=bad_cols)
+    return out
+
+```
+
+##### 4.2.2.2. Pipeline de Execução do Pré-processamento
+  
+&emsp; As funções utilitárias foram integradas em um pipeline sequencial para processar os dados brutos. O processo inicia-se com o carregamento dos datasets. Em seguida, a função padroniza_df é aplicada para realizar a tradução, padronização e limpeza inicial. As colunas de tempo são normalizadas para segundos. Após isso, os alunos ausentes são filtrados com base na ausência de entregas. Após a concatenação dos datasets, a função remove_outliers trata os valores extremos nas features numéricas. Por fim, as variáveis categóricas são transformadas via One-Hot Encoding, resultando no dataframe final, pronto para a modelagem.
+
+```python
+
+# 1) Carregar Excel
+df1_raw = pd.read_excel(XLSX1_PATH, sheet_name=SHEET_INDEX)
+df2_raw = pd.read_excel(XLSX2_PATH, sheet_name=SHEET_INDEX)
+
+# 2) Padronizar valores/nomes
+df1 = padroniza_df(df1_raw)
+df2 = padroniza_df(df2_raw)
+
+# 3) Converter tempos para segundos
+df1 = converte_colunas_tempo(df1)
+df2 = converte_colunas_tempo(df2)
+
+# 4) Filtrar apenas alunos com algum quiz e remover colunas de datas
+df1_presentes = filtra_alunos_presentes(df1)
+df2_presentes = filtra_alunos_presentes(df2)
+
+# 5) Concatenar
+df_consolidado = pd.concat([df1_presentes, df2_presentes], ignore_index=True)
+
+# 5.1) Limpar outliers das colunas numéricas
+df_numeric_clean = remove_outliers(df_consolidado)  # faz clip nos outliers
+# Substituir as colunas numéricas no df_consolidado
+df_consolidado[df_numeric_clean.columns] = df_numeric_clean
+
+# 6) Remover linhas com STEM ausente, replicando lógica original
+if "STEM" in df_consolidado.columns:
+    df_consolidado = df_consolidado.dropna(subset=["STEM"])
+
+# 7) One-Hot
+cat_cols = ["Tipo_Documento", "Idade", "Genero", "STEM", "MelhoraNotaQuizzes", "Aprovou"]
+encoder_info = fit_onehot_encoder(df_consolidado, cat_cols)
+df_onehot = aplica_onehot(df_consolidado, encoder_info)
+
+```
+
+&emsp; Ao final deste pipeline, o dataframe está devidamente processado e preparado para a próxima fase do projeto, a análise de hipóteses formulada conforme descrito na seção 4.2.3.
 
 #### 4.2.3. Hipóteses
 ```
@@ -674,6 +933,8 @@ Remova este bloco ao final
 
 
 [Númeração de acordo com a ordem alfabética]. <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [PMI - Project Management Institute. Um guia do conhecimento em gerenciamento de projetos (Guia PMBOK®): guia do conhecimento em gerenciamento de projetos. 7. ed. Newtown Square, PA: Project Management Institute, 2021.](https://www.academiaplaorc.com.br/wp-content/uploads/2024/07/Guia-PMBOK-7a-Edicao.pdf)  
+
+SILVA, L. A. da; PERES, S. M.; BOSCARIOLI, C. **Introdução à mineração de dados**: com aplicações em R. Rio de Janeiro: GEN LTC, 2016
 
 ## <a name="attachments"></a>Anexos
 
