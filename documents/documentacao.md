@@ -862,11 +862,110 @@ df_onehot = aplica_onehot(df_consolidado, encoder_info)
 &emsp; Ao final deste pipeline, o dataframe está devidamente processado e preparado para a próxima fase do projeto, a análise de hipóteses formulada conforme descrito na seção 4.2.3.
 
 #### 4.2.3. Hipóteses
-```
-Descreva três hipóteses sobre a relação dos dados e o problema. Justifique cada uma delas. 
 
-Remova este bloco ao final
-```
+&emsp; A etapa de verificação de hipóteses é um pilar no processo de mineração de dados. Conforme destacam Silva, Peres e Boscarioli (2016), a qualidade do resultado da modelagem está diretamente ligada à compreensão das características e da distribuição dos dados de entrada. Nesse contexto, a construção de um modelo preditivo robusto exige que os pressupostos dos algoritmos sejam validados. Muitos modelos, especialmente os paramétricos como a regressão linear, partem da suposição de que as variáveis seguem uma distribuição normal, e ignorar essa premissa pode levar a inferências incorretas e a decisões de negócio equivocadas.
+
+&emsp; A hipótese central investigada nesta análise é se as principais variáveis quantitativas do projeto seguem uma distribuição normal. Esta verificação é crucial, pois o resultado orienta diretamente as etapas seguintes do projeto, incluindo:
+
+1.  A escolha entre testes estatísticos **paramétricos** (que assumem normalidade) e **não-paramétricos** (que não possuem tal premissa).
+2.  A necessidade de aplicar **técnicas de transformação** de dados para normalizar variáveis assimétricas.
+3.  A seleção de **métodos de escalonamento** e tratamento de *outliers*, visto que modelos baseados em distância (como SVM e K-Means) são sensíveis à escala e à distribuição dos dados.
+
+&emsp; A seguir, detalhamos o teste dessa hipótese para as três variáveis selecionadas.
+
+##### 4.2.3.1. Teste de Normalidade para a variável `CalcNotaQuiz`
+
+* **Hipótese:** A variável `CalcNotaQuiz`, que representa o número de itens adquiridos em cada transação, segue uma distribuição normal. A suposição inicial seria que a maioria das transações se concentraria em torno de uma média, com menos transações contendo muito poucos ou muitos itens.
+* **Implementação e Análise:** Para validar essa hipótese, foi aplicado o teste de aderência de Shapiro-Wilk, um método estatístico robusto para verificação de normalidade. No notebook do projeto, o teste foi executado utilizando a biblioteca `scipy.stats`, conforme o código apresentado. O resultado obtido foi um **p-valor de 5.73e-27**.
+
+    ```python
+        # Testando normalidade para "CalcNotaQuiz" via Shapiro-Wilk
+        from scipy.stats import shapiro
+
+        dados = df_consolidado['CalcNotaQuiz'].dropna()
+        stat, p = shapiro(dados)
+
+        print('H0: Os dados seguem uma distribuição normal')
+        print('H1: Os dados não seguem uma distribuição normal')
+        print("Estatística W:", stat)
+        print("p-valor:", p)
+
+        if p > 0.05:
+            print("Não rejeitamos H0: os dados seguem uma distribuição normal.")
+        else:
+            print("Rejeitamos H0: os dados não seguem uma distribuição normal.")
+
+        # Saída:
+        # H0: Os dados seguem uma distribuição normal
+        # H1: Os dados não seguem uma distribuição normal
+        # Estatística W: 0.9158549463812558
+        # p-valor: 5.737420736467878e-27
+        # Rejeitamos H0: os dados não seguem uma distribuição normal.
+    ```
+
+* **Conclusão:** Como o p-valor é significativamente menor que o nível de significância padrão de 0,05, a hipótese nula de normalidade (H₀) é **rejeitada**. Isso indica que há evidência estatística forte para afirmar que os dados de `CalcNotaQuiz` não seguem uma distribuição normal.
+
+##### 4.2.3.2. Teste de Normalidade para a variável `Talleres`
+
+* **Hipótese:** A variável `Talleres`, referente à nota de trabalhos complementares, segue uma distribuição normal. A expectativa seria que as notas se distribuíssem simetricamente em torno de uma média central.
+* **Implementação e Análise:** Assim como na variável anterior, o código no notebook aplicou o teste de Shapiro-Wilk sobre os dados da variável `Talleres` (referenciada como `Oficinas` no código). O teste gerou um **p-valor de 3.38e-39**.
+
+    ```python
+        # Testando normalidade para "Oficinas" (Talleres) via Shapiro-Wilk
+        from scipy.stats import shapiro
+
+        dados = df_consolidado['Oficinas'].dropna()
+        stat, p = shapiro(dados)
+
+        print('H0: Os dados seguem uma distribuição normal')
+        print('H1: Os dados não seguem uma distribuição normal')
+        print("Estatística W:", stat)
+        print("p-valor:", p)
+
+        if p > 0.05:
+            print("Não rejeitamos H0: os dados seguem uma distribuição normal.")
+        else:
+            print("Rejeitamos H0: os dados não seguem uma distribuição normal.")
+
+        # Saída:
+        # H0: Os dados seguem uma distribuição normal
+        # H1: Os dados não seguem uma distribuição normal
+        # Estatística W: 0.7847014498757214
+        # p-valor: 3.386401173855684e-39
+        # Rejeitamos H0: os dados não seguem uma distribuição normal.
+    ```
+
+* **Conclusão:** O p-valor extremamente baixo leva à **rejeição** da hipótese nula (H₀). Fica evidente que a distribuição das notas de `Talleres` também desvia significativamente da normalidade.
+
+#### 4.2.3.3. Teste de Normalidade para a variável `Calificación_Oficial`
+
+* **Hipótese:** A variável `Nota_Oficial`, que representa o custo de produção dos produtos, segue uma distribuição normal. A premissa seria que a maioria dos produtos teria um custo próximo da média, com menos produtos sendo extremamente baratos ou caros para produzir.
+* **Implementação e Análise:** O mesmo procedimento foi repetido para a variável `Nota_Oficial`. A execução do código de teste de Shapiro-Wilk, conforme documentado no notebook, também resultou em um p-valor muito baixo (inferior a 0,05).
+
+    ```python
+        # Testando normalidade para "Nota_Oficial" (Calificación_Oficial) via Shapiro-Wilk
+        from scipy.stats import shapiro
+
+        dados = df_consolidado['Nota_Oficial'].dropna()
+        stat, p = shapiro(dados)
+
+        print('H0: Os dados seguem uma distribuição normal')
+        print('H1: Os dados não seguem uma distribuição normal')
+        print("Estatística W:", stat)
+        print("p-valor:", p)
+
+        if p > 0.05:
+            print("Não rejeitamos H0: os dados seguem uma distribuição normal.")
+        else:
+            print("Rejeitamos H0: os dados não seguem uma distribuição normal.")
+    ```
+
+* **Conclusão:** A execução do teste, assim como nos casos anteriores, resultou em um p-valor muito baixo (inferior a 0,05), levando à **rejeição** da hipótese de normalidade para a `Nota_Oficial`.
+* **Conclusão:** Assim como as demais, a hipótese de normalidade para a `Nota_Oficial` é **rejeitada**.
+
+### 4.2.3.4. Implicações dos Resultados
+
+&emsp; A refutação da hipótese de normalidade para todas as três variáveis chave é um resultado de grande impacto para o projeto. Fica claro que a utilização direta de modelos e testes paramétricos seria inadequada e poderia comprometer a validade das conclusões. Dessa forma, a análise dessas hipóteses nos força a tomar decisões mais informadas na próxima fase, como a aplicação de transformações matemáticas (ex: logarítmica) para tentar normalizar os dados ou, alternativamente, a adoção de algoritmos não-paramétricos, que são mais flexíveis quanto à distribuição dos dados de entrada.
 
 ### 4.3. Preparação dos Dados e Modelagem
 ```
