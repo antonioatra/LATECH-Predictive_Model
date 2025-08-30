@@ -824,5 +824,41 @@ else:
 
 ### Visualização por gráficos
 
-&ensp;A fim de complementar a análise, foram construídos histogramas e violin plots das três variáveis, permitindo uma avaliação visual sobre a distribuição das variáveis.
+&ensp;A fim de complementar a análise, foram construídos histogramas e violin-plots das três variáveis, permitindo uma avaliação visual sobre a distribuição das variáveis.
+
+<div align="center">
+  <sub>Figura x - Multiplot da variável CalcNotaQuiz</sub><br>
+  <img src="../assets/CalcNotaQuiz.png"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+  <sub>Figura x - Multiplot da variável Talleres (Oficinas)</sub><br>
+  <img src="../assets/Oficinas.png"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+  <sub>Figura x - Multiplot da variável Calificación_Oficial (Nota_Oficial)</sub><br>
+  <img src="../assets/Nota_Oficial.png"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+  <sub>Figura x - Multiplot das três variáveis</sub><br>
+  <img src="../assets/Multiplot_3.png"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+&ensp;A análise visual dos histogramas confirma os resultados dos testes estatísticos, revelando características específicas de cada distribuição. Nota-se que os gráficos das três variáveis possuem uma assimetria acentuada para a direita, com os dados se concentrando em valores mais altos. Explicando a rejeição da normalidade e a diferença entre a média e a mediana quepode também ser visualizada no violin-plot.
+
+A saber, a curva normal teórica usada como referência para os testes é dada por:
+
+$$
+f(x)=\frac{1}{\sigma\sqrt{2\pi}}\,e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+$$
+
+em que $\mu$ é a média e $\sigma$ o desvio padrão. A sobreposição dessa curva aos histogramas facilita a visualização dos desvios observados em todas as variáveis.
+
+#### Comparação entre média e mediana
 
