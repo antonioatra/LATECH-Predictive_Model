@@ -908,7 +908,22 @@ Seguindo com as equações:
 ### Histogramas pós escalonamento
 
 <div align="center">
-  <sub>Figura x - Multiplot das três variáveis</sub><br>
-  <img src="../assets/Multiplot_3.png"><br>
+  <sub>Figura x - Multiplot da variável CalcNotaQuiz pós escalonamento</sub><br>
+  <img src="../assets/esc_CalcNotaQuiz.jpg"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
+
+<div align="center">
+  <sub>Figura x - Multiplot da variável Talleres (Oficinas) pós escalonamento</sub><br>
+  <img src="../assets/esc_Oficinas.jpg"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+  <sub>Figura x - Multiplot da variável Nota_Oficial pós escalonamento</sub><br>
+  <img src="../assets/esc_Nota_Oficial.jpg"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+&ensp;Ao comparar com os histogramas pré escalonamento, nota-se que a principal mudança está na escala dos dados limitando-se ao limite superior igual a 1, contribuindo para a atribuição de pesos do modelo preditivo na etapa de treinamento e uma singela suavização dos gráficos.
+
