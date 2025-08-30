@@ -877,3 +877,38 @@ $$
 #### Métodos de escalonamento escolhidos para cada variável
 
 &ensp;Para o escalonamento da variável "Calificación_Oficial", o método escolhido foi a padronização, pois é menos sensível a outliers significativos e mantém a escala das notas pré-escalonamento (de 0 a 5). Para a variável Talleres, o método escolhido foi a normalização (Min-Max) para manter a escala das notas de 0 a 1, e por fim, para a variável CalcNotaQuiz, o método de escalonamento escolhido foi a padronização, pois além de ser menos sensível a outliers, permite analisar a quantos desvios padrões de distância uma certa nota se encontra da média da amostra.
+
+#### Equações de cada escalonamento
+
+Primeiramente, segue a tabela dos valores a serem utilizados nas equações:
+
+| Variável     | Mínimo    | Máximo      | Média    | Desvio Padrão | 
+|--------------|-----------|-------------|----------|---------------|
+| CalcNotaQuiz         | 0.625000  | 5.000000    | 4.075710 | 0.772738      |
+| Talleres             | 0.000000  | 5.000000    | 4.100491 | 1.281169      |
+| Calificación_Oficial | 0.500000  | 5.000000    | 4.319476 | 0.768881      | 
+
+Seguindo com as equações:
+
+**CalcNotaQuiz (Padronização)**
+
+- Fórmula geral: $Z = (X - \mu) / \sigma$
+- Fórmula específica: $Z = (X - 4.075710) / 0.772738$
+
+**Talleres (Normalização)**
+
+- Fórmula geral: $X' = \frac{X - X_{\min}}{X_{\max} - X_{\min}}$
+- Fórmula específica: $X' = \frac{X - 0.000000}{5.000000 - 0.000000}$
+
+**Calificación_Oficial (Padronização)**
+
+- Fórmula geral: $Z = (X - \mu) / \sigma$
+- Fórmula específica: $Z = (X - 4.319476) / 0.768881$
+
+### Histogramas pós escalonamento
+
+<div align="center">
+  <sub>Figura x - Multiplot das três variáveis</sub><br>
+  <img src="../assets/Multiplot_3.png"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
