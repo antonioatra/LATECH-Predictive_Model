@@ -858,15 +858,22 @@ $$
 f(x)=\frac{1}{\sigma\sqrt{2\pi}}\,e^{-\frac{(x-\mu)^2}{2\sigma^2}}
 $$
 
-em que $\mu$ é a média e $\sigma$ o desvio padrão. A sobreposição dessa curva aos histogramas facilita a visualização dos desvios observados em todas as variáveis.
+&ensp;em que $\mu$ é a média e $\sigma$ o desvio padrão. A sobreposição dessa curva aos histogramas facilita a visualização dos desvios observados em todas as variáveis.
 
 #### Comparação entre média e mediana
 
-No gráfico das três variáveis juntas, podemos ver que a média e a mediana de todas as três variáveis não coincidem, possuindo determinada distância. A variável Nota_Oficial e Oficinas têm a mediana (4,50) ligeiramente maior que a média (4,28 e 4,17, respectivamente), enquanto para CalcNotaQuiz a diferença é ainda menor. A proximidade entre esses dois valores dá uma forte indicação de que as distribuições não são simétricas.
+&ensp;No gráfico das três variáveis juntas, podemos ver que a média e a mediana de todas as três variáveis não coincidem, possuindo determinada distância. A variável Nota_Oficial e Oficinas têm a mediana (4,50) ligeiramente maior que a média (4,28 e 4,17, respectivamente), enquanto para CalcNotaQuiz a diferença é ainda menor. A proximidade entre esses dois valores dá uma forte indicação de que as distribuições não são simétricas.
 
-Essa observação visual é confirmada pelo cálculo do skewness. O skewness é uma medida numérica que quantifica a assimetria da distribuição. Um valor de zero indica simetria perfeita, enquanto para um valor negativo, a distribuição tem uma cauda mais longa para a esquerda, e em números positivos, a cauda é mais longa para a direita. De acordo com o cálculo, o skewness para Oficinas é -1,16, para Nota_Oficial é -1,02, e para CalcNotaQuiz é -0,93. Todos esses valores são negativos, o que valida a nossa observação visual de que as distribuições são assimétricas à esquerda.
+&ensp;Essa observação visual é confirmada pelo cálculo do skewness. O skewness é uma medida numérica que quantifica a assimetria da distribuição. Um valor de zero indica simetria perfeita, enquanto para um valor negativo, a distribuição tem uma cauda mais longa para a esquerda, e em números positivos, a cauda é mais longa para a direita. De acordo com o cálculo, o skewness para Oficinas é -1,16, para Nota_Oficial é -1,02, e para CalcNotaQuiz é -0,93. Todos esses valores são negativos, o que valida a nossa observação visual de que as distribuições são assimétricas à esquerda.
 
 ### Escalonamento das variáveis selecionadas
 
-O escalonamento de variáveis quantitativas é uma etapa essencial no pré-processamento de dados para modelagem preditiva, sobretudo em algoritmos de machine learning sensíveis à magnitude das variáveis. O objetivo dessa técnica é padronizar as escalas, de modo a evitar que atributos com valores mais elevados exerçam influência desproporcional sobre o processo de aprendizado e prejudiquem o desempenho preditivo do modelo.
+&ensp;O escalonamento de variáveis quantitativas é uma etapa essencial no pré-processamento de dados para modelagem preditiva, sobretudo em algoritmos de machine learning sensíveis à magnitude das variáveis. O objetivo dessa técnica é padronizar as escalas, de modo a evitar que atributos com valores mais elevados exerçam influência desproporcional sobre o processo de aprendizado e prejudiquem o desempenho preditivo do modelo.
 
+&ensp;No contexto da análise de dados da Universidad EAFIT, as três variáveis quantitativas selecionadas foram: CalcNotaQuiz, Talleres e Nota_Oficial. Essas variáveis podem fornecer informações muito importantes, uma vez que as Oficinas (Talleres), e os quizes são atividades que ocorrem com frequência e possuem grande influência na variável Nota_Oficial, que indica se um aluno foi reprovado ou não.
+
+&ensp;O uso adequado do escalonamento possibilita que algoritmos de clustering, classificação e regressão processem os dados de maneira mais equilibrada, favorecendo a convergência dos modelos e aprimorando a precisão das predições. Além disso, contribui para a interpretação dos resultados e para a comparação consistente entre variáveis em análises exploratórias.
+
+#### Métodos de escalonamento escolhidos para cada variável
+
+&ensp;Para o escalonamento da variável "Calificación_Oficial", o método escolhido foi a padronização, pois é menos sensível a outliers significativos e mantém a escala das notas pré-escalonamento (de 0 a 5). Para a variável Talleres, o método escolhido foi a normalização (Min-Max) para manter a escala das notas de 0 a 1, e por fim, para a variável CalcNotaQuiz, o método de escalonamento escolhido foi a padronização, pois além de ser menos sensível a outliers, permite analisar a quantos desvios padrões de distância uma certa nota se encontra da média da amostra.
