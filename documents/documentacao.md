@@ -937,8 +937,254 @@ Remova este bloco ao final
 SILVA, L. A. da; PERES, S. M.; BOSCARIOLI, C. **Introdução à mineração de dados**: com aplicações em R. Rio de Janeiro: GEN LTC, 2016
 
 ## <a name="attachments"></a>Anexos
-```
-Utilize esta seção para anexar materiais como manuais de usuário, documentos complementares que ficaram grandes e não couberam no corpo do texto etc.
 
-Remova este bloco ao final
+### Distribuição normal e teste de hipótese
+
+&ensp;Esta seção investiga se as variáveis quantitativas seguem (ou não) a distribuição normal e discute as implicações dessa avaliação para as etapas subsequentes de modelagem. Em projetos de natureza preditiva voltados a decisões de negócio — como expansão de pontos de venda, segmentação de clientes ou aumento da penetração de produtos — a validade dos resultados depende diretamente da escolha adequada de: (1) testes estatísticos (paramétricos vs. não-paramétricos), (2) técnicas de transformação e tratamento de outliers e (3) métodos de escalonamento capazes de garantir comparabilidade entre atributos de diferentes magnitudes.
+
+&ensp;Nesse sentido, a análise de assimetria, curtose e valores extremos atua como etapa crítica tanto na engenharia de atributos quanto na seleção de algoritmos. Modelos baseados no cálculo de distâncias, que sensíveis à escala (como K-Means, SVM e redes neurais) ou baseados em pressupostos distributivos (como regressões lineares e outros modelos paramétricos) dependem fortemente da adequação das distribuições de entrada para gerar inferências consistentes e decisões confiáveis.
+
+#### Seleção e Caracterização das Variáveis
+
+&ensp;As três variáveis selecionadas para análise foram escolhidas com base em sua possibilidade de impacto e relevância para o treinamento do modelo preditivo.
+
+- **Talleres**: Representa a nota associada a trabalhos complementares aos Quizes e provas.
+- **CalcNotaQuiz**: Indica o número de itens adquiridos em cada transação, fundamental para compreender padrões de consumo
+- **Nota_Oficial**: Refere-se ao custo de produção dos produtos, essencial para análises de margem e rentabilidade
+
+### Análise e Teste de Normalidade das Variáveis Quantitativas
+
+ A verificação da normalidade dos dados é uma etapa central na análise estatística, pois orienta a escolha entre procedimentos paramétricos e não-paramétricos nas fases seguintes do estudo. Neste trabalho, a questão investigada é se as variáveis quantitativas do conjunto analisado podem ser consideradas como provenientes de uma distribuição normal.
+
+<div align="center">
+
+Hipótese Nula (H₀): Os dados seguem uma distribuição normal.
+$H_0: X \sim N(\mu, \sigma^2)$
+
+Hipótese Alternativa (Hₐ): Os dados não seguem uma distribuição normal.
+$H_1: X \not\sim N(\mu, \sigma^2)$
+
+</div> </br>
+
+&ensp;A formulação segue a abordagem clássica de testes de hipóteses: a hipótese nula (H₀) assume normalidade, enquanto a hipótese alternativa (Hₐ) sugere sua violação. Essa estrutura possibilita avaliar formalmente a adequação da distribuição de cada variável, constituindo um critério essencial para a definição de métodos estatísticos apropriados nas etapas posteriores da análise.
+
+### Nível de significâcia e critérios de decisão
+
+&ensp;Adotou-se um nível de significância de α = 0,05 (5%), valor amplamente utilizado na literatura científica por proporcionar um equilíbrio adequado entre o risco de cometer erro do tipo I e a potência do teste. A decisão sobre a hipótese nula baseia-se no valor-p: se p-valor ≤ 0,05, rejeita-se H₀, indicando evidência estatística de desvio da normalidade; se p-valor > 0,05, não se rejeita H₀, sugerindo que não há evidência suficiente para concluir que os dados não seguem uma distribuição normal.
+
+### Teste de Normalidade (Aderência)
+
+&ensp;A normalidade das variáveis quantitativas foi avaliada por meio do teste de Shapiro-Wilk, indicado para amostras de tamanho moderado e amplamente utilizado na literatura para essa finalidade. A estatística do teste é definida como:
+
+$$W = \frac{\left( \sum_{i=1}^{n} a_i x_{(i)} \right)^2}{\sum_{i=1}^{n} (x_i - \bar{x})^2}$$
+
+&ensp;Onde $x_{(i)}$ são os valores ordenados da amostra, $\bar{x}$ é a média amostral, $n$ representa o tamanho da amostra e $a_i$ são constantes derivadas das médias, variâncias e covariâncias das estatísticas de ordem de uma amostra de tamanho $n$ proveniente de uma distribuição normal. Seguem os testes feitos no código para a variável `"CalcNotaQuiz"`:
+
+```python
+# Testes de normalidade das variáveis "CalcNotaQuiz", "Talleres", "Calificación_Oficial"
+# Testando normalidade para "CalcNotaQuiz" via Shapiro-Wilk
+from scipy.stats import shapiro
+
+dados = df_consolidado['CalcNotaQuiz'].dropna()
+
+stat, p = shapiro(dados)
+
+print('H0: Os dados seguem uma distribuição normal')
+print('H1: Os dados não seguem uma distribuição normal')
+print("Estatística W:", stat)
+print("p-valor:", p)
+
+if p > 0.05:
+    print("Não rejeitamos H0: os dados seguem uma distribuição normal.")
+else:
+    print("Rejeitamos H0: os dados não seguem uma distribuição normal.")
 ```
+Segue a saída:
+```
+H0: Os dados seguem uma distribuição normal
+H1: Os dados não seguem uma distribuição normal
+Estatística W: 0.9158549463812558
+p-valor: 5.737420736467878e-27
+Rejeitamos H0: os dados não seguem uma distribuição normal.
+```
+#### Teste de Normalidade para a variável "Talleres"
+
+```python
+# Testando normalidade para "Oficinas" (Talleres) via Shapiro-Wilk
+
+from scipy.stats import shapiro
+
+dados = df_consolidado['Oficinas'].dropna()
+
+stat, p = shapiro(dados)
+
+print('H0: Os dados seguem uma distribuição normal')
+print('H1: Os dados não seguem uma distribuição normal')
+print("Estatística W:", stat)
+print("p-valor:", p)
+
+if p > 0.05:
+    print("Não rejeitamos H0: os dados seguem uma distribuição normal.")
+else:
+    print("Rejeitamos H0: os dados não seguem uma distribuição normal.")
+```
+
+Segue a saída:
+```
+H0: Os dados seguem uma distribuição normal
+H1: Os dados não seguem uma distribuição normal
+Estatística W: 0.7847014498757214
+p-valor: 3.386401173855684e-39
+Rejeitamos H0: os dados não seguem uma distribuição normal.
+```
+
+#### Teste de Normalidade para a variável Calificación_Oficial
+
+```python
+# Testando normalidade para "Nota_Oficial" (Calificación_Oficial) via Shapiro-Wilk
+from scipy.stats import shapiro
+
+dados = df_consolidado['Nota_Oficial'].dropna()
+
+stat, p = shapiro(dados)
+
+print('H0: Os dados seguem uma distribuição normal')
+print('H1: Os dados não seguem uma distribuição normal')
+print("Estatística W:", stat)
+print("p-valor:", p)
+
+
+if p > 0.05:
+    print("Não rejeitamos H0: os dados seguem uma distribuição normal.")
+else:
+    print("Rejeitamos H0: os dados não seguem uma distribuição normal.")
+```
+
+Segue a saída:
+```
+# Testando normalidade para "Nota_Oficial" (Calificación_Oficial) via Shapiro-Wilk
+from scipy.stats import shapiro
+
+dados = df_consolidado['Nota_Oficial'].dropna()
+
+stat, p = shapiro(dados)
+
+print('H0: Os dados seguem uma distribuição normal')
+print('H1: Os dados não seguem uma distribuição normal')
+print("Estatística W:", stat)
+print("p-valor:", p)
+
+
+if p > 0.05:
+    print("Não rejeitamos H0: os dados seguem uma distribuição normal.")
+else:
+    print("Rejeitamos H0: os dados não seguem uma distribuição normal.")
+```
+
+&ensp; Os resultados indicam que as variáveis `CalcNotaQuiz`, `Talleres`, `Calificación_Oficial` apresentam evidências de não seguirem uma distribuição normal (p < 0.05).
+
+### Visualização por gráficos
+
+&ensp;A fim de complementar a análise, foram construídos histogramas e violin-plots das três variáveis, permitindo uma avaliação visual sobre a distribuição das variáveis.
+
+<div align="center">
+  <sub>Figura x - Multiplot da variável CalcNotaQuiz</sub><br>
+  <img src="../assets/CalcNotaQuiz.png"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+  <sub>Figura x - Multiplot da variável Talleres (Oficinas)</sub><br>
+  <img src="../assets/Oficinas.png"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+  <sub>Figura x - Multiplot da variável Calificación_Oficial (Nota_Oficial)</sub><br>
+  <img src="../assets/Nota_Oficial.png"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+  <sub>Figura x - Multiplot das três variáveis</sub><br>
+  <img src="../assets/Multiplot_3.png"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+&ensp;A análise visual dos histogramas confirma os resultados dos testes estatísticos, revelando características específicas de cada distribuição. Nota-se que os gráficos das três variáveis possuem uma assimetria acentuada à esquerda, com os dados se concentrando em valores mais altos. Explicando a rejeição da normalidade e a diferença entre a média e a mediana quepode também ser visualizada no violin-plot.
+
+A saber, a curva normal teórica usada como referência para os testes é dada por:
+
+$$
+f(x)=\frac{1}{\sigma\sqrt{2\pi}}\,e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+$$
+
+&ensp;em que $\mu$ é a média e $\sigma$ o desvio padrão. A sobreposição dessa curva aos histogramas facilita a visualização dos desvios observados em todas as variáveis.
+
+#### Comparação entre média e mediana
+
+&ensp;No gráfico das três variáveis juntas, podemos ver que a média e a mediana de todas as três variáveis não coincidem, possuindo determinada distância. A variável Nota_Oficial e Oficinas têm a mediana (4,50) ligeiramente maior que a média (4,28 e 4,17, respectivamente), enquanto para CalcNotaQuiz a diferença é ainda menor. A proximidade entre esses dois valores dá uma forte indicação de que as distribuições não são simétricas.
+
+&ensp;Essa observação visual é confirmada pelo cálculo do skewness. O skewness é uma medida numérica que quantifica a assimetria da distribuição. Um valor de zero indica simetria perfeita, enquanto para um valor negativo, a distribuição tem uma cauda mais longa para a esquerda, e em números positivos, a cauda é mais longa para a direita. De acordo com o cálculo, o skewness para Oficinas é -1,16, para Nota_Oficial é -1,02, e para CalcNotaQuiz é -0,93. Todos esses valores são negativos, o que valida a nossa observação visual de que as distribuições são assimétricas à esquerda.
+
+### Escalonamento das variáveis selecionadas
+
+&ensp;O escalonamento de variáveis quantitativas é uma etapa essencial no pré-processamento de dados para modelagem preditiva, sobretudo em algoritmos de machine learning sensíveis à magnitude das variáveis. O objetivo dessa técnica é padronizar as escalas, de modo a evitar que atributos com valores mais elevados exerçam influência desproporcional sobre o processo de aprendizado e prejudiquem o desempenho preditivo do modelo.
+
+&ensp;No contexto da análise de dados da Universidad EAFIT, as três variáveis quantitativas selecionadas foram: CalcNotaQuiz, Talleres e Nota_Oficial. Essas variáveis podem fornecer informações muito importantes, uma vez que as Oficinas (Talleres), e os quizes são atividades que ocorrem com frequência e possuem grande influência na variável Nota_Oficial, que indica se um aluno foi reprovado ou não.
+
+&ensp;O uso adequado do escalonamento possibilita que algoritmos de clustering, classificação e regressão processem os dados de maneira mais equilibrada, favorecendo a convergência dos modelos e aprimorando a precisão das predições. Além disso, contribui para a interpretação dos resultados e para a comparação consistente entre variáveis em análises exploratórias.
+
+#### Métodos de escalonamento escolhidos para cada variável
+
+&ensp;Para o escalonamento da variável "Calificación_Oficial", o método escolhido foi a padronização, pois é menos sensível a outliers significativos e mantém a escala das notas pré-escalonamento (de 0 a 5). Para a variável Talleres, o método escolhido foi a normalização (Min-Max) para manter a escala das notas de 0 a 1, e por fim, para a variável CalcNotaQuiz, o método de escalonamento escolhido foi a padronização, pois além de ser menos sensível a outliers, permite analisar a quantos desvios padrões de distância uma certa nota se encontra da média da amostra.
+
+#### Equações de cada escalonamento
+
+Primeiramente, segue a tabela dos valores a serem utilizados nas equações:
+
+| Variável     | Mínimo    | Máximo      | Média    | Desvio Padrão | 
+|--------------|-----------|-------------|----------|---------------|
+| CalcNotaQuiz         | 0.625000  | 5.000000    | 4.075710 | 0.772738      |
+| Talleres             | 0.000000  | 5.000000    | 4.100491 | 1.281169      |
+| Calificación_Oficial | 0.500000  | 5.000000    | 4.319476 | 0.768881      | 
+
+Seguindo com as equações:
+
+**CalcNotaQuiz (Padronização)**
+
+- Fórmula geral: $Z = (X - \mu) / \sigma$
+- Fórmula específica: $Z = (X - 4.075710) / 0.772738$
+
+**Talleres (Normalização)**
+
+- Fórmula geral: $X' = \frac{X - X_{\min}}{X_{\max} - X_{\min}}$
+- Fórmula específica: $X' = \frac{X - 0.000000}{5.000000 - 0.000000}$
+
+**Calificación_Oficial (Padronização)**
+
+- Fórmula geral: $Z = (X - \mu) / \sigma$
+- Fórmula específica: $Z = (X - 4.319476) / 0.768881$
+
+### Histogramas pós escalonamento
+
+<div align="center">
+  <sub>Figura x - Multiplot da variável CalcNotaQuiz pós escalonamento</sub><br>
+  <img src="../assets/esc_CalcNotaQuiz.jpg"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+  <sub>Figura x - Multiplot da variável Talleres (Oficinas) pós escalonamento</sub><br>
+  <img src="../assets/esc_Oficinas.jpg"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+  <sub>Figura x - Multiplot da variável Nota_Oficial pós escalonamento</sub><br>
+  <img src="../assets/esc_Nota_Oficial.jpg"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+&ensp;Ao comparar com os histogramas pré escalonamento, nota-se que a principal mudança está na escala dos dados limitando-se ao limite superior igual a 1, contribuindo para a atribuição de pesos do modelo preditivo na etapa de treinamento e uma singela suavização dos gráficos.
+
