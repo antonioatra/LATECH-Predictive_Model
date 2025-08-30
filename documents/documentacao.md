@@ -850,7 +850,7 @@ else:
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-&ensp;A análise visual dos histogramas confirma os resultados dos testes estatísticos, revelando características específicas de cada distribuição. Nota-se que os gráficos das três variáveis possuem uma assimetria acentuada para a direita, com os dados se concentrando em valores mais altos. Explicando a rejeição da normalidade e a diferença entre a média e a mediana quepode também ser visualizada no violin-plot.
+&ensp;A análise visual dos histogramas confirma os resultados dos testes estatísticos, revelando características específicas de cada distribuição. Nota-se que os gráficos das três variáveis possuem uma assimetria acentuada à esquerda, com os dados se concentrando em valores mais altos. Explicando a rejeição da normalidade e a diferença entre a média e a mediana quepode também ser visualizada no violin-plot.
 
 A saber, a curva normal teórica usada como referência para os testes é dada por:
 
@@ -861,4 +861,12 @@ $$
 em que $\mu$ é a média e $\sigma$ o desvio padrão. A sobreposição dessa curva aos histogramas facilita a visualização dos desvios observados em todas as variáveis.
 
 #### Comparação entre média e mediana
+
+No gráfico das três variáveis juntas, podemos ver que a média e a mediana de todas as três variáveis não coincidem, possuindo determinada distância. A variável Nota_Oficial e Oficinas têm a mediana (4,50) ligeiramente maior que a média (4,28 e 4,17, respectivamente), enquanto para CalcNotaQuiz a diferença é ainda menor. A proximidade entre esses dois valores dá uma forte indicação de que as distribuições não são simétricas.
+
+Essa observação visual é confirmada pelo cálculo do skewness. O skewness é uma medida numérica que quantifica a assimetria da distribuição. Um valor de zero indica simetria perfeita, enquanto para um valor negativo, a distribuição tem uma cauda mais longa para a esquerda, e em números positivos, a cauda é mais longa para a direita. De acordo com o cálculo, o skewness para Oficinas é -1,16, para Nota_Oficial é -1,02, e para CalcNotaQuiz é -0,93. Todos esses valores são negativos, o que valida a nossa observação visual de que as distribuições são assimétricas à esquerda.
+
+### Escalonamento das variáveis selecionadas
+
+O escalonamento de variáveis quantitativas é uma etapa essencial no pré-processamento de dados para modelagem preditiva, sobretudo em algoritmos de machine learning sensíveis à magnitude das variáveis. O objetivo dessa técnica é padronizar as escalas, de modo a evitar que atributos com valores mais elevados exerçam influência desproporcional sobre o processo de aprendizado e prejudiquem o desempenho preditivo do modelo.
 
