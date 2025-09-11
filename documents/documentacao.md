@@ -3,13 +3,13 @@
 ## LATECH: Modelo preditivo para identificação de alunos em risco de reprovação
 ### Integrantes (THROXY):
 - <a href="https://www.linkedin.com/in/antonio-augusto-tavares-ribeiro-andr%C3%A9-613937345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Antonio Augusto Tavares Ribeiro André</a>
-- <a href="https://www.linkedin.com/in/carlos-quaglia-309088357/">Carlos Quaglia</a> 
+- <a href="https://www.linkedin.com/in/carlos-quaglia-309088357/">Carlos Quaglia</a>
 - <a href="https://www.linkedin.com/in/hugo-montan-393b49175/">Hugo Montan</a>
-- <a href="https://www.linkedin.com/in/leandro-precaro-barankiewicz-filho-8a293a345/">Leandro Precaro Brankiewicz Filho</a> 
+- <a href="https://www.linkedin.com/in/leandro-precaro-barankiewicz-filho-8a293a345/">Leandro Precaro Brankiewicz Filho</a>
 - <a href="https://www.linkedin.com/in/luiz-hinuy-0995252b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Luiz Hinuy</a>
 - <a href="https://www.linkedin.com/in/messias-olivindo/">Messias Olivindo</a>
-- <a href="https://www.linkedin.com/in/yuriboczar/">Yuri Boczar</a> 
- 
+- <a href="https://www.linkedin.com/in/yuriboczar/">Yuri Boczar</a>
+
 ## Sumário
 [1. Introdução](#c1)
 
@@ -99,7 +99,7 @@ Remova este bloco ao final
 - **Produtos ou Serviços Substitutos**: presença de alternativas que atendem à mesma necessidade, limitando preços e influenciando a demanda.
 
 <div align="center">
-   
+
   <sub>Figura : 5 forças de Porter </sub>
 
   <img src="../assets/5forcas.png">
@@ -128,20 +128,20 @@ Remova este bloco ao final
 
 &emsp;As principais alternativas ao ensino superior tradicional incluem cursos técnicos, bootcamps, programas de microcredentials e plataformas de aprendizado online, que oferecem formação mais rápida e focada em habilidades específicas. Esses formatos, muitas vezes mais acessíveis, podem atrair estudantes que buscam inserção rápida no mercado de trabalho ou atualização profissional contínua. A ameaça é crescente, especialmente em áreas ligadas à tecnologia e negócios, onde a aprendizagem prática é valorizada. No entanto, a EAFIT mantém vantagem competitiva ao oferecer uma formação integral, com reconhecimento acadêmico formal, rede de contatos e experiências de pesquisa e intercâmbio, fatores que ainda representam barreiras significativas para a substituição total por formatos alternativos.
 
-#### 4.1.2. Análise SWOT 
+#### 4.1.2. Análise SWOT
 
 &emsp; Segundo Rother e Shook (2003), a Análise SWOT é uma ferramenta de planejamento estratégico que organiza visualmente as forças, fraquezas, oportunidades e ameaças de um negócio. Seu objetivo é auxiliar na avaliação do ambiente interno e externo de uma empresa ou projeto, e orientar uma tomada de decisão mais embasada na realidade.
 
 &emsp; Dessa maneira, a aplicação dessa análise é crucial para o mapeamento estratégico da solução em desenvolvimento para a EAFIT. Fornecendo elementos vitais para a idealização e o debate de ideias do projeto, permitindo uma compreensão clara dos desafios e das oportunidades.
 
 <div align="center">
-   
+
    <sub>Figura 1 - Análise Swot </sub>
 
-   <img src="../assets/analise-swot.png"> 
-   
+   <img src="../assets/analise-swot.png">
+
    <sup>Fonte: Material produzido pelos autores (2025)</sup>
-   
+
 </div>
 
 &emsp; Na figura acima temos:
@@ -164,7 +164,7 @@ Remova este bloco ao final
 
 - **Instabilidade econômica e política regional** - O contexto colombiano, assim como o de outras nações latino-americanas, é frequentemente marcado por flutuações econômicas, tensões sociais e mudanças políticas que podem afetar diretamente o financiamento da educação superior, os programas de intercâmbio, os investimentos em infraestrutura e a própria capacidade de planejamento estratégico das universidades privadas.
 
-- **Competição com outras universidades sul-americanas** - A crescente profissionalização e internacionalização de outras universidades na América Latina, como a Universidad de Los Andes (Colômbia), Pontificia Universidad Católica (Chile), Universidade de São Paulo (Brasil) e Universidad Nacional Autónoma de México (México), impõe um desafio constante. A EAFIT precisa manter-se atualizada, inovadora e conectada globalmente para não perder sua atratividade frente à concorrência (QS, 2025). 
+- **Competição com outras universidades sul-americanas** - A crescente profissionalização e internacionalização de outras universidades na América Latina, como a Universidad de Los Andes (Colômbia), Pontificia Universidad Católica (Chile), Universidade de São Paulo (Brasil) e Universidad Nacional Autónoma de México (México), impõe um desafio constante. A EAFIT precisa manter-se atualizada, inovadora e conectada globalmente para não perder sua atratividade frente à concorrência (QS, 2025).
 
 ##### Oportunidades:
 
@@ -173,7 +173,7 @@ Remova este bloco ao final
 #### 4.1.3. Planejamento Geral da Solução
 &emsp; Planejamento Geral da Solução é um conceito de organizar o projeto em tópicos com intuito de nunca se perder em relação a esses 6 tópicos: Dados que serão usados, neste caso, para abastecer o modelo preditivo, A solução proposta para ao cliente, tipo de tarefa, para que o produto será usado, benefícios ao escolher o produto e quais críterios e métricas será usada para acompanhar o sucesso da solução. Pode-se fazer uma analogia com um mapa, onde os tópicos citados são os locais para chegar ao produto ideal. A empresa PMBOK Guide, empresas de software e análise de projetos foram os primeiros a utilizar esse método de se guiar conforme o projeto está em andamento.
 
-&emsp; O planejamento geral da solução é uma etapa fundamental em projetos de inteligência artificial e ciência de dados, já que é fácil se perder em um projeto que exige muitos detalhes. Nele são detalhados os dados disponíveis, os objetivos da solução, o tipo de tarefa de aprendizado de máquina mais adequada (como classificação ou regressão), além dos possíveis usos da ferramenta, benefícios esperados e critérios de sucesso do projeto feito. 
+&emsp; O planejamento geral da solução é uma etapa fundamental em projetos de inteligência artificial e ciência de dados, já que é fácil se perder em um projeto que exige muitos detalhes. Nele são detalhados os dados disponíveis, os objetivos da solução, o tipo de tarefa de aprendizado de máquina mais adequada (como classificação ou regressão), além dos possíveis usos da ferramenta, benefícios esperados e critérios de sucesso do projeto feito.
 
 &emsp; Primeiro, será mostrado a base que todo o projeto se baseará: Os dados. Fornecidos pela EAFIT, eles estão dispostos em tabelas de notas na nova matéria de programção de 775 alunos da instituição entre o primeiro e segundo semestre do ano de 2023. Logo abaixo, terá as explicações do que cada coluna significa:
 
@@ -212,7 +212,7 @@ Remova este bloco ao final
 
 - **Regressão:** Aplicada para estimar as notas futuras com base em padrões de desempenho, frequência, participação e tempo de execução das provas.
 
-&emsp; Mesmo com o modelo em mãos e o problema explicado detalhadamente, sem mostrar a utilidade não será muito produtivo. 
+&emsp; Mesmo com o modelo em mãos e o problema explicado detalhadamente, sem mostrar a utilidade não será muito produtivo.
 &emsp; Com base em dados passados, como notas de quizzes e projetos de alunos de anos anteriores, o sistema preditivo irá ajudar os professores a identificar padrões de notas com o intuito de prever quais terão chances de reprovar a matéria. Assim, os educadores poderão intervir previamente, antes que os alunos atinjam a reprovação. A análise será entregue a partir da semana 5, depois terão atualizações dessa análise entre 3 e 4 semanas. Como sempre terá atualizações sobre as situações dos alunos, o projeto facilitará a tomada de decisões mais informadas e oportunas por parte dos professores, permitindo-lhes identificar com eficiência os alunos em risco de reprovação e oferecer-lhes apoio adicional. Além disso, com o acompanhamento e suporte à esses alunos, o desempenho geral dos alunos irá aumentar, terminando a matéria melhor qualificado e preparado para diversas ocasiões.
 
 &emsp; Com todos os passos passados sendo feitos corretamentes, já é possível definir e observar como o modelo está performando. Primeiramente, a máquina, necessita acertar qual aluno está com dificuldade ou está caminhando para uma situação agravada de reprovação. Outro ponto que pode ser usado como métrica de sucesso é o aumento do suporte dos professores aos alunos e essa alta nos atendimentos resultar em melhoras nas notas. Além disso, o aumento da escolha, por parte dos alunos, de incluir essa matéria em sua grade curricular também é uma métrica de sucesso.
@@ -221,16 +221,16 @@ Remova este bloco ao final
 &emsp; O Canvas de Proposta de Valor é uma ferramenta visual que ajuda a alinhar, de forma prática e objetiva, o que uma solução oferece com o que o cliente realmente precisa. Desenvolvido por Alexander Osterwalder, Yves Pigneur e Alan Smith, ele organiza a análise em dois blocos complementares: o Perfil do Cliente, que detalha as tarefas atuais do cliente, as dores em relação aquela atividade e os ganhos esperados com a solução, e o Mapa de Valor, com as principais informações sobre o produto ou serviço, os elementos aliviantes de dores e as vantagens que criam de ganho. Nesse sentido, o objetivo é alcançar o "encaixe" entre oferta e demanda: entender claramente o que o cliente tenta realizar, quais obstáculos enfrenta e quais resultados espera, e então descrever como a solução elimina essas dores e potencializa os ganhos.
 
 <div align="center">
-   
+
    <sub>Figura : Canvas Proposta de Valor </sub>
 
    <img src="../assets/canva-proposta-de-valor.png">
-   
+
    <sup>Fonte: Material produzido pelos autores (2025)</sup>
-   
+
 </div>
 
-##### Perfil do Cliente: 
+##### Perfil do Cliente:
 &nbsp;&nbsp;&nbsp;&nbsp;
 &emsp; **Ganhos:** Professores e coordenação querem entender rapidamente o que impacta as notas para agir cedo e melhorar os resultados. Buscam visão por curso/área e horário, com evidências para orientar intervenções e monitores.
 
@@ -318,10 +318,10 @@ Remova este bloco ao final
 
 **Perfil**
 
-- Nome: Paola Andrea Vallejo Ramírez  
-- Gênero: Feminino  
-- Idade: 41 anos  
-- Cidade: Medellín - Antioquia, Colômbia  
+- Nome: Paola Andrea Vallejo Ramírez
+- Gênero: Feminino
+- Idade: 41 anos
+- Cidade: Medellín - Antioquia, Colômbia
 - Posição: Docente universitária e coordenadora de projetos pedagógicos na Universidad EAFIT
 
 **Biografia**
@@ -330,25 +330,25 @@ Remova este bloco ao final
 
 &emsp; Atualmente, mora em Medellín e leciona disciplinas introdutórias de programação na Universidad EAFIT, onde também lidera iniciativas de inovação educacional. É reconhecida por sua dedicação ao sucesso dos alunos e por seu compromisso com a inclusão e o uso ético da tecnologia na educação. Atua como ponte entre dados educacionais e ações pedagógicas eficazes, sempre buscando formas de aprimorar os resultados acadêmicos.
 
-**Frustrações** 
+**Frustrações**
 
-- Dificuldade em acompanhar o progresso individual de cada aluno devido ao grande número de estudantes e ao tempo limitado.  
-- Falta de ferramentas práticas para identificar alunos em risco antes que a situação se agrave.  
-- Sensação de que as ações pedagógicas são frequentemente reativas, e não preventivas.  
+- Dificuldade em acompanhar o progresso individual de cada aluno devido ao grande número de estudantes e ao tempo limitado.
+- Falta de ferramentas práticas para identificar alunos em risco antes que a situação se agrave.
+- Sensação de que as ações pedagógicas são frequentemente reativas, e não preventivas.
 - Necessidade constante de adaptar estratégias sem dados objetivos suficientes para orientar as decisões.
 
 **Motivações**
 
-- Acredita que a educação transforma vidas e que todos os alunos merecem oportunidades reais de sucesso.  
-- Busca aplicar métodos científicos e baseados em dados para tornar o ensino mais eficaz.  
-- Quer melhorar a retenção e o desempenho dos estudantes, especialmente os que enfrentam maiores dificuldades, reduzindo a taxa de evasão.  
+- Acredita que a educação transforma vidas e que todos os alunos merecem oportunidades reais de sucesso.
+- Busca aplicar métodos científicos e baseados em dados para tornar o ensino mais eficaz.
+- Quer melhorar a retenção e o desempenho dos estudantes, especialmente os que enfrentam maiores dificuldades, reduzindo a taxa de evasão.
 - Valoriza tecnologias que permitam aos professores agir com mais precisão e empatia.
 
  **Interesses**
 
-- Ferramentas de visualização de dados e dashboards educacionais.  
-- Avaliação formativa e intervenções pedagógicas personalizadas.  
-- Inteligência artificial aplicada à educação.  
+- Ferramentas de visualização de dados e dashboards educacionais.
+- Avaliação formativa e intervenções pedagógicas personalizadas.
+- Inteligência artificial aplicada à educação.
 - Equidade de gênero e inclusão no ensino superior.
 
 <div align = "center">
@@ -365,10 +365,10 @@ Remova este bloco ao final
 
 **Perfil**
 
-- Nome: Juan Esteban Gómez Ríos  
-- Gênero: Masculino  
-- Idade: 18 anos  
-- Cidade: Bello - Antioquia, Colômbia  
+- Nome: Juan Esteban Gómez Ríos
+- Gênero: Masculino
+- Idade: 18 anos
+- Cidade: Bello - Antioquia, Colômbia
 - Posição: Estudante de primeiro semestre no curso de Engenharia de Sistemas da Universidad EAFIT
 
 **Biografia**
@@ -379,26 +379,26 @@ Remova este bloco ao final
 
 **Frustrações**
 
-- Sente que estuda muito, mas não vê resultado nas notas.  
-- Tem dificuldades em organizar o tempo entre trabalho, estudo e tarefas da universidade.  
-- Acredita que falta suporte ou acompanhamento mais próximo dos professores para lidar com suas dificuldades.  
-- Não entende bem por que está indo mal: se é falta de base, cansaço ou desorganização.  
+- Sente que estuda muito, mas não vê resultado nas notas.
+- Tem dificuldades em organizar o tempo entre trabalho, estudo e tarefas da universidade.
+- Acredita que falta suporte ou acompanhamento mais próximo dos professores para lidar com suas dificuldades.
+- Não entende bem por que está indo mal: se é falta de base, cansaço ou desorganização.
 - Tem receio de reprovar logo no primeiro semestre e decepcionar sua família.
 
 **Motivações**
 
-- Quer ser um exemplo positivo para seus irmãos mais novos e mostrar que é possível vencer pelos estudos.  
-- Sonha em trabalhar com tecnologia e desenvolvimento de software, talvez até criar sua própria startup.  
-- Gosta de aprender e se desenvolver, principalmente em temas práticos e aplicados.  
-- Quer provar para si mesmo que é capaz de se adaptar à universidade e ter sucesso.  
+- Quer ser um exemplo positivo para seus irmãos mais novos e mostrar que é possível vencer pelos estudos.
+- Sonha em trabalhar com tecnologia e desenvolvimento de software, talvez até criar sua própria startup.
+- Gosta de aprender e se desenvolver, principalmente em temas práticos e aplicados.
+- Quer provar para si mesmo que é capaz de se adaptar à universidade e ter sucesso.
 - Valoriza professores que explicam com empatia e clareza, e se sente mais seguro quando percebe que está sendo acompanhado.
 
 **Interesses**
 
-- Desenvolvimento web e mobile.  
-- Jogos digitais e cultura geek.  
-- Comunidades de aprendizado online (como YouTube, Discord e fóruns de programação).  
-- Tecnologias acessíveis e que ajudam a estudar de forma independente.  
+- Desenvolvimento web e mobile.
+- Jogos digitais e cultura geek.
+- Comunidades de aprendizado online (como YouTube, Discord e fóruns de programação).
+- Tecnologias acessíveis e que ajudam a estudar de forma independente.
 - Bolsas de estudo e oportunidades extracurriculares que possam melhorar sua formação.
 
 <div align = "center">
@@ -415,10 +415,10 @@ Remova este bloco ao final
 
 **Perfil**
 
-- Nome: Dr. Ricardo Morales  
-- Gênero: Masculino  
-- Idade: 55 anos  
-- Cidade: Medellín, Colômbia  
+- Nome: Dr. Ricardo Morales
+- Gênero: Masculino
+- Idade: 55 anos
+- Cidade: Medellín, Colômbia
 - Posição: Diretor da Faculdade de Ciências e Engenharia na Universidad EAFIT
 
 **Biografia**
@@ -427,39 +427,39 @@ Remova este bloco ao final
 
 **Frustrações**
 
-- Possuímos dados históricos, mas não os aplicamos de forma preventiva.  
-- Intervimos apenas quando a reprovação já é inevitável.  
+- Possuímos dados históricos, mas não os aplicamos de forma preventiva.
+- Intervimos apenas quando a reprovação já é inevitável.
 - Parte do corpo docente ainda prioriza intuição em detrimento de evidências.
 
 **Motivações**
 
-- Transformar a EAFIT em referência em learning analytics na América Latina.  
-- Reduzir a taxa de reprovação em 25% nos próximos 3 anos.  
+- Transformar a EAFIT em referência em learning analytics na América Latina.
+- Reduzir a taxa de reprovação em 25% nos próximos 3 anos.
 - Criar um modelo replicável para outras disciplinas e instituições.
 
 **Interesses**
 
-- Educação.  
+- Educação.
 - Estatística.
 
 #### 4.1.7. Jornadas do Usuário
 
-&nbsp; O mapeamento das jornadas dos usuários é fundamental para compreender como diferentes atores (professores, gestores e estudantes) interagem com o modelo preditivo e quais são as suas necessidades, emoções e oportunidades em cada etapa. Segundo Cooper et al. (2014), ao representar as experiências e necessidades do usuário em forma de jornada, é possível estruturar de maneira cronológica as atividades, emoções e pontos de contato, possibilitando um desenho de soluções mais eficaz e centrado no usuário. Detalhamos abaixo as jornadas de três personas centrais do projeto: **Paola Andrea Vallejo Ramírez (docente/coordenadora)**, **Dr. Ricardo Morales (diretor)** e **Juan Esteban Gómez Ríos (estudante)**. 
+&nbsp; O mapeamento das jornadas dos usuários é fundamental para compreender como diferentes atores (professores, gestores e estudantes) interagem com o modelo preditivo e quais são as suas necessidades, emoções e oportunidades em cada etapa. Segundo Cooper et al. (2014), ao representar as experiências e necessidades do usuário em forma de jornada, é possível estruturar de maneira cronológica as atividades, emoções e pontos de contato, possibilitando um desenho de soluções mais eficaz e centrado no usuário. Detalhamos abaixo as jornadas de três personas centrais do projeto: **Paola Andrea Vallejo Ramírez (docente/coordenadora)**, **Dr. Ricardo Morales (diretor)** e **Juan Esteban Gómez Ríos (estudante)**.
 
 ---
 
 ##### Jornada da Persona 1: Paola Andrea Vallejo Ramírez (Docente/Coordenadora)
 
-&emsp; **Cenário:** Utilização do modelo preditivo para identificar alunos em risco e planejar intervenções pedagógicas eficientes. 
+&emsp; **Cenário:** Utilização do modelo preditivo para identificar alunos em risco e planejar intervenções pedagógicas eficientes.
 
-- **Atividades:** Analisa notas e frequência manualmente; identifica alunos com baixo desempenho; cria grupos de monitoria; oferece suporte individual ou em grupo; sugere atividades de reforço; acompanha evolução das notas.  
-- **Necessidades:** Ferramentas que automatizem a análise de dados; visão rápida de desempenho; informações claras sobre fatores de risco; priorização de alunos que precisam de mais ajuda; feedback sobre a eficácia das intervenções.  
-- **Emoções:** Frustração ao atuar de forma reativa; preocupação sobre eficácia das intervenções; esperança e alívio ao ver melhoras nas notas.  
-- **Oportunidades:** Alertas proativos sobre alunos em risco; insights sobre motivos do risco; classificação por faixas de risco; relatórios periódicos para medir impacto das ações pedagógicas.  
+- **Atividades:** Analisa notas e frequência manualmente; identifica alunos com baixo desempenho; cria grupos de monitoria; oferece suporte individual ou em grupo; sugere atividades de reforço; acompanha evolução das notas.
+- **Necessidades:** Ferramentas que automatizem a análise de dados; visão rápida de desempenho; informações claras sobre fatores de risco; priorização de alunos que precisam de mais ajuda; feedback sobre a eficácia das intervenções.
+- **Emoções:** Frustração ao atuar de forma reativa; preocupação sobre eficácia das intervenções; esperança e alívio ao ver melhoras nas notas.
+- **Oportunidades:** Alertas proativos sobre alunos em risco; insights sobre motivos do risco; classificação por faixas de risco; relatórios periódicos para medir impacto das ações pedagógicas.
 
 <div align="center">
-   <sub>Figura - Jornada da Persona Paola Andrea Vallejo Ramírez</sub>  
-   <img src="../assets/Paola Andrea Vallejo Ramírez uj.png">  
+   <sub>Figura - Jornada da Persona Paola Andrea Vallejo Ramírez</sub>
+   <img src="../assets/Paola Andrea Vallejo Ramírez uj.png">
    <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
@@ -469,14 +469,14 @@ Remova este bloco ao final
 
 &emsp; **Cenário:** Avaliação estratégica e tomada de decisão sobre a continuidade e expansão do modelo preditivo.
 
-- **Atividades:** Analisa relatórios de desempenho e evasão; define metas e KPIs; recebe relatórios periódicos; participa de reuniões com equipe pedagógica; decide sobre manutenção ou expansão do projeto; apresenta resultados para stakeholders.  
-- **Necessidades:** Dados claros sobre ROI; métricas de sucesso alinhadas a objetivos institucionais; evidências concretas de que a solução funciona; projeções de impacto da expansão.  
-- **Emoções:** Inquietação pela falta de dados preventivos; curiosidade e avaliação crítica diante dos relatórios; satisfação com resultados positivos e sensação de liderança.  
-- **Oportunidades:** Relatórios executivos sobre impacto da solução; dashboards consolidados comparando dados históricos; simulações de impacto em outras disciplinas; manuais de replicabilidade.  
+- **Atividades:** Analisa relatórios de desempenho e evasão; define metas e KPIs; recebe relatórios periódicos; participa de reuniões com equipe pedagógica; decide sobre manutenção ou expansão do projeto; apresenta resultados para stakeholders.
+- **Necessidades:** Dados claros sobre ROI; métricas de sucesso alinhadas a objetivos institucionais; evidências concretas de que a solução funciona; projeções de impacto da expansão.
+- **Emoções:** Inquietação pela falta de dados preventivos; curiosidade e avaliação crítica diante dos relatórios; satisfação com resultados positivos e sensação de liderança.
+- **Oportunidades:** Relatórios executivos sobre impacto da solução; dashboards consolidados comparando dados históricos; simulações de impacto em outras disciplinas; manuais de replicabilidade.
 
 <div align="center">
-   <sub>Figura - Jornada da Persona Dr. Ricardo Morales</sub>  
-   <img src="../assets/Dr. Ricardo Morales uj.png">  
+   <sub>Figura - Jornada da Persona Dr. Ricardo Morales</sub>
+   <img src="../assets/Dr. Ricardo Morales uj.png">
    <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
@@ -486,24 +486,24 @@ Remova este bloco ao final
 
 &emsp; **Cenário:** Experiência como estudante em risco de reprovação e recebimento de suporte baseado no modelo preditivo.
 
-- **Atividades:** Assiste às aulas; recebe notas baixas nos quizzes; sente esforço insuficiente; recebe suporte do professor; aplica orientações recebidas; dedica mais tempo aos estudos.  
-- **Necessidades:** Clareza sobre expectativas da disciplina; ajuda para entender notas baixas; suporte empático de professores; feedback personalizado; motivação e confiança.  
-- **Emoções:** Ansiedade e esperança no início; frustração e insegurança ao receber notas baixas; alívio e motivação ao receber suporte; orgulho e confiança ao ver progresso.  
-- **Oportunidades:** Sistema de boas-vindas com dicas personalizadas; notificações automáticas alertando risco; relatórios com insights para professores; gamificação com medidores de progresso.  
+- **Atividades:** Assiste às aulas; recebe notas baixas nos quizzes; sente esforço insuficiente; recebe suporte do professor; aplica orientações recebidas; dedica mais tempo aos estudos.
+- **Necessidades:** Clareza sobre expectativas da disciplina; ajuda para entender notas baixas; suporte empático de professores; feedback personalizado; motivação e confiança.
+- **Emoções:** Ansiedade e esperança no início; frustração e insegurança ao receber notas baixas; alívio e motivação ao receber suporte; orgulho e confiança ao ver progresso.
+- **Oportunidades:** Sistema de boas-vindas com dicas personalizadas; notificações automáticas alertando risco; relatórios com insights para professores; gamificação com medidores de progresso.
 
 <div align="center">
-   <sub>Figura - Jornada da Persona Juan Esteban Gómez Ríos</sub>  
-   <img src="../assets/Juan Esteban Gómez Ríos uj.png">  
+   <sub>Figura - Jornada da Persona Juan Esteban Gómez Ríos</sub>
+   <img src="../assets/Juan Esteban Gómez Ríos uj.png">
    <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
 ---
 
-&nbsp;A análise conjunta das jornadas de **Paola Andrea Vallejo Ramírez (docente/coordenadora)**, **Dr. Ricardo Morales (diretor)** e **Juan Esteban Gómez Ríos (estudante)** evidencia como o modelo preditivo se conecta de maneira complementar aos diferentes níveis da comunidade acadêmica. Enquanto para o **estudante** o foco está em apoio personalizado, motivação e superação de dificuldades, para a **docente** a ênfase recai sobre ferramentas práticas de análise, priorização de alunos em risco e feedback sobre intervenções. Já o **gestor** necessita de dados consolidados, projeções estratégicas e métricas de impacto que sustentem decisões institucionais.  
+&nbsp;A análise conjunta das jornadas de **Paola Andrea Vallejo Ramírez (docente/coordenadora)**, **Dr. Ricardo Morales (diretor)** e **Juan Esteban Gómez Ríos (estudante)** evidencia como o modelo preditivo se conecta de maneira complementar aos diferentes níveis da comunidade acadêmica. Enquanto para o **estudante** o foco está em apoio personalizado, motivação e superação de dificuldades, para a **docente** a ênfase recai sobre ferramentas práticas de análise, priorização de alunos em risco e feedback sobre intervenções. Já o **gestor** necessita de dados consolidados, projeções estratégicas e métricas de impacto que sustentem decisões institucionais.
 
-&nbsp;Assim, percebe-se que as jornadas, apesar de distintas, são interdependentes: a motivação e o progresso do aluno alimentam os indicadores analisados pela professora; esses dados, por sua vez, são consolidados em relatórios que oferecem ao diretor uma visão estratégica da efetividade da solução. Essa correlação cria um **ciclo virtuoso de informação**, no qual cada persona se beneficia de forma diferenciada, mas convergente, reforçando o alinhamento entre **ações pedagógicas, suporte individualizado e decisões estratégicas**.  
+&nbsp;Assim, percebe-se que as jornadas, apesar de distintas, são interdependentes: a motivação e o progresso do aluno alimentam os indicadores analisados pela professora; esses dados, por sua vez, são consolidados em relatórios que oferecem ao diretor uma visão estratégica da efetividade da solução. Essa correlação cria um **ciclo virtuoso de informação**, no qual cada persona se beneficia de forma diferenciada, mas convergente, reforçando o alinhamento entre **ações pedagógicas, suporte individualizado e decisões estratégicas**.
 
-&nbsp;Portanto, as jornadas não devem ser vistas isoladamente, mas como partes de um ecossistema de inovação educacional, no qual o modelo preditivo atua como elo central entre experiência do aluno, prática docente e gestão institucional.  
+&nbsp;Portanto, as jornadas não devem ser vistas isoladamente, mas como partes de um ecossistema de inovação educacional, no qual o modelo preditivo atua como elo central entre experiência do aluno, prática docente e gestão institucional.
 
 
 #### 4.1.8 Política de Privacidade
@@ -605,7 +605,7 @@ Esta etapa inicial marca o primeiro contato com os dados, sendo responsável pel
 
 </div>
 
-#### 4.2.2. Pré-processamento 
+#### 4.2.2. Pré-processamento
 
 &emsp; Antes da etapa de modelagem, é essencial realizar um rigoroso pré-processamento dos dados. Segundo Silva, Peres e Boscarioli (2016), esta fase é fundamental para garantir a integridade e a qualidade do dataset, mitigando o risco de conclusões preciptadas ou de baixa performance do modelo. O objetivo deste processo é transformar os dados brutos — marcados por inconsistências, erros de formatação e ruídos — em um conjunto de dados limpo, padronizado e estruturado, prontos para serem aplicados no treinamento do modelo.
 
@@ -829,7 +829,7 @@ def aplica_onehot(df, encoder_info):
 ```
 
 ##### 4.2.2.2. Pipeline de Execução do Pré-processamento
-  
+ 
 &emsp; As funções utilitárias foram integradas em um pipeline sequencial para processar os dados brutos. O processo inicia-se com o carregamento dos datasets. Em seguida, a função padroniza_df é aplicada para realizar a tradução, padronização e limpeza inicial. As colunas de tempo são normalizadas para segundos. Após isso, os alunos ausentes são filtrados com base na ausência de entregas. Após a concatenação dos datasets, a função remove_outliers trata os valores extremos nas features numéricas. Por fim, as variáveis categóricas são transformadas via One-Hot Encoding, resultando no dataframe final, pronto para a modelagem.
 
 ```python
@@ -978,27 +978,46 @@ df_onehot = aplica_onehot(df_consolidado, encoder_info)
 &emsp; A refutação da hipótese de normalidade para todas as três variáveis chave é um resultado de grande impacto para o projeto. Fica claro que a utilização direta de modelos e testes paramétricos seria inadequada e poderia comprometer a validade das conclusões. Dessa forma, a análise dessas hipóteses nos força a tomar decisões mais informadas na próxima fase, como a aplicação de transformações matemáticas (ex: logarítmica) para tentar normalizar os dados ou, alternativamente, a adoção de algoritmos não-paramétricos, que são mais flexíveis quanto à distribuição dos dados de entrada.
 
 ### 4.3. Preparação dos Dados e Modelagem
-```
-Caso seu projeto seja Modelo Supervisionado, apresentar: 
-a) Organização dos dados (conjunto de treinamento, validação e testes)
-b) Modelagem para o problema (proposta de features com a explicação completa da linha de raciocínio).
-c) Métricas relacionadas ao modelo (pelo menos 3).
-d) Apresentar o primeiro modelo candidato, e uma discussão sobre os resultados deste modelo (discussão sobre as métricas para esse modelo candidato).
 
-Caso seu projeto seja Modelo Não-Supervisionado, apresentar:
-a) Modelagem para o problema (proposta de features com a explicação completa da linha de raciocínio).
-b) Primeiro modelo candidato para o problema.
-c) Justificativa para a definição do K do modelo.
-d) Escolha de um tipo de sistema de recomendação e a justificativa para essa escolha.
+> Aviso de confidencialidade: os dados institucionais utilizados são confidenciais e foram disponibilizados exclusivamente para fins acadêmicos mediante acordo com a Universidad EAFIT. Nenhuma amostra individual, linha ou arquivo bruto será exibido neste documento. As referências a variáveis e procedimentos são descritivas e não expõem conteúdo sensível.
 
-Remova este bloco ao final
-```
+Nesta seção, será apresentado o processo de preparação dos dados para a construção do nosso modelo supervisionado de risco acadêmico. O primeiro passo consiste na escolha das features e suas justificativas, seguido pela organização dos dados em conjuntos de treinamento, validação e teste.
+
+#### 4.3.1. Justificativa das features
+
+&emsp;A partir da análise das colunas disponíveis (Seção 4.2), foram selecionadas features que capturam desempenho, esforço/tempo, evolução e contexto acadêmico, pois estão diretamente relacionadas à probabilidade de aprovação.
+
+&emsp; As avaliações formais — `Parcial_1`, `Parcial_2`, `Projeto_Parte1`, `Projeto_Parte2`, `Oficinas` e `Quizzes` — refletem o aprendizado acumulado do estudante e, por isso, constituem o núcleo das variáveis explicativas. Diferenças entre primeiras e segundas avaliações sinalizam evolução ou retração ao longo do período, oferecendo indícios precoces de risco que podem subsidiar intervenções pedagógicas antes do fechamento das notas.
+
+&emsp; Os quizzes individuais (`Quiz1`–`Quiz8`) adicionam granularidade temporal. A observação de picos e quedas entre semanas permite construir indicadores de estabilidade (como o desvio padrão entre quizzes) e de tendência (como a inclinação de uma regressão simples das notas ao longo do tempo). Tais indicadores ajudam a distinguir perfis consistentes de perfis erráticos, algo crítico para antecipar situações de risco.
+
+&emsp; O tempo de execução de cada quiz (`TempoQ1`–`TempoQ8`, convertido para segundos no pré-processamento) traz um componente de esforço e dificuldade percebida. Tempos anormalmente baixos podem sugerir respostas aleatórias; por outro lado, tempos excessivamente altos podem indicar barreiras de compreensão. Agregações como média, mediana, soma e variabilidade ao longo dos quizzes enriquecem a interpretação conjunta com as notas.
+
+&emsp; As variáveis de evolução declarada, como `MelhoraNotaQuizzes` e `Quanto melhora?`, registram diretamente o progresso entre avaliações, contribuindo para diferenciar estudantes que respondem positivamente a monitorias e atividades de reforço daqueles que mantêm desempenho estável ou declinante.
+
+&emsp; O contexto acadêmico — `Período`, `Grupo`, `Horário`, `Nome_Programa_Academico` e `STEM` — é incorporado para controlar efeitos de turma, turno e curso que impactam padrões de avaliação e disponibilidade de suporte. Essas variáveis serão tratadas por codificação apropriada, mitigando riscos de dominância de categorias e reduzindo a chance de sobreajuste.
+
+&emsp; Aspectos demográficos essenciais, como `Idade` (em faixas) e `Genero`, são considerados com parcimônia e auditados quanto a viés. Caso não agreguem valor preditivo sem riscos éticos, podem ser excluídos da versão final do modelo. Quando presentes, sua utilização é acompanhada de verificações de fairness.
+
+&emsp; Além das variáveis brutas, serão construídos atributos derivados capazes de ampliar a capacidade explicativa: estatísticas agregadas dos quizzes (média, mediana, mínimos e máximos, desvio padrão), tendências temporais, deltas entre avaliações (`Parcial_2 - Parcial_1`, `Projeto_Parte2 - Projeto_Parte1`) e interações relevantes (por exemplo, `STEM × tempo médio`, `Horário × desempenho`, `Oficinas × Quizzes`). Em paralelo, variáveis redundantes ou altamente correlacionadas serão reduzidas, favorecendo um conjunto de atributos mais parcimonioso e interpretável.
+
+#### 4.3.2. Organização dos dados (treinamento, validação e teste)
+
+&emsp; O problema é formulado como classificação binária, tendo `Aprovou` como alvo principal. Em análises complementares, `Nota_Oficial` pode ser modelada como regressão e posteriormente mapeada para aprovação por limiar institucional, permitindo comparar abordagens sem comprometer a interpretação final.
+
+&emsp; Para estimar o desempenho de forma honesta e replicável, será reservado um conjunto de teste de aproximadamente 20% dos registros, estratificado por `Aprovou`, a ser utilizado apenas na avaliação final. Sobre o conjunto restante, emprega-se validação cruzada estratificada (k=5 ou k=10), que fornece métricas estáveis e reduz a variância associada a um único particionamento.
+
+&emsp; Sempre que houver estrutura temporal clara (por exemplo, semestres distintos) ou organização por turmas, será adotada uma estratégia que evite vazamento entre treino e avaliação. Duas alternativas serão consideradas conforme a disponibilidade: separação temporal (por exemplo, utilizar 2023-1 para treino/validação e 2023-2 como teste) ou validação por grupos (GroupKFold) com chaves como `Grupo` e `Horário`. Dessa maneira, amostras muito semelhantes não aparecem simultaneamente em treino e validação.
+
+&emsp; Todo o pré-processamento descrito na Seção 4.2 — padronização de colunas e valores, conversão dos tempos dos quizzes para segundos, filtragem de ausentes, tratamento de outliers por clipping e codificação One-Hot — ocorrerá dentro de cada fold, ajustando encoders e escalonadores exclusivamente no subconjunto de treino e aplicando-os aos subconjuntos de validação e teste. Esse procedimento evita vazamento de informação e preserva a validade das métricas obtidas.
+
+&emsp; Na presença de desbalanceamento entre classes de aprovação, serão avaliadas técnicas como o ajuste de pesos de classe (`class_weight=balanced`) ou oversampling (por exemplo, SMOTE), sempre restritas ao subconjunto de treino. Por fim, serão fixadas sementes aleatórias nos processos de amostragem e modelagem, e os artefatos do pipeline — mapeamentos, encoders, lista final de colunas e escalonadores — serão versionados, garantindo reprodutibilidade e auditabilidade institucional.
 
 ### 4.4. Comparação de Modelos
 ```
-- Descrever e justificar a escolha da métrica de avaliação dos modelos com base no que é mais importante para o problema ao 
+- Descrever e justificar a escolha da métrica de avaliação dos modelos com base no que é mais importante para o problema ao
   se medir a qualidade desses modelos;
-- Descrever ao menos três modelos candidatos, seus respectivos algoritmos, seus tunings de hiperparâmetros e suas métricas 
+- Descrever ao menos três modelos candidatos, seus respectivos algoritmos, seus tunings de hiperparâmetros e suas métricas
   alcançadas;
 
 Remova este bloco ao final
@@ -1006,18 +1025,18 @@ Remova este bloco ao final
 
 ### 4.5. Avaliação
 ```
-- Descreva a solução final de modelo preditivo e justifique a escolha. Alinhe sua justificativa com a Seção 4.1, resgatando o entendimento 
-  do negócio e das personas, explicando de que formas seu modelo atende os requisitos e definições. 
+- Descreva a solução final de modelo preditivo e justifique a escolha. Alinhe sua justificativa com a Seção 4.1, resgatando o entendimento
+  do negócio e das personas, explicando de que formas seu modelo atende os requisitos e definições.
 - Descreva também um plano de contingência para os casos em que o modelo falhar em suas predições.
 - Além disso, discuta sobre a explicabilidade do modelo (se aplicável) e realize a verificação de aceitação ou refutação das hipóteses.
-- Se aplicável, utilize equações, tabelas e gráficos de visualização de dados para melhor ilustrar seus argumentos. 
+- Se aplicável, utilize equações, tabelas e gráficos de visualização de dados para melhor ilustrar seus argumentos.
 
 Remova este bloco ao final
 ```
 
 ## <a name="c5"></a>5. Conclusões e Recomendações
 ```
-Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de negócios em relação ao uso desse modelo. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras, como um manual de usuário mais detalhado na seção "Anexos". Não se esqueça também das pessoas que serão potencialmente afetadas pelas decisões do modelo preditivo e elabore recomendações que ajudem seu parceiro a tratá-las de maneira estratégica e ética. 
+Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de negócios em relação ao uso desse modelo. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras, como um manual de usuário mais detalhado na seção "Anexos". Não se esqueça também das pessoas que serão potencialmente afetadas pelas decisões do modelo preditivo e elabore recomendações que ajudem seu parceiro a tratá-las de maneira estratégica e ética.
 
 Remova este bloco ao final
 ```
@@ -1041,7 +1060,7 @@ Remova este bloco ao final
 [personas] <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [COOPER, Alan; REIMANN, Robert; CRONIN, David; NOESSEL, Christopher. *About Face: The Essentials of Interaction Design*. 4. ed. Indianapolis: Wiley, 2014.](https://www.wiley.com/en-us/About+Face%3A+The+Essentials+of+Interaction+Design%2C+4th+Edition-p-9781118766576)
 
 
-[Númeração de acordo com a ordem alfabética]. <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [PMI - Project Management Institute. Um guia do conhecimento em gerenciamento de projetos (Guia PMBOK®): guia do conhecimento em gerenciamento de projetos. 7. ed. Newtown Square, PA: Project Management Institute, 2021.](https://www.academiaplaorc.com.br/wp-content/uploads/2024/07/Guia-PMBOK-7a-Edicao.pdf)  
+[Númeração de acordo com a ordem alfabética]. <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [PMI - Project Management Institute. Um guia do conhecimento em gerenciamento de projetos (Guia PMBOK®): guia do conhecimento em gerenciamento de projetos. 7. ed. Newtown Square, PA: Project Management Institute, 2021.](https://www.academiaplaorc.com.br/wp-content/uploads/2024/07/Guia-PMBOK-7a-Edicao.pdf)
 
 SILVA, L. A. da; PERES, S. M.; BOSCARIOLI, C. **Introdução à mineração de dados**: com aplicações em R. Rio de Janeiro: GEN LTC, 2016
 
@@ -1252,11 +1271,11 @@ $$
 
 Primeiramente, segue a tabela dos valores a serem utilizados nas equações:
 
-| Variável     | Mínimo    | Máximo      | Média    | Desvio Padrão | 
+| Variável     | Mínimo    | Máximo      | Média    | Desvio Padrão |
 |--------------|-----------|-------------|----------|---------------|
 | CalcNotaQuiz         | 0.625000  | 5.000000    | 4.075710 | 0.772738      |
 | Talleres             | 0.000000  | 5.000000    | 4.100491 | 1.281169      |
-| Calificación_Oficial | 0.500000  | 5.000000    | 4.319476 | 0.768881      | 
+| Calificación_Oficial | 0.500000  | 5.000000    | 4.319476 | 0.768881      |
 
 Seguindo com as equações:
 
@@ -1296,4 +1315,3 @@ Seguindo com as equações:
 </div>
 
 &ensp;Ao comparar com os histogramas pré escalonamento, nota-se que a principal mudança está na escala dos dados limitando-se ao limite superior igual a 1, contribuindo para a atribuição de pesos do modelo preditivo na etapa de treinamento e uma singela suavização dos gráficos.
-
