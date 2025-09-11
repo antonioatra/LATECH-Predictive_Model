@@ -59,11 +59,21 @@ Remova este bloco ao final
 ```
 
 ## <a name="c3"></a>3. Metodologia
-```
-Descreva a metodologia CRISP-DM e suas etapas de desenvolvimento, citando o referencial teórico. Você deve apenas enunciar os métodos, sem dizer ainda como eles foram aplicados, nem quais resultados foram obtidos.
+&emsp; Neste projeto, será usada a metodologia CRISP-DM (Cross Industry Standard Process for Data Mining). Basicamente, essa metodologia serve para ajudar a criar modelos a partir da análise de dados, com o objetivo de identificar possíveis problemas e no caso atual, será usada para ajudar a prever alunos com chance de reprovação. Pensada por um conjunto de empresas de mineração de dados, como SPSS e Daimler-Benz, por volta dos anos 1990, é dividida em 6 etapas denominadas Entendimento do negócio, Entendimento dos dados, Preparação dos dados, Modelagem, Avaliação e por ultimo Implementação. Um ponto importante é que o CRISP-DM não é uma linha reta: o processo é iterativo, ou seja, quando é terminado uma etapa, sempre existe a chance de voltar para uma anterior e melhorar o que já foi feito. As seis etapas dessa metodologia são:
 
-Remova este bloco ao final
-```
+- **Entendimento do negócio**: Essa etapa consiste em compreender o que deve ser feito, para quem e com qual objetivo final o projeto será desenvolvido. Aqui é realizada uma análise completa da empresa e de sua principal dor (problema), para que o desafio seja resolvido da forma mais eficiente possível. É importante ressaltar que, se essa fase não for bem conduzida, todo o projeto corre sério risco de ficar comprometido.
+
+- **Entendimento dos dados**: Essa etapa vem logo após o entendimento do negócio e tem como foco levantar questionamentos sobre os dados que serão usados no projeto. É nesse momento que se avalia quais dados estão disponíveis, sua qualidade e relevância para o problema. A partir dessas análises, normalmente ocorre a coleta dos dados necessários. No caso deste projeto, por uma decisão de escopo, essa coleta não foi realizada, mas a etapa ainda serve para refletir sobre como os dados podem apoiar na solução do problema.
+
+- **Preparação dos dados**: Com os dados em mãos, essa etapa é dedicada ao tratamento e ao pré-processamento, ou seja, corrigir valores nulos, lidar com outliers, enriquecer os dados e selecionar as variáveis mais relevantes para o modelo. Em geral, é uma das fases mais demoradas e também uma das mais revisitadas do processo, já que os dados precisam passar por ajustes constantes ao longo do projeto para garantir a qualidade dos resultados.
+
+- **Modelagem**: Essa é, geralmente, a etapa mais aguardada do processo, embora muitas vezes seja uma das mais rápidas. Aqui é definido qual tipo de modelo será utilizado e quais atributos (variáveis) vão compor sua construção. É também nesse momento que o modelo é efetivamente treinado e começam a aparecer os primeiros resultados, como métricas de desempenho — por exemplo, a acurácia em um modelo preditivo.
+
+- **Avaliação**:Com os resultados da modelagem em mãos, essa é a hora de analisar se o desempenho do modelo realmente atende às expectativas definidas no início do projeto. Métricas como a acurácia são comparadas com os objetivos de negócio para verificar se o modelo é útil na prática. Caso os resultados não sejam satisfatórios, a equipe pode voltar a etapas anteriores — como a preparação dos dados — para refinar o conjunto utilizado e tentar melhorar os resultados. Esse caráter de revisão torna essa fase essencial para garantir que o modelo seja de fato eficaz e aplicável.
+
+- **Implementação**:Sendo a etapa final do processo, a implementação (ou deploy) é quando o modelo é colocado em produção e começa a gerar impacto real para o negócio ou empresa. A forma como isso acontece pode variar bastante de projeto para projeto. Um exemplo comum é disponibilizar o modelo em um serviço na nuvem, permitindo que membros da equipe da empresa possam utilizá-lo diretamente para apoiar decisões ou operações.
+
+&emsp; Por fim, o grande benefício de usar a metodologia CRISP-DM é que ela ajuda a conectar a criação do modelo preditivo com o entendimento real do negócio. No caso deste projeto, isso significa olhar de perto como funciona a dinâmica dos alunos e como os fatores analisados impactam diretamente no risco de reprovação. A partir dessa visão, é possível desenvolver um modelo preditivo mais certeiro sempre com base e inteiramente focado no problema que estiver trabalhando. Além disso, o processo iterativo é um ponto muito forte da metodologia, já que se os resultados obtidos não forem bons, apenas voltar alguns passos e refazer os passos como fosse a primeira vez.
 
 ## <a name="c4"></a>4. Desenvolvimento e Resultados
 ### 4.1. Compreensão do Problema
