@@ -1003,9 +1003,9 @@ Nesta seção, será apresentado o processo de preparação dos dados para a con
 
 #### 4.3.2. Organização dos dados (treinamento, validação e teste)
 
-&emsp; O problema é formulado como classificação binária, tendo `Aprovou` como alvo principal. Em análises complementares, `Nota_Oficial` pode ser modelada como regressão e posteriormente mapeada para aprovação por limiar institucional, permitindo comparar abordagens sem comprometer a interpretação final.
+&emsp; O problema é formulado como classificação binária, tendo `Reprovou` como alvo principal. Em análises complementares, `Nota_Oficial` pode ser modelada como regressão e posteriormente mapeada para aprovação por limiar institucional, permitindo comparar abordagens sem comprometer a interpretação final.
 
-&emsp; Para estimar o desempenho de forma honesta e replicável, será reservado um conjunto de teste de aproximadamente 20% dos registros, estratificado por `Aprovou`, a ser utilizado apenas na avaliação final. Sobre o conjunto restante, emprega-se validação cruzada estratificada (k=5 ou k=10), que fornece métricas estáveis e reduz a variância associada a um único particionamento.
+&emsp; Para estimar o desempenho de forma honesta e replicável, será reservado um conjunto de teste de aproximadamente 20% dos registros, estratificado por `Reprovou`, a ser utilizado apenas na avaliação final. Sobre o conjunto restante, emprega-se validação cruzada estratificada (k=5 ou k=10), que fornece métricas estáveis e reduz a variância associada a um único particionamento.
 
 &emsp; Sempre que houver estrutura temporal clara (por exemplo, semestres distintos) ou organização por turmas, será adotada uma estratégia que evite vazamento entre treino e avaliação. Duas alternativas serão consideradas conforme a disponibilidade: separação temporal (por exemplo, utilizar 2023-1 para treino/validação e 2023-2 como teste) ou validação por grupos (GroupKFold) com chaves como `Grupo` e `Horário`. Dessa maneira, amostras muito semelhantes não aparecem simultaneamente em treino e validação.
 
@@ -1024,6 +1024,8 @@ Em cenários desbalanceados, como este (93% de aprovação e 7% de reprovação)
   <img src="../assets/matriz_confusão_nearestCentroid.png" alt="Matriz de confusão — Nearest Centroid (Etapa 1)"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
+
+Interpretação da Matriz:
 
 ```
             Previsto: 1     Previsto: 0
@@ -1057,8 +1059,6 @@ A classe positiva (“Reprovou”) é minoritária e crítica. Dessa forma, redu
 - Definição: média harmônica entre precisão e recall.
 - Interpretação: equilíbrio entre capturar a maioria dos reprovados e manter previsões positivas confiáveis.
 - Observação: útil para balancear FN e FP. Como o custo de FN é maior, o recall é priorizado; ainda assim, o F1 é monitorado para evitar colapso da precisão.
-
----
 
 ### 4.3.4 Modelo Candidato — Nearest Centroid
 
