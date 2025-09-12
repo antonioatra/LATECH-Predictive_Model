@@ -1013,6 +1013,79 @@ Nesta seção, será apresentado o processo de preparação dos dados para a con
 
 &emsp; Na presença de desbalanceamento entre classes de aprovação, serão avaliadas técnicas como o ajuste de pesos de classe (`class_weight=balanced`) ou oversampling (por exemplo, SMOTE), sempre restritas ao subconjunto de treino. Por fim, serão fixadas sementes aleatórias nos processos de amostragem e modelagem, e os artefatos do pipeline — mapeamentos, encoders, lista final de colunas e escalonadores — serão versionados, garantindo reprodutibilidade e auditabilidade institucional.
 
+### 4.3.3 Métricas relacionadas ao modelo
+
+Métricas são utilizadas para avaliar o desempenho durante o desenvolvimento do modelo preditivo supervisionado.
+
+Em cenários desbalanceados, como este (93% de aprovação e 7% de reprovação), a acurácia por si só pode ser enganosa: um modelo que sempre prevê a classe majoritária (aprovação) pode ter alta acurácia e, ainda assim, pouca utilidade prática. Métricas baseadas na matriz de confusão fornecem uma visão mais detalhada das previsões:
+
+<div align="center">
+  <sub>Figura x — Matriz de confusão do modelo Nearest Centroid na etapa 1</sub><br>
+  <img src="../assets/matriz_confusão_nearestCentroid.png" alt="Matriz de confusão — Nearest Centroid (Etapa 1)"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+```
+            Previsto: 1     Previsto: 0
+Real: 1        VP               FN
+Real: 0        FP               VN
+```
+
+- Verdadeiro Positivo (VP): o modelo prevê “Reprovou” e a pessoa realmente reprovou.
+- Falso Positivo (FP): o modelo prevê “Reprovou”, mas a pessoa não reprovou.
+- Verdadeiro Negativo (VN): o modelo prevê “Não reprovou” e a pessoa de fato não reprovou.
+- Falso Negativo (FN): o modelo prevê “Não reprovou”, mas a pessoa reprovou.
+
+A classe positiva (“Reprovou”) é minoritária e crítica. Dessa forma, reduzir FN — isto é, evitar deixar de identificar alunos que irão reprovar — é a prioridade.
+
+#### Métricas-chave
+
+##### Recall
+- Fórmula: Recall = VP / (VP + FN)
+- Definição: proporção de positivos reais corretamente identificados.
+- Interpretação: “Entre os que realmente reprovam, quantos o modelo detecta?”
+- Observação: o grid search utiliza `scoring='recall'`, indicando que perder um caso de reprovação (FN) é mais custoso do que gerar um alarme a mais (FP). Assim, o modelo prioriza identificar o máximo de casos de reprovação, mesmo que isso aumente o número de alarmes falsos.
+
+##### Precisão
+- Fórmula: Precisão = VP / (VP + FP)
+- Definição: proporção de positivos previstos que são de fato positivos.
+- Interpretação: “Entre os marcados como reprovados, quantos realmente reprovam?”
+- Observação: em dados desbalanceados, ao elevar o recall, é comum aumentar FP e reduzir a precisão. A precisão ajuda a controlar a confiabilidade das sinalizações de reprovação.
+
+##### F1-Score
+- Fórmula: F1 = 2 × (Precisão × Recall) / (Precisão + Recall)
+- Definição: média harmônica entre precisão e recall.
+- Interpretação: equilíbrio entre capturar a maioria dos reprovados e manter previsões positivas confiáveis.
+- Observação: útil para balancear FN e FP. Como o custo de FN é maior, o recall é priorizado; ainda assim, o F1 é monitorado para evitar colapso da precisão.
+
+---
+
+### 4.3.4 Modelo Candidato — Nearest Centroid
+
+#### Descrição do modelo
+O Nearest Centroid (NC) é um classificador simples baseado em distância. Para cada classe, calcula-se o centróide (média dos vetores) no conjunto de treino. Uma nova amostra é atribuída à classe cujo centróide estiver mais próximo, segundo uma métrica de distância.
+
+Foi utilizada busca em grade com validação cruzada (cv=5) para selecionar “metric” e “shrink_threshold”, otimizando por recall, dado o objetivo de reduzir falsos negativos na classe positiva (“Reprovou” = 1). O conjunto é dividido em treino e teste com `random_state=42`. O uso de SMOTE no treino foi considerado (comentado no código) em razão do desbalanceamento.
+
+#### Resultados por pontos no tempo
+- Tabela 1 (menos atributos): recall razoável/alto, porém precisão muito baixa — muitas sinalizações incorretas (FP). Com pouca informação, o NC tende a “abrir a rede” para capturar reprovados, mas gera muitos alarmes falsos.
+- Tabela 2 (informação intermediária): recall muito alto, precisão ainda modesta; F1 melhora — o modelo segue eficaz em detectar reprovados, mas o custo de FP permanece relevante.
+- Tabela 3 (mais atributos): recall alto e leve melhora de precisão e F1 — com mais variáveis, o NC reduz um pouco os FP, mas ainda mantém viés em favor do recall.
+
+#### Ajuste ao desbalanceamento
+O problema é desbalanceado (poucos “Reprovou”). O NC, por ser um classificador simples e otimizado por recall, favorece a classe positiva. Isso ajuda a reduzir FN, mas pode reduzir a precisão. O código prevê SMOTE no treino; sua ativação e comparação de métricas é recomendada para verificar possibilidade de ganhar recall mantendo ou melhorando precisão/F1. 
+
+Nota breve sobre SMOTE: técnica que cria exemplos sintéticos da classe minoritária para equilibrar o treino; deve ser aplicada apenas no conjunto de treino para evitar vazamento de informação.
+
+#### Próximos passos para o candidato
+- Avaliar o efeito de SMOTE apenas no treino e repetir a seleção de hiperparâmetros.
+- Ajustar “shrink_threshold” para maior seletividade (redução de FP).
+- Se o objetivo prioriza estritamente recall (minimizar FN), manter o NC é coerente; do contrário, testar modelos com limiar ajustável (regressão logística, árvores/ensembles) a fim de calibrar um ponto de operação com recall-alvo e ganhar precisão (curva Precision–Recall).
+
+
+#### Conclusão
+O Nearest Centroid atende bem ao objetivo de detectar reprovados (alto recall, baixos FN), sobretudo à medida que mais atributos ficam disponíveis no tempo. Entretanto, tende a produzir muitos falsos positivos nas etapas iniciais, reduzindo a precisão e o F1. É um bom ponto de partida orientado a recall em um cenário desbalanceado. Para implantação, recomenda-se ajuste fino e comparação com modelos que permitam melhor equilíbrio entre recall e custo operacional (FP).
+
 ### 4.4. Comparação de Modelos
 ```
 - Descrever e justificar a escolha da métrica de avaliação dos modelos com base no que é mais importante para o problema ao
