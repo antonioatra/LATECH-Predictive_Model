@@ -981,43 +981,89 @@ df_onehot = aplica_onehot(df_consolidado, encoder_info)
 
 > Aviso de confidencialidade: os dados institucionais utilizados são confidenciais e foram disponibilizados exclusivamente para fins acadêmicos mediante acordo com a Universidad EAFIT. Nenhuma amostra individual, linha ou arquivo bruto será exibido neste documento. As referências a variáveis e procedimentos são descritivas e não expõem conteúdo sensível.
 
-Nesta seção, será apresentado o processo de preparação dos dados para a construção do nosso modelo supervisionado de risco acadêmico. O primeiro passo consiste na escolha das features e suas justificativas, seguido pela organização dos dados em conjuntos de treinamento, validação e teste.
+## 4.3.1. Seleção de Features  
 
-#### 4.3.1. Justificativa das features
+&emsp; A partir da análise das colunas disponíveis (Seção 4.2), foram escolhidas variáveis que capturam dimensões essenciais ao problema: **desempenho, esforço/tempo, evolução e contexto acadêmico**. Essas dimensões estão diretamente relacionadas à probabilidade de aprovação e permitem antecipar situações de risco.  
 
-&emsp;A partir da análise das colunas disponíveis (Seção 4.2), foram selecionadas features que capturam desempenho, esforço/tempo, evolução e contexto acadêmico, pois estão diretamente relacionadas à probabilidade de aprovação.
+### Núcleo de variáveis explicativas  
+- **Quizzes (Quiz1–Quiz6)**: refletem o aprendizado contínuo e oferecem granularidade temporal.  
+- **Tempo de execução dos quizzes (TempoQ1–TempoQ6, em segundos)**: incorporam uma dimensão de esforço/dificuldade percebida.  
+- **Variáveis derivadas**: médias, medianas, desvio padrão, mínimos, máximos e tendências temporais (ex.: inclinação de regressão simples das notas ao longo do tempo).  
 
-&emsp; As avaliações formais — `Parcial_1`, `Parcial_2`, `Projeto_Parte1`, `Projeto_Parte2`, `Oficinas` e `Quizzes` — refletem o aprendizado acumulado do estudante e, por isso, constituem o núcleo das variáveis explicativas. Diferenças entre primeiras e segundas avaliações sinalizam evolução ou retração ao longo do período, oferecendo indícios precoces de risco que podem subsidiar intervenções pedagógicas antes do fechamento das notas.
+### Exclusões específicas dentro do núcleo  
+- **Quiz7 e Quiz8**: não foram utilizados por estarem fora do espectro temporal em que o modelo será aplicado, já próximos do fechamento das avaliações.  
+- **Evolução declarada (*MelhoraNotaQuizzes* e *Quanto melhora?*)**: descartadas, pois apresentam informações que extrapolam o ponto de coleta considerado adequado para a avaliação preditiva, podendo introduzir viés de informação futura.  
 
-&emsp; Os quizzes individuais (`Quiz1`–`Quiz8`) adicionam granularidade temporal. A observação de picos e quedas entre semanas permite construir indicadores de estabilidade (como o desvio padrão entre quizzes) e de tendência (como a inclinação de uma regressão simples das notas ao longo do tempo). Tais indicadores ajudam a distinguir perfis consistentes de perfis erráticos, algo crítico para antecipar situações de risco.
+Breve ilustração da evolução de quizzes e tempos de execução ao longo do primeiro e segundo período respectivamente
 
-&emsp; O tempo de execução de cada quiz (`TempoQ1`–`TempoQ8`, convertido para segundos no pré-processamento) traz um componente de esforço e dificuldade percebida. Tempos anormalmente baixos podem sugerir respostas aleatórias; por outro lado, tempos excessivamente altos podem indicar barreiras de compreensão. Agregações como média, mediana, soma e variabilidade ao longo dos quizzes enriquecem a interpretação conjunta com as notas.
+<div align="center">
+   <sub>Figura - Relação tempo/nota dos quizzes do primeiro período</sub>
+   <img src="../assets/TempoQuiz1.png">
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
 
-&emsp; As variáveis de evolução declarada, como `MelhoraNotaQuizzes` e `Quanto melhora?`, registram diretamente o progresso entre avaliações, contribuindo para diferenciar estudantes que respondem positivamente a monitorias e atividades de reforço daqueles que mantêm desempenho estável ou declinante.
+<div align="center">
+   <sub>Figura - Relação tempo/nota dos quizzes do segundo período</sub>
+   <img src="../assets/TempoQuiz2.png">
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
 
-&emsp; O contexto acadêmico — `Período`, `Grupo`, `Horário`, `Nome_Programa_Academico` e `STEM` — é incorporado para controlar efeitos de turma, turno e curso que impactam padrões de avaliação e disponibilidade de suporte. Essas variáveis serão tratadas por codificação apropriada, mitigando riscos de dominância de categorias e reduzindo a chance de sobreajuste.
+### Exclusões realizadas  
+Apesar da relevância teórica, algumas variáveis não foram incluídas no modelo final:  
 
-&emsp; Aspectos demográficos essenciais, como `Idade` (em faixas) e `Genero`, são considerados com parcimônia e auditados quanto a viés. Caso não agreguem valor preditivo sem riscos éticos, podem ser excluídos da versão final do modelo. Quando presentes, sua utilização é acompanhada de verificações de fairness.
+- **Parcial_2, Projeto_Parte1 e Projeto_Parte2**: não foram utilizadas por não estarem dentro do espectro temporal em que o modelo será aplicado (objetivo é prever risco **antes** dessas avaliações).  
+- **Oficinas**: descartadas, pois havia apenas a média final agregada. Seria necessário acesso às notas individuais de cada oficina para capturar evolução.  
+- **Período, Grupo e Horário**: não foram usados por se tratarem de atribuições essencialmente aleatórias (ex.: grupo de trabalho), sem valor preditivo consistente.  
+- **Gênero e Idade**: embora presentes, não foram considerados. Todos os alunos estavam na faixa de **maiores de idade**, não havendo variação significativa. Já o campo **Gênero** não apresentou diferenciação suficiente para ser efetivo no modelo.  
 
-&emsp; Além das variáveis brutas, serão construídos atributos derivados capazes de ampliar a capacidade explicativa: estatísticas agregadas dos quizzes (média, mediana, mínimos e máximos, desvio padrão), tendências temporais, deltas entre avaliações (`Parcial_2 - Parcial_1`, `Projeto_Parte2 - Projeto_Parte1`) e interações relevantes (por exemplo, `STEM × tempo médio`, `Horário × desempenho`, `Oficinas × Quizzes`). Em paralelo, variáveis redundantes ou altamente correlacionadas serão reduzidas, favorecendo um conjunto de atributos mais parcimonioso e interpretável.
 
-#### 4.3.2. Organização dos dados (treinamento, validação e teste)
+---
 
-&emsp; O problema é formulado como classificação binária, tendo `Reprovou` como alvo principal. Em análises complementares, `Nota_Oficial` pode ser modelada como regressão e posteriormente mapeada para aprovação por limiar institucional, permitindo comparar abordagens sem comprometer a interpretação final.
+## 4.3.2. Organização dos Dados  
 
-&emsp; Para estimar o desempenho de forma honesta e replicável, será reservado um conjunto de teste de aproximadamente 20% dos registros, estratificado por `Reprovou`, a ser utilizado apenas na avaliação final. Sobre o conjunto restante, emprega-se validação cruzada estratificada (k=5 ou k=10), que fornece métricas estáveis e reduz a variância associada a um único particionamento.
+O problema foi formulado como **classificação binária**, tendo **Reprovou** como variável alvo. Em análises futuras, há a possibilidade de explorar **Nota_Oficial** em um cenário de regressão, posteriormente convertido em aprovação/reprovação por limiar institucional.  
 
-&emsp; Sempre que houver estrutura temporal clara (por exemplo, semestres distintos) ou organização por turmas, será adotada uma estratégia que evite vazamento entre treino e avaliação. Duas alternativas serão consideradas conforme a disponibilidade: separação temporal (por exemplo, utilizar 2023-1 para treino/validação e 2023-2 como teste) ou validação por grupos (GroupKFold) com chaves como `Grupo` e `Horário`. Dessa maneira, amostras muito semelhantes não aparecem simultaneamente em treino e validação.
+### Divisão dos dados  
+- Foi utilizada apenas a separação em **treino (80%)** e **teste (20%)**, estratificados pela variável-alvo.  
+- Não foi aplicada validação cruzada, pois o foco inicial está em avaliar a viabilidade do modelo em condições práticas de aplicação e por da margem de dados fornecidas par a aplicação.  
 
-&emsp; Todo o pré-processamento descrito na Seção 4.2 — padronização de colunas e valores, conversão dos tempos dos quizzes para segundos, filtragem de ausentes, tratamento de outliers por clipping e codificação One-Hot — ocorrerá dentro de cada fold, ajustando encoders e escalonadores exclusivamente no subconjunto de treino e aplicando-os aos subconjuntos de validação e teste. Esse procedimento evita vazamento de informação e preserva a validade das métricas obtidas.
+ <div align="center">
+   <sub>Figura - Divisão dos dados</sub>
+   <img src="../assets/divisaoDados.png">
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
 
-&emsp; Na presença de desbalanceamento entre classes de aprovação, serão avaliadas técnicas como o ajuste de pesos de classe (`class_weight=balanced`) ou oversampling (por exemplo, SMOTE), sempre restritas ao subconjunto de treino. Por fim, serão fixadas sementes aleatórias nos processos de amostragem e modelagem, e os artefatos do pipeline — mapeamentos, encoders, lista final de colunas e escalonadores — serão versionados, garantindo reprodutibilidade e auditabilidade institucional.
+### Pré-processamento  
+O pré-processamento foi realizado **sobre o banco completo** antes da separação entre treino e teste. As etapas incluíram:  
+
+- Padronização de colunas e valores.  
+- Conversão dos tempos dos quizzes para segundos.  
+- Tratamento de valores ausentes.  
+- Clipping de outliers.  
+- Codificação **One-Hot** para variáveis categóricas mantidas.  
+
+### Tratamento de desbalanceamento  
+- Como a variável alvo apresenta algum desbalanceamento, avaliou-se o uso de **class_weight=balanced** e técnicas de oversampling (ex.: SMOTE).  
+- Esses métodos foram aplicados exclusivamente no conjunto de treino.  
+
+ <div align="center">
+   <sub>Figura - Divisão dos dados</sub>
+   <img src="../assets/Aprovados-Reprovados.png">
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+### Reprodutibilidade  
+- Foram fixadas sementes aleatórias nos processos de amostragem e modelagem.  
+- O pipeline (lista final de colunas, encoders, mapeamentos e escalonadores) foi versionado, garantindo replicabilidade e auditabilidade institucional.  
+
 
 ### 4.3.3 Métricas relacionadas ao modelo
 
-Métricas são utilizadas para avaliar o desempenho durante o desenvolvimento do modelo preditivo supervisionado.
+&emsp; Métricas são utilizadas para avaliar o desempenho durante o desenvolvimento do modelo preditivo supervisionado.
 
-Em cenários desbalanceados, como este (93% de aprovação e 7% de reprovação), a acurácia por si só pode ser enganosa: um modelo que sempre prevê a classe majoritária (aprovação) pode ter alta acurácia e, ainda assim, pouca utilidade prática. Métricas baseadas na matriz de confusão fornecem uma visão mais detalhada das previsões:
+&emsp; Em cenários desbalanceados, como este (94% de aprovação e 6% de reprovação), a acurácia por si só pode ser enganosa: um modelo que sempre prevê a classe majoritária (aprovação) pode ter alta acurácia e, ainda assim, pouca utilidade prática.
+
+&emsp; Métricas baseadas na matriz de confusão fornecem uma visão mais detalhada das previsões. Como o objetivo principal é identificar corretamente todos os alunos reprovados, o recall da classe minoritária (reprovação) se torna a métrica mais importante, pois mede a proporção de casos positivos reais que foram corretamente identificados pelo modelo.
 
 <div align="center">
   <sub>Figura x — Matriz de confusão do modelo Nearest Centroid na etapa 1</sub><br>
@@ -1063,31 +1109,104 @@ A classe positiva (“Reprovou”) é minoritária e crítica. Dessa forma, redu
 ### 4.3.4 Modelo Candidato — Nearest Centroid
 
 #### Descrição do modelo
-O Nearest Centroid (NC) é um classificador simples baseado em distância. Para cada classe, calcula-se o centróide (média dos vetores) no conjunto de treino. Uma nova amostra é atribuída à classe cujo centróide estiver mais próximo, segundo uma métrica de distância.
+# Nearest Centroid (NC)
 
-Foi utilizada busca em grade com validação cruzada (cv=5) para selecionar “metric” e “shrink_threshold”, otimizando por recall, dado o objetivo de reduzir falsos negativos na classe positiva (“Reprovou” = 1). O conjunto é dividido em treino e teste com `random_state=42`. O uso de SMOTE no treino foi considerado (comentado no código) em razão do desbalanceamento.
+&emsp; O **Nearest Centroid** é um classificador simples baseado em distância. Para cada classe, calcula-se o **centróide** (média dos vetores) no conjunto de treino. Uma nova amostra é atribuída à classe cujo centróide estiver mais próximo, de acordo com uma métrica de distância selecionada (`metric`).  
 
-#### Resultados por pontos no tempo
-- Tabela 1 (menos atributos): recall razoável/alto, porém precisão muito baixa — muitas sinalizações incorretas (FP). Com pouca informação, o NC tende a “abrir a rede” para capturar reprovados, mas gera muitos alarmes falsos.
-- Tabela 2 (informação intermediária): recall muito alto, precisão ainda modesta; F1 melhora — o modelo segue eficaz em detectar reprovados, mas o custo de FP permanece relevante.
-- Tabela 3 (mais atributos): recall alto e leve melhora de precisão e F1 — com mais variáveis, o NC reduz um pouco os FP, mas ainda mantém viés em favor do recall.
+Para otimizar o modelo neste cenário desbalanceado, foram aplicadas as seguintes estratégias:  
 
-#### Ajuste ao desbalanceamento
-O problema é desbalanceado (poucos “Reprovou”). O NC, por ser um classificador simples e otimizado por recall, favorece a classe positiva. Isso ajuda a reduzir FN, mas pode reduzir a precisão. O código prevê SMOTE no treino; sua ativação e comparação de métricas é recomendada para verificar possibilidade de ganhar recall mantendo ou melhorando precisão/F1. 
+- **Busca em grade (GridSearchCV)** com validação cruzada (cv=5) para escolher os melhores hiperparâmetros: `metric` e `shrink_threshold`.  
+- **Otimização por recall**, dado que o objetivo principal é reduzir falsos negativos (FN) na classe positiva (“Reprovou” = 1).  
+- Conjunto de dados dividido em treino e teste com `random_state=42`.  
+- Consideração do uso de **SMOTE** no treino (comentado no código) para lidar com o desbalanceamento.  
 
-Nota breve sobre SMOTE: técnica que cria exemplos sintéticos da classe minoritária para equilibrar o treino; deve ser aplicada apenas no conjunto de treino para evitar vazamento de informação.
+---
 
-#### Próximos passos para o candidato
-- Avaliar o efeito de SMOTE apenas no treino e repetir a seleção de hiperparâmetros.
-- Ajustar “shrink_threshold” para maior seletividade (redução de FP).
-- Se o objetivo prioriza estritamente recall (minimizar FN), manter o NC é coerente; do contrário, testar modelos com limiar ajustável (regressão logística, árvores/ensembles) a fim de calibrar um ponto de operação com recall-alvo e ganhar precisão (curva Precision–Recall).
+## Resultados por pontos no tempo
 
+### Tabela 1 – Menos atributos
+- **Recall:** razoável/alto  
+- **Precisão:** muito baixa (muitas sinalizações incorretas – FP)  
+- **Observação:** com pouca informação, o NC tende a “abrir a rede” para capturar reprovados, mas gera muitos alarmes falsos.  
 
-#### Conclusão
-O Nearest Centroid atende bem ao objetivo de detectar reprovados (alto recall, baixos FN), sobretudo à medida que mais atributos ficam disponíveis no tempo. Entretanto, tende a produzir muitos falsos positivos nas etapas iniciais, reduzindo a precisão e o F1. É um bom ponto de partida orientado a recall em um cenário desbalanceado. Para implantação, recomenda-se ajuste fino e comparação com modelos que permitam melhor equilíbrio entre recall e custo operacional (FP).
+<div align="center">
+  <sub>Figura x — Matriz de confusão 1 do Nearest Centroid</sub><br>
+  <img src="../assets/NC1.jpg"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div> 
 
-### 4.4. Comparação de Modelos
+---
+
+### Tabela 2 – Informação intermediária
+- **Recall:** muito alto  
+- **Precisão:** ainda modesta  
+- **F1-score:** melhora em relação à Tabela 1  
+- **Observação:** o modelo continua eficaz em detectar reprovados, mas o custo de FP ainda é relevante.  
+
+<div align="center">
+  <sub>Figura x — Matriz de confusão 2 do Nearest Centroid</sub><br>
+  <img src="../assets/NC2.jpg"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div> 
+
+---
+
+### Tabela 3 – Mais atributos
+- **Recall:** alto  
+- **Precisão e F1:** leve melhora  
+- **Observação:** com mais variáveis, o NC consegue reduzir um pouco os FP, mantendo foco em recall.  
+
+<div align="center">
+  <sub>Figura x — Matriz de confusão 3 do Nearest Centroid</sub><br>
+  <img src="../assets/NC3.jpg"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div> 
+
+---
+
+## Ajuste ao desbalanceamento
+
+&emsp; O problema é desbalanceado (poucos “Reprovou”). Como o NC é simples e otimizado por **recall**, ele favorece a classe positiva:  
+
+- Reduz FN (detecta mais reprovados)  
+- Pode reduzir precisão (aumenta FP)  
+
+&emsp; O uso de **SMOTE** foi previsto apenas no conjunto de treino, para evitar vazamento de informação. Ele cria exemplos sintéticos da classe minoritária, equilibrando o treino e permitindo potencial aumento de recall sem inflar FP no teste.  
+
+---
+
+## Próximos passos
+
+1. **Avaliar o efeito do SMOTE** apenas no treino e repetir a busca de hiperparâmetros.  
+2. **Ajustar `shrink_threshold`** para maior seletividade (redução de FP).  
+3. **Comparar com outros modelos**: testamos **XGBoost** e outros classificadores com limiar ajustável, que apresentam menor FP.  
+<div align="center">
+  <sub>Figura x — Matriz de confusão XGBClassifier</sub><br>
+  <img src="../assets/XGBClassifier.jpg"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div> 
+
+4. **Criar ensemble (VotingClassifier)** para combinar os pontos fortes do NC (alto recall) e de modelos como XGBoost (menor FP).  
+
+Exemplo de código Python:
+
+```python
+from sklearn.ensemble import VotingClassifier
+from sklearn.neighbors import NearestCentroid
+from xgboost import XGBClassifier
+
+nc = NearestCentroid(shrink_threshold=0.5)
+xgb = XGBClassifier(scale_pos_weight=15, use_label_encoder=False, eval_metric='logloss')
+
+ensemble = VotingClassifier(
+    estimators=[('nc', nc), ('xgb', xgb)],
+    voting='soft'  
+)
+ensemble.fit(X_train, y_train)
+y_pred = ensemble.predict(X_test)
+
 ```
+### 4.4. Comparação de Modelos
 - Descrever e justificar a escolha da métrica de avaliação dos modelos com base no que é mais importante para o problema ao
   se medir a qualidade desses modelos;
 - Descrever ao menos três modelos candidatos, seus respectivos algoritmos, seus tunings de hiperparâmetros e suas métricas
