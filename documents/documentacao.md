@@ -1207,15 +1207,70 @@ y_pred = ensemble.predict(X_test)
 
 ```
 ### 4.4. Comparação de Modelos
-- Descrever e justificar a escolha da métrica de avaliação dos modelos com base no que é mais importante para o problema ao
-  se medir a qualidade desses modelos;
-- Descrever ao menos três modelos candidatos, seus respectivos algoritmos, seus tunings de hiperparâmetros e suas métricas
-  alcançadas;
 
-Remova este bloco ao final
-```
+&emsp; Na seção anterior, foi apresentado o modelo candidato ao projeto da EAFIT: o Nearest Centroid. Nesta seção, serão discutidos outros dois modelos, com o objetivo de prever com eficiência a reprovação de alunos da universidade. 
 
-### 4.5. Avaliação
+&emsp; Para tanto, serão avaliados três modelos supervisionados distintos: Nearest Centroid, AdaBoost e XGBoost. O Nearest Centroid será utilizado como modelo baseline e por sua explicabilidade inerente, enquanto os modelos de ensemble (AdaBoost e XGBoost) serão candidatos a alcançar a maior performance na classificação. Os hiperparâmetros de cada algoritmo serão rigorosamente refinados por meio de estratégias de otimização como Grid Search, garantindo que se tornem o mais adequados possível para a tarefa preditiva.
+
+&emsp; Ao final desta seção, espera-se definir o modelo mais apropriado para o projeto. Após o refinamento, os modelos serão comparados utilizando métricas quantitativas primárias, como o Recall (para minimizar Falsos Negativos na classificação de risco) e o F1-Score (para avaliar o equilíbrio entre Precisão e Recall do modelo). Além disso, seus resultados serão avaliados quanto à capacidade de fornecer explicabilidade das predições, convertendo a saída do modelo em insights úteis e acionáveis para o parceiro.
+
+#### 4.4.1 Métricas
+
+&emsp; Em processos de aprendizado supervisionado e classificação, a qualidade das predições geradas é avaliada com métricas de validação externa, ou seja, um cruzamento entre os resultados disponibilizados pelo output do modelo com os resultados reais da base de dados.Diferentemente do agrupamento de uma métrica como precisão, o foco se desloca para para o custo de erros específicos, dentro da dinâmica da solução desenhada ao parceiro. No contexto da EAFIT, onde o principal objetivo é a intervenção precoce em prol do combate de reprovações, o custo de um Falso negativo (não identificar um aluno em risco real), é muito mais elevado do que o de um Falso positivo.
+
+&emsp; Nesse sentido, o Recall (ou Sensibilidade) é a métrica primária selecionada. O Recall mede a proporção de casos positivos verdadeiros que foram corretamente identificados pelo modelo, refletindo sua capacidade de encontrar todos os alunos que estão realmente em risco. Uma das principais vantagens do Recall é sua relevância direta para o problema de intervenção, pois um alto valor garante que a equipe da EAFIT terá o maior número possível de alunos de alto risco sob observação. Por outro lado, a otimização excessiva do Recall pode levar a uma queda na Precisão, resultando em um alto número de Falsos Positivos, alunos seguros sendo classificados erroneamente como de risco, o que pode gerar sobrecarga de trabalho e diluir o foco da equipe de apoio.
+
+&emsp; Uma segunda métrica essencial é o F1-Score, que mede o desempenho geral do modelo ao calcular a média harmônica entre Precisão e Recall. O F1-Score é um excelente indicador para conjuntos de dados desbalanceados ou quando se busca um equilíbrio entre a capacidade de encontrar todos os casos de risco (Recall) e a capacidade de garantir que as predições de risco sejam, de fato, corretas (Precisão). Neste caso, um valor elevado de F1-Score indica que o modelo é robusto e não está excessivamente enviesado em direção a nenhuma das duas métricas. Contudo, seu valor, sendo um cálculo agregado, pode ser menos intuitivo para a tomada de decisão do parceiro em comparação com os valores diretos de Recall ou Precisão.
+
+#### 4.4.2 Algoritmos para otimização de hiperparâmetros
+
+&emsp; O conceito de hiperparâmetros é fundamental em Machine Learning, sendo estes definidos como variáveis de configuração externas ao modelo, estabelecidas manualmente antes do processo de treinamento [CODESIGNAL].
+
+&emsp; Eles são distintos dos parâmetros do modelo, que são variáveis internas aprendidas a partir dos dados durante o treinamento (como pesos), e têm a função de governar o processo de aprendizado e a complexidade do estimador. A otimização desses hiperparâmetros é crucial para a performance e generalização do modelo, sendo o GridSearchCV (Grid Search Cross-Validation) um dos métodos de busca mais tradicionais. 
+
+&emsp; Implementado na biblioteca Scikit-Learn, o GridSearchCV realiza uma busca exaustiva, testando todas as combinações de valores discretos predefinidos na grade de parâmetros [CODESIGNAL], o snippet abaixo demonstra um uso básico da ferramentea:
+
+`````
+from sklearn.model_selection import GridSearchCV
+from sklearn.neighbors import NearestCentroid
+import numpy as np
+
+# Definição do modelo
+modelo = NearestCentroid()
+
+# Grade de Hiperparâmetros
+param_grid = {
+    'metric': ['euclidean', 'manhattan'],
+    'shrink_threshold': [None, 0.1, 0.5, 1.0] # 'None' desativa o shrinkage
+}
+
+# Configuração do Grid Search
+grid_search = GridSearchCV(
+    estimator=modelo, 
+    param_grid=param_grid, 
+    cv=3,                      
+    scoring='accuracy'         
+)
+
+# Resultado após .fit(X_train, y_train)
+grid_search.best_params_
+`````
+
+#### 4.4.3 Modelos
+
+
+##### 4.4.3.1 AdaBoost
+		
+##### 4.4.3.2 XGBoost
+
+##### 4.4.3.3 Nearest Centroid
+
+#### 4.4.5 Comparação dos Modelos Testados 
+
+
+#### 4.4. Conclusão
+
+#### 
 ```
 - Descreva a solução final de modelo preditivo e justifique a escolha. Alinhe sua justificativa com a Seção 4.1, resgatando o entendimento
   do negócio e das personas, explicando de que formas seu modelo atende os requisitos e definições.
@@ -1235,19 +1290,23 @@ Remova este bloco ao final
 
 ## <a name="c6"></a>6. Referências
 
-[Contexto da indústria]QS. Rankings released! QS World University Rankings: Latin America & The Caribbean 2025. Disponível em: https://www.qs.com/rankings-released-qs-world-university-rankings-latin-america-the-caribbean-2025/. Acesso em: 9 ago. 2025.
+[CODESIGNAL] Grid Search: Finding Optimal Model Parameters. Disponível em: https://codesignal.com/learn/courses/hypertuning-and-cross-validation/lessons/grid-search-finding-optimal-model-parameters. Acesso em: 25 set. 2025.
 
-[Númeração de acordo com a ordem alfabética] EAFIT HISTORIA. "Historia de EAFIT". Disponível em: https://www.eafit.edu.co/historia. Acesso em: 11 de agosto de 2025.
+[EAFIT HISTORIA] "Historia de EAFIT". Disponível em: https://www.eafit.edu.co/historia. Acesso em: 11 de agosto de 2025.
 
-[Númeração de acordo com a ordem alfabética] EAFIT NOTICIAS. "La ANDI reconoció a EAFIT por 65 años de impacto social y legado de futuro". Disponível em: https://www.eafit.edu.co/noticias/eafit-es-noticia/ANDI-reconocio-EAFIT-65anios-impacto-social. Acesso em: 11 de ago. de 2025.
+[EAFIT HISTORIA NOTICIAS] "EAFIT, hija de la Medellín de los 60". Disponível em: https://www.eafit.edu.co/institucional/historia/noticias/eafit-hija-de-la-medellin-de-los-60. Acesso em: 11 de ago. de 2025.
 
-[Númeração de acordo com a ordem alfabética] EAFIT HISTORIA NOTICIAS. "EAFIT, hija de la Medellín de los 60". Disponível em: https://www.eafit.edu.co/institucional/historia/noticias/eafit-hija-de-la-medellin-de-los-60. Acesso em: 11 de ago. de 2025.
+[EAFIT NOTICIAS] "La ANDI reconoció a EAFIT por 65 años de impacto social y legado de futuro". Disponível em: https://www.eafit.edu.co/noticias/eafit-es-noticia/ANDI-reconocio-EAFIT-65anios-impacto-social. Acesso em: 11 de ago. de 2025.
 
-[Númeração de acordo com a ordem alfabética] ROTHER, Mike; SHOOK, John. Aprendendo a enxergar: Mapeando o fluxo de valor para agregar valor e eliminar o desperdício. Disponível em: https://leanproduction.com.br/livro/aprendendo-a-enxergar/. Acesso em: 11 ago. 2025.
+[QS QUACQUARELLI SYMONDS] "QS World University Rankings 2025". Disponível em: https://www.topuniversities.com/university-rankings/world-university-rankings/2025. Acesso em: 11 de ago. de 2025.
 
-[Númeração de acordo com a ordem alfabética] UNIVERSIDAD EAFIT. "Excelencia y reconocimiento". Disponível em: https://www.eafit.edu.co/informes-de-gestion-y-sostenibilidad/informe-sostenibilidad-2023/excelencia-y-reconocimiento. Acesso em: 11 de ago. de 2025.
+[QS. RANKINGS] Rankings released! QS World University Rankings: Latin America & The Caribbean 2025. Disponível em: https://www.qs.com/rankings-released-qs-world-university-rankings-latin-america-the-caribbean-2025/. Acesso em: 9 ago. 2025.
 
-[Númeração de acordo com a ordem alfabética] QS QUACQUARELLI SYMONDS. "QS World University Rankings 2025". Disponível em: https://www.topuniversities.com/university-rankings/world-university-rankings/2025. Acesso em: 11 de ago. de 2025.
+[ROTHER; SHOOK] Aprendendo a enxergar: Mapeando o fluxo de valor para agregar valor e eliminar o desperdício. Disponível em: https://leanproduction.com.br/livro/aprendendo-a-enxergar/. Acesso em: 11 ago. 2025.
+
+[TOWARD DATA SCIENCE] Parameters and Hyperparameters. Disponível em: https://towardsdatascience.com/parameters-and-hyperparameters-aa609601a9ac/. Acesso em: 25 set. 2025.
+
+[UNIVERSIDAD EAFIT] "Excelencia y reconocimiento". Disponível em: https://www.eafit.edu.co/informes-de-gestion-y-sostenibilidad/informe-sostenibilidad-2023/excelencia-y-reconocimiento. Acesso em: 11 de ago. de 2025.
 
 [personas] <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [COOPER, Alan; REIMANN, Robert; CRONIN, David; NOESSEL, Christopher. *About Face: The Essentials of Interaction Design*. 4. ed. Indianapolis: Wiley, 2014.](https://www.wiley.com/en-us/About+Face%3A+The+Essentials+of+Interaction+Design%2C+4th+Edition-p-9781118766576)
 
