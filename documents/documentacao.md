@@ -1275,6 +1275,13 @@ grid_search.best_params_
 
 - ***learning_rate (Taxa de Aprendizado):*** O learning_rate funciona como um fator de escala que modula a contribuição de cada classificador fraco na soma ponderada final. Ele controla a velocidade e a suavidade com que o modelo aprende e corrige os erros em cada iteração. Um valor alto (e.g., 1.0 na Semana 8) permite uma convergência mais rápida, mas pode levar a um aprendizado volátil e a resultados menos estáveis. Por outro lado, um valor baixo (como 0.01 na Semana 12) garante que as correções de erro sejam mais suaves e graduais, promovendo uma melhor generalização e estabilidade do modelo, embora exija, necessariamente, um maior número de estimadores para compensar.
 
+Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
+
+| Janela de Análise | Recall Classe 0 | f1_score |
+|---------------------|-----------------|----------|
+| Semana 6            | 0.7308          |          |
+| Semana 8            | 0.5769          |          |
+| Semana 12           | 0.6154          |          |
 ##### 4.4.3.2 XGBoost
 
 ##### 4.4.3.3 Nearest Centroid
