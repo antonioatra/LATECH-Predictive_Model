@@ -1210,8 +1210,6 @@ y_pred = ensemble.predict(X_test)
 
 &emsp; Na seção anterior, foi apresentado o modelo candidato ao projeto da EAFIT: o Nearest Centroid. Nesta seção, serão discutidos outros dois modelos, com o objetivo de prever com eficiência a reprovação de alunos da universidade. 
 
-&emsp; Para tanto, serão avaliados três modelos supervisionados distintos: Nearest Centroid, AdaBoost e XGBoost. O Nearest Centroid será utilizado como modelo baseline e por sua explicabilidade inerente, enquanto os modelos de ensemble (AdaBoost e XGBoost) serão candidatos a alcançar a maior performance na classificação. Os hiperparâmetros de cada algoritmo serão rigorosamente refinados por meio de estratégias de otimização como Grid Search, garantindo que se tornem o mais adequados possível para a tarefa preditiva.
-
 &emsp; Ao final desta seção, espera-se definir o modelo mais apropriado para o projeto. Após o refinamento, os modelos serão comparados utilizando métricas quantitativas primárias, como o Recall (para minimizar Falsos Negativos na classificação de risco) e o F1-Score (para avaliar o equilíbrio entre Precisão e Recall do modelo). Além disso, seus resultados serão avaliados quanto à capacidade de fornecer explicabilidade das predições, convertendo a saída do modelo em insights úteis e acionáveis para o parceiro.
 
 #### 4.4.1 Métricas
@@ -1267,19 +1265,6 @@ grid_search.best_params_
 
 #### 4.4.5 Comparação dos Modelos Testados 
 
-
-#### 4.4. Conclusão
-
-#### 
-```
-- Descreva a solução final de modelo preditivo e justifique a escolha. Alinhe sua justificativa com a Seção 4.1, resgatando o entendimento
-  do negócio e das personas, explicando de que formas seu modelo atende os requisitos e definições.
-- Descreva também um plano de contingência para os casos em que o modelo falhar em suas predições.
-- Além disso, discuta sobre a explicabilidade do modelo (se aplicável) e realize a verificação de aceitação ou refutação das hipóteses.
-- Se aplicável, utilize equações, tabelas e gráficos de visualização de dados para melhor ilustrar seus argumentos.
-
-Remova este bloco ao final
-```
 
 ## <a name="c5"></a>5. Conclusões e Recomendações
 ```
