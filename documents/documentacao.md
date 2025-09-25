@@ -1208,25 +1208,27 @@ y_pred = ensemble.predict(X_test)
 ```
 ### 4.4. Comparação de Modelos
 
-&emsp; Na seção anterior, foi apresentado o modelo candidato ao projeto da EAFIT: o Nearest Centroid. Nesta seção, serão discutidos outros dois modelos, com o objetivo de prever com eficiência a reprovação de alunos da universidade. 
 
-&emsp; Ao final desta seção, espera-se definir o modelo mais apropriado para o projeto. Após o refinamento, os modelos serão comparados utilizando métricas quantitativas primárias, como o Recall (para minimizar Falsos Negativos na classificação de risco) e o F1-Score (para avaliar o equilíbrio entre Precisão e Recall do modelo). Além disso, seus resultados serão avaliados quanto à capacidade de fornecer explicabilidade das predições, convertendo a saída do modelo em insights úteis e acionáveis para o parceiro.
+&emsp; Na seção anterior, foi apresentado o modelo candidato ao projeto da EAFIT: o Nearest Centroid. Nesta seção, serão discutidos outros dois modelos, com o objetivo de prever com **eficiência a reprovação de alunos** da universidade.
+
+&emsp; Ao final desta seção, espera-se **definir o modelo mais apropriado para o projeto**. Após o refinamento, os modelos serão comparados utilizando métricas quantitativas primárias, como o **Recall (para minimizar Falsos Negativos na classificação de risco)** e o **F1-Score (para avaliar o equilíbrio entre Precisão e Recall do modelo)**. Além disso, seus resultados serão avaliados quanto à **capacidade de fornecer explicabilidade das predições**, convertendo a saída do modelo em insights úteis e acionáveis para o parceiro.
+
 
 #### 4.4.1 Métricas
 
-&emsp; Em processos de aprendizado supervisionado e classificação, a qualidade das predições geradas é avaliada com métricas de validação externa, ou seja, um cruzamento entre os resultados disponibilizados pelo output do modelo com os resultados reais da base de dados.Diferentemente do agrupamento de uma métrica como precisão, o foco se desloca para para o custo de erros específicos, dentro da dinâmica da solução desenhada ao parceiro. No contexto da EAFIT, onde o principal objetivo é a intervenção precoce em prol do combate de reprovações, o custo de um Falso negativo (não identificar um aluno em risco real), é muito mais elevado do que o de um Falso positivo.
+&emsp; Em processos de aprendizado supervisionado e classificação, a qualidade das predições geradas é avaliada com métricas de validação externa, ou seja, um cruzamento entre os resultados disponibilizados pelo output do modelo com os resultados reais da base de dados. Diferentemente do agrupamento de uma métrica como precisão, o foco se desloca para o custo de erros específicos, dentro da dinâmica da solução desenhada ao parceiro. No contexto da EAFIT, onde o principal objetivo é a **intervenção precoce em prol do combate de reprovações**, o **custo de um Falso negativo (não identificar um aluno em risco real), é muito mais elevado do que o de um Falso positivo**.
 
-&emsp; Nesse sentido, o Recall (ou Sensibilidade) é a métrica primária selecionada. O Recall mede a proporção de casos positivos verdadeiros que foram corretamente identificados pelo modelo, refletindo sua capacidade de encontrar todos os alunos que estão realmente em risco. Uma das principais vantagens do Recall é sua relevância direta para o problema de intervenção, pois um alto valor garante que a equipe da EAFIT terá o maior número possível de alunos de alto risco sob observação. Por outro lado, a otimização excessiva do Recall pode levar a uma queda na Precisão, resultando em um alto número de Falsos Positivos, alunos seguros sendo classificados erroneamente como de risco, o que pode gerar sobrecarga de trabalho e diluir o foco da equipe de apoio.
+&emsp; Nesse sentido, o **Recall (ou Sensibilidade) é a métrica primária selecionada**. O Recall mede a **proporção de casos positivos verdadeiros que foram corretamente identificados pelo modelo**, refletindo sua capacidade de encontrar todos os alunos que estão realmente em risco. Uma das principais vantagens do Recall é sua relevância direta para o problema de intervenção, pois um alto valor **garante que a equipe da EAFIT terá o maior número possível de alunos de alto risco sob observação**. Por outro lado, a otimização excessiva do Recall pode levar a uma queda na Precisão, resultando em um alto número de Falsos Positivos, alunos seguros sendo classificados erroneamente como de risco, o que pode gerar sobrecarga de trabalho e diluir o foco da equipe de apoio.
 
-&emsp; Uma segunda métrica essencial é o F1-Score, que mede o desempenho geral do modelo ao calcular a média harmônica entre Precisão e Recall. O F1-Score é um excelente indicador para conjuntos de dados desbalanceados ou quando se busca um equilíbrio entre a capacidade de encontrar todos os casos de risco (Recall) e a capacidade de garantir que as predições de risco sejam, de fato, corretas (Precisão). Neste caso, um valor elevado de F1-Score indica que o modelo é robusto e não está excessivamente enviesado em direção a nenhuma das duas métricas. Contudo, seu valor, sendo um cálculo agregado, pode ser menos intuitivo para a tomada de decisão do parceiro em comparação com os valores diretos de Recall ou Precisão.
+&emsp; A **F1-Score, que mede o desempenho geral do modelo ao calcular a média harmônica entre Precisão e Recall, é a segunda métrica essencial**. O F1-Score é um **excelente indicador para conjuntos de dados desbalanceados** ou quando se busca um **equilíbrio entre a capacidade de encontrar todos os casos de risco (Recall) e a capacidade de garantir que as predições de risco sejam, de fato, corretas (Precisão)**. Neste caso, um valor elevado de F1-Score indica que o modelo é robusto e não está excessivamente enviesado em direção a nenhuma das duas métricas. Contudo, seu valor, sendo um cálculo agregado, pode ser menos intuitivo para a tomada de decisão do parceiro em comparação com os valores diretos de Recall ou Precisão.
 
 #### 4.4.2 Algoritmos para otimização de hiperparâmetros
 
-&emsp; O conceito de hiperparâmetros é fundamental em Machine Learning, sendo estes definidos como variáveis de configuração externas ao modelo, estabelecidas manualmente antes do processo de treinamento [CODESIGNAL].
+&emsp; O conceito de hiperparâmetros é fundamental em Machine Learning, sendo estes definidos como **variáveis de configuração externas ao modelo, estabelecidas manualmente antes do processo de treinamento** [CODESIGNAL].
 
-&emsp; Eles são distintos dos parâmetros do modelo, que são variáveis internas aprendidas a partir dos dados durante o treinamento (como pesos), e têm a função de governar o processo de aprendizado e a complexidade do estimador. A otimização desses hiperparâmetros é crucial para a performance e generalização do modelo, sendo o GridSearchCV (Grid Search Cross-Validation) um dos métodos de busca mais tradicionais. 
+&emsp; Eles são distintos dos parâmetros do modelo, que são variáveis internas aprendidas a partir dos dados durante o treinamento (como pesos), e têm a função de **governar o processo de aprendizado e a complexidade do estimador**. A **otimização desses hiperparâmetros é crucial para a performance e generalização do modelo**, sendo o **GridSearchCV (Grid Search Cross-Validation) um dos métodos de busca mais tradicionais**.
 
-&emsp; Implementado na biblioteca Scikit-Learn, o GridSearchCV realiza uma busca exaustiva, testando todas as combinações de valores discretos predefinidos na grade de parâmetros [CODESIGNAL], o snippet abaixo demonstra um uso básico da ferramentea:
+&emsp; Implementado na biblioteca Scikit-Learn, o GridSearchCV realiza uma **busca exaustiva, testando todas as combinações de valores discretos predefinidos na grade de parâmetros** [CODESIGNAL], o snippet abaixo demonstra um uso básico da ferramenta:
 
 `````
 from sklearn.model_selection import GridSearchCV
@@ -1258,7 +1260,21 @@ grid_search.best_params_
 
 
 ##### 4.4.3.1 AdaBoost
-		
+
+&emsp; O Adaboost (Adaptive Boosting) é um **algoritmo de *ensemble* que se enquadra na técnica de Boosting**. A implementação utilizada, vinda da biblioteca scikit-learn, define como classificador fraco (`base_estimator`) um **Decision Stump (Árvore de Decisão com profundidade máxima de 1)**. O Adaboost **combina sequencialmente múltiplos desses classificadores fracos para construir um único e robusto classificador forte** (*strong learner*). Seu diferencial reside na forma como **ajusta dinamicamente os pesos das amostras em cada iteração**.
+
+&emsp; A otimização dos hiperparâmetros do Adaboost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs: 
+
+| Período de Análise | Learning_rate | n_estimators |
+|---------------------|---------------|--------------|
+| Semana 6            | 0.1           | 50           |
+| Semana 8            | 1.0           | 300          |
+| Semana 12           | 0.01          | 300          |
+
+- ***n_estimators (Número de Estimadores):*** Este hiperparâmetro define a quantidade exata de classificadores fracos (Decision Stumps) que são construídos sequencialmente para formar o modelo ensemble. Ele é fundamental para determinar a complexidade e a capacidade de aprendizado do AdaBoost. Um valor mais elevado (como 300 nas Semanas 8 e 12) oferece mais etapas para o modelo refinar sua classificação e corrigir os erros residuais, o que pode aumentar a performance. 
+
+- ***learning_rate (Taxa de Aprendizado):*** O learning_rate funciona como um fator de escala que modula a contribuição de cada classificador fraco na soma ponderada final. Ele controla a velocidade e a suavidade com que o modelo aprende e corrige os erros em cada iteração. Um valor alto (e.g., 1.0 na Semana 8) permite uma convergência mais rápida, mas pode levar a um aprendizado volátil e a resultados menos estáveis. Por outro lado, um valor baixo (como 0.01 na Semana 12) garante que as correções de erro sejam mais suaves e graduais, promovendo uma melhor generalização e estabilidade do modelo, embora exija, necessariamente, um maior número de estimadores para compensar.
+
 ##### 4.4.3.2 XGBoost
 
 ##### 4.4.3.3 Nearest Centroid
