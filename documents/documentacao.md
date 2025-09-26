@@ -1306,7 +1306,30 @@ grid_search.best_params_
 
 #### 4.4.3.2 XGBoost
 
-&emsp; O XGBoost ***(eXtreme Gradient Boosting)*** é uma implementação otimizada e altamente eficiente do algoritmo Gradient Boosting Machine (GBM), enquadrando-se na técnica de Boosting. Diferente do Adaboost, que ajusta dinamicamente os pesos das amostras, o XGBoost constrói seu modelo de forma sequencial utilizando gradientes e uma função de perda otimizada para corrigir os erros (resíduos) dos modelos de previsão anteriores. Seu diferencial reside na sua escalabilidade e velocidade, além de incorporar termos de regularização (L1 e L2) diretamente na função objetivo, o que o torna ***inerentemente mais robusto contra o overfitting***.
+&emsp; O XGBoost (Extreme Gradient Boosting) é um algoritmo de ensemble (aprendizado em conjunto) baseado em árvores de decisão sequenciais, otimizadas através da técnica de gradient boosting. Sua principal característica é a construção de árvores em sequência, onde cada nova árvore é treinada para minimizar o erro residual do conjunto anterior, garantindo um aprendizado mais forte a partir de classificadores mais fracos.
+
+
+&emsp; A função objetivo do XGBoost é definida da seguinte forma:
+
+$$
+\mathcal{L}(\phi) = \sum_{i=1}^{n} l(y_i, \hat{y}_i) + \sum_{k=1}^{K} \Omega(f_k)
+$$
+
+&ensp; Onde \(n\) é  número de alunos monitorados, \(K\) é o número de árvores envolvidas no processo de boosting, \(\hat{y}_i\) é a predição acumulada até a iteração atual.
+
+
+&ensp; O termo $\sum_{i=1}^{n} l(y_i, \hat{y}_i)$ é a *função de perda*, que mede a discrepância entre o rótulo verdadeiro \(y_i\) e a predição \(\hat{y}_i\) do modelo para cada ponto \(i\) da amostra. E a escolha da função de perda depende do contexto de aplicação do modelo, em problemas de classificação como o nosso caso, normalmente utiliza-se a função *log-loss*. E \(\sum_{k=1}^{K} \Omega(f_k)\) é o *termo de regularização*, que adiciona uma "penalização" para cada árvore \(f_k\) do ensemble (conjunto de modelos mais fracos) a fim de controlar a complexidade do modelo, e assim evitar o overfitting.
+
+
+&ensp; E por fim, o termo $\Omega(f_k)$, responsável por penalizar as árvores "complexas demais" é calculado por:
+
+
+$$
+\Omega(f) = \gamma T + \frac{1}{2} \lambda \|w\|^2
+$$
+
+
+&ensp; Em \(\gamma T\) o parâmetro \(\gamma\) mede o limiar de complexidade de uma árvore, que será proporcional ao seu número \(T\) de folhas, e quanto maior for o número de folhas, maior será a complexidade, e maior será a penalização. E \(\frac{1}{2} \lambda \|w\|^2\) representa a regularização L2 (*L2 é a norma Euclidiana, que siginifica que valores que seriam grandes a priori serão suvizados*) aplicada aos pesos (\(w\)) e o parâmetro \(\lambda\) controla a intensidade da penalização. Folhas que teriam pesos muito elevados, que poderiam indicar overfitting, são suavizadas pela *norma Euclidiana* (L2).
 
 &emsp; A otimização dos hiperparâmetros do XGBoost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
 
