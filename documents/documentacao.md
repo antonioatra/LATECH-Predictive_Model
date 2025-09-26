@@ -1290,11 +1290,21 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 
 &emsp; A otimização dos hiperparâmetros do Nearest Centroid foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
 
-| Período de Análise  | Metrics       | shrink_threshold |
+| Período de Análise  | Metric        | shrink_threshold |
 |---------------------|---------------|--------------|
 | Semana 6            | Manhattan     | None         |
 | Semana 8            | Manhattan     | None         |
 | Semana 12           | Manhattan     | None         |
+
+- ***metric (Métrica de distância):*** Este hiperparâmetro define a fórmula matemática utilizada para calcular a "proximidade" entre um novo aluno e o centroide de cada classe. A escolha da métrica influencia diretamente a fronteira de decisão do modelo. A distância 'euclidean' (padrão) calcula a distância em linha reta entre dois pontos no espaço de features, sendo ideal para quando as classes formam agrupamentos esféricos. Já a métrica 'manhattan' (escolhida pelo algoritmo GridSearch) calcula a soma das diferenças absolutas entre as coordenadas, o que a torna potencialmente mais robusta a outliers em features individuais e bases de dados de alta dimensionalidade.
+
+- ***shrink_threshold (Coeficiente de encolhimento):*** Este hiperparâmetro move cada centroide em direção à média global da base de treinamento do modelo, independentemente da classe. O objetivo é reduzir a variância do modelo, tornando-o menos sensível a outliers ou a classes com poucas amostras. Um centroide calculado a partir de poucos pontos pode ser instável; ao movê-lo para perto da média global, o modelo adota uma postura mais conservadora e generalista. Um valor maior de shrink_threshold aplica um encolhimento mais forte.
+
+| Janela de Análise   | Recall Classe 1 | f1_score |
+|---------------------|-----------------|----------|
+| Semana 6            | 0.8076          | 0.4285   |
+| Semana 8            | 0.7692          | 0.5405   |
+| Semana 12           | 0.7307          | 0.6909   |
 
 #### 4.4.5 Comparação dos Modelos Testados 
 
