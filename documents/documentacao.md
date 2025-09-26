@@ -1262,9 +1262,28 @@ grid_search.best_params_
 
 #### 4.4.3.1 AdaBoost
 
-&emsp; O Adaboost (Adaptive Boosting) é um **algoritmo de *ensemble* que se enquadra na técnica de Boosting**. A implementação utilizada, vinda da biblioteca scikit-learn, define como classificador fraco (`base_estimator`) um **Decision Stump (Árvore de Decisão com profundidade máxima de 1)**. O Adaboost **combina sequencialmente múltiplos desses classificadores fracos para construir um único e robusto classificador forte** (*strong learner*). Seu diferencial reside na forma como **ajusta dinamicamente os pesos das amostras em cada iteração**.
+&emsp; O AdaBoost (Adaptive Boosting) é um algoritmo de ensemble que combina vários classificadores fracos para formar um classificador forte. A ideia central é treinar, de forma sequencial, modelos mais simples (no caso, árvores de decisão rasas) que se concentram progressivamente nos exemplos mais difíceis de classificar da seguinte forma: em cada iteração, o algoritmo atribui pesos maiores às amostras que foram classificadas incorretamente na iteração anterior, forçando os classificadores seguintes a dar mais atenção a esses casos. E de maneira formal, a função preditiva do AdaBoost é definida como:
 
-&emsp; A otimização dos hiperparâmetros do Adaboost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs: 
+$$
+H(x) = \text{sign} \left( \sum_{t=1}^{T} \alpha_t h_t(x) \right)
+$$
+
+&ensp; Onde \(h_t(x)\) é o classificador fraco treinado na t-ésima iteração, \(\alpha_t\) é o peso atribuído ao classificador (maior para classificadores que erraram menos) e \(T\) é o número total de iterações. E \(\text{sign}\) significa que estamos falando de uma *função sinal*, que retorna apenas o sinal do seu argumento, por exemplo:
+
+&ensp; Seja \(z=\sum_{t=1}^{T} \alpha_t h_t(x)\)
+
+$$
+\text{sign}(z) =
+\begin{cases}
++1, & \text{se } z > 0 \\
+-1, & \text{se } z < 0 \\
+0,  & \text{se } z = 0
+\end{cases}
+$$
+
+&ensp; Então a intuição principal é: se o somatório \(\sum_{t=1}^{T} \alpha_t h_t(x)\), que é a combinação linear das predições dos modelos fracos com os seus pesos, tiver valor positivo, então a decisão final do modelo \(H(x)=+1\), que no caso do projeto, seria um aluno reprovado (classe priorizada no projeto). Analogamente, se a decisão final fosse \(H(x)=-1\), então teríamos um aluno aprovado.
+
+&ensp; A otimização dos hiperparâmetros do Adaboost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs: 
 
 | Período de Análise | Learning_rate | n_estimators  |
 |---------------------|---------------|--------------|
@@ -1272,7 +1291,7 @@ grid_search.best_params_
 | Semana 8            | 0.01          | 200          | 
 | Semana 12           | 0.01          | 200          | 
 
-&emsp; Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
+&ensp; Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 
 | Janela de Análise | Recall Classe 0 | f1_score |
 |---------------------|-----------------|----------|
@@ -1442,7 +1461,7 @@ $$
 | `metric`| Define qual método será utilizado para o cálculo das distâncias. | `euclidian, manhattan` |
 | `shrink_threshold`  | Move os centroides em direção à média global da base de dados, tornando o modelo menos sensível a outliers. | `[None, 0.1, 0.5, 1.0]` |
 
-#### Hiperparâmetros que não vão ser utilizados
+#### Hiperparâmetros que **não vão ser utilizados**
 
 | Parâmetro | O que faz / Para que serve | Motivo de não uso |
 |-----------|---------------------------|-----------------|
