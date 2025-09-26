@@ -1259,30 +1259,115 @@ grid_search.best_params_
 #### 4.4.3 Modelos
 
 
-##### 4.4.3.1 AdaBoost
+#### 4.4.3.1 AdaBoost
 
 &emsp; O Adaboost (Adaptive Boosting) é um **algoritmo de *ensemble* que se enquadra na técnica de Boosting**. A implementação utilizada, vinda da biblioteca scikit-learn, define como classificador fraco (`base_estimator`) um **Decision Stump (Árvore de Decisão com profundidade máxima de 1)**. O Adaboost **combina sequencialmente múltiplos desses classificadores fracos para construir um único e robusto classificador forte** (*strong learner*). Seu diferencial reside na forma como **ajusta dinamicamente os pesos das amostras em cada iteração**.
 
 &emsp; A otimização dos hiperparâmetros do Adaboost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs: 
 
-| Período de Análise | Learning_rate | n_estimators |
-|---------------------|---------------|--------------|
-| Semana 6            | 0.1           | 50           |
-| Semana 8            | 1.0           | 300          |
-| Semana 12           | 0.01          | 300          |
+| Período de Análise | Learning_rate | n_estimators  | algorithm |
+|---------------------|---------------|--------------|-----------|
+| Semana 6            | 0.1           | 50           | SAMME     |
+| Semana 8            | 0.01          | 200          | SAMME     |
+| Semana 12           | 0.01          | 200          | SAMME     |
 
-- ***n_estimators (Número de Estimadores):*** Este hiperparâmetro define a quantidade exata de classificadores fracos (Decision Stumps) que são construídos sequencialmente para formar o modelo ensemble. Ele é fundamental para determinar a complexidade e a capacidade de aprendizado do AdaBoost. Um valor mais elevado (como 300 nas Semanas 8 e 12) oferece mais etapas para o modelo refinar sua classificação e corrigir os erros residuais, o que pode aumentar a performance. 
+# Hiperparâmetros AdaBoostClassifier 
 
-- ***learning_rate (Taxa de Aprendizado):*** O learning_rate funciona como um fator de escala que modula a contribuição de cada classificador fraco na soma ponderada final. Ele controla a velocidade e a suavidade com que o modelo aprende e corrige os erros em cada iteração. Um valor alto (e.g., 1.0 na Semana 8) permite uma convergência mais rápida, mas pode levar a um aprendizado volátil e a resultados menos estáveis. Por outro lado, um valor baixo (como 0.01 na Semana 12) garante que as correções de erro sejam mais suaves e graduais, promovendo uma melhor generalização e estabilidade do modelo, embora exija, necessariamente, um maior número de estimadores para compensar.
+## Hiperparâmetros que **vão ser usados**
+
+
+| Parâmetro        | O que faz / Para que serve | Valores sugeridos / Observações |
+|------------------|---------------------------|--------------------------------|
+| `n_estimators`   | Número máximo de estimadores fracos a serem treinados. Controla quantas árvores/estimadores serão construídos no ensemble. | `[50, 100, 200]` - Mantido pequeno para evitar overfitting em dataset pequeno |
+| `learning_rate`  | Peso aplicado às contribuições de cada estimador. Controla a taxa de aprendizado do ensemble. | `[0.01, 0.1, 0.5]` - Valores menores ajudam na generalização, maiores aceleram convergência |
+| `algorithm`      | Define como os pesos das observações são atualizados durante o boosting. | `"SAMME.R"` - Probabilístico, recomendado para classificação binária/multiclasse |
+| `random_state`   | Semente aleatória para garantir reprodutibilidade. | `[42]` |
+
+---
+
+## Hiperparâmetros que **não vão ser usados**
+
+| Parâmetro        | O que faz / Para que serve | Motivo de não uso |
+|------------------|---------------------------|-----------------|
+| `loss`           | Define a função de perda para regressão. | Apenas para AdaBoostRegressor, não usado em classificação |
+| `base_estimator` | Modelo fraco que será usado no boosting. | Fixado em `DecisionTreeClassifier(max_depth=1)`, não será variado no grid |
 
 Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 
 | Janela de Análise | Recall Classe 0 | f1_score |
 |---------------------|-----------------|----------|
-| Semana 6            | 0.7308          |          |
-| Semana 8            | 0.5769          |          |
-| Semana 12           | 0.6154          |          |
-##### 4.4.3.2 XGBoost
+| Semana 6            | 0.8076          | 0.3387   |
+| Semana 8            | 0.6538          | 0.4594   |
+| Semana 12           | 0.6923          | 0.4931   |
+
+#### 4.4.3.2 XGBoost
+
+
+
+| Período de Análise | Learning_rate | n_estimators | max_depth | three_method |
+|---------------------|---------------|--------------|----------|--------------|
+| Semana 6            | 0.1           | 200          | 7        | auto         |
+| Semana 8            | 1.0           | 300          | 7        | auto         |
+| Semana 12           | 0.1           | 100          | 5        | auto         |
+
+# Hiperparâmetros XGBoost
+
+## Hiperparâmetros que **vão ser usados**
+
+| Parâmetro       | O que faz / Para que serve | Valores sugeridos / Observações |
+|-----------------|---------------------------|--------------------------------|
+| `max_depth`     | Profundidade máxima da árvore. Controla o quão complexas podem ser as divisões e ajuda a evitar overfitting. | `[3, 5, 7, 10]` |
+| `n_estimators`  | Número de árvores (rounds de boosting) a serem construídas. | `[50, 100, 200]` (dataset pequeno) |
+| `learning_rate` | Define quanto cada árvore contribui para a predição final. Controla a taxa de aprendizado do ensemble. | `[0.001, 0.01, 0.1]` |
+| `tree_method`   | Define o algoritmo usado para construir árvores. Evita usar `updater` diretamente, mais seguro para GridSearch. | `auto` (suficiente para datasets pequenos/médios) |
+| `random_state`   | Semente aleatória para garantir reprodutibilidade. | `[42]` |
+
+---
+
+## Hiperparâmetros que **não vão ser usados**
+
+| Parâmetro | O que faz / Para que serve | Motivo de não uso |
+|-----------|---------------------------|-----------------|
+| `interaction_constraints` | Restringe quais features podem interagir entre si. | Não necessário, poucas features |
+| `monotone_constraints` | Impõe monotonicidade entre features e predição. | Não necessário |
+| `refresh_leaf` | Usado com updater “refresh” para atualizar folhas/nós. | `updater` não será usado |
+| `updater` | Define sequência de updaters internos. | Baixo nível, pode quebrar GridSearch → substituído por `tree_method` |
+| `process_type` | Tipo de processo de boosting (default/update). | Não relevante para caso binário padrão |
+| `grow_policy` | Política de crescimento de árvores (`depthwise` ou `lossguide`). | Padrão `depthwise` suficiente |
+| `max_leaves` | Número máximo de folhas. | Só funciona com `lossguide`, não usado porque `max_depth` já controla complexidade |
+| `max_bin` | Número máximo de bins para discretização de variáveis contínuas. | Default suficiente, dataset pequeno |
+| `predictor` | Algoritmo usado para predição (CPU/GPU). | Não usado, sem GPU |
+| `num_parallel_tree` | Número de árvores construídas em paralelo. | Não necessário, modelo pequeno e foco em F1/Recall |
+| `sample_type` | Apenas DART. | Não será usado |
+| `normalize_type` | Apenas DART. | Não será usado |
+| `rate_drop` | Apenas DART. | Não será usado |
+| `skip_drop` | Apenas DART. | Não será usado |
+| `one_drop` | Apenas DART. | Não será usado |
+| `max_cat_to_onehot` | Limite de categorias para one-hot encoding. | Poucas features categóricas |
+| `max_cat_threshold` | Threshold para dividir categorias. | Poucas features categóricas |
+| `deterministic_histogram` | Para `gpu_hist`, garante histograma determinístico. | Sem GPU |
+| `tweedie_variance_power` | Para regressão Tweedie. | Problema binário → não usado |
+| `huber_slope` | Para pseudo-Huber. | Problema binário → não usado |
+| `quantile_alpha` | Para regressão quantil. | Problema binário → não usado |
+| `aft_loss_distribution` | Para AFT (modelos de sobrevivência). | Problema binário → não usado |
+| `aft_loss_distribution_scale` | Para AFT. | Problema binário → não usado |
+| `top_k` | Para seleção de features em boosters lineares. | Não usado (problema de classificação binária) |
+| `feature_selector` | Método de seleção de features em boosters lineares. | Não usado |
+| `lambda_bias` | Regularização L2 no bias. | Só para boosters lineares, não usado |
+| `multi_strategy` | Para múltiplos alvos / multiclasses. | Problema binário → não usado |
+| `max_cached_hist_node` | Número máximo de nós de histograma em cache (GPU). | Sem GPU |
+| `seed_per_iteration` | Reinicia semente a cada iteração (reprodutibilidade). | Não será usado |
+| `use_rmm` | Usa gerenciador de memória GPU. | Sem GPU |
+.
+
+Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
+
+| Janela de Análise | Recall Classe 0 | f1_score |
+|---------------------|-----------------|----------|
+| Semana 6            | 0.7692          | 0.3960   |
+| Semana 8            | 0.5384          | 0.5384   |
+| Semana 12           | 0.5384          | 0.5957   |
+
 
 ##### 4.4.3.3 Nearest Centroid
 
