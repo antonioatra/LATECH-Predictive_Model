@@ -1230,7 +1230,7 @@ y_pred = ensemble.predict(X_test)
 
 &emsp; Implementado na biblioteca Scikit-Learn, o GridSearchCV realiza uma **busca exaustiva, testando todas as combinações de valores discretos predefinidos na grade de parâmetros** [CODESIGNAL], o snippet abaixo demonstra um uso básico da ferramenta:
 
-`````
+`````python
 from sklearn.model_selection import GridSearchCV
 from sklearn.neighbors import NearestCentroid
 import numpy as np
@@ -1255,6 +1255,7 @@ grid_search = GridSearchCV(
 # Resultado após .fit(X_train, y_train)
 grid_search.best_params_
 `````
+
 
 #### 4.4.3 Modelos
 
@@ -1387,10 +1388,6 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 | Semana 8            | Manhattan     | None         |
 | Semana 12           | Manhattan     | None         |
 
-- ***metric (Métrica de distância):*** Este hiperparâmetro define a fórmula matemática utilizada para calcular a "proximidade" entre um novo aluno e o centroide de cada classe. A escolha da métrica influencia diretamente a fronteira de decisão do modelo. A distância 'euclidean' (padrão) calcula a distância em linha reta entre dois pontos no espaço de features, sendo ideal para quando as classes formam agrupamentos esféricos. Já a métrica 'manhattan' (escolhida pelo algoritmo GridSearch) calcula a soma das diferenças absolutas entre as coordenadas, o que a torna potencialmente mais robusta a outliers em features individuais e bases de dados de alta dimensionalidade.
-
-- ***shrink_threshold (Coeficiente de encolhimento):*** Este hiperparâmetro move cada centroide em direção à média global da base de treinamento do modelo, independentemente da classe. O objetivo é reduzir a variância do modelo, tornando-o menos sensível a outliers ou a classes com poucas amostras. Um centroide calculado a partir de poucos pontos pode ser instável. Ao movê-lo para perto da média global, o modelo adota uma postura mais conservadora e generalista. Um valor maior de shrink_threshold aplica um encolhimento mais forte. Os valores a serem testados no GridSearch vieram do padrão da literatura.
-
 &emsp; Sob estes hiperparâmetros, o modelo retorna as seguintes métricas. 
 
 | Janela de Análise   | Recall Classe 1 | f1_score |
@@ -1399,7 +1396,44 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 | Semana 8            | 0.7692          | 0.5405   |
 | Semana 12           | 0.7307          | 0.6909   |
 
+
+- ***metric (Métrica de distância):*** Este hiperparâmetro define a fórmula matemática utilizada para calcular a "proximidade" entre um novo aluno e o centroide de cada classe. A escolha da métrica influencia diretamente a fronteira de decisão do modelo. A distância 'euclidean' (padrão) calcula a distância em linha reta entre dois pontos no espaço de features, sendo ideal para quando as classes formam agrupamentos esféricos. Já a métrica 'manhattan' (escolhida pelo algoritmo GridSearch) calcula a soma das diferenças absolutas entre as coordenadas, o que a torna potencialmente mais robusta a outliers em features individuais e bases de dados de alta dimensionalidade.
+
+- ***shrink_threshold (Coeficiente de encolhimento):*** Este hiperparâmetro move cada centroide em direção à média global da base de treinamento do modelo, independentemente da classe. O objetivo é reduzir a variância do modelo, tornando-o menos sensível a outliers ou a classes com poucas amostras. Um centroide calculado a partir de poucos pontos pode ser instável. Ao movê-lo para perto da média global, o modelo adota uma postura mais conservadora e generalista. Um valor maior de shrink_threshold aplica um encolhimento mais forte. Os valores a serem testados no GridSearch vieram do padrão da literatura.
+
+
 #### 4.4.5 Comparação dos Modelos Testados 
+
+Semana 06: 
+
+| Modelo | Recall (Classe 1) | F1-Score (Classe 1) |
+| :---: | :---: | :---: |
+| **Nearest Centroid** | **0.8076** | **0.4285** |
+| **AdaBoost** | **0.8076** | 0.3387 |
+| XGBoost | 0.7692 | 0.3960 |
+
+Semana 08: 
+
+| Modelo | Recall (Classe 1) | F1-Score (Classe 1) |
+| :---: | :---: | :---: |
+| **Nearest Centroid** | **0.7692** | **0.5405** |
+| AdaBoost | 0.6538 | 0.4594 |
+| XGBoost | 0.5384 | 0.5384 |
+
+Semana 12:
+
+| Modelo | Recall (Classe 1) | F1-Score (Classe 1) |
+| :---: | :---: | :---: |
+| **Nearest Centroid** | **0.7307** | **0.6909** |
+| AdaBoost | 0.6923 | 0.4931 |
+| XGBoost | 0.5384 | 0.5957 |
+
+
+&emsp; A comparação de modelos revela um padrão de desempenho que valida a escolha do **Nearest Centroid (NC)** como o classificador mais adequado para o objetivo central do projeto: a **intervenção precoce no combate à reprovação**.
+
+&emsp; Na Semana 06, o momento mais estratégico para a atuação da equipe de apoio da EAFIT, o NC empata com o AdaBoost no valor **máximo de Recall (0.8076)**, garantindo que **mais de 80% dos alunos que irão reprovar** sejam sinalizados logo no início do curso. O empate é acompanhado por um **F1-Score superior (0.4285)**, o que estabelece o Nearest Centroid como a opção mais equilibrada e **confiável** para a primeira janela de intervenção.
+
+&emsp; A superioridade do Nearest Centroid se consolida ao longo do semestre. Nas Semanas 08 e 12, o modelo lidera consistentemente em ambas as métricas, superando os algoritmos de *boosting*. Na Semana 08, o NC atinge **0.7692 de Recall** e **0.5405 de F1-Score**. Na conclusão da análise, na Semana 12, o modelo alcança o **pico de assertividade**, registrando um **F1-Score de 0.6909**, o mais alto de todos os modelos testados. Logo, o resultado demonstra que o NC evolui para uma **predição altamente confiável**, capaz de minimizar Falsos Positivos sem comprometer o Recall, que se mantém robusto em **0.7307**.
 
 
 ## <a name="c5"></a>5. Conclusões e Recomendações
