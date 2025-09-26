@@ -1262,9 +1262,28 @@ grid_search.best_params_
 
 #### 4.4.3.1 AdaBoost
 
-&emsp; O Adaboost (Adaptive Boosting) é um **algoritmo de *ensemble* que se enquadra na técnica de Boosting**. A implementação utilizada, vinda da biblioteca scikit-learn, define como classificador fraco (`base_estimator`) um **Decision Stump (Árvore de Decisão com profundidade máxima de 1)**. O Adaboost **combina sequencialmente múltiplos desses classificadores fracos para construir um único e robusto classificador forte** (*strong learner*). Seu diferencial reside na forma como **ajusta dinamicamente os pesos das amostras em cada iteração**.
+&emsp; O AdaBoost (Adaptive Boosting) é um algoritmo de ensemble que combina vários classificadores fracos para formar um classificador forte. A ideia central é treinar, de forma sequencial, modelos mais simples (no caso, árvores de decisão rasas) que se concentram progressivamente nos exemplos mais difíceis de classificar da seguinte forma: em cada iteração, o algoritmo atribui pesos maiores às amostras que foram classificadas incorretamente na iteração anterior, forçando os classificadores seguintes a dar mais atenção a esses casos. E de maneira formal, a função preditiva do AdaBoost é definida como:
 
-&emsp; A otimização dos hiperparâmetros do Adaboost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs: 
+$$
+H(x) = \text{sign} \left( \sum_{t=1}^{T} \alpha_t h_t(x) \right)
+$$
+
+&ensp; Onde \(h_t(x)\) é o classificador fraco treinado na t-ésima iteração, \(\alpha_t\) é o peso atribuído ao classificador (maior para classificadores que erraram menos) e \(T\) é o número total de iterações. E \(\text{sign}\) significa que estamos falando de uma *função sinal*, que retorna apenas o sinal do seu argumento, por exemplo:
+
+&ensp; Seja \(z=\sum_{t=1}^{T} \alpha_t h_t(x)\)
+
+$$
+\text{sign}(z) =
+\begin{cases}
++1, & \text{se } z > 0 \\
+-1, & \text{se } z < 0 \\
+0,  & \text{se } z = 0
+\end{cases}
+$$
+
+&ensp; Então a intuição principal é: se o somatório \(\sum_{t=1}^{T} \alpha_t h_t(x)\), que é a combinação linear das predições dos modelos fracos com os seus pesos, tiver valor positivo, então a decisão final do modelo \(H(x)=+1\), que no caso do projeto, seria um aluno reprovado (classe priorizada no projeto). Analogamente, se a decisão final fosse \(H(x)=-1\), então teríamos um aluno aprovado.
+
+&ensp; A otimização dos hiperparâmetros do Adaboost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs: 
 
 | Período de Análise | Learning_rate | n_estimators  |
 |---------------------|---------------|--------------|
@@ -1272,7 +1291,7 @@ grid_search.best_params_
 | Semana 8            | 0.01          | 200          | 
 | Semana 12           | 0.01          | 200          | 
 
-&emsp; Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
+&ensp; Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 
 | Janela de Análise | Recall Classe 0 | f1_score |
 |---------------------|-----------------|----------|
@@ -1306,9 +1325,32 @@ grid_search.best_params_
 
 #### 4.4.3.2 XGBoost
 
-&emsp; O XGBoost ***(eXtreme Gradient Boosting)*** é uma implementação otimizada e altamente eficiente do algoritmo Gradient Boosting Machine (GBM), enquadrando-se na técnica de Boosting. Diferente do Adaboost, que ajusta dinamicamente os pesos das amostras, o XGBoost constrói seu modelo de forma sequencial utilizando gradientes e uma função de perda otimizada para corrigir os erros (resíduos) dos modelos de previsão anteriores. Seu diferencial reside na sua escalabilidade e velocidade, além de incorporar termos de regularização (L1 e L2) diretamente na função objetivo, o que o torna ***inerentemente mais robusto contra o overfitting***.
+&ensp; O XGBoost (Extreme Gradient Boosting) é um algoritmo de ensemble (aprendizado em conjunto) baseado em árvores de decisão sequenciais, otimizadas através da técnica de gradient boosting. Sua principal característica é a construção de árvores em sequência, onde cada nova árvore é treinada para minimizar o erro residual do conjunto anterior, garantindo um aprendizado mais forte a partir de classificadores mais fracos.
 
-&emsp; A otimização dos hiperparâmetros do XGBoost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
+
+&ensp; A função objetivo do XGBoost é definida da seguinte forma:
+
+$$
+\mathcal{L}(\phi) = \sum_{i=1}^{n} l(y_i, \hat{y}_i) + \sum_{k=1}^{K} \Omega(f_k)
+$$
+
+&ensp; Onde \(n\) é  número de alunos monitorados, \(K\) é o número de árvores envolvidas no processo de boosting, \(\hat{y}_i\) é a predição acumulada até a iteração atual.
+
+
+&ensp; O termo $\sum_{i=1}^{n} l(y_i, \hat{y}_i)$ é a *função de perda*, que mede a discrepância entre o rótulo verdadeiro \(y_i\) e a predição \(\hat{y}_i\) do modelo para cada ponto \(i\) da amostra. E a escolha da função de perda depende do contexto de aplicação do modelo, em problemas de classificação como o nosso caso, normalmente utiliza-se a função *log-loss*. E \(\sum_{k=1}^{K} \Omega(f_k)\) é o *termo de regularização*, que adiciona uma "penalização" para cada árvore \(f_k\) do ensemble (conjunto de modelos mais fracos) a fim de controlar a complexidade do modelo, e assim evitar o overfitting.
+
+
+&ensp; E por fim, o termo $\Omega(f_k)$, responsável por penalizar as árvores "complexas demais" é calculado por:
+
+
+$$
+\Omega(f) = \gamma T + \frac{1}{2} \lambda \|w\|^2
+$$
+
+
+&ensp; Em \(\gamma T\) o parâmetro \(\gamma\) mede o limiar de complexidade de uma árvore, que será proporcional ao seu número \(T\) de folhas, e quanto maior for o número de folhas, maior será a complexidade, e maior será a penalização. E \(\frac{1}{2} \lambda \|w\|^2\) representa a regularização L2 (*L2 é a norma Euclidiana, que siginifica que valores que seriam grandes a priori serão suvizados*) aplicada aos pesos (\(w\)) e o parâmetro \(\lambda\) controla a intensidade da penalização. Folhas que teriam pesos muito elevados, que poderiam indicar overfitting, são suavizadas pela *norma Euclidiana* (L2).
+
+&ensp; A otimização dos hiperparâmetros do XGBoost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
 
 
 
@@ -1378,9 +1420,23 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 
 ##### 4.4.3.3 Nearest Centroid
 
-&emsp; O Nearest Centroid é um algoritmo de classificação supervisionado baseado em protótipos, que se destaca por sua simplicidade e alta interpretabilidade. A implementação do scikit-learn utilizada classifica novas amostras com base na sua proximidade ao centroide (a média vetorial das amostras) de cada classe. Seu diferencial reside na transparência do seu mecanismo de decisão: cada classe é representada por um único vetor médio, e a classificação é uma comparação direta de distâncias a esses perfis médios (centroides).
+&ensp; O Nearest Centroid é um algoritmo de classificação supervisionado baseado em distância, que se destaca por sua simplicidade interpretabilidade. O algoritmo classifica novas amostras com base na sua proximidade à média vetorial das amostras (chamada de centroide) de cada classe, assim, a nova instância de dado terá a classificação atribuída ao centroide mais próximo.
 
-&emsp; A otimização dos hiperparâmetros do Nearest Centroid foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
+&ensp; De maneira formal, dado um conjunto de dados de treinamento \(\{(x_i, y_i)\}_{i=1}^n\) em que cada \(x_i \in \mathbb{R}^d\) representa um vetor de atributos e \(y_i \in \{1, \dots, K\}\) representa a classe atribuída ao vetor \(x_i\). E o centroide da classe \(K\) é definido como:
+
+$$
+c_k = \frac{1}{|C_k|} \sum_{i \in C_k} x_i
+$$
+
+&ensp; Onde \(C_k\) representa o conjunto de índices pertencentes à classe \(k\). E a predição para uma nova instância \(x\) é realizada escolhendo o centroide mais próximo:
+
+$$
+\hat{y} = \arg\min_{k} \; d(x, c_k)
+$$
+
+&ensp; Onde \(c_k\) é o centroide da classe \(k\) ou seja, o ponto médio que generaliza, ou resume o comportamento dessa classe. O termo \(d(x, c_k)\) representa a distância da nova instância \(x\) até o centroide, calculada pela distância Euclidiana (padrão da literatura), ou pela distância Manhattan (para bases com muitas dimensões). E o operador \(\arg\min\) quer dizer que o modelo escolhe a classe cujo centroide está mais próximo da nova instância \(x\). No contexto do projeto, o modelo compara um novo estudante com os perfis médios de aprovados e reprovados e decide, pela distância ao centróide, a qual classe ele mais se assemelha.
+
+&ensp; A otimização dos hiperparâmetros do Nearest Centroid foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
 
 | Período de Análise  | Metric        | shrink_threshold |
 |---------------------|---------------|--------------|
@@ -1396,11 +1452,20 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 | Semana 8            | 0.7692          | 0.5405   |
 | Semana 12           | 0.7307          | 0.6909   |
 
+#### Hiperparâmetros Nearest Centroid
 
-- ***metric (Métrica de distância):*** Este hiperparâmetro define a fórmula matemática utilizada para calcular a "proximidade" entre um novo aluno e o centroide de cada classe. A escolha da métrica influencia diretamente a fronteira de decisão do modelo. A distância 'euclidean' (padrão) calcula a distância em linha reta entre dois pontos no espaço de features, sendo ideal para quando as classes formam agrupamentos esféricos. Já a métrica 'manhattan' (escolhida pelo algoritmo GridSearch) calcula a soma das diferenças absolutas entre as coordenadas, o que a torna potencialmente mais robusta a outliers em features individuais e bases de dados de alta dimensionalidade.
+#### Hiperparâmetros que vão ser utilizados
 
-- ***shrink_threshold (Coeficiente de encolhimento):*** Este hiperparâmetro move cada centroide em direção à média global da base de treinamento do modelo, independentemente da classe. O objetivo é reduzir a variância do modelo, tornando-o menos sensível a outliers ou a classes com poucas amostras. Um centroide calculado a partir de poucos pontos pode ser instável. Ao movê-lo para perto da média global, o modelo adota uma postura mais conservadora e generalista. Um valor maior de shrink_threshold aplica um encolhimento mais forte. Os valores a serem testados no GridSearch vieram do padrão da literatura.
+| Parâmetro       | O que faz / Para que serve | Valores sugeridos / Observações |
+|-----------------|---------------------------|--------------------------------|
+| `metric`| Define qual método será utilizado para o cálculo das distâncias. | `euclidian, manhattan` |
+| `shrink_threshold`  | Move os centroides em direção à média global da base de dados, tornando o modelo menos sensível a outliers. | `[None, 0.1, 0.5, 1.0]` |
 
+#### Hiperparâmetros que **não vão ser utilizados**
+
+| Parâmetro | O que faz / Para que serve | Motivo de não uso |
+|-----------|---------------------------|-----------------|
+| `prior` | Define a probabilidade a priori de uma classe. | As classes são muito desbalanceadas, então não utilizamos para evitar overfitting e falsos negativos e falsos positivos. |
 
 #### 4.4.5 Comparação dos Modelos Testados 
 
