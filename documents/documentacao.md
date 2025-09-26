@@ -1271,9 +1271,18 @@ grid_search.best_params_
 | Semana 8            | 0.01          | 200          | SAMME     |
 | Semana 12           | 0.01          | 200          | SAMME     |
 
-# Hiperparâmetros AdaBoostClassifier 
+&emsp; Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 
-## Hiperparâmetros que **vão ser usados**
+| Janela de Análise | Recall Classe 0 | f1_score |
+|---------------------|-----------------|----------|
+| Semana 6            | 0.8076          | 0.3387   |
+| Semana 8            | 0.6538          | 0.4594   |
+| Semana 12           | 0.6923          | 0.4931   |
+
+
+#### Hiperparâmetros AdaBoostClassifier 
+
+##### Hiperparâmetros que **vão ser utilizados**
 
 
 | Parâmetro        | O que faz / Para que serve | Valores sugeridos / Observações |
@@ -1285,22 +1294,20 @@ grid_search.best_params_
 
 ---
 
-## Hiperparâmetros que **não vão ser usados**
+##### Hiperparâmetros que **não vão ser utilizados**
 
 | Parâmetro        | O que faz / Para que serve | Motivo de não uso |
 |------------------|---------------------------|-----------------|
 | `loss`           | Define a função de perda para regressão. | Apenas para AdaBoostRegressor, não usado em classificação |
 | `base_estimator` | Modelo fraco que será usado no boosting. | Fixado em `DecisionTreeClassifier(max_depth=1)`, não será variado no grid |
 
-Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 
-| Janela de Análise | Recall Classe 0 | f1_score |
-|---------------------|-----------------|----------|
-| Semana 6            | 0.8076          | 0.3387   |
-| Semana 8            | 0.6538          | 0.4594   |
-| Semana 12           | 0.6923          | 0.4931   |
 
 #### 4.4.3.2 XGBoost
+
+&emsp; O XGBoost ***(eXtreme Gradient Boosting)*** é uma implementação otimizada e altamente eficiente do algoritmo Gradient Boosting Machine (GBM), enquadrando-se na técnica de Boosting. Diferente do Adaboost, que ajusta dinamicamente os pesos das amostras, o XGBoost constrói seu modelo de forma sequencial utilizando gradientes e uma função de perda otimizada para corrigir os erros (resíduos) dos modelos de previsão anteriores. Seu diferencial reside na sua escalabilidade e velocidade, além de incorporar termos de regularização (L1 e L2) diretamente na função objetivo, o que o torna ***inerentemente mais robusto contra o overfitting***.
+
+&emsp; A otimização dos hiperparâmetros do XGBoost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
 
 
 
@@ -1310,9 +1317,17 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 | Semana 8            | 1.0           | 300          | 7        | auto         |
 | Semana 12           | 0.1           | 100          | 5        | auto         |
 
-# Hiperparâmetros XGBoost
+Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 
-## Hiperparâmetros que **vão ser usados**
+| Janela de Análise | Recall Classe 0 | f1_score |
+|---------------------|-----------------|----------|
+| Semana 6            | 0.7692          | 0.3960   |
+| Semana 8            | 0.5384          | 0.5384   |
+| Semana 12           | 0.5384          | 0.5957   |
+
+#### Hiperparâmetros XGBoost
+
+##### Hiperparâmetros que **vão ser utilizados**
 
 | Parâmetro       | O que faz / Para que serve | Valores sugeridos / Observações |
 |-----------------|---------------------------|--------------------------------|
@@ -1324,7 +1339,7 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 
 ---
 
-## Hiperparâmetros que **não vão ser usados**
+##### Hiperparâmetros que **não vão ser utilizados**
 
 | Parâmetro | O que faz / Para que serve | Motivo de não uso |
 |-----------|---------------------------|-----------------|
@@ -1358,15 +1373,6 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 | `max_cached_hist_node` | Número máximo de nós de histograma em cache (GPU). | Sem GPU |
 | `seed_per_iteration` | Reinicia semente a cada iteração (reprodutibilidade). | Não será usado |
 | `use_rmm` | Usa gerenciador de memória GPU. | Sem GPU |
-.
-
-Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
-
-| Janela de Análise | Recall Classe 0 | f1_score |
-|---------------------|-----------------|----------|
-| Semana 6            | 0.7692          | 0.3960   |
-| Semana 8            | 0.5384          | 0.5384   |
-| Semana 12           | 0.5384          | 0.5957   |
 
 
 ##### 4.4.3.3 Nearest Centroid
@@ -1384,6 +1390,8 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 - ***metric (Métrica de distância):*** Este hiperparâmetro define a fórmula matemática utilizada para calcular a "proximidade" entre um novo aluno e o centroide de cada classe. A escolha da métrica influencia diretamente a fronteira de decisão do modelo. A distância 'euclidean' (padrão) calcula a distância em linha reta entre dois pontos no espaço de features, sendo ideal para quando as classes formam agrupamentos esféricos. Já a métrica 'manhattan' (escolhida pelo algoritmo GridSearch) calcula a soma das diferenças absolutas entre as coordenadas, o que a torna potencialmente mais robusta a outliers em features individuais e bases de dados de alta dimensionalidade.
 
 - ***shrink_threshold (Coeficiente de encolhimento):*** Este hiperparâmetro move cada centroide em direção à média global da base de treinamento do modelo, independentemente da classe. O objetivo é reduzir a variância do modelo, tornando-o menos sensível a outliers ou a classes com poucas amostras. Um centroide calculado a partir de poucos pontos pode ser instável. Ao movê-lo para perto da média global, o modelo adota uma postura mais conservadora e generalista. Um valor maior de shrink_threshold aplica um encolhimento mais forte. Os valores a serem testados no GridSearch vieram do padrão da literatura.
+
+&emsp; Sob estes hiperparâmetros, o modelo retorna as seguintes métricas. 
 
 | Janela de Análise   | Recall Classe 1 | f1_score |
 |---------------------|-----------------|----------|
