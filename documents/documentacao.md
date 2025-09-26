@@ -1306,10 +1306,10 @@ grid_search.best_params_
 
 #### 4.4.3.2 XGBoost
 
-&emsp; O XGBoost (Extreme Gradient Boosting) é um algoritmo de ensemble (aprendizado em conjunto) baseado em árvores de decisão sequenciais, otimizadas através da técnica de gradient boosting. Sua principal característica é a construção de árvores em sequência, onde cada nova árvore é treinada para minimizar o erro residual do conjunto anterior, garantindo um aprendizado mais forte a partir de classificadores mais fracos.
+&ensp; O XGBoost (Extreme Gradient Boosting) é um algoritmo de ensemble (aprendizado em conjunto) baseado em árvores de decisão sequenciais, otimizadas através da técnica de gradient boosting. Sua principal característica é a construção de árvores em sequência, onde cada nova árvore é treinada para minimizar o erro residual do conjunto anterior, garantindo um aprendizado mais forte a partir de classificadores mais fracos.
 
 
-&emsp; A função objetivo do XGBoost é definida da seguinte forma:
+&ensp; A função objetivo do XGBoost é definida da seguinte forma:
 
 $$
 \mathcal{L}(\phi) = \sum_{i=1}^{n} l(y_i, \hat{y}_i) + \sum_{k=1}^{K} \Omega(f_k)
@@ -1331,7 +1331,7 @@ $$
 
 &ensp; Em \(\gamma T\) o parâmetro \(\gamma\) mede o limiar de complexidade de uma árvore, que será proporcional ao seu número \(T\) de folhas, e quanto maior for o número de folhas, maior será a complexidade, e maior será a penalização. E \(\frac{1}{2} \lambda \|w\|^2\) representa a regularização L2 (*L2 é a norma Euclidiana, que siginifica que valores que seriam grandes a priori serão suvizados*) aplicada aos pesos (\(w\)) e o parâmetro \(\lambda\) controla a intensidade da penalização. Folhas que teriam pesos muito elevados, que poderiam indicar overfitting, são suavizadas pela *norma Euclidiana* (L2).
 
-&emsp; A otimização dos hiperparâmetros do XGBoost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
+&ensp; A otimização dos hiperparâmetros do XGBoost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
 
 
 
@@ -1401,9 +1401,23 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 
 ##### 4.4.3.3 Nearest Centroid
 
-&emsp; O Nearest Centroid é um algoritmo de classificação supervisionado baseado em protótipos, que se destaca por sua simplicidade e alta interpretabilidade. A implementação do scikit-learn utilizada classifica novas amostras com base na sua proximidade ao centroide (a média vetorial das amostras) de cada classe. Seu diferencial reside na transparência do seu mecanismo de decisão: cada classe é representada por um único vetor médio, e a classificação é uma comparação direta de distâncias a esses perfis médios (centroides).
+&ensp; O Nearest Centroid é um algoritmo de classificação supervisionado baseado em distância, que se destaca por sua simplicidade interpretabilidade. O algoritmo classifica novas amostras com base na sua proximidade à média vetorial das amostras (chamada de centroide) de cada classe, assim, a nova instância de dado terá a classificação atribuída ao centroide mais próximo.
 
-&emsp; A otimização dos hiperparâmetros do Nearest Centroid foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
+&ensp; De maneira formal, dado um conjunto de dados de treinamento \(\{(x_i, y_i)\}_{i=1}^n\) em que cada \(x_i \in \mathbb{R}^d\) representa um vetor de atributos e \(y_i \in \{1, \dots, K\}\) representa a classe atribuída ao vetor \(x_i\). E o centroide da classe \(K\) é definido como:
+
+$$
+c_k = \frac{1}{|C_k|} \sum_{i \in C_k} x_i
+$$
+
+&ensp; Onde \(C_k\) representa o conjunto de índices pertencentes à classe \(k\). E a predição para uma nova instância \(x\) é realizada escolhendo o centroide mais próximo:
+
+$$
+\hat{y} = \arg\min_{k} \; d(x, c_k)
+$$
+
+&ensp; Onde \(c_k\) é o centroide da classe \(k\) ou seja, o ponto médio que generaliza, ou resume o comportamento dessa classe. O termo \(d(x, c_k)\) representa a distância da nova instância \(x\) até o centroide, calculada pela distância Euclidiana (padrão da literatura), ou pela distância Manhattan (para bases com muitas dimensões). E o operador \(\arg\min\) quer dizer que o modelo escolhe a classe cujo centroide está mais próximo da nova instância \(x\). No contexto do projeto, o modelo compara um novo estudante com os perfis médios de aprovados e reprovados e decide, pela distância ao centróide, a qual classe ele mais se assemelha.
+
+&ensp; A otimização dos hiperparâmetros do Nearest Centroid foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
 
 | Período de Análise  | Metric        | shrink_threshold |
 |---------------------|---------------|--------------|
