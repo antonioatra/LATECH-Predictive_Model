@@ -1266,11 +1266,11 @@ grid_search.best_params_
 
 &emsp; A otimização dos hiperparâmetros do Adaboost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs: 
 
-| Período de Análise | Learning_rate | n_estimators  | algorithm |
-|---------------------|---------------|--------------|-----------|
-| Semana 6            | 0.1           | 50           | SAMME     |
-| Semana 8            | 0.01          | 200          | SAMME     |
-| Semana 12           | 0.01          | 200          | SAMME     |
+| Período de Análise | Learning_rate | n_estimators  |
+|---------------------|---------------|--------------|
+| Semana 6            | 0.1           | 50           | 
+| Semana 8            | 0.01          | 200          | 
+| Semana 12           | 0.01          | 200          | 
 
 &emsp; Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 
