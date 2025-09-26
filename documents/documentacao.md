@@ -1286,6 +1286,16 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 
 ##### 4.4.3.3 Nearest Centroid
 
+&emsp; O Nearest Centroid é um algoritmo de classificação supervisionado baseado em protótipos, que se destaca por sua simplicidade e alta interpretabilidade. A implementação do scikit-learn utilizada classifica novas amostras com base na sua proximidade ao centroide (a média vetorial das amostras) de cada classe. Seu diferencial reside na transparência do seu mecanismo de decisão: cada classe é representada por um único vetor médio, e a classificação é uma comparação direta de distâncias a esses perfis médios (centroides).
+
+&emsp; A otimização dos hiperparâmetros do Nearest Centroid foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
+
+| Período de Análise  | Metrics       | shrink_threshold |
+|---------------------|---------------|--------------|
+| Semana 6            | Manhattan     | None         |
+| Semana 8            | Manhattan     | None         |
+| Semana 12           | Manhattan     | None         |
+
 #### 4.4.5 Comparação dos Modelos Testados 
 
 
