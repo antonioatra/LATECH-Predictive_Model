@@ -1454,18 +1454,181 @@ $$
 
 #### Hiperparâmetros Nearest Centroid
 
-#### Hiperparâmetros que vão ser utilizados
+##### Hiperparâmetros que vão ser utilizados
 
 | Parâmetro       | O que faz / Para que serve | Valores sugeridos / Observações |
 |-----------------|---------------------------|--------------------------------|
 | `metric`| Define qual método será utilizado para o cálculo das distâncias. | `euclidian, manhattan` |
 | `shrink_threshold`  | Move os centroides em direção à média global da base de dados, tornando o modelo menos sensível a outliers. | `[None, 0.1, 0.5, 1.0]` |
 
-#### Hiperparâmetros que **não vão ser utilizados**
+##### Hiperparâmetros que **não vão ser utilizados**
 
 | Parâmetro | O que faz / Para que serve | Motivo de não uso |
 |-----------|---------------------------|-----------------|
 | `prior` | Define a probabilidade a priori de uma classe. | As classes são muito desbalanceadas, então não utilizamos para evitar overfitting e falsos negativos e falsos positivos. |
+
+##### Explicabilidade do Nearest Centroid com SHAP
+
+&emsp; O modelo preditivo foi treinado em 3 etapas diferentes(semanas 6,8,12) e avaliado quanto à contribuição de cada variável de entrada para suas previsões utilizando **SHAP (SHapley Additive exPlanations)**. Os gráficos abaixo representam a importância de cada feature no output do modelo, onde cada ponto indica o impacto de uma observação específica.
+
+&emsp; Para uma interpretação mais direta sobre o problema, a classe dos reprovados é tida como 1 e a dos aprovados como 0, isso implica na representação dos pesos no modelo, pesos negativos vão contra a classe positiva, os reprovados.
+
+---
+
+## Interpretação Geral
+
+- **Eixo X**: valor SHAP, que representa o impacto de cada feature na previsão do modelo.  
+  - Valores positivos indicam que a feature aumenta a probabilidade de saída positiva.  
+  - Valores negativos reduzem essa probabilidade.
+
+- **Eixo Y**: lista todas as features utilizadas.
+
+- **Cor dos pontos**: indica o valor da feature, de **azul (baixo)** a **vermelho (alto)**.
+
+---
+
+### Análise por Semana
+
+#### Semana 6
+<div align="center">
+  <sub>Figura x — Explicabilidade semana 6 Nearest Centroid</sub><br>
+  <img src="../assets/explicabilidade6.png"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+#### Semana 8
+<div align="center">
+  <sub>Figura x — Explicabilidade semana 8 Nearest Centroid</sub><br>
+  <img src="../assets/explicabilidade8.png"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+#### Semana 12
+<div align="center">
+  <sub>Figura x — Explicabilidade semana 12 Nearest Centroid</sub><br>
+  <img src="../assets/explicabilidade12.png"><br>
+  <sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+
+
+
+# Insights do Modelo Preditivo (SHAP) – Gráfico Atual
+
+O gráfico acima mostra a contribuição de cada feature para a previsão do modelo utilizando **SHAP (SHapley Additive exPlanations)**.
+
+---
+
+## Interpretação Geral
+
+- **Eixo X**: valor SHAP, representando o impacto da feature na previsão.  
+  - Valores positivos → aumentam a previsão positiva.  
+  - Valores negativos → reduzem a previsão positiva.
+
+- **Eixo Y**: lista das features analisadas.
+
+- **Cor dos pontos**: indica valor da feature, de **azul (baixo)** a **vermelho (alto)**.
+
+---
+
+# Insights do Nearest Centroid (SHAP) – Semanas 6, 8 e 12
+
+## Semana 6
+
+### Variável Demográfica
+- **Genero_Masculino**  
+  - Valores 0 (azul) tendem a **diminuir** a previsão.  
+  - Valores 1 (vermelho) **aumentam** a previsão positiva.  
+
+### Quizzes
+- **Quiz1 e Quiz3**  
+  - Valores altos (vermelho) aumentam a previsão negativa do modelo(aprovados).  
+  - Valores baixos (azul) aumentam a previsão postiva do modelo(reprovados).  
+- **Quiz2**  
+  - Impacto mais neutro, mas ainda com efeito relevante, principalmente valores altos, esses que jogam para a classe negativa(reprovados).
+- **Análise final**
+  - Notas mais alta tendem a identificar o modelo como aprovado.
+
+### Variáveis de Tempo
+- **TempoQ1, TempoQ2 e TempoQ3**  
+  - Valores baixos (azul) reduzem a previsão do reprovados.  
+  - Valores altos (vermelho) aumentam a previsão do reprovados.
+- **Análise final**
+  - Tempos de resposta dos quizzes mais baixos tendem a classificar como reprovado.
+
+### Outras Features
+- **STEM_SI**: impacto mínimo no modelo, sugerindo baixa relevância e reforçando a análise anterior de que STEM não influenciava na predição.
+
+
+---
+
+## Semana 8
+
+### Variável Demográfica
+- **Genero_Masculino**  
+  - Valores 0 (azul) tendem a diminuir a previsão.  
+  - Valores 1 (vermelho) aumentam a previsão positiva.  
+
+### Avaliações e Quizzes
+- **Parcial_1, Quiz1, Quiz2, Quiz3, Quiz4**  
+  - Valores altos (vermelho) aumentam a previsão negativa(aprovados).  
+  - Valores baixos (azul) reduzem a previsão negativa(aprovados).  
+  - **Parcial_1** e **Quiz3** mostram maior dispersão → efeito não-linear.  
+  - **Quiz2**: impacto neutro, mas relevante, notas mais altas jogam um pouco para a classe dos aprovados.
+- **Análise final**
+  - Notas altas continuam influenciando na predição da classe dos aprovados no modelo(negativa) mas agora com algumas dispersões.
+
+### Variáveis de Tempo
+- **TempoQ1, TempoQ2, TempoQ3, TempoQ4**  
+  - Valores altos (vermelho) aumentam a previsão da classe positiva(reprovados).  
+  - Valores baixos (azul) reduzem a previsão da classe positiva(aprovados).
+- **Análise final**
+  - Tempos mais altos de resolução dos quizzes continuam influenciando na classificação de reprovados pelo modelo.  
+
+### Outras Features
+- **STEM_SI**: impacto mínimo no modelo.
+---
+
+## Semana 12
+
+### Variável demográfica
+- **Genero_Masculino**  
+  - Valores baixos (azul) podem impactar positivamente.  
+  - Valores altos (vermelho) podem reduzir a previsão.
+
+### Avaliações e Quizzes
+- **Parcial_1, Quiz5, Quiz6 e Quiz3**  
+  - Valores altos (vermelho) aumentam a previsão negativa(aprovados).  
+  - Valores baixos (azul) reduzem a previsão negativa(aprovados). 
+- **Quiz1 e Quiz4**
+  - Relevantes para o modelo mas em menor escala ao comparado com os quizzes 3, 5 e 6.  
+- **Quiz2** 
+  - Impacto neutro, mas relevante.
+- **Análise final**
+  - Notas altas continuam influenciando na predição da classe dos aprovados no modelo(negativa) mas agora com algumas dispersões.
+
+### Variáveis de tempo
+- **TempoQ1 a TempoQ6** têm impacto menor, mas ainda relevante, tempos menores mais relacionados com a classe negativa(aprovados).  
+- **TempoQ5 e TempoQ6**: valores altos (vermelho) aumentam a previsão → dedicação ou engajamento.
+
+### Outras observações
+- **STEM_SI**: baixo impacto geral.  
+- Algumas features apresentam efeito **não-linear** ou **interações**, visível na dispersão.
+- **Análise final**
+  - Notas de quizzes iniciais já não são tão relevantes para o modelo.
+
+---
+
+## Interpretação dos Resultados
+
+O gráfico **SHAP** permite analisar a influência de cada feature na predição:  
+
+- Pontos em vermelho estão relacionados à classe "reprovado".  
+- **Notas de quizzes** impactam negativamente a classe "reprovado": quanto maior a nota, maior a probabilidade de ser previsto como aprovado.  
+
+A análise combinada do SHAP com essas métricas reforça a **interpretabilidade** do modelo e auxilia na tomada de decisão pedagógica.
+
+
 
 #### 4.4.5 Comparação dos Modelos Testados 
 
