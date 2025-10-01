@@ -1665,11 +1665,26 @@ Semana 12:
 
 
 ## <a name="c5"></a>5. Conclusões e Recomendações
-```
-Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de negócios em relação ao uso desse modelo. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras, como um manual de usuário mais detalhado na seção "Anexos". Não se esqueça também das pessoas que serão potencialmente afetadas pelas decisões do modelo preditivo e elabore recomendações que ajudem seu parceiro a tratá-las de maneira estratégica e ética.
+&emsp; A implementação do modelo preditivo desenvolvido ao longo deste projeto demonstra que é possível antecipar, com alto grau de confiabilidade, os alunos em risco de reprovação. Os resultados obtidos durante a fase de avaliação mostraram que o modelo alcançou métricas satisfatórias de recall, possibilitando que docentes e gestores tenham uma ferramenta de suporte robusta para tomada de decisão pedagógica.
 
-Remova este bloco ao final
-```
+&emsp; Um dos diferenciais do trabalho foi o uso de **técnicas de explicabilidade** (como os gráficos de SHAP), que permitem interpretar de forma transparente os fatores que mais influenciam a probabilidade de reprovação. Essa característica não apenas aumenta a confiança no modelo, como também auxilia professores a compreenderem melhor quais aspectos pedagógicos (ex.: quizzes, tempo de prova, evolução de notas) merecem atenção especial em intervenções.
+
+&emsp; Além dos resultados centrais, **os anexos** desta documentação apresentam materiais adicionais importantes: 
+testes de hipóteses para análise do impacto de features, teste de normalidade para entender a distribuição das features e escalonamento das mesmas para análise e teste do modelo.
+
+### Recomendações de Uso
+
+1. **Execução com novos dados**  
+   - O modelo foi projetado para receber arquivos no formato **CSV** contendo os mesmos campos descritos na seção de dados (ex.: notas parciais, quizzes, tempo, gênero, STEM, etc.).  
+   - Para utilizar, basta preparar o CSV seguindo o dicionário de variáveis já padronizado correspondente à semana e executar o pipeline de pré-processamento antes de aplicar o modelo.  
+
+2. **Interpretação dos resultados**  
+   - A saída gerada pelo modelo indica a probabilidade de cada aluno ser aprovado ou reprovado.  
+   - Os resultados podem ser classificados em reprovado e aprovado, de forma a orientar intervenções pedagógicas graduais.  
+   - Recomenda-se que os professores utilizem os gráficos de explicabilidade para identificar fatores individuais de risco.
+
+
+&emsp; Em suma, a solução proposta se mostra tecnicamente viável, pedagogicamente relevante e alinhada às necessidades da Universidad EAFIT. O uso de predições automatizadas, explicabilidade transparente e integração com rotinas de acompanhamento acadêmico reforça a inovação pedagógica e pode contribuir significativamente para a **redução da reprovação e evasão**, objetivos centrais do projeto.
 
 ## <a name="c6"></a>6. Referências
 
