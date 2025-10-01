@@ -1,4 +1,4 @@
-# Inteli - Instituto de Tecnologia e Liderança 
+# Inteli - Instituto de Tecnologia e Liderança
 
 <p align="center">
 <a href= "https://www.inteli.edu.br/"><img src="assets/inteli.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
@@ -8,24 +8,24 @@
 
 ## THROXY
 
-## :student: Integrantes: 
+## Integrantes:
 - <a href="https://www.linkedin.com/in/luiz-hinuy-0995252b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Luiz Hinuy</a>
 - <a href="https://www.linkedin.com/in/hugo-montan-393b49175/">Hugo Montan</a>
-- <a href="https://www.linkedin.com/in/leandro-precaro-barankiewicz-filho-8a293a345/">Leandro Precaro Brankiewicz Filho</a> 
-- <a href="https://www.linkedin.com/in/yuriboczar/">Yuri Boczar</a> 
+- <a href="https://www.linkedin.com/in/leandro-precaro-barankiewicz-filho-8a293a345/">Leandro Precaro Brankiewicz Filho</a>
+- <a href="https://www.linkedin.com/in/yuriboczar/">Yuri Lessa Boczar</a>
 - <a href="https://www.linkedin.com/in/messias-olivindo/">Messias Olivindo</a>
-- <a href="https://www.linkedin.com/in/carlos-quaglia-309088357/">Carlos Quaglia</a> 
+- <a href="https://www.linkedin.com/in/carlos-quaglia-309088357/">Carlos Quaglia</a>
 - <a href="https://www.linkedin.com/in/antonio-augusto-tavares-ribeiro-andr%C3%A9-613937345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Antonio Augusto Tavares Ribeiro André</a>
 
-## :teacher: Professores:
-### Orientador(a) 
+## Professores:
+### Orientador(a)
 - <a href="https://www.linkedin.com/in/profclaudioandre/">Claudio Fernando André</a>
 ### Instrutores
-- <a href="https://www.linkedin.com/in/emf-softw-eng/">Eduardo Moreira Fernandes</a>
-- <a href="https://www.linkedin.com/in/gui-cestari/">Guilherme Henrique de Oliveira Cestari</a> 
-- <a href="https://www.linkedin.com/in/renato-penha/">Renato Penha</a> 
+- <a href="https://www.linkedin.com/in/bryan-kano/">Bryan Kano Ferreira</a>
+- <a href="https://www.linkedin.com/in/gui-cestari/">Guilherme Henrique de Oliveira Cestari</a>
+- <a href="https://www.linkedin.com/in/renato-penha/">Renato Penha</a>
 - <a href="https://www.linkedin.com/in/fernando-pizzo-208b526a/">Fernando Pizzo Ribeiro</a>
-- <a href="https://www.linkedin.com/in/laizaribeiro/">Laíza Ribeiro Silva</a> 
+- <a href="https://www.linkedin.com/in/laizaribeiro/">Laíza Ribeiro Silva</a>
 
 
 ## 📝 Descrição
@@ -34,28 +34,64 @@
 &emsp; A solução proposta é um sistema de análise preditiva que utiliza dados históricos e parciais — como notas de avaliações, quizzes, tempo de resolução e informações demográficas — para estimar a probabilidade de aprovação antes do término do curso. O modelo fará previsões contínuas e atualizadas a cada 4 semanas, permitindo aos docentes agir rapidamente com estratégias personalizadas, como tutorias, revisões ou atividades de reforço.<br>
 &emsp; Com isso, espera-se otimizar os recursos de acompanhamento, reduzir taxas de reprovação e evasão, além de promover melhorias no desempenho acadêmico. A ferramenta também oferecerá insights sobre quais fatores mais influenciam o resultado final, apoiando decisões pedagógicas baseadas em dados.
 
-
-<b>Link para vídeo demonstrativo:</b> <a href="https://inteli.edu.br">Coloque seu link aqui</a>
-
-Caso tenha publicado seu modelo preditivo em uma aplicação web, não deixe de colocar o link de acesso aqui.
-
 ## 📁 Estrutura de pastas
 
-Dentre os arquivos presentes na raiz do projeto, definem-se:
+Estrutura atual (principais arquivos e diretórios na raiz do projeto):
 
-- <b>readme.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
-
-- <b>assets</b>: todas as imagens e mídias utilizadas nos notebooks e documentação são posicionadas aqui.
-
-- <b>documents</b>: aqui estarão todos os documentos do projeto. Há também uma pasta denominada <b>extras</b> onde estão presentes documentos complementares.
-
-- <b>notebooks</b>: todos os Jupyter Notebooks criados para desenvolvimento do projeto.
+```
+/ (raiz do projeto)
+├── README.md
+├── assets/
+│   ├── inteli.png
+│   └── ...(imagens e mídias usadas na documentação)
+├── documents/
+│   └── documentacao.md   (Documentação do projeto)
+├── notebooks/
+│   └── *.ipynb           (Jupyter Notebooks de desenvolvimento)
+├── requirements.txt      (Dependências do projeto)
+└── .gitignore
+```
 
 ## 💻 Execução dos projetos
 
-Descreva aqui os requisitos e os passos necessários para execução dos notebooks localmente (VS Code com instalação de Python) e no ambiente Google Colab
+## Requisitos
+- Python 3.8+ (recomenda-se 3.10)
+- Git
+- VS Code com extensões: Python, Jupyter
+- Arquivos do projeto (clone do repositório). O projeto já contém `requirements.txt` e `notebooks/`.
 
-> Não deixe de informar para o caso do Colab que, se o utilizador não salvar uma cópia do notebook no seu Google Drive próprio, não será possível salvar as alterações realizadas no arquivo.
+## Execução local (VS Code + Python)
+1. Clone o repositório:
+    ```
+    git clone <URL_DO_REPOSITORIO>
+    cd <REPO>
+    ```
+2. Crie e ative um ambiente virtual:
+    - Windows:
+      ```
+      python -m venv .venv
+      .venv\Scripts\activate
+      ```
+    - macOS / Linux:
+      ```
+      python -m venv .venv
+      source .venv/bin/activate
+      ```
+3. Atualize pip e instale dependências:
+    ```
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
+4. Abra o projeto no VS Code:
+    - Selecione o intérprete Python do ambiente `.venv`.
+    - Abra o notebook em `notebooks/` e use a extensão Jupyter para executar células.
+    - Alternativa: iniciar Jupyter localmente:
+      ```
+      jupyter notebook
+      ```
+5. Dados e caminhos:
+    - Verifique se os arquivos de dados usados pelos notebooks estão nas pastas esperadas (paths relativos).
+    - Caso necessário, ajuste caminhos nos notebooks para apontar para `documents/` ou `assets/`.
 
 ## 🗃 Histórico de lançamentos
 
