@@ -1664,6 +1664,62 @@ Semana 12:
 &emsp; A superioridade do Nearest Centroid se consolida ao longo do semestre. Nas Semanas 08 e 12, o modelo lidera consistentemente em ambas as métricas, superando os algoritmos de *boosting*. Na Semana 08, o NC atinge **0.7692 de Recall** e **0.5405 de F1-Score**. Na conclusão da análise, na Semana 12, o modelo alcança o **pico de assertividade**, registrando um **F1-Score de 0.6909**, o mais alto de todos os modelos testados. Logo, o resultado demonstra que o NC evolui para uma **predição altamente confiável**, capaz de minimizar Falsos Positivos sem comprometer o Recall, que se mantém robusto em **0.7307**.
 
 
+### 4.5. Avaliação do Modelo
+
+&emsp; Para solucionar o problema de evasão e reprovação na matéria de Pensamento Computacional da universidade EAFIT, foi desenvolvido um modelo preditivo baseado no algoritmo *Nearest Centroid*. Este algoritmo foi selecionado por apresentar o melhor desempenho em métricas de classificação durante as semanas de previsão nas semanas 6, 8 e 12.
+
+&emsp; O principal objetivo do modelo é identificar o maior número possível de alunos em risco real de reprovação. Por essa razão, a otimização focou em maximizar a métrica de **Recall (Sensibilidade)**. Isso significa que o sistema foi calibrado para minimizar os falsos negativos (não alertar um aluno que irá reprovar). Como consequência, o modelo pode gerar alguns falsos positivos (alertar um aluno que seria aprovado), uma decisão estratégica considerada mais benéfica, pois é melhor intervir preventivamente do que omitir um alerta crucial. Dessa forma, a solução atende às expectativas ao construir um sistema de alerta precoce eficaz.
+
+&emsp; Adicionalmente, a solução foi integrada a um *dashboard* interativo. Esta ferramenta permite que professores e coordenadores monitorem o desempenho acadêmico das turmas, submetam novos dados para obter predições em tempo real e visualizem a situação de risco de cada estudante. O sistema mitiga as dores das personas envolvidas:
+
+* **Aluno:** Recebe acompanhamento proativo e alertas sobre sua situação acadêmica.
+* **Professor:** Obtém uma ferramenta para identificar e auxiliar alunos em momentos decisivos do semestre.
+* **Diretor/Coordenador:** Ganha uma visão macro do desempenho acadêmico, permitindo a criação de estratégias institucionais mais eficazes.
+
+#### 4.5.1. Plano de Contingência
+
+&emsp; A implementação de um modelo preditivo em um ambiente acadêmico real exige a preparação para cenários adversos, onde o desempenho pode não atingir as expectativas. Para mitigar os riscos associados a possíveis falhas de predição, foi delineado um plano de contingência. O plano será ativado caso se observem certos gatilhos, como um aumento na taxa de reprovação geral em comparação com semestres anteriores, um excesso de falsos alarmes gerando intervenções desnecessárias, ou falhas críticas na detecção de alunos que acabam reprovando sem terem sido alertados.
+
+&emsp; Ao identificar um desses gatilhos, as ações imediatas envolverão a suspensão dos alertas preditivos para evitar a propagação de informações incorretas, a mudança de uma estratégia de intervenção individual para uma coletiva e a comunicação da situação ao corpo docente, que será orientado a intensificar o acompanhamento geral dos estudantes. Em paralelo, serão aplicadas estratégias pedagógicas alternativas, como aulões de revisão, plantões de dúvidas e a coleta de feedback dos alunos para obter dados qualitativos. 
+
+&emsp; Dessa maneira, caso o modelo preditivo não apresente os resultados esperados, o plano de contingência garante uma transição rápida e organizada para um sistema de suporte mais amplo, protegendo os alunos de possíveis falhas e utilizando a situação como uma oportunidade para coletar dados e aprimorar as estratégias pedagógicas da instituição.
+
+#### 4.5.2. Explicabilidade e Análise de Viés do Modelo
+
+&emsp; A interpretabilidade de um modelo é essencial para gerar confiança no sistema e, principalmente, para detectar vieses indesejados nos dados (MOLNAR, 2022). Para isso, foi utilizada a metodologia SHAP (*SHapley Additive exPlanations*) para analisar o impacto de cada variável nas previsões do modelo nas semanas 6, 8 e 12.
+
+&emsp; Os gráficos SHAP (Figuras x, x e x) ordenam as variáveis pela sua importância global. Cada ponto no gráfico representa um aluno, e sua posição no eixo horizontal indica o impacto daquela variável na previsão final (valores positivos aumentam a chance de "reprovado", valores negativos aumentam a de "aprovado"). A cor indica o valor da variável (vermelho para alto, azul para baixo).
+
+<div align='center'>
+ <sup>Figura x: Análise de explicabilidade SHAP para o modelo da semana 6</sup>
+ <br>
+ <img src="../assets/explicabilidade8.png" alt="Gráfico SHAP Semana 6" width="700">
+ <br>
+ <sub>Fonte: Material produzido pelos autores (2025).</sub>
+</div>
+<br>
+<div align='center'>
+ <sup>Figura x: Análise de explicabilidade SHAP para o modelo da semana 8</sup>
+ <br>
+ <img src="../assets/explicabilidade6.png" alt="Gráfico SHAP Semana 8" width="700">
+ <br>
+ <sub>Fonte: Material produzido pelos autores (2025).</sub>
+</div>
+<br>
+<div align='center'>
+ <sup>Figura x: Análise de explicabilidade SHAP para o modelo da semana 12</sup>
+ <br>
+ <img src="../assets/explicabilidade8.png" alt="Gráfico SHAP Semana 12" width="700">
+ <br>
+ <sub>Fonte: Material produzido pelos autores (2025).</sub>
+</div>
+
+&emsp; A análise dos gráficos revelou os seguintes *insights*:
+
+1.  **Desempenho Acadêmico:** Conforme esperado, as notas das avaliações (`Quiz1` a `Quiz6`, `Parcial_1`) são preditores-chave. Valores baixos empurram a previsão para reprovação, enquanto valores altos a direcionam para aprovação. Isso confirma que o modelo aprendeu uma lógica academicamente coerente.
+
+2.  **Relevância de Cursos STEM:** A variável `STEM_SI` (se o aluno pertence a um curso de tecnologia) apresenta baixo impacto em todas as análises, mostrando que a aprovação de um aluno não está relacionado ao seu curso de interesse, mas sim ao seu desempenho individual.
+
 ## <a name="c5"></a>5. Conclusões e Recomendações
 ```
 Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de negócios em relação ao uso desse modelo. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras, como um manual de usuário mais detalhado na seção "Anexos". Não se esqueça também das pessoas que serão potencialmente afetadas pelas decisões do modelo preditivo e elabore recomendações que ajudem seu parceiro a tratá-las de maneira estratégica e ética.
@@ -1680,6 +1736,8 @@ Remova este bloco ao final
 [EAFIT HISTORIA NOTICIAS] "EAFIT, hija de la Medellín de los 60". Disponível em: https://www.eafit.edu.co/institucional/historia/noticias/eafit-hija-de-la-medellin-de-los-60. Acesso em: 11 de ago. de 2025.
 
 [EAFIT NOTICIAS] "La ANDI reconoció a EAFIT por 65 años de impacto social y legado de futuro". Disponível em: https://www.eafit.edu.co/noticias/eafit-es-noticia/ANDI-reconocio-EAFIT-65anios-impacto-social. Acesso em: 11 de ago. de 2025.
+
+[MOLNAR] MOLNAR, Christoph. Interpretable Machine Learning: a Guide for Making Black Box Models Explainable. 2. ed. [S.l.]: Christoph Molnar, 2022. Disponível em: https://christophm.github.io/interpretable-ml-book/. Acesso em: 1 out. 2025.
 
 [QS QUACQUARELLI SYMONDS] "QS World University Rankings 2025". Disponível em: https://www.topuniversities.com/university-rankings/world-university-rankings/2025. Acesso em: 11 de ago. de 2025.
 
