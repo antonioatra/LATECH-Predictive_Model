@@ -86,7 +86,7 @@
       python -m venv .venv
       source .venv/bin/activate
       ```
-3. Atualize pip e instale dependências (certifique-se de que `streamlit` esteja nas dependências; caso contrário instale manualmente):
+3. Atualize pip e instale dependências:
     ```
     pip install --upgrade pip
     pip install -r requirements.txt
