@@ -1670,7 +1670,7 @@ Semana 12:
 
 &emsp; O principal objetivo do modelo é identificar o maior número possível de alunos em risco real de reprovação. Por essa razão, a otimização focou em maximizar a métrica de **Recall (Sensibilidade)**. Isso significa que o sistema foi calibrado para minimizar os falsos negativos (não alertar um aluno que irá reprovar). Como consequência, o modelo pode gerar alguns falsos positivos (alertar um aluno que seria aprovado), uma decisão estratégica considerada mais benéfica, pois é melhor intervir preventivamente do que omitir um alerta crucial. Dessa forma, a solução atende às expectativas ao construir um sistema de alerta precoce eficaz.
 
-&emsp; Adicionalmente, a solução foi integrada a um *dashboard* interativo. Esta ferramenta permite que professores e coordenadores monitorem o desempenho acadêmico das turmas, submetam novos dados para obter predições em tempo real e visualizem a situação de risco de cada estudante. O sistema mitiga as dores das personas envolvidas:
+&emsp; Adicionalmente, a solução foi integrada a um *dashboard* interativo. Esta ferramenta permite que professores e coordenadores monitorem o desempenho acadêmico dos alunos, submetam novos dados para obter predições em tempo real e visualizem a situação de risco de cada estudante. O sistema mitiga as dores das personas envolvidas:
 
 * **Aluno:** Recebe acompanhamento proativo e alertas sobre sua situação acadêmica.
 * **Professor:** Obtém uma ferramenta para identificar e auxiliar alunos em momentos decisivos do semestre.
