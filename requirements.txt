@@ -50,3 +50,4 @@ traitlets==5.14.3
 tzdata==2025.2
 wcwidth==0.2.13
 shap==0.47.2
+streamlit==1.50.0
