@@ -35,21 +35,30 @@
 &emsp; Com isso, espera-se otimizar os recursos de acompanhamento, reduzir taxas de reprovação e evasão, além de promover melhorias no desempenho acadêmico. A ferramenta também oferecerá insights sobre quais fatores mais influenciam o resultado final, apoiando decisões pedagógicas baseadas em dados.
 
 ## 📁 Estrutura de pastas
-
-Estrutura atual (principais arquivos e diretórios na raiz do projeto):
-
+(Arquivos e diretórios na raiz do projeto):
 ```
 / (raiz do projeto)
+│
 ├── README.md
+│
 ├── assets/
 │   ├── inteli.png
 │   └── ...(imagens e mídias usadas na documentação)
+│
 ├── documents/
-│   └── documentacao.md   (Documentação do projeto)
+│   └── documentacao.md      (Documentação do projeto)
+│
 ├── notebooks/
-│   └── *.ipynb           (Jupyter Notebooks de desenvolvimento)
-├── requirements.txt      (Dependências do projeto)
-└── .gitignore
+│   ├── anexos/              (Notebook Jupyter com os modelos não utilizados)
+│   ├── dados/               (Pasta onde os dados tratados são armazenados)
+│   ├── modelos_treinados/   (Arquivos .pkl com os modelos já treinados)
+│   ├── notebook.ipynb       (Jupyter Notebook  com o modelo utilizado pelo projeto)
+│   └── notebook.py          (Cria o front com o streamlit)
+│
+├── requirements.txt         (Dependências do projeto)
+│
+├──.gitattributes
+└──.gitignore
 ```
 
 ## 💻 Execução dos projetos
@@ -57,8 +66,8 @@ Estrutura atual (principais arquivos e diretórios na raiz do projeto):
 ## Requisitos
 - Python 3.8+ (recomenda-se 3.10)
 - Git
-- VS Code com extensões: Python, Jupyter
-- Arquivos do projeto (clone do repositório). O projeto já contém `requirements.txt` e `notebooks/`.
+- VS Code com extensões: Python e Jupyter
+- Arquivos do projeto (clone do repositório). O projeto contém `requirements.txt`.
 
 ## Execução local (VS Code + Python)
 1. Clone o repositório:
@@ -77,21 +86,22 @@ Estrutura atual (principais arquivos e diretórios na raiz do projeto):
       python -m venv .venv
       source .venv/bin/activate
       ```
-3. Atualize pip e instale dependências:
+3. Atualize pip e instale dependências (certifique-se de que `streamlit` esteja nas dependências; caso contrário instale manualmente):
     ```
     pip install --upgrade pip
     pip install -r requirements.txt
     ```
 4. Abra o projeto no VS Code:
     - Selecione o intérprete Python do ambiente `.venv`.
-    - Abra o notebook em `notebooks/` e use a extensão Jupyter para executar células.
-    - Alternativa: iniciar Jupyter localmente:
-      ```
-      jupyter notebook
-      ```
-5. Dados e caminhos:
-    - Verifique se os arquivos de dados usados pelos notebooks estão nas pastas esperadas (paths relativos).
-    - Caso necessário, ajuste caminhos nos notebooks para apontar para `documents/` ou `assets/`.
+    - Para trabalhar com notebooks Jupyter, abra o arquivo `.ipynb` em `notebooks/` e use a extensão Jupyter.
+
+5. Executar a aplicação Streamlit:
+    ```
+    cd notebooks
+    streamlit run notebook.py
+    ```
+    - O Streamlit abrirá a interface no navegador (provavelmente http://localhost:8501).
+    - Caso queira, interrompa com Ctrl+C no terminal para parar a aplicação.
 
 ## 🗃 Histórico de lançamentos
 
