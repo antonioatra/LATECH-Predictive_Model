@@ -135,6 +135,9 @@ def preparar_dados_predicao(df_dados, colunas_modelo):
     """Prepara dados para predição garantindo que todas as features estejam presentes"""
     X_pred = pd.DataFrame(index=df_dados.index)
     
+    # ========== VERIFICAÇÃO ADICIONAL (NOVO) ==========
+    colunas_criticas_ausentes = []
+    
     for col in colunas_modelo:
         if col in df_dados.columns:
             # Usar dados reais e normalizar se necessário
@@ -143,6 +146,10 @@ def preparar_dados_predicao(df_dados, colunas_modelo):
                 valores = valores / 5.0  # Normalizar notas
             X_pred[col] = valores
         else:
+            # Registrar colunas críticas ausentes
+            if col.startswith(('Quiz', 'Parcial', 'TempoQ')):
+                colunas_criticas_ausentes.append(col)
+            
             # Valores padrão para features ausentes
             if 'Genero_Masculino' in col:
                 X_pred[col] = np.random.choice([0, 1], len(df_dados), p=[0.4, 0.6])
@@ -150,6 +157,10 @@ def preparar_dados_predicao(df_dados, colunas_modelo):
                 X_pred[col] = np.random.choice([0, 1], len(df_dados), p=[0.3, 0.7])
             else:
                 X_pred[col] = 0
+    
+    # Alertar se houver colunas críticas ausentes
+    if colunas_criticas_ausentes:
+        st.warning(f"⚠️ **Atenção:** Colunas preenchidas com valores padrão (podem afetar predições): {', '.join(colunas_criticas_ausentes)}")
     
     return X_pred.fillna(0)
 
@@ -175,7 +186,7 @@ st.image(img)
 df_modelo1, df_modelo2, df_modelo3, df_consolidado = carregar_dados_processados()
 
 if df_modelo1 is None:
-    st.error("❌ Dados não encontrados! Execute primeiro o pipeline de processamento.")
+    st.error("Dados não encontrados! Execute primeiro o pipeline de processamento.")
     st.stop()
 
 # ==================== DASHBOARD PRINCIPAL ====================
@@ -224,7 +235,7 @@ tem_labels = False
 
         
 if fonte_dados == "Carregar dados da predição":
-    uploaded_file = st.file_uploader("Envie arquivo com dados de teste", type=["csv", "xlsx"])
+    uploaded_file = st.file_uploader("Envie arquivo com dados de teste", type=["csv"])
     if uploaded_file:
         try:
             if uploaded_file.name.endswith('.csv'):
@@ -232,15 +243,35 @@ if fonte_dados == "Carregar dados da predição":
             else:
                 df_predicao = pd.read_excel(uploaded_file)
             
+            # ========== VALIDAÇÃO DE COLUNAS (NOVO) ==========
+            # Identificar colunas obrigatórias (notas/quizzes)
+            colunas_obrigatorias = [col for col in colunas_disponiveis 
+                                    if col.startswith(('Quiz', 'Parcial', 'TempoQ'))]
+            
+            # Verificar colunas faltantes
+            colunas_faltantes = set(colunas_obrigatorias) - set(df_predicao.columns)
+            
+            if colunas_faltantes:
+                st.error(f"❌ **Arquivo inválido!**")
+                st.error(f"**Colunas obrigatórias ausentes:** {', '.join(sorted(colunas_faltantes))}")
+                st.info(f"**Colunas esperadas para Semana {semana_atual}:** {', '.join(colunas_disponiveis)}")
+                st.warning("Por favor, corrija o arquivo CSV e tente novamente.")
+                st.stop()  # Para a execução
+            
             # Verificar se tem coluna de resultado real
             if 'Reprovou' in df_predicao.columns:
                 tem_labels = True
-                st.success(f"Dados carregados com {len(df_predicao)} registros (com labels reais)")
+                st.success(f"✅ Dados carregados com {len(df_predicao)} registros (com labels reais)")
             else:
-                st.success(f"Dados carregados com {len(df_predicao)} registros")
+                st.success(f"✅ Dados carregados com {len(df_predicao)} registros")
+            
+            # Mostrar colunas encontradas
+            with st.expander("🔍 Ver colunas detectadas no arquivo"):
+                st.write(f"**Colunas encontradas:** {', '.join(df_predicao.columns.tolist())}")
                 
         except Exception as e:
-            st.error(f"Erro ao carregar arquivo: {e}")
+            st.error(f"❌ Erro ao carregar arquivo: {e}")
+            st.stop()
             
 
 if df_predicao is None or len(df_predicao) == 0:
@@ -450,106 +481,85 @@ with col1:
     st.plotly_chart(fig_pizza, use_container_width=True)
 
 with col2:
-    st.subheader("Distribuição da Média da Notas")
+    st.subheader("Distribuição da Média das Notas")
     
-    # Criar histograma das probabilidades de reprovação com cores melhores
-    fig_hist = go.Figure(data=[go.Histogram(
-        x=df_exibicao['Media_Atual'],
-        nbinsx=10,
-        marker_color='#6366f1',  # Índigo mais vibrante
-        opacity=0.8,
-        marker_line_color='#4f46e5',
+    # Separar médias por predição
+    df_exibicao['Predicao_Binaria'] = predicoes
+    medias_aprovados = df_exibicao[df_exibicao['Predicao_Binaria'] == 0]['Media_Atual']
+    medias_reprovados = df_exibicao[df_exibicao['Predicao_Binaria'] == 1]['Media_Atual']
+    
+    # Calcular estatísticas
+    media_aprovados = medias_aprovados.mean() if len(medias_aprovados) > 0 else 0
+    media_reprovados = medias_reprovados.mean() if len(medias_reprovados) > 0 else 0
+    
+    # Criar histograma sobreposto com cores distintas
+    fig_hist = go.Figure()
+    
+    # Histograma dos aprovados
+    fig_hist.add_trace(go.Histogram(
+        x=medias_aprovados,
+        name=f'Aprovados (média: {media_aprovados:.2f})',
+        nbinsx=15,
+        marker_color='#22c55e',  # Verde
+        opacity=0.7,
+        marker_line_color='#16a34a',
         marker_line_width=1
-    )])
+    ))
+    
+    # Histograma dos reprovados
+    fig_hist.add_trace(go.Histogram(
+        x=medias_reprovados,
+        name=f'Reprovados (média: {media_reprovados:.2f})',
+        nbinsx=15,
+        marker_color='#ef4444',  # Vermelho
+        opacity=0.7,
+        marker_line_color='#dc2626',
+        marker_line_width=1
+    ))
+    
+    # Adicionar linhas verticais para as médias
+    fig_hist.add_vline(
+        x=media_aprovados, 
+        line_dash="dash", 
+        line_color="#16a34a", 
+        line_width=2,
+        annotation_text=f"Média Aprovados: {media_aprovados:.2f}",
+        annotation_position="top"
+    )
+    
+    fig_hist.add_vline(
+        x=media_reprovados, 
+        line_dash="dash", 
+        line_color="#dc2626", 
+        line_width=2,
+        annotation_text=f"Média Reprovados: {media_reprovados:.2f}",
+        annotation_position="bottom"
+    )
     
     fig_hist.update_layout(
-        
+        barmode='overlay',  # Sobrepor os histogramas
+        xaxis_title="Média das Notas",
+        yaxis_title="Quantidade de Alunos",
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
+        ),
+        height=400,
+        hovermode='x unified'
     )
     
     st.plotly_chart(fig_hist, use_container_width=True)
-
-# Análise de performance APENAS se temos dados de validação
-if mostrar_metricas_reais and 'Reprovou' in df_predicao.columns:
-    st.subheader("Matriz de Confusão (Dados de Validação)")
     
-    # Calcular matriz de confusão
-    cm = confusion_matrix(df_predicao['Reprovou'], predicoes)
-    
-    # Criar heatmap da matriz de confusão
-    fig_cm = go.Figure(data=go.Heatmap(
-        z=cm,
-        x=['Previsto: Aprovado', 'Previsto: Reprovado'],
-        y=['Real: Aprovado', 'Real: Reprovado'],
-        colorscale='Blues',
-        text=cm,
-        texttemplate="%{text}",
-        textfont={"size": 16}
-    ))
-    
-    fig_cm.update_layout(
-        title="Matriz de Confusão - Performance do Modelo",
-        height=400
-    )
-    
-    st.plotly_chart(fig_cm, use_container_width=True)
+    # Adicionar métricas resumidas abaixo do gráfico
+    col_a, col_b, col_c = st.columns(3)
+    with col_a:
+        st.metric("📗 Média Aprovados", f"{media_aprovados:.2f}")
+    with col_b:
+        st.metric("📕 Média Reprovados", f"{media_reprovados:.2f}")
 
-# Download dos resultados
-st.subheader("Exportar Resultados")
-
-# Preparar dados para download
-df_download = df_exibicao_final.copy()
-df_download['Fonte_Dados'] = fonte_dados
-df_download['Semana_Predicao'] = semana_atual
-df_download['Modelo_Usado'] = modelo_arquivo
-
-csv_export = df_download.to_csv(index=False)
-
-col1, col2 = st.columns(2)
-with col1:
-    st.download_button(
-        "Download Predições Completas",
-        csv_export,
-        f"predicoes_semana_{semana_atual}_{fonte_dados.lower().replace(' ', '_')}.csv",
-        "text/csv",
-        key="download_predicoes"
-    )
-
-with col2:
-    # Relatório resumo
-    relatorio = f"""# Relatório de Predições - LATECH
-    
-## Configurações
-- **Semana:** {semana_atual}
-- **Fonte dos Dados:** {fonte_dados}
-- **Grupo Analisado:** {grupo_selecionado}
-- **Modelo Utilizado:** {modelo_arquivo}
-
-## Resultados Gerais
-- **Total de Alunos Analisados:** {total_alunos}
-- **Aprovados Previstos:** {aprovados_previstos} ({100-taxa_reprovacao:.1f}%)
-- **Reprovados Previstos:** {reprovados_previstos} ({taxa_reprovacao:.1f}%)
-
-## Métricas do Modelo
-- **Precisão:** {precisao_modelo:.1f}%
-{"- **Recall:** " + f"{recall_modelo:.1f}%" if tem_labels else ""}
-{"- **F1-Score:** " + f"{f1_modelo:.1f}%" if tem_labels else ""}
-
-## Observações
-{f"- Análise realizada com dados de validação (métricas reais disponíveis)" if tem_labels and 'Reprovou' in df_predicao.columns else "- Análise preditiva (sem dados reais para comparação)"}
-- Probabilidades calculadas baseadas na distância do modelo NearestCentroid
-- Notas apresentadas na escala original (0-5)
-
----
-*Relatório gerado automaticamente pelo Sistema LATECH*
-    """
-    
-    st.download_button(
-        "📄 Download Relatório",
-        relatorio,
-        f"relatorio_semana_{semana_atual}.md",
-        "text/markdown",
-        key="download_relatorio"
-    )
 
 st.markdown("---")
 st.markdown(
