@@ -1,1 +1,0 @@
-Pasta para geração do csv dos dados

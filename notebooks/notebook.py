@@ -31,7 +31,7 @@ st.markdown("""
         border-radius: 10px;
         margin-bottom: 2rem;
     }
-    
+
     .metric-card {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         padding: 1.5rem;
@@ -40,19 +40,19 @@ st.markdown("""
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    
+
     .metric-value {
         font-size: 2.5rem;
         font-weight: bold;
         margin: 0;
     }
-    
+
     .metric-label {
         font-size: 1rem;
         opacity: 0.9;
         margin-top: 0.5rem;
     }
-    
+
     .prediction-approved {
         background-color: #10b981;
         color: white;
@@ -61,7 +61,7 @@ st.markdown("""
         font-size: 0.875rem;
         font-weight: 500;
     }
-    
+
     .prediction-rejected {
         background-color: #ef4444;
         color: white;
@@ -78,7 +78,7 @@ def carregar_dados_processados():
     """Carrega dados já processados salvos"""
     try:
         df_modelo1 = pd.read_csv('dados/dados_modelo1.csv')
-        df_modelo2 = pd.read_csv('dados/dados_modelo2.csv') 
+        df_modelo2 = pd.read_csv('dados/dados_modelo2.csv')
         df_modelo3 = pd.read_csv('dados/dados_modelo3.csv')
         df_consolidado = pd.read_csv('dados/dados_consolidado.csv')
         return df_modelo1, df_modelo2, df_modelo3, df_consolidado
@@ -119,8 +119,6 @@ def carregar_dados_teste():
     except Exception as e:
         st.error(f"Erro ao carregar dados de teste: {e}")
         return {}
-
-
 
 def carregar_modelo(nome_arquivo):
     """Carrega modelo treinado"""
@@ -167,14 +165,14 @@ def preparar_dados_predicao(df_dados, colunas_modelo):
 def avaliar_modelo(modelo, X_test, y_test):
     """Avalia performance do modelo nos dados de teste"""
     y_pred = modelo.predict(X_test)
-    
+
     metricas = {
         'accuracy': np.mean(y_pred == y_test),
         'recall': recall_score(y_test, y_pred, pos_label=1),
         'f1_score': f1_score(y_test, y_pred, pos_label=1),
         'confusion_matrix': confusion_matrix(y_test, y_pred)
     }
-    
+
     return metricas, y_pred
 
 img = Image.open("../assets/logo.png")
@@ -383,7 +381,7 @@ with col4:
 if mostrar_metricas_reais:
     st.subheader("📊 Métricas de Avaliação do Modelo (Dados de Validação)")
     col1, col2, col3 = st.columns(3)
-    
+
     with col1:
         st.metric("Acurácia", f"{precisao_modelo:.1f}%")
     with col2:
@@ -567,13 +565,13 @@ st.markdown(
     <div style='text-align: center; color: #666; margin-top: 2rem;'>
         <h4>🎓 LATECH - Sistema Preditivo de Aprovação Acadêmica</h4>
         <p>
-            Desenvolvido com Streamlit e Machine Learning | 
+            Desenvolvido com Streamlit e Machine Learning |
             <strong>Recursos:</strong> Predições em Tempo Real, Análise SHAP, Gestão de Modelos
         </p>
         <p>
             <em>Versão 2.0 - Dashboard com Dados de Teste Separados</em>
         </p>
     </div>
-    """, 
+    """,
     unsafe_allow_html=True
 )
