@@ -37,18 +37,16 @@
 &emsp; Apesar de seu histórico de sucesso, a EAFIT enfrenta o desafio de otimizar a experiência de aprendizado dos estudantes em um contexto cada vez mais digital. O problema consiste na necessidade de desenvolver uma metodologia para adaptar estratégias de ensino de países mais desenvolvidos à realidade e aos recursos da Colômbia.
 
 ## <a name="c2"></a>2. Objetivos e Justificativa
-Em um cenário acadêmico cada vez mais orientado por dados, o uso de ferramentas de **análise preditiva** tornou-se essencial para apoiar decisões pedagógicas e estratégicas. A Universidad EAFIT, reconhecida por sua excelência e inovação, enfrenta o desafio contemporâneo de aprimorar a experiência de aprendizagem e reduzir índices de reprovação em um contexto cada vez mais digital e dinâmico.
+&emsp; Em um cenário acadêmico cada vez mais orientado por dados, o uso de ferramentas de **análise preditiva** tornou-se essencial para apoiar decisões pedagógicas e estratégicas. A Universidad EAFIT, reconhecida por sua excelência e inovação, enfrenta o desafio contemporâneo de aprimorar a experiência de aprendizagem e reduzir índices de reprovação em um contexto cada vez mais digital e dinâmico.
 
-  Nesse contexto, o desenvolvimento de um **modelo preditivo para identificação de alunos em risco de reprovação** surge como uma iniciativa estratégica voltada à **transformação digital do ensino**. O projeto visa integrar ciência de dados, tecnologia e propósito educacional, oferecendo uma solução que antecipa comportamentos de risco e apoia a tomada de decisão docente e institucional.
+&emsp; Nesse contexto, o desenvolvimento de um **modelo preditivo para identificação de alunos em risco de reprovação** surge como uma iniciativa estratégica voltada à **transformação digital do ensino**. O projeto visa integrar ciência de dados, tecnologia e propósito educacional, oferecendo uma solução que antecipa comportamentos de risco e apoia a tomada de decisão docente e institucional.
 
-  Desenvolvido pelo grupo **THROXY**, o projeto combina rigor técnico e sensibilidade pedagógica, buscando promover intervenções precoces e personalizadas que favoreçam o sucesso acadêmico e fortaleçam a missão institucional da EAFIT de inspirar vidas, criar conhecimento e transformar a sociedade.
+&emsp; Desenvolvido pelo grupo **THROXY**, o projeto combina rigor técnico e sensibilidade pedagógica, buscando promover intervenções precoces e personalizadas que favoreçam o sucesso acadêmico e fortaleçam a missão institucional da EAFIT de inspirar vidas, criar conhecimento e transformar a sociedade.
 
----
-
-### **2.1 Objetivos**
+### 2.1 Objetivos
 
 **Objetivo Geral:**  
-   Desenvolver um modelo preditivo capaz de identificar, com base em dados históricos de desempenho acadêmico, os alunos com maior probabilidade de reprovação, a fim de subsidiar ações pedagógicas e estratégicas da Universidad EAFIT.
+&emsp; Desenvolver um modelo preditivo capaz de identificar, com base em dados históricos de desempenho acadêmico, os alunos com maior probabilidade de reprovação, a fim de subsidiar ações pedagógicas e estratégicas da Universidad EAFIT.
 
 **Objetivos Específicos:**
 
@@ -64,27 +62,21 @@ Em um cenário acadêmico cada vez mais orientado por dados, o uso de ferramenta
 
 * Oferecer subsídios à equipe docente e à gestão institucional para **intervenções preventivas** e decisões baseadas em evidências.
 
----
+### 2.2 Proposta de Solução
 
-### **2.2 Proposta de Solução**
+&emsp; A solução proposta consiste em um **modelo preditivo supervisionado**, treinado a partir de dados acadêmicos de estudantes da EAFIT, com o propósito de classificar alunos em atual estado de aprovação ou reprovação.
 
-  A solução proposta consiste em um **modelo preditivo supervisionado**, treinado a partir de dados acadêmicos de estudantes da EAFIT, com o propósito de classificar alunos em atual estado de aprovação ou reprovação.
+&emsp; O sistema utiliza algoritmos de aprendizado de máquina para analisar padrões de notas, tempos de execução de quizzes, desempenho em projetos e evolução ao longo do semestre. Os resultados são apresentados por meio de um **dashboard interativo**, que permite aos docentes e coordenadores monitorar os alunos em tempo real, identificando e agindo antecipadamente com intervenções direcionadas.
 
-  O sistema utiliza algoritmos de aprendizado de máquina para analisar padrões de notas, tempos de execução de quizzes, desempenho em projetos e evolução ao longo do semestre. Os resultados são apresentados por meio de um **dashboard interativo**, que permite aos docentes e coordenadores monitorar os alunos em tempo real, identificando e agindo antecipadamente com intervenções direcionadas.
+&emsp; Além de prever resultados, o modelo busca **explicar os fatores que influenciam o desempenho**, promovendo transparência e auxiliando os professores na compreensão do “porquê” por trás das previsões. Dessa forma, a solução atua tanto como uma ferramenta de **análise diagnóstica** quanto de **gestão pedagógica inteligente**.
 
-  Além de prever resultados, o modelo busca **explicar os fatores que influenciam o desempenho**, promovendo transparência e auxiliando os professores na compreensão do “porquê” por trás das previsões. Dessa forma, a solução atua tanto como uma ferramenta de **análise diagnóstica** quanto de **gestão pedagógica inteligente**.
+### 2.3 Justificativa
 
----
+&emsp; A implementação de modelos preditivos na educação responde à necessidade de **gestão baseada em evidências**, permitindo que decisões acadêmicas sejam tomadas de forma mais precisa e proativa. Em vez de identificar a reprovação apenas ao final do semestre, o sistema possibilita **ações preventivas**, oferecendo aos professores meios para agir antes que o problema se consolide.
 
-### **2.3 Justificativa**
+&emsp; Tal abordagem traz benefícios diretos à instituição, como **redução da evasão**, **melhoria na taxa de aprovação**, **aumento do engajamento estudantil** e **otimização do acompanhamento docente**. Além disso, ao proporcionar explicabilidade e transparência, o projeto promove a **confiança no uso da inteligência artificial** e reforça o compromisso ético com o uso responsável de dados educacionais.
 
-  A implementação de modelos preditivos na educação responde à necessidade de **gestão baseada em evidências**, permitindo que decisões acadêmicas sejam tomadas de forma mais precisa e proativa. Em vez de identificar a reprovação apenas ao final do semestre, o sistema possibilita **ações preventivas**, oferecendo aos professores meios para agir antes que o problema se consolide.
-
-  Tal abordagem traz benefícios diretos à instituição, como **redução da evasão**, **melhoria na taxa de aprovação**, **aumento do engajamento estudantil** e **otimização do acompanhamento docente**. Além disso, ao proporcionar explicabilidade e transparência, o projeto promove a **confiança no uso da inteligência artificial** e reforça o compromisso ético com o uso responsável de dados educacionais.
-
-  Em suma, o modelo proposto vai além de uma ferramenta técnica: representa um **instrumento de transformação educacional**, unindo ciência de dados, empatia pedagógica e inovação tecnológica em prol do sucesso dos estudantes e da excelência acadêmica da Universidad EAFIT.
-
-```
+&emsp; Em suma, o modelo proposto vai além de uma ferramenta técnica: representa um **instrumento de transformação educacional**, unindo ciência de dados, empatia pedagógica e inovação tecnológica em prol do sucesso dos estudantes e da excelência acadêmica da Universidad EAFIT.
 
 ## <a name="c3"></a>3. Metodologia
 &emsp; Neste projeto, será usada a metodologia CRISP-DM (Cross Industry Standard Process for Data Mining). Basicamente, essa metodologia serve para ajudar a criar modelos a partir da análise de dados, com o objetivo de identificar possíveis problemas e no caso atual, será usada para ajudar a prever alunos com chance de reprovação. Pensada por um conjunto de empresas de mineração de dados, como SPSS e Daimler-Benz, por volta dos anos 1990, é dividida em 6 etapas denominadas Entendimento do negócio, Entendimento dos dados, Preparação dos dados, Modelagem, Avaliação e por ultimo Implementação. Um ponto importante é que o CRISP-DM não é uma linha reta: o processo é iterativo, ou seja, quando é terminado uma etapa, sempre existe a chance de voltar para uma anterior e melhorar o que já foi feito. As seis etapas dessa metodologia são:
