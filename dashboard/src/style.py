@@ -58,8 +58,8 @@ def carregar_css():
 def highlight_predictions(row):
     colors = []
     for col in row.index:
-        if col == 'Predição':
-            colors.append('background-color: #fca5a5; color: #7f1d1d;' if row[col] == 'Reprovado' else 'background-color: #86efac; color: #14532d;')
+        if col == 'Predição' or col == 'Predicción':
+            colors.append('background-color: #fca5a5; color: #7f1d1d;' if row[col] == 'Reprobado | Reprovado' else 'background-color: #86efac; color: #14532d;')
         else:
             colors.append('')
     return colors
@@ -77,10 +77,17 @@ def criar_footer():
     st.markdown(
         """
         <div style='text-align: center; color: #666; margin-top: 2rem;'>
-            <h4>🎓 LATECH - Sistema Preditivo de Aprovação Acadêmica</h4>
+            <h4>🎓 LATECH - Sistema predictivo de aprobación académica </h4>
             <p>
+              Desarrollado con Streamlit y aprendizaje automático | <strong>Características: </strong> Predicciones en tiempo real, análisis de diagnóstico y gestión pedagógica inteligente  
+            </p>
+            <p>
+                <em>Versión 2.0 - Dashboard con datos de prueba separados</em>
+            </p>
+            <h4>🎓 LATECH - Sistema Preditivo de Aprovação Acadêmica</h4>
+            <p>           
                 Desenvolvido com Streamlit e Machine Learning |
-                <strong>Recursos:</strong> Predições em Tempo Real, Análise SHAP, Gestão de Modelos
+                <strong>Recursos:</strong> Predições em Tempo Real, Análise Diagnóstica e Gestão Pedagógica Inteligente
             </p>
             <p>
                 <em>Versão 2.0 - Dashboard com Dados de Teste Separados</em>

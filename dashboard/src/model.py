@@ -19,7 +19,6 @@ def preparar_dados_predicao(df_dados, colunas_modelo):
     """Prepara dados para predição garantindo que todas as features estejam presentes"""
     X_pred = pd.DataFrame(index=df_dados.index)
     
-    # ========== VERIFICAÇÃO ADICIONAL (NOVO) ==========
     colunas_criticas_ausentes = []
     
     for col in colunas_modelo:
