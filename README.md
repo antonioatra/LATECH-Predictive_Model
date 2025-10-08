@@ -95,6 +95,7 @@
     ```
     pip install -r notebooks/requirements.txt
     ```
+    - Certifique-se de que os arquivo com os dados do primeiro e segundo semestre estão na raiz do projeto com os seguintes nomes: `Datos_Anonimo_20231_v2.xlsx` e `Datos_Anonimo_20231_v2.xlsx`.
     - Selecione o intérprete Python do ambiente `.venv`.
     - Para trabalhar com notebooks Jupyter, abra o arquivo `.ipynb` em `notebooks/` e use a extensão Jupyter.
 
