@@ -24,13 +24,13 @@ st.image(img)
 # Carregar o CSS da página
 stl.carregar_css()
 
-# Carregamento dos dados
-df_modelo1, df_modelo2, df_modelo3, df_consolidado = dl.carregar_dados_processados()
+# # Carregamento dos dados
+# df_modelo1, df_modelo2, df_modelo3, df_consolidado = dl.carregar_dados_processados()
 
-# Preventiva caso os dados nao sejam carregados
-if df_modelo1 is None:
-    st.error("Dados não encontrados! Execute primeiro o pipeline de processamento. | ¡Datos no encontrados! Ejecute primero el canal de procesamiento.")
-    st.stop()
+# # Preventiva caso os dados nao sejam carregados
+# if df_modelo1 is None:
+#     st.er("Dados não encontrados! Execute primeiro o pipeline de processamento. | ¡Datos no encontrados! Ejecute primero el canal de procesamiento.")
+#     st.stop()
 
 # Interface
 # Seção de configurações da predição
