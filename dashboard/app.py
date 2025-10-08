@@ -24,14 +24,6 @@ st.image(img)
 # Carregar o CSS da página
 stl.carregar_css()
 
-# Carregamento dos dados
-df_modelo1, df_modelo2, df_modelo3, df_consolidado = dl.carregar_dados_processados()
-
-# Preventiva caso os dados nao sejam carregados
-if df_modelo1 is None:
-    st.error("Dados não encontrados! Execute primeiro o pipeline de processamento. | ¡Datos no encontrados! Ejecute primero el canal de procesamiento.")
-    st.stop()
-
 # Interface
 # Seção de configurações da predição
 st.subheader("Configuración de predicción | Configurações de Predição")
@@ -49,17 +41,14 @@ with col_config2:
 # Selecionar modelo e dados baseado na semana
 if semana_atual == 6:
     modelo_arquivo = "modelo1_treinado.pkl"
-    df_base = df_consolidado  # Usar consolidado com valores inteiros
     colunas_disponiveis = ['Genero_Masculino','STEM_SI',  'Quiz1', 'Quiz2', 'Quiz3', 'TempoQ1', 'TempoQ2', 'TempoQ3']
     st.info("📊 Semana 6: Predicciones basadas en los primeros 3 cuestionarios | Semana 6: Predições baseadas nos primeiros 3 quizzes")
 elif semana_atual == 8:
     modelo_arquivo = "modelo2_treinado.pkl"
-    df_base = df_consolidado  # Usar consolidado com valores inteiros
     colunas_disponiveis = ['Genero_Masculino','STEM_SI', 'Quiz1', 'Quiz2', 'Quiz3','Quiz4', 'TempoQ1', 'TempoQ2', 'TempoQ3','TempoQ4', 'Parcial_1']
     st.info("📊 Semana 8: Predicciones con 4 cuestionarios + Parcial 1 | Semana 8: Predições com 4 quizzes + Parcial 1")
 else:  # semana 12
     modelo_arquivo = "modelo3_treinado.pkl"
-    df_base = df_consolidado  # Usar consolidado com valores inteiros
     colunas_disponiveis = ['Genero_Masculino','STEM_SI', 'Quiz1', 'Quiz2', 'Quiz3','Quiz4','Quiz5', 'Quiz6', 'TempoQ1', 'TempoQ2', 'TempoQ3','TempoQ4', 'TempoQ5', 'TempoQ6','Parcial_1' ]
     st.info("📊 Semana 12: Predicciones completas con 6 cuestionarios + 1 parcial | Semana 12: Predições completas com 6 quizzes + Parcial 1")
 
