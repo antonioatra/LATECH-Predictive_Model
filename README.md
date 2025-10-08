@@ -67,7 +67,7 @@
 - Python 3.8+ (recomenda-se 3.10)
 - Git
 - VS Code com extensões: Python e Jupyter
-- Arquivos do projeto (clone do repositório). O projeto contém `requirements.txt`.
+- Arquivos do projeto (clone do repositório).
 
 ## Execução local (VS Code + Python)
 1. Clone o repositório:
@@ -86,19 +86,26 @@
       python -m venv .venv
       source .venv/bin/activate
       ```
-3. Atualize pip e instale dependências:
+3. Atualize pip:
     ```
     pip install --upgrade pip
-    pip install -r requirements.txt
     ```
-4. Abra o projeto no VS Code:
+4. Rode os notebooks:
+    - Instale as dependências
+    ```
+    pip install -r notebooks/requirements.txt
+    ```
     - Selecione o intérprete Python do ambiente `.venv`.
     - Para trabalhar com notebooks Jupyter, abra o arquivo `.ipynb` em `notebooks/` e use a extensão Jupyter.
 
-5. Executar a aplicação Streamlit:
+5. Execute a aplicação Streamlit localmente:
+    - Instale as dependências
     ```
-    cd notebooks
-    streamlit run notebook.py
+    pip install -r dashboard/requirements.txt
+    ```
+    - Rode o projeto
+    ```
+    cd dashboard && streamlit run app.py
     ```
     - O Streamlit abrirá a interface no navegador (provavelmente http://localhost:8501).
     - Caso queira, interrompa com Ctrl+C no terminal para parar a aplicação.

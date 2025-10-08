@@ -1,0 +1,19 @@
+# Manipulação e análise de dados
+numpy
+pandas
+scipy
+
+# Visualização de dados
+matplotlib
+seaborn
+plotly
+openpyxl
+
+# Machine Learning e métricas
+scikit-learn
+imbalanced-learn
+shap
+
+# Suporte para ambiente interativo (Jupyter)
+ipython
+jupyter
