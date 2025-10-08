@@ -9,7 +9,7 @@ from sklearn.metrics import recall_score, f1_score, confusion_matrix
 def carregar_modelo(nome_arquivo):
     """Carrega modelo treinado"""
     try:
-        caminho = os.path.join("../notebooks/modelos_treinados", nome_arquivo)
+        caminho = os.path.join("modelos_treinados", nome_arquivo)
         with open(caminho, 'rb') as f:
             return pickle.load(f)
     except FileNotFoundError:

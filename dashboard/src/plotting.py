@@ -1,6 +1,5 @@
 # Arquivo direcionado a criação de gráficos do dashboard
 import plotly.graph_objects as go
-import pandas as pd
 
 def criar_grafico_pizza(aprovados, reprovados, semana):
     """Cria e retorna uma figura Plotly de gráfico de pizza."""
