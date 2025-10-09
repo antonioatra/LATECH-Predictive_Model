@@ -34,31 +34,35 @@
 &emsp; A solução proposta é um sistema de análise preditiva que utiliza dados históricos e parciais — como notas de avaliações, quizzes, tempo de resolução e informações demográficas — para estimar a probabilidade de aprovação antes do término do curso. O modelo fará previsões contínuas e atualizadas a cada 4 semanas, permitindo aos docentes agir rapidamente com estratégias personalizadas, como tutorias, revisões ou atividades de reforço.<br>
 &emsp; Com isso, espera-se otimizar os recursos de acompanhamento, reduzir taxas de reprovação e evasão, além de promover melhorias no desempenho acadêmico. A ferramenta também oferecerá insights sobre quais fatores mais influenciam o resultado final, apoiando decisões pedagógicas baseadas em dados.
 
-## 📁 Estrutura de pastas
-(Arquivos e diretórios na raiz do projeto):
+## 📁 Estrutura de pastas (escaneada na raiz do projeto — .venv ignorado)
+
 ```
 / (raiz do projeto)
 │
 ├── README.md
 │
+├── dashboard/
+│   ├── app.py                      # Streamlit app principal
+│   ├── requirements.txt            # Dependências específicas do dashboard
+│   ├── modelos_treinados/          # Arquivos .pkl com modelos treinados para o dashboard
+│   └── src/                        # Código do frontend / componentes do dashboard
+│
 ├── assets/
 │   ├── inteli.png
-│   └── ...(imagens e mídias usadas na documentação)
+│   └── ... (imagens e mídias usadas na documentação)
 │
 ├── documents/
-│   └── documentacao.md      (Documentação do projeto)
+│   └── documentacao.md             # Documentação do projeto
 │
 ├── notebooks/
-│   ├── anexos/              (Notebook Jupyter com os modelos não utilizados)
-│   ├── dados/               (Pasta onde os dados tratados são armazenados)
-│   ├── modelos_treinados/   (Arquivos .pkl com os modelos já treinados)
-│   ├── notebook.ipynb       (Jupyter Notebook  com o modelo utilizado pelo projeto)
-│   └── notebook.py          (Cria o front com o streamlit)
+│   ├── notebook.ipynb              # Notebook principal com o modelo usado
+│   ├── requirements.txt            # Dependências para os notebooks (se aplicável)
+│   ├── anexos/                     # Notebooks e materiais suplementares
+│   └── dados/                      # Dados tratados (arquivos .csv, .xlsx, etc.)
 │
-├── requirements.txt         (Dependências do projeto)
 │
-├──.gitattributes
-└──.gitignore
+├── .gitattributes
+└── .gitignore
 ```
 
 ## 💻 Execução dos projetos
