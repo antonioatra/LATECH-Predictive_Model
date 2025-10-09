@@ -28,11 +28,11 @@
 
 ## <a name="c1"></a>1. Introdução
 
-&emsp; Fundada em 1960 por um grupo de empresários de Medellín, a EAFIT nasceu com o propósito de formar profissionais para os setores de gestão, finanças e tecnologia, estabelecendo desde o início um forte vínculo com o desenvolvimento socioeconômico da região (EAFIT HISTORIA, 2025). Reconhecida pelo governo colombiano como universidade em 1971, a instituição expandiu sua oferta acadêmica para incluir escolas de Engenharia, Ciências e Humanidades, Direito e Música, adaptando-se às necessidades da sociedade e consolidando sua posição como um centro educacional de destaque.
+&emsp; Fundada em 1960 por um grupo de empresários de Medellín, a EAFIT nasceu com o propósito de formar profissionais para os setores de gestão, finanças e tecnologia, estabelecendo desde o início um forte vínculo com o desenvolvimento socioeconômico da região (UNIVERSIDAD EAFIT, s.d.). Reconhecida pelo governo colombiano como universidade em 1971, a instituição expandiu sua oferta acadêmica para incluir escolas de Engenharia, Ciências e Humanidades, Direito e Música, adaptando-se às necessidades da sociedade e consolidando sua posição como um centro educacional de destaque.
 
-&emsp; O reconhecimento oficial como universidade pelo Ministério da Educação, em 1971, marcou um ponto de inflexão que acelerou a diversificação acadêmica e a expansão institucional. A partir dos anos 1970, a EAFIT consolidou novas escolas e programas além da Administração, incluindo Engenharia e, posteriormente, Ciências e Humanidades, Direito e Música, em sintonia com as necessidades emergentes da sociedade e com a modernização do tecido econômico regional (EAFIT HISTORIA NOTICIAS, 2025). Esse crescimento veio acompanhado de uma profunda atuação no território: o campus de La Aguacatala, no sul de Medellín, tornou-se referência urbana e cultural, com atividades acadêmicas, científicas e de extensão que expressam a missão institucional de inspirar vidas, criar conhecimento e transformar a sociedade (EAFIT HISTORIA, 2025).
+&emsp; O reconhecimento oficial como universidade pelo Ministério da Educação, em 1971, marcou um ponto de inflexão que acelerou a diversificação acadêmica e a expansão institucional. A partir dos anos 1970, a EAFIT consolidou novas escolas e programas além da Administração, incluindo Engenharia e, posteriormente, Ciências e Humanidades, Direito e Música, em sintonia com as necessidades emergentes da sociedade e com a modernização do tecido econômico regional (RESTREPO CARDONA, 2020). Esse crescimento veio acompanhado de uma profunda atuação no território: o campus de La Aguacatala, no sul de Medellín, tornou-se referência urbana e cultural, com atividades acadêmicas, científicas e de extensão que expressam a missão institucional de inspirar vidas, criar conhecimento e transformar a sociedade (UNIVERSIDAD EAFIT, s.d.).
 
-&emsp; Entre seus egressos notáveis, a EAFIT formou líderes como Aníbal Gaviria, ex-governador de Antioquia, e Claudia Patricia Restrepo Montoya, ex-vice-ministra de Cultura da Colômbia, testemunhos do compromisso da instituição com uma formação ética, crítica e orientada ao serviço público. Apesar desse histórico, a universidade enfrenta o desafio contemporâneo de otimizar a experiência de aprendizagem em um contexto cada vez mais digital. Neste projeto, propomos desenvolver um modelo preditivo que antecipe a probabilidade de reprovação de estudantes, apoiando a tomada de decisão pedagógica e a personalização de intervenções (EAFIT NOTICIAS, 2025).
+&emsp; Entre seus egressos notáveis, a EAFIT formou líderes como Aníbal Gaviria, ex-governador de Antioquia, e Claudia Patricia Restrepo Montoya, ex-vice-ministra de Cultura da Colômbia, testemunhos do compromisso da instituição com uma formação ética, crítica e orientada ao serviço público. Apesar desse histórico, a universidade enfrenta o desafio contemporâneo de otimizar a experiência de aprendizagem em um contexto cada vez mais digital. Neste projeto, propomos desenvolver um modelo preditivo que antecipe a probabilidade de reprovação de estudantes, apoiando a tomada de decisão pedagógica e a personalização de intervenções (RESTREPO CARDONA, 2020).
 
 &emsp; Apesar de seu histórico de sucesso, a EAFIT enfrenta o desafio de otimizar a experiência de aprendizado dos estudantes em um contexto cada vez mais digital. O problema consiste na necessidade de desenvolver uma metodologia para adaptar estratégias de ensino de países mais desenvolvidos à realidade e aos recursos da Colômbia.
 
@@ -96,8 +96,17 @@
 &emsp; Por fim, o grande benefício de usar a metodologia CRISP-DM é que ela ajuda a conectar a criação do modelo preditivo com o entendimento real do negócio. No caso deste projeto, isso significa olhar de perto como funciona a dinâmica dos alunos e como os fatores analisados impactam diretamente no risco de reprovação. A partir dessa visão, é possível desenvolver um modelo preditivo mais certeiro sempre com base e inteiramente focado no problema que estiver trabalhando. Além disso, o processo iterativo é um ponto muito forte da metodologia, já que se os resultados obtidos não forem bons, apenas voltar alguns passos e refazer os passos como fosse a primeira vez.
 
 ## <a name="c4"></a>4. Desenvolvimento e Resultados
+
+&emsp; Esta seção aborda o processo de desenvolvimento e a análise de resultados do modelo preditivo, cujo objetivo principal é a identificação de alunos em risco de reprovação. Para construir um modelo robusto, o projeto foi estruturado em etapas sequenciais: início com a compreensão do problema e a análise exploratória dos dados, seguida pela fase de preparação e modelagem e, por fim, a avaliação de performance da solução desenvolvida.
+
 ### 4.1. Compreensão do Problema
+
+&emsp; A etapa de compreensão do problema é o alicerce fundamental para o desenvolvimento de uma solução de machine learning eficaz. O principa desafio deste projeto é o índice de reprovação escolar, um fenômeno com impacto negativo na jornada acadêmica e emocional dos alunos, além de gerar custos e ineficiências para a instituição de ensino. Esta seção, portanto, aprofunda a análise deste cenário, estabelecendo as bases para uma abordagem proativa e orientada por dados, que visa identificar os alunos em risco o mais cedo possível.
+
 #### 4.1.1. Contexto da indústria e 5 forças de Porter
+
+&emsp; Nesta seção, o contexto competitivo da indústria é examinado através da metodologia das Cinco Forças de Porter. Esta ferramenta estratégica será utilizada para entender a estrutura do mercado e entender as pressões que afetam a rentabilidade e a competição, fornecendo a base para dar continuidade ao projeto.
+
 ##### 1. Contexto da indústria:
 
 &emsp;A Universidad EAFIT é uma instituição privada sem fins lucrativos, fundada em Medellín, que se consolidou como protagonista no cenário acadêmico colombiano e regional. Reconhecida por sua excelência acadêmica e inovação, ocupa a 56ª posição entre 437 universidades no QS World University Rankings: Latin America & the Caribbean 2025, sendo a principal instituição fora de Bogotá e uma das cinco melhores universidades privadas da Colômbia. Entre seus principais concorrentes estão a Universidad de los Andes, líder no segmento privado e classificada em 7º lugar na América Latina, referência em pesquisa de ponta; a Universidad Pontificia Bolivariana (UPB), também sediada em Medellín e posicionada na 84ª colocação, com atuação multidisciplinar; e a Universidad CES, 33ª na região e especializada nas áreas de saúde e engenharia biomédica.
@@ -120,7 +129,7 @@
 
 <div align="center">
 
-  <sub>Figura : 5 forças de Porter </sub>
+  <sub>Figura 1: 5 forças de Porter </sub>
 
   <img src="../assets/5forcas.png">
 
@@ -150,13 +159,13 @@
 
 #### 4.1.2. Análise SWOT
 
-&emsp; Segundo Rother e Shook (2003), a Análise SWOT é uma ferramenta de planejamento estratégico que organiza visualmente as forças, fraquezas, oportunidades e ameaças de um negócio. Seu objetivo é auxiliar na avaliação do ambiente interno e externo de uma empresa ou projeto, e orientar uma tomada de decisão mais embasada na realidade.
+&emsp; Segundo Rother e Shook (2012), a Análise SWOT é uma ferramenta de planejamento estratégico que organiza visualmente as forças, fraquezas, oportunidades e ameaças de um negócio. Seu objetivo é auxiliar na avaliação do ambiente interno e externo de uma empresa ou projeto, e orientar uma tomada de decisão mais embasada na realidade.
 
 &emsp; Dessa maneira, a aplicação dessa análise é crucial para o mapeamento estratégico da solução em desenvolvimento para a EAFIT. Fornecendo elementos vitais para a idealização e o debate de ideias do projeto, permitindo uma compreensão clara dos desafios e das oportunidades.
 
 <div align="center">
 
-   <sub>Figura 1 - Análise Swot </sub>
+   <sub>Figura 2: Análise Swot </sub>
 
    <img src="../assets/analise-swot.png">
 
@@ -168,7 +177,7 @@
 
 ##### Forças:
 
-- **Posicionada como uma das melhores universidades da Colômbia** - A Universidad EAFIT possui reconhecimento nacional por sua excelência acadêmica (UNIVERSIDAD EAFIT, 2025), foco na inovação e comprometimento com a formação integral de seus estudantes. É constantemente classificada entre as melhores instituições de ensino superior da Colômbia.
+- **Posicionada como uma das melhores universidades da Colômbia** - A Universidad EAFIT possui reconhecimento nacional por sua excelência acadêmica (UNIVERSIDAD EAFIT, 2023), foco na inovação e comprometimento com a formação integral de seus estudantes. É constantemente classificada entre as melhores instituições de ensino superior da Colômbia.
 
 - **Credenciada como instituição de alta qualidade** - A EAFIT foi credenciada pelo Ministério Nacional da Educação da Colômbia como uma universidade de alta qualidade duas vezes seguidas, sendo a primeira universidade colombiana a ter esta recognição. Essa certificação garante que a instituição atende a rigorosos critérios de avaliação institucional, como infraestrutura, corpo docente, produção científica, governança e impacto social, contribuindo para a confiança do público interno e externo.
 
@@ -184,7 +193,7 @@
 
 - **Instabilidade econômica e política regional** - O contexto colombiano, assim como o de outras nações latino-americanas, é frequentemente marcado por flutuações econômicas, tensões sociais e mudanças políticas que podem afetar diretamente o financiamento da educação superior, os programas de intercâmbio, os investimentos em infraestrutura e a própria capacidade de planejamento estratégico das universidades privadas.
 
-- **Competição com outras universidades sul-americanas** - A crescente profissionalização e internacionalização de outras universidades na América Latina, como a Universidad de Los Andes (Colômbia), Pontificia Universidad Católica (Chile), Universidade de São Paulo (Brasil) e Universidad Nacional Autónoma de México (México), impõe um desafio constante. A EAFIT precisa manter-se atualizada, inovadora e conectada globalmente para não perder sua atratividade frente à concorrência (QS, 2025).
+- **Competição com outras universidades sul-americanas** - A crescente profissionalização e internacionalização de outras universidades na América Latina, como a Universidad de Los Andes (Colômbia), Pontificia Universidad Católica (Chile), Universidade de São Paulo (Brasil) e Universidad Nacional Autónoma de México (México), impõe um desafio constante. A EAFIT precisa manter-se atualizada, inovadora e conectada globalmente para não perder sua atratividade frente à concorrência (QS TOP UNIVERSITIES, 2024).
 
 ##### Oportunidades:
 
@@ -222,8 +231,6 @@
 
 &emsp; Com o modelo preditivo, conseguimos resolver as dores do cliente, mas temos que contextualizar tal problema para ficar o mais claro possível nossos objetivos. A instituição EAFIT colocou uma nova matéria de programação em sua grade e, no primeiro ano, teve muitas notas baixas e vários alunos desistindo da matéria antes de acabar. Para solucionar esse problema, será produzido um modelo preditivo que ajudará os professores a administrar o curso, analisando as notas dos alunos e se há chance de reprovação dos mesmos. Com um sistema capaz de prever desempenhos e até prever se o aluno será reprovado ou não, os professores e coordenadores poderão disponibilizar o melhor suporte para os alunos que estão com dificuldade ou até grande risco de reprovação.
 
-
-
 ##### Tipo de Tarefa
 
 &emsp; A solução engloba duas tarefas de aprendizado de máquina:
@@ -242,7 +249,7 @@
 
 <div align="center">
 
-   <sub>Figura : Canvas Proposta de Valor </sub>
+   <sub>Figura 3: Canvas Proposta de Valor </sub>
 
    <img src="../assets/canva-proposta-de-valor.png">
 
@@ -277,15 +284,15 @@
 
 ##### Riscos:
 
-&emsp; Com base nas diretrizes apresentadas no PMBOK® Guide (PMI, 2021) e no conhecimento consolidado acerca da análise de riscos, elaborou-se a matriz de riscos do projeto com o objetivo de identificar, classificar e propor estratégias de mitigação para as ameaças potenciais ao desenvolvimento da solução. Essa abordagem permite antecipar problemas, minimizar impactos negativos e assegurar maior controle sobre as variáveis que podem comprometer o desempenho do modelo preditivo desenvolvido para a Universidade EAFIT, apresentado na figura xx.
+&emsp; Com base nas diretrizes apresentadas no PMBOK® Guide (PMI, 2021) e no conhecimento consolidado acerca da análise de riscos, elaborou-se a matriz de riscos do projeto com o objetivo de identificar, classificar e propor estratégias de mitigação para as ameaças potenciais ao desenvolvimento da solução. Essa abordagem permite antecipar problemas, minimizar impactos negativos e assegurar maior controle sobre as variáveis que podem comprometer o desempenho do modelo preditivo desenvolvido para a Universidade EAFIT, apresentado na figura 4.
 
 <div align="center">
 
-<sup>Figura xx: Matriz de riscos do projeto</sup>
+<sup>Figura 4: Matriz de riscos do projeto</sup>
 
 <img src="../assets/matrizRiscos.png">
 
-<sup>Fonte: Material produzido pelos autores</sup>
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
 
 </div>
 
@@ -301,15 +308,15 @@
 
 ##### Oportunidades:
 
-&emsp; Além da identificação e análise dos riscos, é relevante reconhecer e explorar as oportunidades que o projeto oferece. A partir dessa perspectiva, elaborou-se a matriz de oportunidades com o propósito de potencializar fatores favoráveis, agregar valor ao desenvolvimento da solução e maximizar os benefícios dessa etapa de construção. Essa abordagem permite direcionar esforços para iniciativas que fortaleçam o trabalho do grupo e ampliem o impacto positivo do modelo preditivo desenvolvido para a Universidade EAFIT, apresentado na figura xx.
+&emsp; Além da identificação e análise dos riscos, é relevante reconhecer e explorar as oportunidades que o projeto oferece. A partir dessa perspectiva, elaborou-se a matriz de oportunidades com o propósito de potencializar fatores favoráveis, agregar valor ao desenvolvimento da solução e maximizar os benefícios dessa etapa de construção. Essa abordagem permite direcionar esforços para iniciativas que fortaleçam o trabalho do grupo e ampliem o impacto positivo do modelo preditivo desenvolvido para a Universidade EAFIT, apresentado na figura 5.
 
 <div align="center">
 
-<sup>Figura xx: Matriz de oportunidades do projeto</sup>
+<sup>Figura 5: Matriz de oportunidades do projeto</sup>
 
 <img src="../assets/matrizOportunidades.png">
 
-<sup>Fonte: Material produzido pelos autores</sup>
+<sup>Fonte: Material produzido pelos autores(2025)</sup>
 
 </div>
 
@@ -322,11 +329,11 @@
 #### 4.1.6. Personas
 
 &emsp; No desenvolvimento de produtos e serviços — especialmente em projetos de tecnologia e experiência do usuário — o uso de personas é uma prática amplamente adotada para orientar decisões de design. Uma persona é uma representação fictícia, porém plausível, de um usuário-alvo, construída a partir de dados qualitativos e quantitativos sobre seus comportamentos, necessidades, motivações e objetivos. Essa abordagem ajuda as equipes a manterem o foco nas expectativas reais do público, reduzindo suposições e alinhando o projeto às demandas concretas.
-&emsp; De acordo com Cooper et al. (2014)[personas], personas funcionam como arquétipos que sintetizam as principais características de determinados segmentos de usuários, permitindo que designers e desenvolvedores fundamentem suas escolhas em evidências, e não em opiniões subjetivas. Ao serem aplicadas em documentos técnicos e estratégicos, elas contribuem para que o produto final seja relevante, funcional e verdadeiramente centrado no usuário.
+&emsp; De acordo com Cooper et al. (2014), personas funcionam como arquétipos que sintetizam as principais características de determinados segmentos de usuários, permitindo que designers e desenvolvedores fundamentem suas escolhas em evidências, e não em opiniões subjetivas. Ao serem aplicadas em documentos técnicos e estratégicos, elas contribuem para que o produto final seja relevante, funcional e verdadeiramente centrado no usuário.
 
 <div align = "center">
 
-<sub>Figura : Persona 1</sub>
+<sub>Figura 6: Persona 1</sub>
 
 <img src = "../assets/persona1.png">
 
@@ -373,7 +380,7 @@
 
 <div align = "center">
 
-<sub>Figura : Persona 2</sub>
+<sub>Figura 7: Persona 2</sub>
 
 <img src = "../assets/persona2.png">
 
@@ -423,7 +430,7 @@
 
 <div align = "center">
 
-<sub>Figura : Persona 3</sub>
+<sub>Figura 8: Persona 3</sub>
 
 <img src = "../assets/persona3.png">
 
@@ -466,9 +473,8 @@
 
 &nbsp; O mapeamento das jornadas dos usuários é fundamental para compreender como diferentes atores (professores, gestores e estudantes) interagem com o modelo preditivo e quais são as suas necessidades, emoções e oportunidades em cada etapa. Segundo Cooper et al. (2014), ao representar as experiências e necessidades do usuário em forma de jornada, é possível estruturar de maneira cronológica as atividades, emoções e pontos de contato, possibilitando um desenho de soluções mais eficaz e centrado no usuário. Detalhamos abaixo as jornadas de três personas centrais do projeto: **Paola Andrea Vallejo Ramírez (docente/coordenadora)**, **Dr. Ricardo Morales (diretor)** e **Juan Esteban Gómez Ríos (estudante)**.
 
----
 
-##### Jornada da Persona 1: Paola Andrea Vallejo Ramírez (Docente/Coordenadora)
+##### 4.1.7.1. Jornada da Persona 1: Paola Andrea Vallejo Ramírez (Docente/Coordenadora)
 
 &emsp; **Cenário:** Utilização do modelo preditivo para identificar alunos em risco e planejar intervenções pedagógicas eficientes.
 
@@ -478,14 +484,13 @@
 - **Oportunidades:** Alertas proativos sobre alunos em risco; insights sobre motivos do risco; classificação por faixas de risco; relatórios periódicos para medir impacto das ações pedagógicas.
 
 <div align="center">
-   <sub>Figura - Jornada da Persona Paola Andrea Vallejo Ramírez</sub>
+   <sub>Figura 9: Jornada da Persona Paola Andrea Vallejo Ramírez</sub>
    <img src="../assets/Paola Andrea Vallejo Ramírez uj.png">
    <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
----
 
-##### Jornada da Persona 2: Dr. Ricardo Morales (Diretor)
+##### 4.1.7.2. Jornada da Persona 2: Dr. Ricardo Morales (Diretor)
 
 &emsp; **Cenário:** Avaliação estratégica e tomada de decisão sobre a continuidade e expansão do modelo preditivo.
 
@@ -495,14 +500,12 @@
 - **Oportunidades:** Relatórios executivos sobre impacto da solução; dashboards consolidados comparando dados históricos; simulações de impacto em outras disciplinas; manuais de replicabilidade.
 
 <div align="center">
-   <sub>Figura - Jornada da Persona Dr. Ricardo Morales</sub>
+   <sub>Figura 10: Jornada da Persona Dr. Ricardo Morales</sub>
    <img src="../assets/Dr. Ricardo Morales uj.png">
    <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
----
-
-##### Jornada da Persona 3: Juan Esteban Gómez Ríos (Estudante)
+##### 4.1.7.3. Jornada da Persona 3: Juan Esteban Gómez Ríos (Estudante)
 
 &emsp; **Cenário:** Experiência como estudante em risco de reprovação e recebimento de suporte baseado no modelo preditivo.
 
@@ -512,19 +515,16 @@
 - **Oportunidades:** Sistema de boas-vindas com dicas personalizadas; notificações automáticas alertando risco; relatórios com insights para professores; gamificação com medidores de progresso.
 
 <div align="center">
-   <sub>Figura - Jornada da Persona Juan Esteban Gómez Ríos</sub>
+   <sub>Figura 11: Jornada da Persona Juan Esteban Gómez Ríos</sub>
    <img src="../assets/Juan Esteban Gómez Ríos uj.png">
    <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
----
+&emsp; A análise conjunta das jornadas de **Paola Andrea Vallejo Ramírez (docente/coordenadora)**, **Dr. Ricardo Morales (diretor)** e **Juan Esteban Gómez Ríos (estudante)** evidencia como o modelo preditivo se conecta de maneira complementar aos diferentes níveis da comunidade acadêmica. Enquanto para o **estudante** o foco está em apoio personalizado, motivação e superação de dificuldades, para a **docente** a ênfase recai sobre ferramentas práticas de análise, priorização de alunos em risco e feedback sobre intervenções. Já o **gestor** necessita de dados consolidados, projeções estratégicas e métricas de impacto que sustentem decisões institucionais.
 
-&nbsp;A análise conjunta das jornadas de **Paola Andrea Vallejo Ramírez (docente/coordenadora)**, **Dr. Ricardo Morales (diretor)** e **Juan Esteban Gómez Ríos (estudante)** evidencia como o modelo preditivo se conecta de maneira complementar aos diferentes níveis da comunidade acadêmica. Enquanto para o **estudante** o foco está em apoio personalizado, motivação e superação de dificuldades, para a **docente** a ênfase recai sobre ferramentas práticas de análise, priorização de alunos em risco e feedback sobre intervenções. Já o **gestor** necessita de dados consolidados, projeções estratégicas e métricas de impacto que sustentem decisões institucionais.
+&emsp; Assim, percebe-se que as jornadas, apesar de distintas, são interdependentes: a motivação e o progresso do aluno alimentam os indicadores analisados pela professora; esses dados, por sua vez, são consolidados em relatórios que oferecem ao diretor uma visão estratégica da efetividade da solução. Essa correlação cria um **ciclo virtuoso de informação**, no qual cada persona se beneficia de forma diferenciada, mas convergente, reforçando o alinhamento entre **ações pedagógicas, suporte individualizado e decisões estratégicas**.
 
-&nbsp;Assim, percebe-se que as jornadas, apesar de distintas, são interdependentes: a motivação e o progresso do aluno alimentam os indicadores analisados pela professora; esses dados, por sua vez, são consolidados em relatórios que oferecem ao diretor uma visão estratégica da efetividade da solução. Essa correlação cria um **ciclo virtuoso de informação**, no qual cada persona se beneficia de forma diferenciada, mas convergente, reforçando o alinhamento entre **ações pedagógicas, suporte individualizado e decisões estratégicas**.
-
-&nbsp;Portanto, as jornadas não devem ser vistas isoladamente, mas como partes de um ecossistema de inovação educacional, no qual o modelo preditivo atua como elo central entre experiência do aluno, prática docente e gestão institucional.
-
+&emsp; Portanto, as jornadas não devem ser vistas isoladamente, mas como partes de um ecossistema de inovação educacional, no qual o modelo preditivo atua como elo central entre experiência do aluno, prática docente e gestão institucional.
 
 #### 4.1.8 Política de Privacidade
 
@@ -566,12 +566,12 @@
 &emsp; Esta seção tem como objetivo compreender todo o processo de entendimento dos dados do projeto. Esse processo representa o primeiro contato dos integrantes do grupo com os dados fornecidos pela empresa parceira. Trata-se de um momento destinado a analisar a estrutura e a composição desses dados, por meio de consultas, aplicação de métodos de estatística descritiva, identificação de colunas numéricas e categóricas, além da realização de etapas de pré-processamento, normalização e limpeza dos dados disponibilizados.
 
 #### 4.2.1. Exploração de dados
-Esta etapa inicial marca o primeiro contato com os dados, sendo responsável pela análise preliminar e pela identificação dos tipos de variáveis que compõem a base. A partir dessa exploração, torna-se possível compreender melhor a natureza das informações disponíveis e orientar as próximas etapas de preparação e tratamento.
-  A base de dados contém informações de alunos matriculados em um curso de Pensamento Computacional da Universidade EAFIT e apresenta as seguintes features:
+&emsp; Esta etapa inicial marca o primeiro contato com os dados, sendo responsável pela análise preliminar e pela identificação dos tipos de variáveis que compõem a base. A partir dessa exploração, torna-se possível compreender melhor a natureza das informações disponíveis e orientar as próximas etapas de preparação e tratamento.
+&emsp; A base de dados contém informações de alunos matriculados em um curso de Pensamento Computacional da Universidade EAFIT e apresenta as seguintes features:
 
 <div align = "center">
 
-<sub>Tabela : Classificações das variáveis</sub>
+<sub>Tabela 1: Classificações das variáveis</sub>
 
 <table align="center">
 
@@ -993,7 +993,7 @@ df_onehot = aplica_onehot(df_consolidado, encoder_info)
 * **Conclusão:** A execução do teste, assim como nos casos anteriores, resultou em um p-valor muito baixo (inferior a 0,05), levando à **rejeição** da hipótese de normalidade para a `Nota_Oficial`.
 * **Conclusão:** Assim como as demais, a hipótese de normalidade para a `Nota_Oficial` é **rejeitada**.
 
-### 4.2.3.4. Implicações dos Resultados
+#### 4.2.3.4. Implicações dos Resultados
 
 &emsp; A refutação da hipótese de normalidade para todas as três variáveis chave é um resultado de grande impacto para o projeto. Fica claro que a utilização direta de modelos e testes paramétricos seria inadequada e poderia comprometer a validade das conclusões. Dessa forma, a análise dessas hipóteses nos força a tomar decisões mais informadas na próxima fase, como a aplicação de transformações matemáticas (ex: logarítmica) para tentar normalizar os dados ou, alternativamente, a adoção de algoritmos não-paramétricos, que são mais flexíveis quanto à distribuição dos dados de entrada.
 
@@ -1001,34 +1001,34 @@ df_onehot = aplica_onehot(df_consolidado, encoder_info)
 
 > Aviso de confidencialidade: os dados institucionais utilizados são confidenciais e foram disponibilizados exclusivamente para fins acadêmicos mediante acordo com a Universidad EAFIT. Nenhuma amostra individual, linha ou arquivo bruto será exibido neste documento. As referências a variáveis e procedimentos são descritivas e não expõem conteúdo sensível.
 
-## 4.3.1. Seleção de Features  
+#### 4.3.1. Seleção de Features  
 
 &emsp; A partir da análise das colunas disponíveis (Seção 4.2), foram escolhidas variáveis que capturam dimensões essenciais ao problema: **desempenho, esforço/tempo, evolução e contexto acadêmico**. Essas dimensões estão diretamente relacionadas à probabilidade de aprovação e permitem antecipar situações de risco.  
 
-### Núcleo de variáveis explicativas  
+##### 4.3.1.1. Núcleo de variáveis explicativas  
 - **Quizzes (Quiz1–Quiz6)**: refletem o aprendizado contínuo e oferecem granularidade temporal.  
 - **Tempo de execução dos quizzes (TempoQ1–TempoQ6, em segundos)**: incorporam uma dimensão de esforço/dificuldade percebida.  
 - **Variáveis derivadas**: médias, medianas, desvio padrão, mínimos, máximos e tendências temporais (ex.: inclinação de regressão simples das notas ao longo do tempo).  
 
-### Exclusões específicas dentro do núcleo  
+##### 4.3.1.2. Exclusões específicas dentro do núcleo  
 - **Quiz7 e Quiz8**: não foram utilizados por estarem fora do espectro temporal em que o modelo será aplicado, já próximos do fechamento das avaliações.  
 - **Evolução declarada (*MelhoraNotaQuizzes* e *Quanto melhora?*)**: descartadas, pois apresentam informações que extrapolam o ponto de coleta considerado adequado para a avaliação preditiva, podendo introduzir viés de informação futura.  
 
 Breve ilustração da evolução de quizzes e tempos de execução ao longo do primeiro e segundo período respectivamente
 
 <div align="center">
-   <sub>Figura - Relação tempo/nota dos quizzes do primeiro período</sub>
+   <sub>Figura 12: Relação tempo/nota dos quizzes do primeiro período</sub>
    <img src="../assets/TempoQuiz1.png">
    <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
 <div align="center">
-   <sub>Figura - Relação tempo/nota dos quizzes do segundo período</sub>
+   <sub>Figura 13: Relação tempo/nota dos quizzes do segundo período</sub>
    <img src="../assets/TempoQuiz2.png">
    <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-### Exclusões realizadas  
+##### 4.3.1.3. Exclusões realizadas  
 Apesar da relevância teórica, algumas variáveis não foram incluídas no modelo final:  
 
 - **Parcial_2, Projeto_Parte1 e Projeto_Parte2**: não foram utilizadas por não estarem dentro do espectro temporal em que o modelo será aplicado (objetivo é prever risco **antes** dessas avaliações).  
@@ -1036,24 +1036,21 @@ Apesar da relevância teórica, algumas variáveis não foram incluídas no mode
 - **Período, Grupo e Horário**: não foram usados por se tratarem de atribuições essencialmente aleatórias (ex.: grupo de trabalho), sem valor preditivo consistente.  
 - **Gênero e Idade**: embora presentes, não foram considerados. Todos os alunos estavam na faixa de **maiores de idade**, não havendo variação significativa. Já o campo **Gênero** não apresentou diferenciação suficiente para ser efetivo no modelo.  
 
+#### 4.3.2. Organização dos Dados  
 
----
+&emsp; O problema foi formulado como **classificação binária**, tendo **Reprovou** como variável alvo. Em análises futuras, há a possibilidade de explorar **Nota_Oficial** em um cenário de regressão, posteriormente convertido em aprovação/reprovação por limiar institucional.  
 
-## 4.3.2. Organização dos Dados  
-
-O problema foi formulado como **classificação binária**, tendo **Reprovou** como variável alvo. Em análises futuras, há a possibilidade de explorar **Nota_Oficial** em um cenário de regressão, posteriormente convertido em aprovação/reprovação por limiar institucional.  
-
-### Divisão dos dados  
+##### 4.3.2.1. Divisão dos dados  
 - Foi utilizada apenas a separação em **treino (80%)** e **teste (20%)**, estratificados pela variável-alvo.  
 - Não foi aplicada validação cruzada, pois o foco inicial está em avaliar a viabilidade do modelo em condições práticas de aplicação e por da margem de dados fornecidas par a aplicação.  
 
  <div align="center">
-   <sub>Figura - Divisão dos dados</sub>
+   <sub>Figura 14: Divisão dos dados</sub>
    <img src="../assets/divisaoDados.png">
    <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-### Pré-processamento  
+##### 4.3.2.2. Pré-processamento  
 O pré-processamento foi realizado **sobre o banco completo** antes da separação entre treino e teste. As etapas incluíram:  
 
 - Padronização de colunas e valores.  
@@ -1062,22 +1059,22 @@ O pré-processamento foi realizado **sobre o banco completo** antes da separaç�
 - Clipping de outliers.  
 - Codificação **One-Hot** para variáveis categóricas mantidas.  
 
-### Tratamento de desbalanceamento  
+##### 4.3.2.3. Tratamento de desbalanceamento  
 - Como a variável alvo apresenta algum desbalanceamento, avaliou-se o uso de **class_weight=balanced** e técnicas de oversampling (ex.: SMOTE).  
 - Esses métodos foram aplicados exclusivamente no conjunto de treino.  
 
  <div align="center">
-   <sub>Figura - Divisão dos dados</sub>
+   <sub>Figura 15: Divisão dos dados</sub>
    <img src="../assets/Aprovados-Reprovados.png">
    <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-### Reprodutibilidade  
+##### 4.3.2.4. Reprodutibilidade  
 - Foram fixadas sementes aleatórias nos processos de amostragem e modelagem.  
 - O pipeline (lista final de colunas, encoders, mapeamentos e escalonadores) foi versionado, garantindo replicabilidade e auditabilidade institucional.  
 
 
-### 4.3.3 Métricas relacionadas ao modelo
+#### 4.3.3 Métricas relacionadas ao modelo
 
 &emsp; Métricas são utilizadas para avaliar o desempenho durante o desenvolvimento do modelo preditivo supervisionado.
 
@@ -1086,7 +1083,7 @@ O pré-processamento foi realizado **sobre o banco completo** antes da separaç�
 &emsp; Métricas baseadas na matriz de confusão fornecem uma visão mais detalhada das previsões. Como o objetivo principal é identificar corretamente todos os alunos reprovados, o recall da classe minoritária (reprovação) se torna a métrica mais importante, pois mede a proporção de casos positivos reais que foram corretamente identificados pelo modelo.
 
 <div align="center">
-  <sub>Figura x — Matriz de confusão do modelo Nearest Centroid na etapa 1</sub><br>
+  <sub>Figura 16: Matriz de confusão do modelo Nearest Centroid na etapa 1</sub><br>
   <img src="../assets/matriz_confusão_nearestCentroid.png" alt="Matriz de confusão — Nearest Centroid (Etapa 1)"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
@@ -1106,30 +1103,27 @@ Real: 0        FP               VN
 
 A classe positiva (“Reprovou”) é minoritária e crítica. Dessa forma, reduzir FN — isto é, evitar deixar de identificar alunos que irão reprovar — é a prioridade.
 
-#### Métricas-chave
+##### Métricas-chave:
 
-##### Recall
+###### Recall
 - Fórmula: Recall = VP / (VP + FN)
 - Definição: proporção de positivos reais corretamente identificados.
 - Interpretação: “Entre os que realmente reprovam, quantos o modelo detecta?”
 - Observação: o grid search utiliza `scoring='recall'`, indicando que perder um caso de reprovação (FN) é mais custoso do que gerar um alarme a mais (FP). Assim, o modelo prioriza identificar o máximo de casos de reprovação, mesmo que isso aumente o número de alarmes falsos.
 
-##### Precisão
+###### Precisão
 - Fórmula: Precisão = VP / (VP + FP)
 - Definição: proporção de positivos previstos que são de fato positivos.
 - Interpretação: “Entre os marcados como reprovados, quantos realmente reprovam?”
 - Observação: em dados desbalanceados, ao elevar o recall, é comum aumentar FP e reduzir a precisão. A precisão ajuda a controlar a confiabilidade das sinalizações de reprovação.
 
-##### F1-Score
+###### F1-Score
 - Fórmula: F1 = 2 × (Precisão × Recall) / (Precisão + Recall)
 - Definição: média harmônica entre precisão e recall.
 - Interpretação: equilíbrio entre capturar a maioria dos reprovados e manter previsões positivas confiáveis.
 - Observação: útil para balancear FN e FP. Como o custo de FN é maior, o recall é priorizado; ainda assim, o F1 é monitorado para evitar colapso da precisão.
 
-### 4.3.4 Modelo Candidato — Nearest Centroid
-
-#### Descrição do modelo
-# Nearest Centroid (NC)
+#### 4.3.4 Modelo Candidato — Nearest Centroid
 
 &emsp; O **Nearest Centroid** é um classificador simples baseado em distância. Para cada classe, calcula-se o **centróide** (média dos vetores) no conjunto de treino. Uma nova amostra é atribuída à classe cujo centróide estiver mais próximo, de acordo com uma métrica de distância selecionada (`metric`).  
 
@@ -1140,51 +1134,44 @@ Para otimizar o modelo neste cenário desbalanceado, foram aplicadas as seguinte
 - Conjunto de dados dividido em treino e teste com `random_state=42`.  
 - Consideração do uso de **SMOTE** no treino (comentado no código) para lidar com o desbalanceamento.  
 
----
+##### Resultados por pontos no tempo
 
-## Resultados por pontos no tempo
-
-### Tabela 1 – Menos atributos
+###### Tabela 1 – Menos atributos
 - **Recall:** razoável/alto  
 - **Precisão:** muito baixa (muitas sinalizações incorretas – FP)  
 - **Observação:** com pouca informação, o NC tende a “abrir a rede” para capturar reprovados, mas gera muitos alarmes falsos.  
 
 <div align="center">
-  <sub>Figura x — Matriz de confusão 1 do Nearest Centroid</sub><br>
+  <sub>Figura 17: Matriz de confusão 1 do Nearest Centroid</sub><br>
   <img src="../assets/NC1.jpg"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div> 
 
----
 
-### Tabela 2 – Informação intermediária
+###### Tabela 2 – Informação intermediária
 - **Recall:** muito alto  
 - **Precisão:** ainda modesta  
 - **F1-score:** melhora em relação à Tabela 1  
 - **Observação:** o modelo continua eficaz em detectar reprovados, mas o custo de FP ainda é relevante.  
 
 <div align="center">
-  <sub>Figura x — Matriz de confusão 2 do Nearest Centroid</sub><br>
+  <sub>Figura 18: Matriz de confusão 2 do Nearest Centroid</sub><br>
   <img src="../assets/NC2.jpg"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div> 
 
----
-
-### Tabela 3 – Mais atributos
+###### Tabela 3 – Mais atributos
 - **Recall:** alto  
 - **Precisão e F1:** leve melhora  
 - **Observação:** com mais variáveis, o NC consegue reduzir um pouco os FP, mantendo foco em recall.  
 
 <div align="center">
-  <sub>Figura x — Matriz de confusão 3 do Nearest Centroid</sub><br>
+  <sub>Figura 19: Matriz de confusão 3 do Nearest Centroid</sub><br>
   <img src="../assets/NC3.jpg"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div> 
 
----
-
-## Ajuste ao desbalanceamento
+##### Ajuste ao desbalanceamento
 
 &emsp; O problema é desbalanceado (poucos “Reprovou”). Como o NC é simples e otimizado por **recall**, ele favorece a classe positiva:  
 
@@ -1193,15 +1180,13 @@ Para otimizar o modelo neste cenário desbalanceado, foram aplicadas as seguinte
 
 &emsp; O uso de **SMOTE** foi previsto apenas no conjunto de treino, para evitar vazamento de informação. Ele cria exemplos sintéticos da classe minoritária, equilibrando o treino e permitindo potencial aumento de recall sem inflar FP no teste.  
 
----
-
-## Próximos passos
+##### Próximos passos
 
 1. **Avaliar o efeito do SMOTE** apenas no treino e repetir a busca de hiperparâmetros.  
 2. **Ajustar `shrink_threshold`** para maior seletividade (redução de FP).  
 3. **Comparar com outros modelos**: testamos **XGBoost** e outros classificadores com limiar ajustável, que apresentam menor FP.  
 <div align="center">
-  <sub>Figura x — Matriz de confusão XGBClassifier</sub><br>
+  <sub>Figura 20: Matriz de confusão XGBClassifier</sub><br>
   <img src="../assets/XGBClassifier.jpg"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div> 
@@ -1226,13 +1211,12 @@ ensemble.fit(X_train, y_train)
 y_pred = ensemble.predict(X_test)
 
 ```
-### 4.4. Comparação de Modelos
 
+### 4.4. Comparação de Modelos
 
 &emsp; Na seção anterior, foi apresentado o modelo candidato ao projeto da EAFIT: o Nearest Centroid. Nesta seção, serão discutidos outros dois modelos, com o objetivo de prever com **eficiência a reprovação de alunos** da universidade.
 
 &emsp; Ao final desta seção, espera-se **definir o modelo mais apropriado para o projeto**. Após o refinamento, os modelos serão comparados utilizando métricas quantitativas primárias, como o **Recall (para minimizar Falsos Negativos na classificação de risco)** e o **F1-Score (para avaliar o equilíbrio entre Precisão e Recall do modelo)**. Além disso, seus resultados serão avaliados quanto à **capacidade de fornecer explicabilidade das predições**, convertendo a saída do modelo em insights úteis e acionáveis para o parceiro.
-
 
 #### 4.4.1 Métricas
 
@@ -1244,11 +1228,11 @@ y_pred = ensemble.predict(X_test)
 
 #### 4.4.2 Algoritmos para otimização de hiperparâmetros
 
-&emsp; O conceito de hiperparâmetros é fundamental em Machine Learning, sendo estes definidos como **variáveis de configuração externas ao modelo, estabelecidas manualmente antes do processo de treinamento** [CODESIGNAL].
+&emsp; O conceito de hiperparâmetros é fundamental em Machine Learning, sendo estes definidos como **variáveis de configuração externas ao modelo, estabelecidas manualmente antes do processo de treinamento** (CODESIGNAL, s.d.).
 
 &emsp; Eles são distintos dos parâmetros do modelo, que são variáveis internas aprendidas a partir dos dados durante o treinamento (como pesos), e têm a função de **governar o processo de aprendizado e a complexidade do estimador**. A **otimização desses hiperparâmetros é crucial para a performance e generalização do modelo**, sendo o **GridSearchCV (Grid Search Cross-Validation) um dos métodos de busca mais tradicionais**.
 
-&emsp; Implementado na biblioteca Scikit-Learn, o GridSearchCV realiza uma **busca exaustiva, testando todas as combinações de valores discretos predefinidos na grade de parâmetros** [CODESIGNAL], o snippet abaixo demonstra um uso básico da ferramenta:
+&emsp; Implementado na biblioteca Scikit-Learn, o GridSearchCV realiza uma **busca exaustiva, testando todas as combinações de valores discretos predefinidos na grade de parâmetros** (CODESIGNAL, s.d.), o snippet abaixo demonstra um uso básico da ferramenta:
 
 `````python
 from sklearn.model_selection import GridSearchCV
@@ -1276,11 +1260,11 @@ grid_search = GridSearchCV(
 grid_search.best_params_
 `````
 
-
 #### 4.4.3 Modelos
 
+&emsp; Em uma análise comparativa, foram testados algoritmos robustos como AdaBoost e XGBoost para comparar com o modelo Nearest Centroid. Apesar dos esforços de otimização para melhorar seus resultados, nenhum dos modelos superou o desempenho do Nearest Centroid, que se manteve como a abordagem de melhor desempenho para a tarefa. 
 
-#### 4.4.3.1 AdaBoost
+##### 4.4.3.1 AdaBoost
 
 &emsp; O AdaBoost (Adaptive Boosting) é um algoritmo de ensemble que combina vários classificadores fracos para formar um classificador forte. A ideia central é treinar, de forma sequencial, modelos mais simples (no caso, árvores de decisão rasas) que se concentram progressivamente nos exemplos mais difíceis de classificar da seguinte forma: em cada iteração, o algoritmo atribui pesos maiores às amostras que foram classificadas incorretamente na iteração anterior, forçando os classificadores seguintes a dar mais atenção a esses casos. E de maneira formal, a função preditiva do AdaBoost é definida como:
 
@@ -1288,9 +1272,9 @@ $$
 H(x) = \text{sign} \left( \sum_{t=1}^{T} \alpha_t h_t(x) \right)
 $$
 
-&ensp; Onde \(h_t(x)\) é o classificador fraco treinado na t-ésima iteração, \(\alpha_t\) é o peso atribuído ao classificador (maior para classificadores que erraram menos) e \(T\) é o número total de iterações. E \(\text{sign}\) significa que estamos falando de uma *função sinal*, que retorna apenas o sinal do seu argumento, por exemplo:
+&emsp; Onde \(h_t(x)\) é o classificador fraco treinado na t-ésima iteração, \(\alpha_t\) é o peso atribuído ao classificador (maior para classificadores que erraram menos) e \(T\) é o número total de iterações. E \(\text{sign}\) significa que estamos falando de uma *função sinal*, que retorna apenas o sinal do seu argumento, por exemplo:
 
-&ensp; Seja \(z=\sum_{t=1}^{T} \alpha_t h_t(x)\)
+&emsp; Seja \(z=\sum_{t=1}^{T} \alpha_t h_t(x)\)
 
 $$
 \text{sign}(z) =
@@ -1301,17 +1285,29 @@ $$
 \end{cases}
 $$
 
-&ensp; Então a intuição principal é: se o somatório \(\sum_{t=1}^{T} \alpha_t h_t(x)\), que é a combinação linear das predições dos modelos fracos com os seus pesos, tiver valor positivo, então a decisão final do modelo \(H(x)=+1\), que no caso do projeto, seria um aluno reprovado (classe priorizada no projeto). Analogamente, se a decisão final fosse \(H(x)=-1\), então teríamos um aluno aprovado.
+&emsp; Então a intuição principal é: se o somatório \(\sum_{t=1}^{T} \alpha_t h_t(x)\), que é a combinação linear das predições dos modelos fracos com os seus pesos, tiver valor positivo, então a decisão final do modelo \(H(x)=+1\), que no caso do projeto, seria um aluno reprovado (classe priorizada no projeto). Analogamente, se a decisão final fosse \(H(x)=-1\), então teríamos um aluno aprovado.
 
-&ensp; A otimização dos hiperparâmetros do Adaboost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs: 
+&emsp; A otimização dos hiperparâmetros do Adaboost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs: 
+
+<div align = "center">
+
+<sub>Tabela 2: Resultados da otimização AdaBoost</sub>
 
 | Período de Análise | Learning_rate | n_estimators  |
-|---------------------|---------------|--------------|
+|:---------------------:|:--------------:|:--------------:|
 | Semana 6            | 0.1           | 50           | 
 | Semana 8            | 0.01          | 200          | 
 | Semana 12           | 0.01          | 200          | 
 
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
 &ensp; Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
+
+<div align = "center">
+
+<sub>Tabela 3: Resultados obtidos pelo AdaBoost</sub>
 
 | Janela de Análise | Recall Classe 0 | f1_score |
 |---------------------|-----------------|----------|
@@ -1319,11 +1315,17 @@ $$
 | Semana 8            | 0.6538          | 0.4594   |
 | Semana 12           | 0.6923          | 0.4931   |
 
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
 
-#### Hiperparâmetros AdaBoostClassifier 
+</div>
 
-##### Hiperparâmetros que **vão ser utilizados**
+##### Hiperparâmetros AdaBoostClassifier 
 
+###### Hiperparâmetros que vão ser utilizados
+
+<div align = "center">
+
+<sub>Tabela 4: Tabela de hiperparâmetros que vão ser utilizados</sub>
 
 | Parâmetro        | O que faz / Para que serve | Valores sugeridos / Observações |
 |------------------|---------------------------|--------------------------------|
@@ -1332,35 +1334,43 @@ $$
 | `algorithm`      | Define como os pesos das observações são atualizados durante o boosting. | `"SAMME.R"` - Probabilístico, recomendado para classificação binária/multiclasse |
 | `random_state`   | Semente aleatória para garantir reprodutibilidade. | `[42]` |
 
----
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
 
-##### Hiperparâmetros que **não vão ser utilizados**
+</div>
+
+###### Hiperparâmetros que **não vão ser utilizados**
+
+<div align = "center">
+
+<sub>Tabela 5: Tabela de hiperparâmetros que não vão ser utilizados</sub>
 
 | Parâmetro        | O que faz / Para que serve | Motivo de não uso |
 |------------------|---------------------------|-----------------|
 | `loss`           | Define a função de perda para regressão. | Apenas para AdaBoostRegressor, não usado em classificação |
 | `base_estimator` | Modelo fraco que será usado no boosting. | Fixado em `DecisionTreeClassifier(max_depth=1)`, não será variado no grid |
 
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+##### 4.4.3.2 XGBoost
+
+&emsp; O XGBoost (Extreme Gradient Boosting) é um algoritmo de ensemble (aprendizado em conjunto) baseado em árvores de decisão sequenciais, otimizadas através da técnica de gradient boosting. Sua principal característica é a construção de árvores em sequência, onde cada nova árvore é treinada para minimizar o erro residual do conjunto anterior, garantindo um aprendizado mais forte a partir de classificadores mais fracos.
 
 
-#### 4.4.3.2 XGBoost
-
-&ensp; O XGBoost (Extreme Gradient Boosting) é um algoritmo de ensemble (aprendizado em conjunto) baseado em árvores de decisão sequenciais, otimizadas através da técnica de gradient boosting. Sua principal característica é a construção de árvores em sequência, onde cada nova árvore é treinada para minimizar o erro residual do conjunto anterior, garantindo um aprendizado mais forte a partir de classificadores mais fracos.
-
-
-&ensp; A função objetivo do XGBoost é definida da seguinte forma:
+&emsp; A função objetivo do XGBoost é definida da seguinte forma:
 
 $$
 \mathcal{L}(\phi) = \sum_{i=1}^{n} l(y_i, \hat{y}_i) + \sum_{k=1}^{K} \Omega(f_k)
 $$
 
-&ensp; Onde \(n\) é  número de alunos monitorados, \(K\) é o número de árvores envolvidas no processo de boosting, \(\hat{y}_i\) é a predição acumulada até a iteração atual.
+&emsp; Onde \(n\) é  número de alunos monitorados, \(K\) é o número de árvores envolvidas no processo de boosting, \(\hat{y}_i\) é a predição acumulada até a iteração atual.
 
 
-&ensp; O termo $\sum_{i=1}^{n} l(y_i, \hat{y}_i)$ é a *função de perda*, que mede a discrepância entre o rótulo verdadeiro \(y_i\) e a predição \(\hat{y}_i\) do modelo para cada ponto \(i\) da amostra. E a escolha da função de perda depende do contexto de aplicação do modelo, em problemas de classificação como o nosso caso, normalmente utiliza-se a função *log-loss*. E \(\sum_{k=1}^{K} \Omega(f_k)\) é o *termo de regularização*, que adiciona uma "penalização" para cada árvore \(f_k\) do ensemble (conjunto de modelos mais fracos) a fim de controlar a complexidade do modelo, e assim evitar o overfitting.
+&emsp; O termo $\sum_{i=1}^{n} l(y_i, \hat{y}_i)$ é a *função de perda*, que mede a discrepância entre o rótulo verdadeiro \(y_i\) e a predição \(\hat{y}_i\) do modelo para cada ponto \(i\) da amostra. E a escolha da função de perda depende do contexto de aplicação do modelo, em problemas de classificação como o nosso caso, normalmente utiliza-se a função *log-loss*. E \(\sum_{k=1}^{K} \Omega(f_k)\) é o *termo de regularização*, que adiciona uma "penalização" para cada árvore \(f_k\) do ensemble (conjunto de modelos mais fracos) a fim de controlar a complexidade do modelo, e assim evitar o overfitting.
 
 
-&ensp; E por fim, o termo $\Omega(f_k)$, responsável por penalizar as árvores "complexas demais" é calculado por:
+&emsp; E por fim, o termo $\Omega(f_k)$, responsável por penalizar as árvores "complexas demais" é calculado por:
 
 
 $$
@@ -1368,19 +1378,28 @@ $$
 $$
 
 
-&ensp; Em \(\gamma T\) o parâmetro \(\gamma\) mede o limiar de complexidade de uma árvore, que será proporcional ao seu número \(T\) de folhas, e quanto maior for o número de folhas, maior será a complexidade, e maior será a penalização. E \(\frac{1}{2} \lambda \|w\|^2\) representa a regularização L2 (*L2 é a norma Euclidiana, que siginifica que valores que seriam grandes a priori serão suvizados*) aplicada aos pesos (\(w\)) e o parâmetro \(\lambda\) controla a intensidade da penalização. Folhas que teriam pesos muito elevados, que poderiam indicar overfitting, são suavizadas pela *norma Euclidiana* (L2).
+&emsp; Em \(\gamma T\) o parâmetro \(\gamma\) mede o limiar de complexidade de uma árvore, que será proporcional ao seu número \(T\) de folhas, e quanto maior for o número de folhas, maior será a complexidade, e maior será a penalização. E \(\frac{1}{2} \lambda \|w\|^2\) representa a regularização L2 (*L2 é a norma Euclidiana, que siginifica que valores que seriam grandes a priori serão suvizados*) aplicada aos pesos (\(w\)) e o parâmetro \(\lambda\) controla a intensidade da penalização. Folhas que teriam pesos muito elevados, que poderiam indicar overfitting, são suavizadas pela *norma Euclidiana* (L2).
 
-&ensp; A otimização dos hiperparâmetros do XGBoost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
+&emsp; A otimização dos hiperparâmetros do XGBoost foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
 
+<div align = "center">
 
+<sub>Tabela 6: Tabela de melhores hiperparâmetros</sub>
 
 | Período de Análise | Learning_rate | n_estimators | max_depth | three_method |
 |---------------------|---------------|--------------|----------|--------------|
 | Semana 6            | 0.1           | 200          | 7        | auto         |
 | Semana 8            | 1.0           | 300          | 7        | auto         |
 | Semana 12           | 0.1           | 100          | 5        | auto         |
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
 
 Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
+
+<div align = "center">
+
+<sub>Tabela 7: Resultados obtidos com os melhores hiperparâmteros encontrados</sub>
 
 | Janela de Análise | Recall Classe 0 | f1_score |
 |---------------------|-----------------|----------|
@@ -1388,9 +1407,17 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 | Semana 8            | 0.5384          | 0.5384   |
 | Semana 12           | 0.5384          | 0.5957   |
 
-#### Hiperparâmetros XGBoost
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
 
-##### Hiperparâmetros que **vão ser utilizados**
+</div>
+
+##### Hiperparâmetros XGBoost
+
+###### Hiperparâmetros que **vão ser utilizados**
+
+<div align = "center">
+
+<sub>Tabela 8: Hiperparâmetros que serão utilizados no XGBoost</sub>
 
 | Parâmetro       | O que faz / Para que serve | Valores sugeridos / Observações |
 |-----------------|---------------------------|--------------------------------|
@@ -1400,9 +1427,15 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 | `tree_method`   | Define o algoritmo usado para construir árvores. Evita usar `updater` diretamente, mais seguro para GridSearch. | `auto` (suficiente para datasets pequenos/médios) |
 | `random_state`   | Semente aleatória para garantir reprodutibilidade. | `[42]` |
 
----
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
 
-##### Hiperparâmetros que **não vão ser utilizados**
+</div>
+
+###### Hiperparâmetros que **não vão ser utilizados**
+
+<div align = "center">
+
+<sub>Tabela 9: Hiperparâmetros que não serão utilizados</sub>
 
 | Parâmetro | O que faz / Para que serve | Motivo de não uso |
 |-----------|---------------------------|-----------------|
@@ -1437,26 +1470,33 @@ Sob esses hiperparâmetros, o modelo retorna as seguintes métricas:
 | `seed_per_iteration` | Reinicia semente a cada iteração (reprodutibilidade). | Não será usado |
 | `use_rmm` | Usa gerenciador de memória GPU. | Sem GPU |
 
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
 
 ##### 4.4.3.3 Nearest Centroid
 
-&ensp; O Nearest Centroid é um algoritmo de classificação supervisionado baseado em distância, que se destaca por sua simplicidade interpretabilidade. O algoritmo classifica novas amostras com base na sua proximidade à média vetorial das amostras (chamada de centroide) de cada classe, assim, a nova instância de dado terá a classificação atribuída ao centroide mais próximo.
+&emsp; O Nearest Centroid é um algoritmo de classificação supervisionado baseado em distância, que se destaca por sua simplicidade interpretabilidade. O algoritmo classifica novas amostras com base na sua proximidade à média vetorial das amostras (chamada de centroide) de cada classe, assim, a nova instância de dado terá a classificação atribuída ao centroide mais próximo.
 
-&ensp; De maneira formal, dado um conjunto de dados de treinamento \(\{(x_i, y_i)\}_{i=1}^n\) em que cada \(x_i \in \mathbb{R}^d\) representa um vetor de atributos e \(y_i \in \{1, \dots, K\}\) representa a classe atribuída ao vetor \(x_i\). E o centroide da classe \(K\) é definido como:
+&emsp; De maneira formal, dado um conjunto de dados de treinamento \(\{(x_i, y_i)\}_{i=1}^n\) em que cada \(x_i \in \mathbb{R}^d\) representa um vetor de atributos e \(y_i \in \{1, \dots, K\}\) representa a classe atribuída ao vetor \(x_i\). E o centroide da classe \(K\) é definido como:
 
 $$
 c_k = \frac{1}{|C_k|} \sum_{i \in C_k} x_i
 $$
 
-&ensp; Onde \(C_k\) representa o conjunto de índices pertencentes à classe \(k\). E a predição para uma nova instância \(x\) é realizada escolhendo o centroide mais próximo:
+&emsp; Onde \(C_k\) representa o conjunto de índices pertencentes à classe \(k\). E a predição para uma nova instância \(x\) é realizada escolhendo o centroide mais próximo:
 
 $$
 \hat{y} = \arg\min_{k} \; d(x, c_k)
 $$
 
-&ensp; Onde \(c_k\) é o centroide da classe \(k\) ou seja, o ponto médio que generaliza, ou resume o comportamento dessa classe. O termo \(d(x, c_k)\) representa a distância da nova instância \(x\) até o centroide, calculada pela distância Euclidiana (padrão da literatura), ou pela distância Manhattan (para bases com muitas dimensões). E o operador \(\arg\min\) quer dizer que o modelo escolhe a classe cujo centroide está mais próximo da nova instância \(x\). No contexto do projeto, o modelo compara um novo estudante com os perfis médios de aprovados e reprovados e decide, pela distância ao centróide, a qual classe ele mais se assemelha.
+&emsp; Onde \(c_k\) é o centroide da classe \(k\) ou seja, o ponto médio que generaliza, ou resume o comportamento dessa classe. O termo \(d(x, c_k)\) representa a distância da nova instância \(x\) até o centroide, calculada pela distância Euclidiana (padrão da literatura), ou pela distância Manhattan (para bases com muitas dimensões). E o operador \(\arg\min\) quer dizer que o modelo escolhe a classe cujo centroide está mais próximo da nova instância \(x\). No contexto do projeto, o modelo compara um novo estudante com os perfis médios de aprovados e reprovados e decide, pela distância ao centróide, a qual classe ele mais se assemelha.
 
-&ensp; A otimização dos hiperparâmetros do Nearest Centroid foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
+&emsp; A otimização dos hiperparâmetros do Nearest Centroid foi realizada semanalmente utilizando o Grid Search Cross-Validation (GridSearchCV) para maximizar o desempenho na identificação da classe minoritária (Reprovado), quesito central na avaliação da qualidade do modelo, resultando nos seguintes outputs:
+
+<div align = "center">
+
+<sub>Tabela 10: Melhores hiperparâmetros encontrados</sub>
 
 | Período de Análise  | Metric        | shrink_threshold |
 |---------------------|---------------|--------------|
@@ -1464,7 +1504,15 @@ $$
 | Semana 8            | Manhattan     | None         |
 | Semana 12           | Manhattan     | None         |
 
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
 &emsp; Sob estes hiperparâmetros, o modelo retorna as seguintes métricas. 
+
+<div align = "center">
+
+<sub>Tabela 11: Métricas obtidas</sub>
 
 | Janela de Análise   | Recall Classe 1 | f1_score |
 |---------------------|-----------------|----------|
@@ -1472,20 +1520,40 @@ $$
 | Semana 8            | 0.7692          | 0.5405   |
 | Semana 12           | 0.7307          | 0.6909   |
 
-#### Hiperparâmetros Nearest Centroid
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
 
-##### Hiperparâmetros que vão ser utilizados
+</div>
+
+##### Hiperparâmetros Nearest Centroid
+
+###### Hiperparâmetros que vão ser utilizados
+
+<div align = "center">
+
+<sub>Tabela 12: Parâmetros utilizados</sub>
 
 | Parâmetro       | O que faz / Para que serve | Valores sugeridos / Observações |
 |-----------------|---------------------------|--------------------------------|
 | `metric`| Define qual método será utilizado para o cálculo das distâncias. | `euclidian, manhattan` |
 | `shrink_threshold`  | Move os centroides em direção à média global da base de dados, tornando o modelo menos sensível a outliers. | `[None, 0.1, 0.5, 1.0]` |
 
-##### Hiperparâmetros que **não vão ser utilizados**
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+###### Hiperparâmetros que **não vão ser utilizados**
+
+<div align = "center">
+
+<sub>Tabela 13: Hiperparâmetros que não serão utilizados</sub>
 
 | Parâmetro | O que faz / Para que serve | Motivo de não uso |
 |-----------|---------------------------|-----------------|
 | `prior` | Define a probabilidade a priori de uma classe. | As classes são muito desbalanceadas, então não utilizamos para evitar overfitting e falsos negativos e falsos positivos. |
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
 
 ##### Explicabilidade do Nearest Centroid com SHAP
 
@@ -1493,9 +1561,7 @@ $$
 
 &emsp; Para uma interpretação mais direta sobre o problema, a classe dos reprovados é tida como 1 e a dos aprovados como 0, isso implica na representação dos pesos no modelo, pesos negativos vão contra a classe positiva, os reprovados.
 
----
-
-## Interpretação Geral
+##### Interpretação Geral
 
 - **Eixo X**: valor SHAP, que representa o impacto de cada feature na previsão do modelo.  
   - Valores positivos indicam que a feature aumenta a probabilidade de saída positiva.  
@@ -1505,41 +1571,34 @@ $$
 
 - **Cor dos pontos**: indica o valor da feature, de **azul (baixo)** a **vermelho (alto)**.
 
----
+###### Análise por Semana
 
-### Análise por Semana
-
-#### Semana 6
+- Semana 6
 <div align="center">
-  <sub>Figura x — Explicabilidade semana 6 Nearest Centroid</sub><br>
+  <sub>Figura 21: Explicabilidade semana 6 Nearest Centroid</sub><br>
   <img src="../assets/explicabilidade6.png"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-#### Semana 8
+- Semana 8
 <div align="center">
-  <sub>Figura x — Explicabilidade semana 8 Nearest Centroid</sub><br>
+  <sub>Figura 22: Explicabilidade semana 8 Nearest Centroid</sub><br>
   <img src="../assets/explicabilidade8.png"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-#### Semana 12
+- Semana 12
 <div align="center">
-  <sub>Figura x — Explicabilidade semana 12 Nearest Centroid</sub><br>
+  <sub>Figura 23: Explicabilidade semana 12 Nearest Centroid</sub><br>
   <img src="../assets/explicabilidade12.png"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-
-
-
-# Insights do Modelo Preditivo (SHAP) – Gráfico Atual
+##### Insights do Modelo Preditivo (SHAP) – Gráfico Atual
 
 O gráfico acima mostra a contribuição de cada feature para a previsão do modelo utilizando **SHAP (SHapley Additive exPlanations)**.
 
----
-
-## Interpretação Geral
+###### Interpretação Geral
 
 - **Eixo X**: valor SHAP, representando o impacto da feature na previsão.  
   - Valores positivos → aumentam a previsão positiva.  
@@ -1549,110 +1608,106 @@ O gráfico acima mostra a contribuição de cada feature para a previsão do mod
 
 - **Cor dos pontos**: indica valor da feature, de **azul (baixo)** a **vermelho (alto)**.
 
----
+##### Insights do Nearest Centroid (SHAP) – Semanas 6, 8 e 12
 
-# Insights do Nearest Centroid (SHAP) – Semanas 6, 8 e 12
+- ***Semana 6***
 
-## Semana 6
+  - **Variável Demográfica**
+    - **Genero_Masculino**  
+      - Valores 0 (azul) tendem a **diminuir** a previsão.  
+      - Valores 1 (vermelho) **aumentam** a previsão positiva.  
 
-### Variável Demográfica
-- **Genero_Masculino**  
-  - Valores 0 (azul) tendem a **diminuir** a previsão.  
-  - Valores 1 (vermelho) **aumentam** a previsão positiva.  
+  - **Quizzes**
+    - **Quiz1 e Quiz3**  
+      - Valores altos (vermelho) aumentam a previsão negativa do modelo(aprovados).  
+      - Valores baixos (azul) aumentam a previsão postiva do modelo(reprovados).  
+    - **Quiz2**  
+      - Impacto mais neutro, mas ainda com efeito relevante, principalmente valores altos, esses que jogam para a classe negativa(reprovados).
+    - **Análise final**
+      - Notas mais alta tendem a identificar o modelo como aprovado.
 
-### Quizzes
-- **Quiz1 e Quiz3**  
-  - Valores altos (vermelho) aumentam a previsão negativa do modelo(aprovados).  
-  - Valores baixos (azul) aumentam a previsão postiva do modelo(reprovados).  
-- **Quiz2**  
-  - Impacto mais neutro, mas ainda com efeito relevante, principalmente valores altos, esses que jogam para a classe negativa(reprovados).
-- **Análise final**
-  - Notas mais alta tendem a identificar o modelo como aprovado.
+  - **Variáveis de Tempo**
+    - **TempoQ1, TempoQ2 e TempoQ3**  
+      - Valores baixos (azul) reduzem a previsão do reprovados.  
+      - Valores altos (vermelho) aumentam a previsão do reprovados.
+    - **Análise final**
+      - Tempos de resposta dos quizzes mais baixos tendem a classificar como reprovado.
 
-### Variáveis de Tempo
-- **TempoQ1, TempoQ2 e TempoQ3**  
-  - Valores baixos (azul) reduzem a previsão do reprovados.  
-  - Valores altos (vermelho) aumentam a previsão do reprovados.
-- **Análise final**
-  - Tempos de resposta dos quizzes mais baixos tendem a classificar como reprovado.
+  - **Outras Features**
+    - **STEM_SI**: impacto mínimo no modelo, sugerindo baixa relevância e reforçando a análise anterior de que STEM não influenciava na predição.
+<br>
 
-### Outras Features
-- **STEM_SI**: impacto mínimo no modelo, sugerindo baixa relevância e reforçando a análise anterior de que STEM não influenciava na predição.
+- ***Semana 8***
 
+  - **Variável Demográfica**
+    - **Genero_Masculino**  
+      - Valores 0 (azul) tendem a diminuir a previsão.  
+      - Valores 1 (vermelho) aumentam a previsão positiva.  
 
----
+  - **Avaliações e Quizzes**
+    - **Parcial_1, Quiz1, Quiz2, Quiz3, Quiz4**  
+      - Valores altos (vermelho) aumentam a previsão negativa(aprovados).  
+      - Valores baixos (azul) reduzem a previsão negativa(aprovados).  
+      - **Parcial_1** e **Quiz3** mostram maior dispersão → efeito não-linear.  
+      - **Quiz2**: impacto neutro, mas relevante, notas mais altas jogam um pouco para a classe dos aprovados.
+    - **Análise final**
+      - Notas altas continuam influenciando na predição da classe dos aprovados no modelo(negativa) mas agora com algumas dispersões.
 
-## Semana 8
+  - **Variáveis de Tempo**
+    - **TempoQ1, TempoQ2, TempoQ3, TempoQ4**  
+      - Valores altos (vermelho) aumentam a previsão da classe positiva(reprovados).  
+      - Valores baixos (azul) reduzem a previsão da classe positiva(aprovados).
+    - **Análise final**
+      - Tempos mais altos de resolução dos quizzes continuam influenciando na classificação de reprovados pelo modelo.  
 
-### Variável Demográfica
-- **Genero_Masculino**  
-  - Valores 0 (azul) tendem a diminuir a previsão.  
-  - Valores 1 (vermelho) aumentam a previsão positiva.  
+  - **Outras Features**
+    - **STEM_SI**: impacto mínimo no modelo.
+<br>
 
-### Avaliações e Quizzes
-- **Parcial_1, Quiz1, Quiz2, Quiz3, Quiz4**  
-  - Valores altos (vermelho) aumentam a previsão negativa(aprovados).  
-  - Valores baixos (azul) reduzem a previsão negativa(aprovados).  
-  - **Parcial_1** e **Quiz3** mostram maior dispersão → efeito não-linear.  
-  - **Quiz2**: impacto neutro, mas relevante, notas mais altas jogam um pouco para a classe dos aprovados.
-- **Análise final**
-  - Notas altas continuam influenciando na predição da classe dos aprovados no modelo(negativa) mas agora com algumas dispersões.
+- ***Semana 12***
 
-### Variáveis de Tempo
-- **TempoQ1, TempoQ2, TempoQ3, TempoQ4**  
-  - Valores altos (vermelho) aumentam a previsão da classe positiva(reprovados).  
-  - Valores baixos (azul) reduzem a previsão da classe positiva(aprovados).
-- **Análise final**
-  - Tempos mais altos de resolução dos quizzes continuam influenciando na classificação de reprovados pelo modelo.  
+  - **Variável demográfica**
+    - **Genero_Masculino**  
+      - Valores baixos (azul) podem impactar positivamente.  
+      - Valores altos (vermelho) podem reduzir a previsão.
 
-### Outras Features
-- **STEM_SI**: impacto mínimo no modelo.
----
+  - **Avaliações e Quizzes**
+    - **Parcial_1, Quiz5, Quiz6 e Quiz3**  
+      - Valores altos (vermelho) aumentam a previsão negativa(aprovados).  
+      - Valores baixos (azul) reduzem a previsão negativa(aprovados). 
+    - **Quiz1 e Quiz4**
+      - Relevantes para o modelo mas em menor escala ao comparado com os quizzes 3, 5 e 6.  
+    - **Quiz2** 
+      - Impacto neutro, mas relevante.
+    - **Análise final**
+      - Notas altas continuam influenciando na predição da classe dos aprovados no modelo(negativa) mas agora com algumas dispersões.
 
-## Semana 12
+  - **Variáveis de tempo**
+    - **TempoQ1 a TempoQ6** têm impacto menor, mas ainda relevante, tempos menores mais relacionados com a classe negativa(aprovados).  
+    - **TempoQ5 e TempoQ6**: valores altos (vermelho) aumentam a previsão → dedicação ou engajamento.
 
-### Variável demográfica
-- **Genero_Masculino**  
-  - Valores baixos (azul) podem impactar positivamente.  
-  - Valores altos (vermelho) podem reduzir a previsão.
+  - **Outras observações**
+    - **STEM_SI**: baixo impacto geral.  
+    - Algumas features apresentam efeito **não-linear** ou **interações**, visível na dispersão.
+    - **Análise final**
+      - Notas de quizzes iniciais já não são tão relevantes para o modelo.
 
-### Avaliações e Quizzes
-- **Parcial_1, Quiz5, Quiz6 e Quiz3**  
-  - Valores altos (vermelho) aumentam a previsão negativa(aprovados).  
-  - Valores baixos (azul) reduzem a previsão negativa(aprovados). 
-- **Quiz1 e Quiz4**
-  - Relevantes para o modelo mas em menor escala ao comparado com os quizzes 3, 5 e 6.  
-- **Quiz2** 
-  - Impacto neutro, mas relevante.
-- **Análise final**
-  - Notas altas continuam influenciando na predição da classe dos aprovados no modelo(negativa) mas agora com algumas dispersões.
+##### Interpretação dos Resultados
 
-### Variáveis de tempo
-- **TempoQ1 a TempoQ6** têm impacto menor, mas ainda relevante, tempos menores mais relacionados com a classe negativa(aprovados).  
-- **TempoQ5 e TempoQ6**: valores altos (vermelho) aumentam a previsão → dedicação ou engajamento.
-
-### Outras observações
-- **STEM_SI**: baixo impacto geral.  
-- Algumas features apresentam efeito **não-linear** ou **interações**, visível na dispersão.
-- **Análise final**
-  - Notas de quizzes iniciais já não são tão relevantes para o modelo.
-
----
-
-## Interpretação dos Resultados
-
-O gráfico **SHAP** permite analisar a influência de cada feature na predição:  
+&emsp; O gráfico **SHAP** permite analisar a influência de cada feature na predição:  
 
 - Pontos em vermelho estão relacionados à classe "reprovado".  
 - **Notas de quizzes** impactam negativamente a classe "reprovado": quanto maior a nota, maior a probabilidade de ser previsto como aprovado.  
 
-A análise combinada do SHAP com essas métricas reforça a **interpretabilidade** do modelo e auxilia na tomada de decisão pedagógica.
-
-
+&emsp; A análise combinada do SHAP com essas métricas reforça a **interpretabilidade** do modelo e auxilia na tomada de decisão pedagógica.
 
 #### 4.4.5 Comparação dos Modelos Testados 
 
-Semana 06: 
+- Semana 06: 
+
+<div align = "center">
+
+<sub>Tabela 24: Métricas obtidas na semana 6</sub>
 
 | Modelo | Recall (Classe 1) | F1-Score (Classe 1) |
 | :---: | :---: | :---: |
@@ -1660,7 +1715,15 @@ Semana 06:
 | **AdaBoost** | **0.8076** | 0.3387 |
 | XGBoost | 0.7692 | 0.3960 |
 
-Semana 08: 
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+- Semana 08: 
+
+<div align = "center">
+
+<sub>Tabela 25: Métricas obtidas na semana 8</sub>
 
 | Modelo | Recall (Classe 1) | F1-Score (Classe 1) |
 | :---: | :---: | :---: |
@@ -1668,7 +1731,15 @@ Semana 08:
 | AdaBoost | 0.6538 | 0.4594 |
 | XGBoost | 0.5384 | 0.5384 |
 
-Semana 12:
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+- Semana 12:
+
+<div align = "center">
+
+<sub>Tabela 26: Métricas obtidas na semana 12</sub>
 
 | Modelo | Recall (Classe 1) | F1-Score (Classe 1) |
 | :---: | :---: | :---: |
@@ -1676,6 +1747,9 @@ Semana 12:
 | AdaBoost | 0.6923 | 0.4931 |
 | XGBoost | 0.5384 | 0.5957 |
 
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
 
 &emsp; A comparação de modelos revela um padrão de desempenho que valida a escolha do **Nearest Centroid (NC)** como o classificador mais adequado para o objetivo central do projeto: a **intervenção precoce no combate à reprovação**.
 
@@ -1711,7 +1785,7 @@ Semana 12:
 &emsp; Os gráficos SHAP (Figuras x, x e x) ordenam as variáveis pela sua importância global. Cada ponto no gráfico representa um aluno, e sua posição no eixo horizontal indica o impacto daquela variável na previsão final (valores positivos aumentam a chance de "reprovado", valores negativos aumentam a de "aprovado"). A cor indica o valor da variável (vermelho para alto, azul para baixo).
 
 <div align='center'>
- <sup>Figura x: Análise de explicabilidade SHAP para o modelo da semana 6</sup>
+ <sup>Figura 24: Análise de explicabilidade SHAP para o modelo da semana 6</sup>
  <br>
  <img src="../assets/explicabilidade8.png" alt="Gráfico SHAP Semana 6" width="700">
  <br>
@@ -1719,7 +1793,7 @@ Semana 12:
 </div>
 <br>
 <div align='center'>
- <sup>Figura x: Análise de explicabilidade SHAP para o modelo da semana 8</sup>
+ <sup>Figura 25: Análise de explicabilidade SHAP para o modelo da semana 8</sup>
  <br>
  <img src="../assets/explicabilidade6.png" alt="Gráfico SHAP Semana 8" width="700">
  <br>
@@ -1727,7 +1801,7 @@ Semana 12:
 </div>
 <br>
 <div align='center'>
- <sup>Figura x: Análise de explicabilidade SHAP para o modelo da semana 12</sup>
+ <sup>Figura 26: Análise de explicabilidade SHAP para o modelo da semana 12</sup>
  <br>
  <img src="../assets/explicabilidade8.png" alt="Gráfico SHAP Semana 12" width="700">
  <br>
@@ -1764,30 +1838,27 @@ testes de hipóteses para análise do impacto de features, teste de normalidade 
 
 ## <a name="c6"></a>6. Referências
 
-[CODESIGNAL] Grid Search: Finding Optimal Model Parameters. Disponível em: https://codesignal.com/learn/courses/hypertuning-and-cross-validation/lessons/grid-search-finding-optimal-model-parameters. Acesso em: 25 set. 2025.
+CODESIGNAL. **Grid Search: Finding Optimal Model Parameters**. [S. l.], [s.d.]. Disponível em: https://codesignal.com/learn/courses/hypertuning-and-cross-validation/lessons/grid-search-finding-optimal-model-parameters. Acesso em: 8 out. 2025.
 
-[EAFIT HISTORIA] "Historia de EAFIT". Disponível em: https://www.eafit.edu.co/historia. Acesso em: 11 de agosto de 2025.
+UNIVERSIDAD EAFIT. **Historia**. [S. l.], [s.d.]. Disponível em: https://www.eafit.edu.co/institucional/historia. Acesso em: 8 out. 2025.
 
-[EAFIT HISTORIA NOTICIAS] "EAFIT, hija de la Medellín de los 60". Disponível em: https://www.eafit.edu.co/institucional/historia/noticias/eafit-hija-de-la-medellin-de-los-60. Acesso em: 11 de ago. de 2025.
+RESTREPO CARDONA, María Paulina. **EAFIT, hija de la Medellín de los 60**. [S. l.]: Universidad EAFIT, 14 ago. 2020. Disponível em: https://www.eafit.edu.co/institucional/historia/noticias/eafit-hija-de-la-medellin-de-los-60. Acesso em: 8 out. 2025.
 
-[EAFIT NOTICIAS] "La ANDI reconoció a EAFIT por 65 años de impacto social y legado de futuro". Disponível em: https://www.eafit.edu.co/noticias/eafit-es-noticia/ANDI-reconocio-EAFIT-65anios-impacto-social. Acesso em: 11 de ago. de 2025.
+EAFIT. **Área de Información y Prensa. La ANDI reconoció a EAFIT por sus 65 años de impacto social**. [S. l.]: Universidad EAFIT, 2 ago. 2023. Disponível em: https://www.eafit.edu.co/noticias/eafit-es-noticia/ANDI-reconocio-EAFIT-65anios-impacto-social. Acesso em: 8 out. 2025.
 
-[MOLNAR] MOLNAR, Christoph. Interpretable Machine Learning: a Guide for Making Black Box Models Explainable. 2. ed. [S.l.]: Christoph Molnar, 2022. Disponível em: https://christophm.github.io/interpretable-ml-book/. Acesso em: 1 out. 2025.
+MOLNAR, Christoph. **Interpretable Machine Learning: a Guide for Making Black Box Models Explainable.** 2. ed. [S.l.]: Christoph Molnar, 2022. Disponível em: https://christophm.github.io/interpretable-ml-book/. Acesso em: 1 out. 2025.
 
-[QS QUACQUARELLI SYMONDS] "QS World University Rankings 2025". Disponível em: https://www.topuniversities.com/university-rankings/world-university-rankings/2025. Acesso em: 11 de ago. de 2025.
+QS TOP UNIVERSITIES. **QS World University Rankings: Latin America & The Caribbean 2025**. [S. l.], 2024. Disponível em: https://www.topuniversities.com/latin-america-caribbean-overall. Acesso em: 8 out. 2025.
 
-[QS. RANKINGS] Rankings released! QS World University Rankings: Latin America & The Caribbean 2025. Disponível em: https://www.qs.com/rankings-released-qs-world-university-rankings-latin-america-the-caribbean-2025/. Acesso em: 9 ago. 2025.
+ROTHER, Mike; SHOOK, John. **Aprendendo a Enxergar: Mapeando o Fluxo de Valor para Agregar Valor e Eliminar o Desperdício**. São Paulo: Lean Institute Brasil, 2012. 167 p.
 
-[ROTHER; SHOOK] Aprendendo a enxergar: Mapeando o fluxo de valor para agregar valor e eliminar o desperdício. Disponível em: https://leanproduction.com.br/livro/aprendendo-a-enxergar/. Acesso em: 11 ago. 2025.
+MISHRA, Divyanshu. **Parameters and Hyperparameters**. In: Towards Data Science. [S. l.], 1 maio 2020. Disponível em: https://towardsdatascience.com/parameters-and-hyperparameters-aa609601a9ac. Acesso em: 8 out. 2025.
 
-[TOWARD DATA SCIENCE] Parameters and Hyperparameters. Disponível em: https://towardsdatascience.com/parameters-and-hyperparameters-aa609601a9ac/. Acesso em: 25 set. 2025.
+UNIVERSIDAD EAFIT. **Excelencia y reconocimiento**. In: Informe de Sostenibilidad 2023. [S. l.], 2023. Disponível em: https://www.eafit.edu.co/informes-de-gestion-y-sostenibilidad/informe-sostenibilidad-2023/excelencia-y-reconocimiento. Acesso em: 8 out. 2025.
 
-[UNIVERSIDAD EAFIT] "Excelencia y reconocimiento". Disponível em: https://www.eafit.edu.co/informes-de-gestion-y-sostenibilidad/informe-sostenibilidad-2023/excelencia-y-reconocimiento. Acesso em: 11 de ago. de 2025.
+COOPER, Alan; REIMANN, Robert; CRONIN, David; NOESSEL, Christopher. **About Face: The Essentials of Interaction Design**. 4. ed. Indianapolis: Wiley, 2014
 
-[personas] <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [COOPER, Alan; REIMANN, Robert; CRONIN, David; NOESSEL, Christopher. *About Face: The Essentials of Interaction Design*. 4. ed. Indianapolis: Wiley, 2014.](https://www.wiley.com/en-us/About+Face%3A+The+Essentials+of+Interaction+Design%2C+4th+Edition-p-9781118766576)
-
-
-[Númeração de acordo com a ordem alfabética]. <a name="ref[Numeração de acrodo com a ordem alfabética]"></a> [PMI - Project Management Institute. Um guia do conhecimento em gerenciamento de projetos (Guia PMBOK®): guia do conhecimento em gerenciamento de projetos. 7. ed. Newtown Square, PA: Project Management Institute, 2021.](https://www.academiaplaorc.com.br/wp-content/uploads/2024/07/Guia-PMBOK-7a-Edicao.pdf)
+PMI - Project Management Institute. **Um guia do conhecimento em gerenciamento de projetos (Guia PMBOK®): guia do conhecimento em gerenciamento de projetos**. 7. ed. Newtown Square, PA: Project Management Institute, 2021.
 
 SILVA, L. A. da; PERES, S. M.; BOSCARIOLI, C. **Introdução à mineração de dados**: com aplicações em R. Rio de Janeiro: GEN LTC, 2016
 
@@ -1795,13 +1866,13 @@ SILVA, L. A. da; PERES, S. M.; BOSCARIOLI, C. **Introdução à mineração de d
 
 ### Distribuição normal e teste de hipótese
 
-&ensp;Esta seção investiga se as variáveis quantitativas seguem (ou não) a distribuição normal e discute as implicações dessa avaliação para as etapas subsequentes de modelagem. Em projetos de natureza preditiva voltados a decisões de negócio — como expansão de pontos de venda, segmentação de clientes ou aumento da penetração de produtos — a validade dos resultados depende diretamente da escolha adequada de: (1) testes estatísticos (paramétricos vs. não-paramétricos), (2) técnicas de transformação e tratamento de outliers e (3) métodos de escalonamento capazes de garantir comparabilidade entre atributos de diferentes magnitudes.
+&emsp;Esta seção investiga se as variáveis quantitativas seguem (ou não) a distribuição normal e discute as implicações dessa avaliação para as etapas subsequentes de modelagem. Em projetos de natureza preditiva voltados a decisões de negócio — como expansão de pontos de venda, segmentação de clientes ou aumento da penetração de produtos — a validade dos resultados depende diretamente da escolha adequada de: (1) testes estatísticos (paramétricos vs. não-paramétricos), (2) técnicas de transformação e tratamento de outliers e (3) métodos de escalonamento capazes de garantir comparabilidade entre atributos de diferentes magnitudes.
 
-&ensp;Nesse sentido, a análise de assimetria, curtose e valores extremos atua como etapa crítica tanto na engenharia de atributos quanto na seleção de algoritmos. Modelos baseados no cálculo de distâncias, que sensíveis à escala (como K-Means, SVM e redes neurais) ou baseados em pressupostos distributivos (como regressões lineares e outros modelos paramétricos) dependem fortemente da adequação das distribuições de entrada para gerar inferências consistentes e decisões confiáveis.
+&emsp;Nesse sentido, a análise de assimetria, curtose e valores extremos atua como etapa crítica tanto na engenharia de atributos quanto na seleção de algoritmos. Modelos baseados no cálculo de distâncias, que sensíveis à escala (como K-Means, SVM e redes neurais) ou baseados em pressupostos distributivos (como regressões lineares e outros modelos paramétricos) dependem fortemente da adequação das distribuições de entrada para gerar inferências consistentes e decisões confiáveis.
 
 #### Seleção e Caracterização das Variáveis
 
-&ensp;As três variáveis selecionadas para análise foram escolhidas com base em sua possibilidade de impacto e relevância para o treinamento do modelo preditivo.
+&emsp;As três variáveis selecionadas para análise foram escolhidas com base em sua possibilidade de impacto e relevância para o treinamento do modelo preditivo.
 
 - **Talleres**: Representa a nota associada a trabalhos complementares aos Quizes e provas.
 - **CalcNotaQuiz**: Indica o número de itens adquiridos em cada transação, fundamental para compreender padrões de consumo
@@ -1809,7 +1880,7 @@ SILVA, L. A. da; PERES, S. M.; BOSCARIOLI, C. **Introdução à mineração de d
 
 ### Análise e Teste de Normalidade das Variáveis Quantitativas
 
- A verificação da normalidade dos dados é uma etapa central na análise estatística, pois orienta a escolha entre procedimentos paramétricos e não-paramétricos nas fases seguintes do estudo. Neste trabalho, a questão investigada é se as variáveis quantitativas do conjunto analisado podem ser consideradas como provenientes de uma distribuição normal.
+&emsp; A verificação da normalidade dos dados é uma etapa central na análise estatística, pois orienta a escolha entre procedimentos paramétricos e não-paramétricos nas fases seguintes do estudo. Neste trabalho, a questão investigada é se as variáveis quantitativas do conjunto analisado podem ser consideradas como provenientes de uma distribuição normal.
 
 <div align="center">
 
@@ -1821,19 +1892,19 @@ $H_1: X \not\sim N(\mu, \sigma^2)$
 
 </div> </br>
 
-&ensp;A formulação segue a abordagem clássica de testes de hipóteses: a hipótese nula (H₀) assume normalidade, enquanto a hipótese alternativa (Hₐ) sugere sua violação. Essa estrutura possibilita avaliar formalmente a adequação da distribuição de cada variável, constituindo um critério essencial para a definição de métodos estatísticos apropriados nas etapas posteriores da análise.
+&emsp;A formulação segue a abordagem clássica de testes de hipóteses: a hipótese nula (H₀) assume normalidade, enquanto a hipótese alternativa (Hₐ) sugere sua violação. Essa estrutura possibilita avaliar formalmente a adequação da distribuição de cada variável, constituindo um critério essencial para a definição de métodos estatísticos apropriados nas etapas posteriores da análise.
 
 ### Nível de significâcia e critérios de decisão
 
-&ensp;Adotou-se um nível de significância de α = 0,05 (5%), valor amplamente utilizado na literatura científica por proporcionar um equilíbrio adequado entre o risco de cometer erro do tipo I e a potência do teste. A decisão sobre a hipótese nula baseia-se no valor-p: se p-valor ≤ 0,05, rejeita-se H₀, indicando evidência estatística de desvio da normalidade; se p-valor > 0,05, não se rejeita H₀, sugerindo que não há evidência suficiente para concluir que os dados não seguem uma distribuição normal.
+&emsp;Adotou-se um nível de significância de α = 0,05 (5%), valor amplamente utilizado na literatura científica por proporcionar um equilíbrio adequado entre o risco de cometer erro do tipo I e a potência do teste. A decisão sobre a hipótese nula baseia-se no valor-p: se p-valor ≤ 0,05, rejeita-se H₀, indicando evidência estatística de desvio da normalidade; se p-valor > 0,05, não se rejeita H₀, sugerindo que não há evidência suficiente para concluir que os dados não seguem uma distribuição normal.
 
 ### Teste de Normalidade (Aderência)
 
-&ensp;A normalidade das variáveis quantitativas foi avaliada por meio do teste de Shapiro-Wilk, indicado para amostras de tamanho moderado e amplamente utilizado na literatura para essa finalidade. A estatística do teste é definida como:
+&emsp;A normalidade das variáveis quantitativas foi avaliada por meio do teste de Shapiro-Wilk, indicado para amostras de tamanho moderado e amplamente utilizado na literatura para essa finalidade. A estatística do teste é definida como:
 
 $$W = \frac{\left( \sum_{i=1}^{n} a_i x_{(i)} \right)^2}{\sum_{i=1}^{n} (x_i - \bar{x})^2}$$
 
-&ensp;Onde $x_{(i)}$ são os valores ordenados da amostra, $\bar{x}$ é a média amostral, $n$ representa o tamanho da amostra e $a_i$ são constantes derivadas das médias, variâncias e covariâncias das estatísticas de ordem de uma amostra de tamanho $n$ proveniente de uma distribuição normal. Seguem os testes feitos no código para a variável `"CalcNotaQuiz"`:
+&emsp;Onde $x_{(i)}$ são os valores ordenados da amostra, $\bar{x}$ é a média amostral, $n$ representa o tamanho da amostra e $a_i$ são constantes derivadas das médias, variâncias e covariâncias das estatísticas de ordem de uma amostra de tamanho $n$ proveniente de uma distribuição normal. Seguem os testes feitos no código para a variável `"CalcNotaQuiz"`:
 
 ```python
 # Testes de normalidade das variáveis "CalcNotaQuiz", "Talleres", "Calificación_Oficial"
@@ -1936,37 +2007,37 @@ else:
     print("Rejeitamos H0: os dados não seguem uma distribuição normal.")
 ```
 
-&ensp; Os resultados indicam que as variáveis `CalcNotaQuiz`, `Talleres`, `Calificación_Oficial` apresentam evidências de não seguirem uma distribuição normal (p < 0.05).
+&emsp; Os resultados indicam que as variáveis `CalcNotaQuiz`, `Talleres`, `Calificación_Oficial` apresentam evidências de não seguirem uma distribuição normal (p < 0.05).
 
 ### Visualização por gráficos
 
-&ensp;A fim de complementar a análise, foram construídos histogramas e violin-plots das três variáveis, permitindo uma avaliação visual sobre a distribuição das variáveis.
+&emsp;A fim de complementar a análise, foram construídos histogramas e violin-plots das três variáveis, permitindo uma avaliação visual sobre a distribuição das variáveis.
 
 <div align="center">
-  <sub>Figura x - Multiplot da variável CalcNotaQuiz</sub><br>
+  <sub>Figura 27: Multiplot da variável CalcNotaQuiz</sub><br>
   <img src="../assets/CalcNotaQuiz.png"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
 <div align="center">
-  <sub>Figura x - Multiplot da variável Talleres (Oficinas)</sub><br>
+  <sub>Figura 28: Multiplot da variável Talleres (Oficinas)</sub><br>
   <img src="../assets/Oficinas.png"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
 <div align="center">
-  <sub>Figura x - Multiplot da variável Calificación_Oficial (Nota_Oficial)</sub><br>
+  <sub>Figura 29: Multiplot da variável Calificación_Oficial (Nota_Oficial)</sub><br>
   <img src="../assets/Nota_Oficial.png"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
 <div align="center">
-  <sub>Figura x - Multiplot das três variáveis</sub><br>
+  <sub>Figura 30: Multiplot das três variáveis</sub><br>
   <img src="../assets/Multiplot_3.png"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-&ensp;A análise visual dos histogramas confirma os resultados dos testes estatísticos, revelando características específicas de cada distribuição. Nota-se que os gráficos das três variáveis possuem uma assimetria acentuada à esquerda, com os dados se concentrando em valores mais altos. Explicando a rejeição da normalidade e a diferença entre a média e a mediana quepode também ser visualizada no violin-plot.
+&emsp;A análise visual dos histogramas confirma os resultados dos testes estatísticos, revelando características específicas de cada distribuição. Nota-se que os gráficos das três variáveis possuem uma assimetria acentuada à esquerda, com os dados se concentrando em valores mais altos. Explicando a rejeição da normalidade e a diferença entre a média e a mediana quepode também ser visualizada no violin-plot.
 
 A saber, a curva normal teórica usada como referência para os testes é dada por:
 
@@ -1974,25 +2045,25 @@ $$
 f(x)=\frac{1}{\sigma\sqrt{2\pi}}\,e^{-\frac{(x-\mu)^2}{2\sigma^2}}
 $$
 
-&ensp;em que $\mu$ é a média e $\sigma$ o desvio padrão. A sobreposição dessa curva aos histogramas facilita a visualização dos desvios observados em todas as variáveis.
+&emsp;em que $\mu$ é a média e $\sigma$ o desvio padrão. A sobreposição dessa curva aos histogramas facilita a visualização dos desvios observados em todas as variáveis.
 
 #### Comparação entre média e mediana
 
-&ensp;No gráfico das três variáveis juntas, podemos ver que a média e a mediana de todas as três variáveis não coincidem, possuindo determinada distância. A variável Nota_Oficial e Oficinas têm a mediana (4,50) ligeiramente maior que a média (4,28 e 4,17, respectivamente), enquanto para CalcNotaQuiz a diferença é ainda menor. A proximidade entre esses dois valores dá uma forte indicação de que as distribuições não são simétricas.
+&emsp;No gráfico das três variáveis juntas, podemos ver que a média e a mediana de todas as três variáveis não coincidem, possuindo determinada distância. A variável Nota_Oficial e Oficinas têm a mediana (4,50) ligeiramente maior que a média (4,28 e 4,17, respectivamente), enquanto para CalcNotaQuiz a diferença é ainda menor. A proximidade entre esses dois valores dá uma forte indicação de que as distribuições não são simétricas.
 
-&ensp;Essa observação visual é confirmada pelo cálculo do skewness. O skewness é uma medida numérica que quantifica a assimetria da distribuição. Um valor de zero indica simetria perfeita, enquanto para um valor negativo, a distribuição tem uma cauda mais longa para a esquerda, e em números positivos, a cauda é mais longa para a direita. De acordo com o cálculo, o skewness para Oficinas é -1,16, para Nota_Oficial é -1,02, e para CalcNotaQuiz é -0,93. Todos esses valores são negativos, o que valida a nossa observação visual de que as distribuições são assimétricas à esquerda.
+&emsp;Essa observação visual é confirmada pelo cálculo do skewness. O skewness é uma medida numérica que quantifica a assimetria da distribuição. Um valor de zero indica simetria perfeita, enquanto para um valor negativo, a distribuição tem uma cauda mais longa para a esquerda, e em números positivos, a cauda é mais longa para a direita. De acordo com o cálculo, o skewness para Oficinas é -1,16, para Nota_Oficial é -1,02, e para CalcNotaQuiz é -0,93. Todos esses valores são negativos, o que valida a nossa observação visual de que as distribuições são assimétricas à esquerda.
 
 ### Escalonamento das variáveis selecionadas
 
-&ensp;O escalonamento de variáveis quantitativas é uma etapa essencial no pré-processamento de dados para modelagem preditiva, sobretudo em algoritmos de machine learning sensíveis à magnitude das variáveis. O objetivo dessa técnica é padronizar as escalas, de modo a evitar que atributos com valores mais elevados exerçam influência desproporcional sobre o processo de aprendizado e prejudiquem o desempenho preditivo do modelo.
+&emsp;O escalonamento de variáveis quantitativas é uma etapa essencial no pré-processamento de dados para modelagem preditiva, sobretudo em algoritmos de machine learning sensíveis à magnitude das variáveis. O objetivo dessa técnica é padronizar as escalas, de modo a evitar que atributos com valores mais elevados exerçam influência desproporcional sobre o processo de aprendizado e prejudiquem o desempenho preditivo do modelo.
 
-&ensp;No contexto da análise de dados da Universidad EAFIT, as três variáveis quantitativas selecionadas foram: CalcNotaQuiz, Talleres e Nota_Oficial. Essas variáveis podem fornecer informações muito importantes, uma vez que as Oficinas (Talleres), e os quizes são atividades que ocorrem com frequência e possuem grande influência na variável Nota_Oficial, que indica se um aluno foi reprovado ou não.
+&emsp;No contexto da análise de dados da Universidad EAFIT, as três variáveis quantitativas selecionadas foram: CalcNotaQuiz, Talleres e Nota_Oficial. Essas variáveis podem fornecer informações muito importantes, uma vez que as Oficinas (Talleres), e os quizes são atividades que ocorrem com frequência e possuem grande influência na variável Nota_Oficial, que indica se um aluno foi reprovado ou não.
 
-&ensp;O uso adequado do escalonamento possibilita que algoritmos de clustering, classificação e regressão processem os dados de maneira mais equilibrada, favorecendo a convergência dos modelos e aprimorando a precisão das predições. Além disso, contribui para a interpretação dos resultados e para a comparação consistente entre variáveis em análises exploratórias.
+&emsp;O uso adequado do escalonamento possibilita que algoritmos de clustering, classificação e regressão processem os dados de maneira mais equilibrada, favorecendo a convergência dos modelos e aprimorando a precisão das predições. Além disso, contribui para a interpretação dos resultados e para a comparação consistente entre variáveis em análises exploratórias.
 
 #### Métodos de escalonamento escolhidos para cada variável
 
-&ensp;Para o escalonamento da variável "Calificación_Oficial", o método escolhido foi a padronização, pois é menos sensível a outliers significativos e mantém a escala das notas pré-escalonamento (de 0 a 5). Para a variável Talleres, o método escolhido foi a normalização (Min-Max) para manter a escala das notas de 0 a 1, e por fim, para a variável CalcNotaQuiz, o método de escalonamento escolhido foi a padronização, pois além de ser menos sensível a outliers, permite analisar a quantos desvios padrões de distância uma certa nota se encontra da média da amostra.
+&emsp;Para o escalonamento da variável "Calificación_Oficial", o método escolhido foi a padronização, pois é menos sensível a outliers significativos e mantém a escala das notas pré-escalonamento (de 0 a 5). Para a variável Talleres, o método escolhido foi a normalização (Min-Max) para manter a escala das notas de 0 a 1, e por fim, para a variável CalcNotaQuiz, o método de escalonamento escolhido foi a padronização, pois além de ser menos sensível a outliers, permite analisar a quantos desvios padrões de distância uma certa nota se encontra da média da amostra.
 
 #### Equações de cada escalonamento
 
@@ -2024,21 +2095,21 @@ Seguindo com as equações:
 ### Histogramas pós escalonamento
 
 <div align="center">
-  <sub>Figura x - Multiplot da variável CalcNotaQuiz pós escalonamento</sub><br>
+  <sub>Figura 31: Multiplot da variável CalcNotaQuiz pós escalonamento</sub><br>
   <img src="../assets/esc_CalcNotaQuiz.jpg"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
 <div align="center">
-  <sub>Figura x - Multiplot da variável Talleres (Oficinas) pós escalonamento</sub><br>
+  <sub>Figura 32: Multiplot da variável Talleres (Oficinas) pós escalonamento</sub><br>
   <img src="../assets/esc_Oficinas.jpg"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
 <div align="center">
-  <sub>Figura x - Multiplot da variável Nota_Oficial pós escalonamento</sub><br>
+  <sub>Figura 33: Multiplot da variável Nota_Oficial pós escalonamento</sub><br>
   <img src="../assets/esc_Nota_Oficial.jpg"><br>
   <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-&ensp;Ao comparar com os histogramas pré escalonamento, nota-se que a principal mudança está na escala dos dados limitando-se ao limite superior igual a 1, contribuindo para a atribuição de pesos do modelo preditivo na etapa de treinamento e uma singela suavização dos gráficos.
+&emsp;Ao comparar com os histogramas pré escalonamento, nota-se que a principal mudança está na escala dos dados limitando-se ao limite superior igual a 1, contribuindo para a atribuição de pesos do modelo preditivo na etapa de treinamento e uma singela suavização dos gráficos.
