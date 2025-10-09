@@ -33,32 +33,37 @@
 &emsp; O projeto, desenvolvido em parceria com a Universidade EAFIT, tem como objetivo criar um modelo preditivo capaz de identificar, de forma antecipada, estudantes em risco de reprovar no curso de programação. A instituição enfrenta o desafio de detectar dificuldades acadêmicas apenas em estágios avançados do semestre, o que limita as oportunidades de intervenção e apoio.<br>
 &emsp; A solução proposta é um sistema de análise preditiva que utiliza dados históricos e parciais — como notas de avaliações, quizzes, tempo de resolução e informações demográficas — para estimar a probabilidade de aprovação antes do término do curso. O modelo fará previsões contínuas e atualizadas a cada 4 semanas, permitindo aos docentes agir rapidamente com estratégias personalizadas, como tutorias, revisões ou atividades de reforço.<br>
 &emsp; Com isso, espera-se otimizar os recursos de acompanhamento, reduzir taxas de reprovação e evasão, além de promover melhorias no desempenho acadêmico. A ferramenta também oferecerá insights sobre quais fatores mais influenciam o resultado final, apoiando decisões pedagógicas baseadas em dados.
+&emsp; Aqui nós temos um video em espanhol explicando como entrar na plataforma e o que ela faz: <a href="https://youtu.be/V4tN3LteRU8"> LaTech Funcionamento</a>
 
-## 📁 Estrutura de pastas
-(Arquivos e diretórios na raiz do projeto):
+## 📁 Estrutura de pastas (escaneada na raiz do projeto — .venv ignorado)
+
 ```
 / (raiz do projeto)
 │
 ├── README.md
 │
+├── dashboard/
+│   ├── app.py                      # Streamlit app principal
+│   ├── requirements.txt            # Dependências específicas do dashboard
+│   ├── modelos_treinados/          # Arquivos .pkl com modelos treinados para o dashboard
+│   └── src/                        # Código do frontend / componentes do dashboard
+│
 ├── assets/
 │   ├── inteli.png
-│   └── ...(imagens e mídias usadas na documentação)
+│   └── ... (imagens e mídias usadas na documentação)
 │
 ├── documents/
-│   └── documentacao.md      (Documentação do projeto)
+│   └── documentacao.md             # Documentação do projeto
 │
 ├── notebooks/
-│   ├── anexos/              (Notebook Jupyter com os modelos não utilizados)
-│   ├── dados/               (Pasta onde os dados tratados são armazenados)
-│   ├── modelos_treinados/   (Arquivos .pkl com os modelos já treinados)
-│   ├── notebook.ipynb       (Jupyter Notebook  com o modelo utilizado pelo projeto)
-│   └── notebook.py          (Cria o front com o streamlit)
+│   ├── notebook.ipynb              # Notebook principal com o modelo usado
+│   ├── requirements.txt            # Dependências para os notebooks (se aplicável)
+│   ├── anexos/                     # Notebooks e materiais suplementares
+│   └── dados/                      # Dados tratados (arquivos .csv, .xlsx, etc.)
 │
-├── requirements.txt         (Dependências do projeto)
 │
-├──.gitattributes
-└──.gitignore
+├── .gitattributes
+└── .gitignore
 ```
 
 ## 💻 Execução dos projetos
@@ -67,7 +72,7 @@
 - Python 3.8+ (recomenda-se 3.10)
 - Git
 - VS Code com extensões: Python e Jupyter
-- Arquivos do projeto (clone do repositório). O projeto contém `requirements.txt`.
+- Arquivos do projeto (clone do repositório).
 
 ## Execução local (VS Code + Python)
 1. Clone o repositório:
@@ -86,19 +91,27 @@
       python -m venv .venv
       source .venv/bin/activate
       ```
-3. Atualize pip e instale dependências:
+3. Atualize pip:
     ```
     pip install --upgrade pip
-    pip install -r requirements.txt
     ```
-4. Abra o projeto no VS Code:
+4. Rode os notebooks:
+    - Instale as dependências
+    ```
+    pip install -r notebooks/requirements.txt
+    ```
+    - Certifique-se de que os arquivo com os dados do primeiro e segundo semestre estão na raiz do projeto com os seguintes nomes: `Datos_Anonimo_20231_v2.xlsx` e `Datos_Anonimo_20231_v2.xlsx`.
     - Selecione o intérprete Python do ambiente `.venv`.
     - Para trabalhar com notebooks Jupyter, abra o arquivo `.ipynb` em `notebooks/` e use a extensão Jupyter.
 
-5. Executar a aplicação Streamlit:
+5. Execute a aplicação Streamlit localmente:
+    - Instale as dependências
     ```
-    cd notebooks
-    streamlit run notebook.py
+    pip install -r dashboard/requirements.txt
+    ```
+    - Rode o projeto
+    ```
+    cd dashboard && streamlit run app.py
     ```
     - O Streamlit abrirá a interface no navegador (provavelmente http://localhost:8501).
     - Caso queira, interrompa com Ctrl+C no terminal para parar a aplicação.

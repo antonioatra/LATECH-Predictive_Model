@@ -2,9 +2,6 @@
 import streamlit as st
 from PIL import Image
 import pandas as pd
-import plotly.graph_objects as go
-import plotly.express as px
-import src.data_loader as dl
 import src.model as ml
 import src.style as stl
 import src.plotting as plot
@@ -74,7 +71,6 @@ if fonte_dados == "Cargar datos de predicción | Carregar dados da predição":
             else:
                 df_predicao = pd.read_excel(uploaded_file)
             
-            # ========== VALIDAÇÃO DE COLUNAS (NOVO) ==========
             # Identificar colunas obrigatórias (notas/quizzes)
             colunas_obrigatorias = [col for col in colunas_disponiveis 
                                     if col.startswith(('Quiz', 'Parcial', 'TempoQ'))]
@@ -198,13 +194,13 @@ with col4:
         stl.criar_card_metrica(
             titulo="Precisión del pronóstico |Precisão da Previsão",
             valor=f"{precisao_modelo:.0f}%",
-            cor_fundo="linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)"
+            cor_fundo="linear-gradient(135deg, #64748b 0%, #475569 100%)"
         )
     else:
         stl.criar_card_metrica(
             titulo="Precisión del pronóstico | Precisão da Previsão",
-            valor="N/A",
-            cor_fundo="linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)"
+            valor="?",
+            cor_fundo="linear-gradient(135deg, #64748b 0%, #475569 100%)"
         )
 
 st.markdown("<br>", unsafe_allow_html=True)
