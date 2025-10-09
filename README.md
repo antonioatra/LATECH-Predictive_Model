@@ -33,6 +33,7 @@
 &emsp; O projeto, desenvolvido em parceria com a Universidade EAFIT, tem como objetivo criar um modelo preditivo capaz de identificar, de forma antecipada, estudantes em risco de reprovar no curso de programação. A instituição enfrenta o desafio de detectar dificuldades acadêmicas apenas em estágios avançados do semestre, o que limita as oportunidades de intervenção e apoio.<br>
 &emsp; A solução proposta é um sistema de análise preditiva que utiliza dados históricos e parciais — como notas de avaliações, quizzes, tempo de resolução e informações demográficas — para estimar a probabilidade de aprovação antes do término do curso. O modelo fará previsões contínuas e atualizadas a cada 4 semanas, permitindo aos docentes agir rapidamente com estratégias personalizadas, como tutorias, revisões ou atividades de reforço.<br>
 &emsp; Com isso, espera-se otimizar os recursos de acompanhamento, reduzir taxas de reprovação e evasão, além de promover melhorias no desempenho acadêmico. A ferramenta também oferecerá insights sobre quais fatores mais influenciam o resultado final, apoiando decisões pedagógicas baseadas em dados.
+&emsp; Aqui nós temos um video em espanhol explicando como entrar na plataforma e o que ela faz: <a href="https://youtu.be/V4tN3LteRU8"> LaTech Funcionamento</a>
 
 ## 📁 Estrutura de pastas (escaneada na raiz do projeto — .venv ignorado)
 
