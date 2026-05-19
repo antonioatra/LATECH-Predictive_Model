@@ -28,25 +28,25 @@
 
 ## <a name="c1"></a>1. Introdução
 
-&emsp; Fundada em 1960 por um grupo de empresários de Medellín, a EAFIT nasceu com o propósito de formar profissionais para os setores de gestão, finanças e tecnologia, estabelecendo desde o início um forte vínculo com o desenvolvimento socioeconômico da região (UNIVERSIDAD EAFIT, s.d.). Reconhecida pelo governo colombiano como universidade em 1971, a instituição expandiu sua oferta acadêmica para incluir escolas de Engenharia, Ciências e Humanidades, Direito e Música, adaptando-se às necessidades da sociedade e consolidando sua posição como um centro educacional de destaque.
+&emsp; Fundada em 1960 por um grupo de empresários de Medellín, a universidade nasceu com o propósito de formar profissionais para os setores de gestão, finanças e tecnologia, estabelecendo desde o início um forte vínculo com o desenvolvimento socioeconômico da região (UNIVERSIDAD X, s.d.). Reconhecida pelo governo colombiano como universidade em 1971, a instituição expandiu sua oferta acadêmica para incluir escolas de Engenharia, Ciências e Humanidades, Direito e Música, adaptando-se às necessidades da sociedade e consolidando sua posição como um centro educacional de destaque.
 
-&emsp; O reconhecimento oficial como universidade pelo Ministério da Educação, em 1971, marcou um ponto de inflexão que acelerou a diversificação acadêmica e a expansão institucional. A partir dos anos 1970, a EAFIT consolidou novas escolas e programas além da Administração, incluindo Engenharia e, posteriormente, Ciências e Humanidades, Direito e Música, em sintonia com as necessidades emergentes da sociedade e com a modernização do tecido econômico regional (RESTREPO CARDONA, 2020). Esse crescimento veio acompanhado de uma profunda atuação no território: o campus de La Aguacatala, no sul de Medellín, tornou-se referência urbana e cultural, com atividades acadêmicas, científicas e de extensão que expressam a missão institucional de inspirar vidas, criar conhecimento e transformar a sociedade (UNIVERSIDAD EAFIT, s.d.).
+&emsp; O reconhecimento oficial como universidade pelo Ministério da Educação, em 1971, marcou um ponto de inflexão que acelerou a diversificação acadêmica e a expansão institucional. A partir dos anos 1970, a universidade consolidou novas escolas e programas além da Administração, incluindo Engenharia e, posteriormente, Ciências e Humanidades, Direito e Música, em sintonia com as necessidades emergentes da sociedade e com a modernização do tecido econômico regional (RESTREPO CARDONA, 2020). Esse crescimento veio acompanhado de uma profunda atuação no território: o campus de La Aguacatala, no sul de Medellín, tornou-se referência urbana e cultural, com atividades acadêmicas, científicas e de extensão que expressam a missão institucional de inspirar vidas, criar conhecimento e transformar a sociedade (UNIVERSIDAD X, s.d.).
 
-&emsp; Entre seus egressos notáveis, a EAFIT formou líderes como Aníbal Gaviria, ex-governador de Antioquia, e Claudia Patricia Restrepo Montoya, ex-vice-ministra de Cultura da Colômbia, testemunhos do compromisso da instituição com uma formação ética, crítica e orientada ao serviço público. Apesar desse histórico, a universidade enfrenta o desafio contemporâneo de otimizar a experiência de aprendizagem em um contexto cada vez mais digital. Neste projeto, propomos desenvolver um modelo preditivo que antecipe a probabilidade de reprovação de estudantes, apoiando a tomada de decisão pedagógica e a personalização de intervenções (RESTREPO CARDONA, 2020).
+&emsp; Entre seus egressos notáveis, a universidade formou líderes como Aníbal Gaviria, ex-governador de Antioquia, e Claudia Patricia Restrepo Montoya, ex-vice-ministra de Cultura da Colômbia, testemunhos do compromisso da instituição com uma formação ética, crítica e orientada ao serviço público. Apesar desse histórico, a universidade enfrenta o desafio contemporâneo de otimizar a experiência de aprendizagem em um contexto cada vez mais digital. Neste projeto, propomos desenvolver um modelo preditivo que antecipe a probabilidade de reprovação de estudantes, apoiando a tomada de decisão pedagógica e a personalização de intervenções (RESTREPO CARDONA, 2020).
 
-&emsp; Apesar de seu histórico de sucesso, a EAFIT enfrenta o desafio de otimizar a experiência de aprendizado dos estudantes em um contexto cada vez mais digital. O problema consiste na necessidade de desenvolver uma metodologia para adaptar estratégias de ensino de países mais desenvolvidos à realidade e aos recursos da Colômbia.
+&emsp; Apesar de seu histórico de sucesso, a universidade enfrenta o desafio de otimizar a experiência de aprendizado dos estudantes em um contexto cada vez mais digital. O problema consiste na necessidade de desenvolver uma metodologia para adaptar estratégias de ensino de países mais desenvolvidos à realidade e aos recursos da Colômbia.
 
 ## <a name="c2"></a>2. Objetivos e Justificativa
-&emsp; Em um cenário acadêmico cada vez mais orientado por dados, o uso de ferramentas de **análise preditiva** tornou-se essencial para apoiar decisões pedagógicas e estratégicas. A Universidad EAFIT, reconhecida por sua excelência e inovação, enfrenta o desafio contemporâneo de aprimorar a experiência de aprendizagem e reduzir índices de reprovação em um contexto cada vez mais digital e dinâmico.
+&emsp; Em um cenário acadêmico cada vez mais orientado por dados, o uso de ferramentas de **análise preditiva** tornou-se essencial para apoiar decisões pedagógicas e estratégicas. A Universidad X, reconhecida por sua excelência e inovação, enfrenta o desafio contemporâneo de aprimorar a experiência de aprendizagem e reduzir índices de reprovação em um contexto cada vez mais digital e dinâmico.
 
 &emsp; Nesse contexto, o desenvolvimento de um **modelo preditivo para identificação de alunos em risco de reprovação** surge como uma iniciativa estratégica voltada à **transformação digital do ensino**. O projeto visa integrar ciência de dados, tecnologia e propósito educacional, oferecendo uma solução que antecipa comportamentos de risco e apoia a tomada de decisão docente e institucional.
 
-&emsp; Desenvolvido pelo grupo **THROXY**, o projeto combina rigor técnico e sensibilidade pedagógica, buscando promover intervenções precoces e personalizadas que favoreçam o sucesso acadêmico e fortaleçam a missão institucional da EAFIT de inspirar vidas, criar conhecimento e transformar a sociedade.
+&emsp; Desenvolvido pelo grupo **THROXY**, o projeto combina rigor técnico e sensibilidade pedagógica, buscando promover intervenções precoces e personalizadas que favoreçam o sucesso acadêmico e fortaleçam a missão institucional da universidade de inspirar vidas, criar conhecimento e transformar a sociedade.
 
 ### 2.1 Objetivos
 
 **Objetivo Geral:**  
-&emsp; Desenvolver um modelo preditivo capaz de identificar, com base em dados históricos de desempenho acadêmico, os alunos com maior probabilidade de reprovação, a fim de subsidiar ações pedagógicas e estratégicas da Universidad EAFIT.
+&emsp; Desenvolver um modelo preditivo capaz de identificar, com base em dados históricos de desempenho acadêmico, os alunos com maior probabilidade de reprovação, a fim de subsidiar ações pedagógicas e estratégicas da Universidad X.
 
 **Objetivos Específicos:**
 
@@ -64,7 +64,7 @@
 
 ### 2.2 Proposta de Solução
 
-&emsp; A solução proposta consiste em um **modelo preditivo supervisionado**, treinado a partir de dados acadêmicos de estudantes da EAFIT, com o propósito de classificar alunos em atual estado de aprovação ou reprovação.
+&emsp; A solução proposta consiste em um **modelo preditivo supervisionado**, treinado a partir de dados acadêmicos de estudantes da universidade, com o propósito de classificar alunos em atual estado de aprovação ou reprovação.
 
 &emsp; O sistema utiliza algoritmos de aprendizado de máquina para analisar padrões de notas, tempos de execução de quizzes, desempenho em projetos e evolução ao longo do semestre. Os resultados são apresentados por meio de um **dashboard interativo**, que permite aos docentes e coordenadores monitorar os alunos em tempo real, identificando e agindo antecipadamente com intervenções direcionadas.
 
@@ -76,7 +76,7 @@
 
 &emsp; Tal abordagem traz benefícios diretos à instituição, como **redução da evasão**, **melhoria na taxa de aprovação**, **aumento do engajamento estudantil** e **otimização do acompanhamento docente**. Além disso, ao proporcionar explicabilidade e transparência, o projeto promove a **confiança no uso da inteligência artificial** e reforça o compromisso ético com o uso responsável de dados educacionais.
 
-&emsp; Em suma, o modelo proposto vai além de uma ferramenta técnica: representa um **instrumento de transformação educacional**, unindo ciência de dados, empatia pedagógica e inovação tecnológica em prol do sucesso dos estudantes e da excelência acadêmica da Universidad EAFIT.
+&emsp; Em suma, o modelo proposto vai além de uma ferramenta técnica: representa um **instrumento de transformação educacional**, unindo ciência de dados, empatia pedagógica e inovação tecnológica em prol do sucesso dos estudantes e da excelência acadêmica da Universidad X.
 
 ## <a name="c3"></a>3. Metodologia
 &emsp; Neste projeto, será usada a metodologia CRISP-DM (Cross Industry Standard Process for Data Mining). Basicamente, essa metodologia serve para ajudar a criar modelos a partir da análise de dados, com o objetivo de identificar possíveis problemas e no caso atual, será usada para ajudar a prever alunos com chance de reprovação. Pensada por um conjunto de empresas de mineração de dados, como SPSS e Daimler-Benz, por volta dos anos 1990, é dividida em 6 etapas denominadas Entendimento do negócio, Entendimento dos dados, Preparação dos dados, Modelagem, Avaliação e por ultimo Implementação. Um ponto importante é que o CRISP-DM não é uma linha reta: o processo é iterativo, ou seja, quando é terminado uma etapa, sempre existe a chance de voltar para uma anterior e melhorar o que já foi feito. As seis etapas dessa metodologia são:
@@ -109,13 +109,13 @@
 
 ##### 1. Contexto da indústria:
 
-&emsp;A Universidad EAFIT é uma instituição privada sem fins lucrativos, fundada em Medellín, que se consolidou como protagonista no cenário acadêmico colombiano e regional. Reconhecida por sua excelência acadêmica e inovação, ocupa a 56ª posição entre 437 universidades no QS World University Rankings: Latin America & the Caribbean 2025, sendo a principal instituição fora de Bogotá e uma das cinco melhores universidades privadas da Colômbia. Entre seus principais concorrentes estão a Universidad de los Andes, líder no segmento privado e classificada em 7º lugar na América Latina, referência em pesquisa de ponta; a Universidad Pontificia Bolivariana (UPB), também sediada em Medellín e posicionada na 84ª colocação, com atuação multidisciplinar; e a Universidad CES, 33ª na região e especializada nas áreas de saúde e engenharia biomédica.
+&emsp;A Universidad X é uma instituição privada sem fins lucrativos, fundada em Medellín, que se consolidou como protagonista no cenário acadêmico colombiano e regional. Reconhecida por sua excelência acadêmica e inovação, ocupa a 56ª posição entre 437 universidades no QS World University Rankings: Latin America & the Caribbean 2025, sendo a principal instituição fora de Bogotá e uma das cinco melhores universidades privadas da Colômbia. Entre seus principais concorrentes estão a Universidad de los Andes, líder no segmento privado e classificada em 7º lugar na América Latina, referência em pesquisa de ponta; a Universidad Pontificia Bolivariana (UPB), também sediada em Medellín e posicionada na 84ª colocação, com atuação multidisciplinar; e a Universidad CES, 33ª na região e especializada nas áreas de saúde e engenharia biomédica.
 
-&emsp;Com um modelo de negócios sustentado pela diversificação de receitas, a EAFIT apresenta 57,4% de sua receita total proveniente de programas de graduação (COP 154.443 milhões), 21,6% de pós-graduação (COP 58.213 milhões) e o restante originado de educação executiva, consultorias corporativas e pesquisa aplicada. Em 2022, as receitas por serviços de ensino totalizaram COP 268.940 milhões. Sua solidez financeira foi reconhecida em maio de 2019, quando a Fitch Ratings elevou sua nota de crédito de longo prazo de AA+ para AAA(col), ressaltando alta liquidez, baixo endividamento e operação robusta — classificação retirada em abril de 2020 por decisão comercial da agência.
+&emsp;Com um modelo de negócios sustentado pela diversificação de receitas, a universidade apresenta 57,4% de sua receita total proveniente de programas de graduação (COP 154.443 milhões), 21,6% de pós-graduação (COP 58.213 milhões) e o restante originado de educação executiva, consultorias corporativas e pesquisa aplicada. Em 2022, as receitas por serviços de ensino totalizaram COP 268.940 milhões. Sua solidez financeira foi reconhecida em maio de 2019, quando a Fitch Ratings elevou sua nota de crédito de longo prazo de AA+ para AAA(col), ressaltando alta liquidez, baixo endividamento e operação robusta — classificação retirada em abril de 2020 por decisão comercial da agência.
 
-&emsp;O setor de ensino superior na Colômbia passa por transformações aceleradas. Estudos apontam que 69% dos estudantes preferem modelos flexíveis de aprendizagem, seja no formato online, híbrido ou blended. A adoção de ferramentas de inteligência artificial já alcança 92% do corpo discente, exigindo da EAFIT políticas claras de uso e integridade acadêmica. Paralelamente, as microcredentials ganham espaço como percursos de aprendizagem curtos, flexíveis e reconhecidos, impulsionando debates regionais liderados pela UNESCO IESALC para padronização e garantia de qualidade.
+&emsp;O setor de ensino superior na Colômbia passa por transformações aceleradas. Estudos apontam que 69% dos estudantes preferem modelos flexíveis de aprendizagem, seja no formato online, híbrido ou blended. A adoção de ferramentas de inteligência artificial já alcança 92% do corpo discente, exigindo da universidade políticas claras de uso e integridade acadêmica. Paralelamente, as microcredentials ganham espaço como percursos de aprendizagem curtos, flexíveis e reconhecidos, impulsionando debates regionais liderados pela UNESCO IESALC para padronização e garantia de qualidade.
 
-&emsp;Nesse contexto, a EAFIT se posiciona para capitalizar essas mudanças, investindo em inovação pedagógica, integração tecnológica e ampliação de parcerias estratégicas, visando não apenas manter sua relevância no cenário acadêmico, mas também antecipar tendências e moldar o futuro da educação superior na América Latina.
+&emsp;Nesse contexto, a universidade se posiciona para capitalizar essas mudanças, investindo em inovação pedagógica, integração tecnológica e ampliação de parcerias estratégicas, visando não apenas manter sua relevância no cenário acadêmico, mas também antecipar tendências e moldar o futuro da educação superior na América Latina.
 
 ##### 2. 5 forças de Porter:
 
@@ -139,29 +139,29 @@
 
 **Rivalidade entre concorrentes existentes**
 
-&emsp;A Universidad EAFIT atua no setor de ensino superior colombiano, especialmente no segmento privado, caracterizado por um número moderado de instituições de grande porte e forte reputação acadêmica. Seus principais concorrentes diretos incluem a Universidad de los Andes, líder no ranking nacional, a Universidad Pontificia Bolivariana (UPB) e a Universidad CES, todas com forte presença em áreas estratégicas de ensino e pesquisa. Essa rivalidade é intensificada por fatores como reputação acadêmica, qualidade do corpo docente, internacionalização, infraestrutura e inovação pedagógica. Apesar disso, a EAFIT diferencia-se por seu posicionamento como a principal universidade privada fora de Bogotá, pela diversificação de receitas e pela oferta de programas inovadores em múltiplas áreas do conhecimento, o que fortalece sua marca e a mantém competitiva no cenário nacional e regional.
+&emsp;A Universidad X atua no setor de ensino superior colombiano, especialmente no segmento privado, caracterizado por um número moderado de instituições de grande porte e forte reputação acadêmica. Seus principais concorrentes diretos incluem a Universidad de los Andes, líder no ranking nacional, a Universidad Pontificia Bolivariana (UPB) e a Universidad CES, todas com forte presença em áreas estratégicas de ensino e pesquisa. Essa rivalidade é intensificada por fatores como reputação acadêmica, qualidade do corpo docente, internacionalização, infraestrutura e inovação pedagógica. Apesar disso, a universidade diferencia-se por seu posicionamento como a principal universidade privada fora de Bogotá, pela diversificação de receitas e pela oferta de programas inovadores em múltiplas áreas do conhecimento, o que fortalece sua marca e a mantém competitiva no cenário nacional e regional.
 
 **Poder de barganha de fornecedores**
 
-&emsp;No setor educacional, os fornecedores podem incluir desde editoras acadêmicas e plataformas tecnológicas até prestadores de serviços de manutenção, segurança e alimentação. A EAFIT, por ser uma instituição de grande porte e com sólida situação financeira, tem poder de negociação elevado, podendo diversificar fornecedores e adotar soluções internas para reduzir dependências estratégicas. Sua posição consolidada no mercado permite estabelecer contratos de longo prazo em condições favoráveis, além de buscar parcerias acadêmicas e tecnológicas que geram benefícios mútuos, diminuindo o risco de impactos significativos advindos de aumento de custos ou mudanças nas condições de fornecimento.
+&emsp;No setor educacional, os fornecedores podem incluir desde editoras acadêmicas e plataformas tecnológicas até prestadores de serviços de manutenção, segurança e alimentação. A universide, por ser uma instituição de grande porte e com sólida situação financeira, tem poder de negociação elevado, podendo diversificar fornecedores e adotar soluções internas para reduzir dependências estratégicas. Sua posição consolidada no mercado permite estabelecer contratos de longo prazo em condições favoráveis, além de buscar parcerias acadêmicas e tecnológicas que geram benefícios mútuos, diminuindo o risco de impactos significativos advindos de aumento de custos ou mudanças nas condições de fornecimento.
 
 **Poder de barganha de compradores**
 
-&emsp;Os "compradores" no contexto da EAFIT são os estudantes e suas famílias, que avaliam não apenas o preço das mensalidades, mas também a qualidade do ensino, a empregabilidade dos egressos, as oportunidades de intercâmbio e o reconhecimento acadêmico. No segmento premium da educação superior privada, o poder de barganha é moderado: embora os alunos possam optar por outras instituições de prestígio, a reputação, a localização estratégica e o portfólio diversificado da EAFIT reduzem a elasticidade da demanda. No entanto, com o aumento da oferta de cursos online, híbridos e microcredentials — muitas vezes a preços menores —, cresce a pressão para que a EAFIT mantenha diferenciais claros de valor agregado, reforçando a importância de inovação contínua e experiência acadêmica de excelência.
+&emsp;Os "compradores" no contexto da universidade são os estudantes e suas famílias, que avaliam não apenas o preço das mensalidades, mas também a qualidade do ensino, a empregabilidade dos egressos, as oportunidades de intercâmbio e o reconhecimento acadêmico. No segmento premium da educação superior privada, o poder de barganha é moderado: embora os alunos possam optar por outras instituições de prestígio, a reputação, a localização estratégica e o portfólio diversificado da universidade reduzem a elasticidade da demanda. No entanto, com o aumento da oferta de cursos online, híbridos e microcredentials — muitas vezes a preços menores —, cresce a pressão para que a universidade mantenha diferenciais claros de valor agregado, reforçando a importância de inovação contínua e experiência acadêmica de excelência.
 
 **Ameaça de novos entrantes**
 
-&emsp;O ingresso de novos competidores relevantes no ensino superior colombiano é dificultado por barreiras como altos investimentos em infraestrutura, acreditações, corpo docente qualificado e reputação acadêmica, além de regulamentações rigorosas. Apesar disso, o avanço da educação online e de plataformas globais de cursos representa uma ameaça indireta, pois reduz as barreiras geográficas e oferece alternativas de formação a custos competitivos. Nesse cenário, a EAFIT mitiga o risco por meio de expansão de programas digitais, parcerias internacionais e fortalecimento de sua marca como centro de excelência acadêmica e inovação.
+&emsp;O ingresso de novos competidores relevantes no ensino superior colombiano é dificultado por barreiras como altos investimentos em infraestrutura, acreditações, corpo docente qualificado e reputação acadêmica, além de regulamentações rigorosas. Apesar disso, o avanço da educação online e de plataformas globais de cursos representa uma ameaça indireta, pois reduz as barreiras geográficas e oferece alternativas de formação a custos competitivos. Nesse cenário, a universidade mitiga o risco por meio de expansão de programas digitais, parcerias internacionais e fortalecimento de sua marca como centro de excelência acadêmica e inovação.
 
 **Ameaça de produtos substitutos**
 
-&emsp;As principais alternativas ao ensino superior tradicional incluem cursos técnicos, bootcamps, programas de microcredentials e plataformas de aprendizado online, que oferecem formação mais rápida e focada em habilidades específicas. Esses formatos, muitas vezes mais acessíveis, podem atrair estudantes que buscam inserção rápida no mercado de trabalho ou atualização profissional contínua. A ameaça é crescente, especialmente em áreas ligadas à tecnologia e negócios, onde a aprendizagem prática é valorizada. No entanto, a EAFIT mantém vantagem competitiva ao oferecer uma formação integral, com reconhecimento acadêmico formal, rede de contatos e experiências de pesquisa e intercâmbio, fatores que ainda representam barreiras significativas para a substituição total por formatos alternativos.
+&emsp;As principais alternativas ao ensino superior tradicional incluem cursos técnicos, bootcamps, programas de microcredentials e plataformas de aprendizado online, que oferecem formação mais rápida e focada em habilidades específicas. Esses formatos, muitas vezes mais acessíveis, podem atrair estudantes que buscam inserção rápida no mercado de trabalho ou atualização profissional contínua. A ameaça é crescente, especialmente em áreas ligadas à tecnologia e negócios, onde a aprendizagem prática é valorizada. No entanto, a universidade mantém vantagem competitiva ao oferecer uma formação integral, com reconhecimento acadêmico formal, rede de contatos e experiências de pesquisa e intercâmbio, fatores que ainda representam barreiras significativas para a substituição total por formatos alternativos.
 
 #### 4.1.2. Análise SWOT
 
 &emsp; Segundo Rother e Shook (2012), a Análise SWOT é uma ferramenta de planejamento estratégico que organiza visualmente as forças, fraquezas, oportunidades e ameaças de um negócio. Seu objetivo é auxiliar na avaliação do ambiente interno e externo de uma empresa ou projeto, e orientar uma tomada de decisão mais embasada na realidade.
 
-&emsp; Dessa maneira, a aplicação dessa análise é crucial para o mapeamento estratégico da solução em desenvolvimento para a EAFIT. Fornecendo elementos vitais para a idealização e o debate de ideias do projeto, permitindo uma compreensão clara dos desafios e das oportunidades.
+&emsp; Dessa maneira, a aplicação dessa análise é crucial para o mapeamento estratégico da solução em desenvolvimento para a universidade. Fornecendo elementos vitais para a idealização e o debate de ideias do projeto, permitindo uma compreensão clara dos desafios e das oportunidades.
 
 <div align="center">
 
@@ -177,23 +177,23 @@
 
 ##### Forças:
 
-- **Posicionada como uma das melhores universidades da Colômbia** - A Universidad EAFIT possui reconhecimento nacional por sua excelência acadêmica (UNIVERSIDAD EAFIT, 2023), foco na inovação e comprometimento com a formação integral de seus estudantes. É constantemente classificada entre as melhores instituições de ensino superior da Colômbia.
+- **Posicionada como uma das melhores universidades da Colômbia** - A Universidad X possui reconhecimento nacional por sua excelência acadêmica (UNIVERSIDAD X, 2023), foco na inovação e comprometimento com a formação integral de seus estudantes. É constantemente classificada entre as melhores instituições de ensino superior da Colômbia.
 
-- **Credenciada como instituição de alta qualidade** - A EAFIT foi credenciada pelo Ministério Nacional da Educação da Colômbia como uma universidade de alta qualidade duas vezes seguidas, sendo a primeira universidade colombiana a ter esta recognição. Essa certificação garante que a instituição atende a rigorosos critérios de avaliação institucional, como infraestrutura, corpo docente, produção científica, governança e impacto social, contribuindo para a confiança do público interno e externo.
+- **Credenciada como instituição de alta qualidade** - A universidade foi credenciada pelo Ministério Nacional da Educação da Colômbia como uma universidade de alta qualidade duas vezes seguidas, sendo a primeira universidade colombiana a ter esta recognição. Essa certificação garante que a instituição atende a rigorosos critérios de avaliação institucional, como infraestrutura, corpo docente, produção científica, governança e impacto social, contribuindo para a confiança do público interno e externo.
 
 - **Currículo extenso e diverso, com opções de pós-graduação** - A universidade oferece uma ampla gama de programas acadêmicos em áreas como administração, economia, engenharia, humanidades, direito e ciências aplicadas. Além disso, conta com cerca de 90 opções de cursos de pós-graduação.
 
 ##### Fraquezas:
 
-- **Gastos elevados com a manutenção do Campus Vivo** - Embora o Campus Vivo seja um diferencial arquitetônico e ambiental da EAFIT, sua manutenção representa custos operacionais significativos. Isso inclui jardinagem, segurança, manutenção predial e limpeza, o que pode impactar os recursos disponíveis para investimentos em outras áreas estratégicas, como digitalização ou internacionalização.
+- **Gastos elevados com a manutenção do Campus Vivo** - Embora o Campus Vivo seja um diferencial arquitetônico e ambiental da universidade, sua manutenção representa custos operacionais significativos. Isso inclui jardinagem, segurança, manutenção predial e limpeza, o que pode impactar os recursos disponíveis para investimentos em outras áreas estratégicas, como digitalização ou internacionalização.
 
-- **Inexistência de parcerias com universidades de referência na América Latina e no mundo** - Apesar de seu prestígio nacional, a EAFIT ainda apresenta limitações na construção de alianças acadêmicas internacionais robustas, especialmente com instituições de referência global. A ausência de programas de dupla titulação, intercâmbios amplamente reconhecidos e pesquisa conjunta com universidades de renome mundial limita o alcance internacional da instituição.
+- **Inexistência de parcerias com universidades de referência na América Latina e no mundo** - Apesar de seu prestígio nacional, a universidade ainda apresenta limitações na construção de alianças acadêmicas internacionais robustas, especialmente com instituições de referência global. A ausência de programas de dupla titulação, intercâmbios amplamente reconhecidos e pesquisa conjunta com universidades de renome mundial limita o alcance internacional da instituição.
 
 ##### Ameaças:
 
 - **Instabilidade econômica e política regional** - O contexto colombiano, assim como o de outras nações latino-americanas, é frequentemente marcado por flutuações econômicas, tensões sociais e mudanças políticas que podem afetar diretamente o financiamento da educação superior, os programas de intercâmbio, os investimentos em infraestrutura e a própria capacidade de planejamento estratégico das universidades privadas.
 
-- **Competição com outras universidades sul-americanas** - A crescente profissionalização e internacionalização de outras universidades na América Latina, como a Universidad de Los Andes (Colômbia), Pontificia Universidad Católica (Chile), Universidade de São Paulo (Brasil) e Universidad Nacional Autónoma de México (México), impõe um desafio constante. A EAFIT precisa manter-se atualizada, inovadora e conectada globalmente para não perder sua atratividade frente à concorrência (QS TOP UNIVERSITIES, 2024).
+- **Competição com outras universidades sul-americanas** - A crescente profissionalização e internacionalização de outras universidades na América Latina, como a Universidad de Los Andes (Colômbia), Pontificia Universidad Católica (Chile), Universidade de São Paulo (Brasil) e Universidad Nacional Autónoma de México (México), impõe um desafio constante. A universidade precisa manter-se atualizada, inovadora e conectada globalmente para não perder sua atratividade frente à concorrência (QS TOP UNIVERSITIES, 2024).
 
 ##### Oportunidades:
 
@@ -204,7 +204,7 @@
 
 &emsp; O planejamento geral da solução é uma etapa fundamental em projetos de inteligência artificial e ciência de dados, já que é fácil se perder em um projeto que exige muitos detalhes. Nele são detalhados os dados disponíveis, os objetivos da solução, o tipo de tarefa de aprendizado de máquina mais adequada (como classificação ou regressão), além dos possíveis usos da ferramenta, benefícios esperados e critérios de sucesso do projeto feito.
 
-&emsp; Primeiro, será mostrado a base que todo o projeto se baseará: Os dados. Fornecidos pela EAFIT, eles estão dispostos em tabelas de notas na nova matéria de programção de 775 alunos da instituição entre o primeiro e segundo semestre do ano de 2023. Logo abaixo, terá as explicações do que cada coluna significa:
+&emsp; Primeiro, será mostrado a base que todo o projeto se baseará: Os dados. Fornecidos pela universidade, eles estão dispostos em tabelas de notas na nova matéria de programção de 775 alunos da instituição entre o primeiro e segundo semestre do ano de 2023. Logo abaixo, terá as explicações do que cada coluna significa:
 
 - **Período:** Período letivo em que a aula é realizada.
 - **Grupo:** Grupo ao qual o aluno pertence.
@@ -229,7 +229,7 @@
 
 &emsp; Esse banco de dados fornecido será importante para que seja possível identificar padrões, nível de dificuldade entre as atividades entre outros dados importantes para o treinamento do modelo preditivo.
 
-&emsp; Com o modelo preditivo, conseguimos resolver as dores do cliente, mas temos que contextualizar tal problema para ficar o mais claro possível nossos objetivos. A instituição EAFIT colocou uma nova matéria de programação em sua grade e, no primeiro ano, teve muitas notas baixas e vários alunos desistindo da matéria antes de acabar. Para solucionar esse problema, será produzido um modelo preditivo que ajudará os professores a administrar o curso, analisando as notas dos alunos e se há chance de reprovação dos mesmos. Com um sistema capaz de prever desempenhos e até prever se o aluno será reprovado ou não, os professores e coordenadores poderão disponibilizar o melhor suporte para os alunos que estão com dificuldade ou até grande risco de reprovação.
+&emsp; Com o modelo preditivo, conseguimos resolver as dores do cliente, mas temos que contextualizar tal problema para ficar o mais claro possível nossos objetivos. A instituição colocou uma nova matéria de programação em sua grade e, no primeiro ano, teve muitas notas baixas e vários alunos desistindo da matéria antes de acabar. Para solucionar esse problema, será produzido um modelo preditivo que ajudará os professores a administrar o curso, analisando as notas dos alunos e se há chance de reprovação dos mesmos. Com um sistema capaz de prever desempenhos e até prever se o aluno será reprovado ou não, os professores e coordenadores poderão disponibilizar o melhor suporte para os alunos que estão com dificuldade ou até grande risco de reprovação.
 
 ##### Tipo de Tarefa
 
@@ -284,7 +284,7 @@
 
 ##### Riscos:
 
-&emsp; Com base nas diretrizes apresentadas no PMBOK® Guide (PMI, 2021) e no conhecimento consolidado acerca da análise de riscos, elaborou-se a matriz de riscos do projeto com o objetivo de identificar, classificar e propor estratégias de mitigação para as ameaças potenciais ao desenvolvimento da solução. Essa abordagem permite antecipar problemas, minimizar impactos negativos e assegurar maior controle sobre as variáveis que podem comprometer o desempenho do modelo preditivo desenvolvido para a Universidade EAFIT, apresentado na figura 4.
+&emsp; Com base nas diretrizes apresentadas no PMBOK® Guide (PMI, 2021) e no conhecimento consolidado acerca da análise de riscos, elaborou-se a matriz de riscos do projeto com o objetivo de identificar, classificar e propor estratégias de mitigação para as ameaças potenciais ao desenvolvimento da solução. Essa abordagem permite antecipar problemas, minimizar impactos negativos e assegurar maior controle sobre as variáveis que podem comprometer o desempenho do modelo preditivo desenvolvido para a Universidade , apresentado na figura 4.
 
 <div align="center">
 
@@ -308,7 +308,7 @@
 
 ##### Oportunidades:
 
-&emsp; Além da identificação e análise dos riscos, é relevante reconhecer e explorar as oportunidades que o projeto oferece. A partir dessa perspectiva, elaborou-se a matriz de oportunidades com o propósito de potencializar fatores favoráveis, agregar valor ao desenvolvimento da solução e maximizar os benefícios dessa etapa de construção. Essa abordagem permite direcionar esforços para iniciativas que fortaleçam o trabalho do grupo e ampliem o impacto positivo do modelo preditivo desenvolvido para a Universidade EAFIT, apresentado na figura 5.
+&emsp; Além da identificação e análise dos riscos, é relevante reconhecer e explorar as oportunidades que o projeto oferece. A partir dessa perspectiva, elaborou-se a matriz de oportunidades com o propósito de potencializar fatores favoráveis, agregar valor ao desenvolvimento da solução e maximizar os benefícios dessa etapa de construção. Essa abordagem permite direcionar esforços para iniciativas que fortaleçam o trabalho do grupo e ampliem o impacto positivo do modelo preditivo desenvolvido para a Universidade , apresentado na figura 5.
 
 <div align="center">
 
@@ -349,13 +349,13 @@
 - Gênero: Feminino
 - Idade: 41 anos
 - Cidade: Medellín - Antioquia, Colômbia
-- Posição: Docente universitária e coordenadora de projetos pedagógicos na Universidad EAFIT
+- Posição: Docente universitária e coordenadora de projetos pedagógicos na Universidad 
 
 **Biografia**
 
 &emsp; Paola nasceu em Medellín, na Colômbia, e cresceu em um ambiente onde a educação era altamente valorizada. Desde pequena, era curiosa e gostava de resolver problemas práticos. Apaixonada por aprender, escolheu seguir a carreira acadêmica e se formou em Engenharia de Software pela Universidade Industrial de Santander. Posteriormente, concluiu um mestrado em Educação e Tecnologias Digitais na Universidad de los Andes.
 
-&emsp; Atualmente, mora em Medellín e leciona disciplinas introdutórias de programação na Universidad EAFIT, onde também lidera iniciativas de inovação educacional. É reconhecida por sua dedicação ao sucesso dos alunos e por seu compromisso com a inclusão e o uso ético da tecnologia na educação. Atua como ponte entre dados educacionais e ações pedagógicas eficazes, sempre buscando formas de aprimorar os resultados acadêmicos.
+&emsp; Atualmente, mora em Medellín e leciona disciplinas introdutórias de programação na Universidad , onde também lidera iniciativas de inovação educacional. É reconhecida por sua dedicação ao sucesso dos alunos e por seu compromisso com a inclusão e o uso ético da tecnologia na educação. Atua como ponte entre dados educacionais e ações pedagógicas eficazes, sempre buscando formas de aprimorar os resultados acadêmicos.
 
 **Frustrações**
 
@@ -396,13 +396,13 @@
 - Gênero: Masculino
 - Idade: 18 anos
 - Cidade: Bello - Antioquia, Colômbia
-- Posição: Estudante de primeiro semestre no curso de Engenharia de Sistemas da Universidad EAFIT
+- Posição: Estudante de primeiro semestre no curso de Engenharia de Sistemas da Universidad 
 
 **Biografia**
 
 &emsp; Juan nasceu e cresceu em Bello, uma cidade próxima a Medellín. Vem de uma família de classe média-baixa, onde é o primeiro a ingressar em uma universidade particular. Sempre se destacou na escola pública por sua criatividade e curiosidade, especialmente em áreas como matemática e informática, onde aprendeu programação básica por conta própria através de vídeos no YouTube.
 
-&emsp; Ingressar na Universidad EAFIT foi um grande sonho realizado, mas o choque com a metodologia, o volume de conteúdo e a linguagem acadêmica mais formal têm representado grandes desafios. Juan trabalha meio período em uma loja para ajudar nas despesas e, por isso, nem sempre consegue dedicar o tempo ideal aos estudos. Mesmo esforçado, suas notas nos primeiros quizzes e avaliações foram baixas, o que começou a impactar sua motivação.
+&emsp; Ingressar na Universidad  foi um grande sonho realizado, mas o choque com a metodologia, o volume de conteúdo e a linguagem acadêmica mais formal têm representado grandes desafios. Juan trabalha meio período em uma loja para ajudar nas despesas e, por isso, nem sempre consegue dedicar o tempo ideal aos estudos. Mesmo esforçado, suas notas nos primeiros quizzes e avaliações foram baixas, o que começou a impactar sua motivação.
 
 **Frustrações**
 
@@ -446,7 +446,7 @@
 - Gênero: Masculino
 - Idade: 55 anos
 - Cidade: Medellín, Colômbia
-- Posição: Diretor da Faculdade de Ciências e Engenharia na Universidad EAFIT
+- Posição: Diretor da Faculdade de Ciências e Engenharia na Universidad 
 
 **Biografia**
 
@@ -460,7 +460,7 @@
 
 **Motivações**
 
-- Transformar a EAFIT em referência em learning analytics na América Latina.
+- Transformar a  em referência em learning analytics na América Latina.
 - Reduzir a taxa de reprovação em 25% nos próximos 3 anos.
 - Criar um modelo replicável para outras disciplinas e instituições.
 
@@ -552,11 +552,11 @@
 
 - **Direitos dos Titulares:** Acesso, correção, exclusão, revogação de consentimento
 
-- **Solicitações via e-mail:** lgonzalez8@eafit.edu.co
+- **Solicitações via e-mail:** lgonzalez8@.edu.co
 
 - **Encarregado de Dados (DPO):**<br>
    1- *Nome:* Paola Vallejo<br>
-   2- *E-mail:* pvallej3@eafit.edu.co<br>
+   2- *E-mail:* pvallej3@.edu.co<br>
 
 ##### **Política de Privacidade na Colômbia**
 
@@ -567,7 +567,7 @@
 
 #### 4.2.1. Exploração de dados
 &emsp; Esta etapa inicial marca o primeiro contato com os dados, sendo responsável pela análise preliminar e pela identificação dos tipos de variáveis que compõem a base. A partir dessa exploração, torna-se possível compreender melhor a natureza das informações disponíveis e orientar as próximas etapas de preparação e tratamento.
-&emsp; A base de dados contém informações de alunos matriculados em um curso de Pensamento Computacional da Universidade EAFIT e apresenta as seguintes features:
+&emsp; A base de dados contém informações de alunos matriculados em um curso de Pensamento Computacional da Universidade  e apresenta as seguintes features:
 
 <div align = "center">
 
@@ -999,7 +999,7 @@ df_onehot = aplica_onehot(df_consolidado, encoder_info)
 
 ### 4.3. Preparação dos Dados e Modelagem
 
-> Aviso de confidencialidade: os dados institucionais utilizados são confidenciais e foram disponibilizados exclusivamente para fins acadêmicos mediante acordo com a Universidad EAFIT. Nenhuma amostra individual, linha ou arquivo bruto será exibido neste documento. As referências a variáveis e procedimentos são descritivas e não expõem conteúdo sensível.
+> Aviso de confidencialidade: os dados institucionais utilizados são confidenciais e foram disponibilizados exclusivamente para fins acadêmicos mediante acordo com a Universidad . Nenhuma amostra individual, linha ou arquivo bruto será exibido neste documento. As referências a variáveis e procedimentos são descritivas e não expõem conteúdo sensível.
 
 #### 4.3.1. Seleção de Features  
 
@@ -1214,15 +1214,15 @@ y_pred = ensemble.predict(X_test)
 
 ### 4.4. Comparação de Modelos
 
-&emsp; Na seção anterior, foi apresentado o modelo candidato ao projeto da EAFIT: o Nearest Centroid. Nesta seção, serão discutidos outros dois modelos, com o objetivo de prever com **eficiência a reprovação de alunos** da universidade.
+&emsp; Na seção anterior, foi apresentado o modelo candidato ao projeto da : o Nearest Centroid. Nesta seção, serão discutidos outros dois modelos, com o objetivo de prever com **eficiência a reprovação de alunos** da universidade.
 
 &emsp; Ao final desta seção, espera-se **definir o modelo mais apropriado para o projeto**. Após o refinamento, os modelos serão comparados utilizando métricas quantitativas primárias, como o **Recall (para minimizar Falsos Negativos na classificação de risco)** e o **F1-Score (para avaliar o equilíbrio entre Precisão e Recall do modelo)**. Além disso, seus resultados serão avaliados quanto à **capacidade de fornecer explicabilidade das predições**, convertendo a saída do modelo em insights úteis e acionáveis para o parceiro.
 
 #### 4.4.1 Métricas
 
-&emsp; Em processos de aprendizado supervisionado e classificação, a qualidade das predições geradas é avaliada com métricas de validação externa, ou seja, um cruzamento entre os resultados disponibilizados pelo output do modelo com os resultados reais da base de dados. Diferentemente do agrupamento de uma métrica como precisão, o foco se desloca para o custo de erros específicos, dentro da dinâmica da solução desenhada ao parceiro. No contexto da EAFIT, onde o principal objetivo é a **intervenção precoce em prol do combate de reprovações**, o **custo de um Falso negativo (não identificar um aluno em risco real), é muito mais elevado do que o de um Falso positivo**.
+&emsp; Em processos de aprendizado supervisionado e classificação, a qualidade das predições geradas é avaliada com métricas de validação externa, ou seja, um cruzamento entre os resultados disponibilizados pelo output do modelo com os resultados reais da base de dados. Diferentemente do agrupamento de uma métrica como precisão, o foco se desloca para o custo de erros específicos, dentro da dinâmica da solução desenhada ao parceiro. No contexto da , onde o principal objetivo é a **intervenção precoce em prol do combate de reprovações**, o **custo de um Falso negativo (não identificar um aluno em risco real), é muito mais elevado do que o de um Falso positivo**.
 
-&emsp; Nesse sentido, o **Recall (ou Sensibilidade) é a métrica primária selecionada**. O Recall mede a **proporção de casos positivos verdadeiros que foram corretamente identificados pelo modelo**, refletindo sua capacidade de encontrar todos os alunos que estão realmente em risco. Uma das principais vantagens do Recall é sua relevância direta para o problema de intervenção, pois um alto valor **garante que a equipe da EAFIT terá o maior número possível de alunos de alto risco sob observação**. Por outro lado, a otimização excessiva do Recall pode levar a uma queda na Precisão, resultando em um alto número de Falsos Positivos, alunos seguros sendo classificados erroneamente como de risco, o que pode gerar sobrecarga de trabalho e diluir o foco da equipe de apoio.
+&emsp; Nesse sentido, o **Recall (ou Sensibilidade) é a métrica primária selecionada**. O Recall mede a **proporção de casos positivos verdadeiros que foram corretamente identificados pelo modelo**, refletindo sua capacidade de encontrar todos os alunos que estão realmente em risco. Uma das principais vantagens do Recall é sua relevância direta para o problema de intervenção, pois um alto valor **garante que a equipe da  terá o maior número possível de alunos de alto risco sob observação**. Por outro lado, a otimização excessiva do Recall pode levar a uma queda na Precisão, resultando em um alto número de Falsos Positivos, alunos seguros sendo classificados erroneamente como de risco, o que pode gerar sobrecarga de trabalho e diluir o foco da equipe de apoio.
 
 &emsp; A **F1-Score, que mede o desempenho geral do modelo ao calcular a média harmônica entre Precisão e Recall, é a segunda métrica essencial**. O F1-Score é um **excelente indicador para conjuntos de dados desbalanceados** ou quando se busca um **equilíbrio entre a capacidade de encontrar todos os casos de risco (Recall) e a capacidade de garantir que as predições de risco sejam, de fato, corretas (Precisão)**. Neste caso, um valor elevado de F1-Score indica que o modelo é robusto e não está excessivamente enviesado em direção a nenhuma das duas métricas. Contudo, seu valor, sendo um cálculo agregado, pode ser menos intuitivo para a tomada de decisão do parceiro em comparação com os valores diretos de Recall ou Precisão.
 
@@ -1753,14 +1753,14 @@ O gráfico acima mostra a contribuição de cada feature para a previsão do mod
 
 &emsp; A comparação de modelos revela um padrão de desempenho que valida a escolha do **Nearest Centroid (NC)** como o classificador mais adequado para o objetivo central do projeto: a **intervenção precoce no combate à reprovação**.
 
-&emsp; Na Semana 06, o momento mais estratégico para a atuação da equipe de apoio da EAFIT, o NC empata com o AdaBoost no valor **máximo de Recall (0.8076)**, garantindo que **mais de 80% dos alunos que irão reprovar** sejam sinalizados logo no início do curso. O empate é acompanhado por um **F1-Score superior (0.4285)**, o que estabelece o Nearest Centroid como a opção mais equilibrada e **confiável** para a primeira janela de intervenção.
+&emsp; Na Semana 06, o momento mais estratégico para a atuação da equipe de apoio da , o NC empata com o AdaBoost no valor **máximo de Recall (0.8076)**, garantindo que **mais de 80% dos alunos que irão reprovar** sejam sinalizados logo no início do curso. O empate é acompanhado por um **F1-Score superior (0.4285)**, o que estabelece o Nearest Centroid como a opção mais equilibrada e **confiável** para a primeira janela de intervenção.
 
 &emsp; A superioridade do Nearest Centroid se consolida ao longo do semestre. Nas Semanas 08 e 12, o modelo lidera consistentemente em ambas as métricas, superando os algoritmos de *boosting*. Na Semana 08, o NC atinge **0.7692 de Recall** e **0.5405 de F1-Score**. Na conclusão da análise, na Semana 12, o modelo alcança o **pico de assertividade**, registrando um **F1-Score de 0.6909**, o mais alto de todos os modelos testados. Logo, o resultado demonstra que o NC evolui para uma **predição altamente confiável**, capaz de minimizar Falsos Positivos sem comprometer o Recall, que se mantém robusto em **0.7307**.
 
 
 ### 4.5. Avaliação do Modelo
 
-&emsp; Para solucionar o problema de evasão e reprovação na matéria de Pensamento Computacional da universidade EAFIT, foi desenvolvido um modelo preditivo baseado no algoritmo *Nearest Centroid*. Este algoritmo foi selecionado por apresentar o melhor desempenho em métricas de classificação durante as semanas de previsão nas semanas 6, 8 e 12.
+&emsp; Para solucionar o problema de evasão e reprovação na matéria de Pensamento Computacional da universidade , foi desenvolvido um modelo preditivo baseado no algoritmo *Nearest Centroid*. Este algoritmo foi selecionado por apresentar o melhor desempenho em métricas de classificação durante as semanas de previsão nas semanas 6, 8 e 12.
 
 &emsp; O principal objetivo do modelo é identificar o maior número possível de alunos em risco real de reprovação. Por essa razão, a otimização focou em maximizar a métrica de **Recall (Sensibilidade)**. Isso significa que o sistema foi calibrado para minimizar os falsos negativos (não alertar um aluno que irá reprovar). Como consequência, o modelo pode gerar alguns falsos positivos (alertar um aluno que seria aprovado), uma decisão estratégica considerada mais benéfica, pois é melhor intervir preventivamente do que omitir um alerta crucial. Dessa forma, a solução atende às expectativas ao construir um sistema de alerta precoce eficaz.
 
@@ -1834,17 +1834,17 @@ testes de hipóteses para análise do impacto de features, teste de normalidade 
    - Recomenda-se que os professores utilizem os gráficos de explicabilidade para identificar fatores individuais de risco.
 
 
-&emsp; Em suma, a solução proposta se mostra tecnicamente viável, pedagogicamente relevante e alinhada às necessidades da Universidad EAFIT. O uso de predições automatizadas, explicabilidade transparente e integração com rotinas de acompanhamento acadêmico reforça a inovação pedagógica e pode contribuir significativamente para a **redução da reprovação e evasão**, objetivos centrais do projeto.
+&emsp; Em suma, a solução proposta se mostra tecnicamente viável, pedagogicamente relevante e alinhada às necessidades da Universidad . O uso de predições automatizadas, explicabilidade transparente e integração com rotinas de acompanhamento acadêmico reforça a inovação pedagógica e pode contribuir significativamente para a **redução da reprovação e evasão**, objetivos centrais do projeto.
 
 ## <a name="c6"></a>6. Referências
 
 CODESIGNAL. **Grid Search: Finding Optimal Model Parameters**. [S. l.], [s.d.]. Disponível em: https://codesignal.com/learn/courses/hypertuning-and-cross-validation/lessons/grid-search-finding-optimal-model-parameters. Acesso em: 8 out. 2025.
 
-UNIVERSIDAD EAFIT. **Historia**. [S. l.], [s.d.]. Disponível em: https://www.eafit.edu.co/institucional/historia. Acesso em: 8 out. 2025.
+UNIVERSIDAD . **Historia**. [S. l.], [s.d.]. Disponível em: https://www..edu.co/institucional/historia. Acesso em: 8 out. 2025.
 
-RESTREPO CARDONA, María Paulina. **EAFIT, hija de la Medellín de los 60**. [S. l.]: Universidad EAFIT, 14 ago. 2020. Disponível em: https://www.eafit.edu.co/institucional/historia/noticias/eafit-hija-de-la-medellin-de-los-60. Acesso em: 8 out. 2025.
+RESTREPO CARDONA, María Paulina. **, hija de la Medellín de los 60**. [S. l.]: Universidad , 14 ago. 2020. Disponível em: https://www..edu.co/institucional/historia/noticias/-hija-de-la-medellin-de-los-60. Acesso em: 8 out. 2025.
 
-EAFIT. **Área de Información y Prensa. La ANDI reconoció a EAFIT por sus 65 años de impacto social**. [S. l.]: Universidad EAFIT, 2 ago. 2023. Disponível em: https://www.eafit.edu.co/noticias/eafit-es-noticia/ANDI-reconocio-EAFIT-65anios-impacto-social. Acesso em: 8 out. 2025.
+. **Área de Información y Prensa. La ANDI reconoció a  por sus 65 años de impacto social**. [S. l.]: Universidad , 2 ago. 2023. Disponível em: https://www..edu.co/noticias/-es-noticia/ANDI-reconocio--65anios-impacto-social. Acesso em: 8 out. 2025.
 
 MOLNAR, Christoph. **Interpretable Machine Learning: a Guide for Making Black Box Models Explainable.** 2. ed. [S.l.]: Christoph Molnar, 2022. Disponível em: https://christophm.github.io/interpretable-ml-book/. Acesso em: 1 out. 2025.
 
@@ -1854,7 +1854,7 @@ ROTHER, Mike; SHOOK, John. **Aprendendo a Enxergar: Mapeando o Fluxo de Valor pa
 
 MISHRA, Divyanshu. **Parameters and Hyperparameters**. In: Towards Data Science. [S. l.], 1 maio 2020. Disponível em: https://towardsdatascience.com/parameters-and-hyperparameters-aa609601a9ac. Acesso em: 8 out. 2025.
 
-UNIVERSIDAD EAFIT. **Excelencia y reconocimiento**. In: Informe de Sostenibilidad 2023. [S. l.], 2023. Disponível em: https://www.eafit.edu.co/informes-de-gestion-y-sostenibilidad/informe-sostenibilidad-2023/excelencia-y-reconocimiento. Acesso em: 8 out. 2025.
+UNIVERSIDAD . **Excelencia y reconocimiento**. In: Informe de Sostenibilidad 2023. [S. l.], 2023. Disponível em: https://www..edu.co/informes-de-gestion-y-sostenibilidad/informe-sostenibilidad-2023/excelencia-y-reconocimiento. Acesso em: 8 out. 2025.
 
 COOPER, Alan; REIMANN, Robert; CRONIN, David; NOESSEL, Christopher. **About Face: The Essentials of Interaction Design**. 4. ed. Indianapolis: Wiley, 2014
 
@@ -2057,7 +2057,7 @@ $$
 
 &emsp;O escalonamento de variáveis quantitativas é uma etapa essencial no pré-processamento de dados para modelagem preditiva, sobretudo em algoritmos de machine learning sensíveis à magnitude das variáveis. O objetivo dessa técnica é padronizar as escalas, de modo a evitar que atributos com valores mais elevados exerçam influência desproporcional sobre o processo de aprendizado e prejudiquem o desempenho preditivo do modelo.
 
-&emsp;No contexto da análise de dados da Universidad EAFIT, as três variáveis quantitativas selecionadas foram: CalcNotaQuiz, Talleres e Nota_Oficial. Essas variáveis podem fornecer informações muito importantes, uma vez que as Oficinas (Talleres), e os quizes são atividades que ocorrem com frequência e possuem grande influência na variável Nota_Oficial, que indica se um aluno foi reprovado ou não.
+&emsp;No contexto da análise de dados da Universidad , as três variáveis quantitativas selecionadas foram: CalcNotaQuiz, Talleres e Nota_Oficial. Essas variáveis podem fornecer informações muito importantes, uma vez que as Oficinas (Talleres), e os quizes são atividades que ocorrem com frequência e possuem grande influência na variável Nota_Oficial, que indica se um aluno foi reprovado ou não.
 
 &emsp;O uso adequado do escalonamento possibilita que algoritmos de clustering, classificação e regressão processem os dados de maneira mais equilibrada, favorecendo a convergência dos modelos e aprimorando a precisão das predições. Além disso, contribui para a interpretação dos resultados e para a comparação consistente entre variáveis em análises exploratórias.
 
